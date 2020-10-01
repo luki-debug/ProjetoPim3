@@ -1,9 +1,0 @@
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\bin\Debug\netstandard2.0\CamadaControle.deps.json
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\bin\Debug\netstandard2.0\CamadaControle.dll
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\bin\Debug\netstandard2.0\CamadaControle.pdb
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.csprojAssemblyReference.cache
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.AssemblyInfoInputs.cache
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.AssemblyInfo.cs
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.csproj.CoreCompileInputs.cache
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.dll
-C:\Users\lucas\source\repos\CamadaWeb\CamadaControle\obj\Debug\netstandard2.0\CamadaControle.pdb
