@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LLL00vhv/xRgrlVmGQxAyJDuLhilb94yeqyM0ejHJvEL1SC/RYPxjbsXEFbNYeKuJGwXHjGgDitHGSwdYQjj/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lucas\\source\\repos\\CamadaWeb\\CamadaControle\\CamadaControle.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

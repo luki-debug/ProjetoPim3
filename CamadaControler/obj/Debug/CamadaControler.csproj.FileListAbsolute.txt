@@ -1,0 +1,7 @@
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\bin\Debug\CamadaControler.dll.config
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\bin\Debug\CamadaControler.dll
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\bin\Debug\CamadaControler.pdb
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\obj\Debug\CamadaControler.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\obj\Debug\CamadaControler.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\obj\Debug\CamadaControler.dll
+C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\obj\Debug\CamadaControler.pdb

@@ -1,0 +1,10 @@
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\bin\Debug\CamadaModel.dll
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\bin\Debug\CamadaModel.pdb
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\bin\Debug\CamadaControler.dll
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\bin\Debug\CamadaControler.pdb
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\bin\Debug\CamadaControler.dll.config
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\obj\Debug\CamadaModel.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\obj\Debug\CamadaModel.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\obj\Debug\CamadaModel.csproj.CopyComplete
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\obj\Debug\CamadaModel.dll
+C:\Users\lucas\source\repos\CamadaWeb\CamadaModel\obj\Debug\CamadaModel.pdb
