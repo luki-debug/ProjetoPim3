@@ -23,21 +23,14 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@ValorLiberado", carteira.ValorLiberado);
                 acessoDados.AdicionarParametros("@ValorRetirado", carteira.ValorRetido);
                 acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
-                string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO Carteira " +
                     "(Saldo,ValorInvestido,ValorLiberado,ValorRetirado,IdPessoa) " +
                     "VALUES (@Saldo,@ValorInvestido,@ValorLiberado,@ValorRetirado,@IdPessoa) " +
                     "select @@IDENTITY as RETORNO " +
                     "END").ToString();
-                acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
-                string retornoFisica = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "INSERT INTO Juridica " +
-                    "(IdPessoa,RazaoSocial,CNPJ) " +
-                    "VALUES (@IdPessoa,@RazaoSocial,@CNPJ) " +
-                    "select @@IDENTITY as RETORNO " +
-                    "END").ToString();
 
-                return retornoPessoa;
+                return retornoCarteira;
             }
             catch (Exception exception)
             {
@@ -45,30 +38,24 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public string Alterar(Juridica juridica)
+        public string Alterar(Carteira carteira)
         {
             try
             {
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@RG", juridica.CNPJ);
-                acessoDados.AdicionarParametros("@DataNascimento", juridica.RazaoSocial);
-                acessoDados.AdicionarParametros("@Email", juridica.Email);
-                acessoDados.AdicionarParametros("@Logradouro", juridica.Logradouro);
-                acessoDados.AdicionarParametros("@Numero", juridica.Numero);
-                acessoDados.AdicionarParametros("@Cidade", juridica.Cidade);
-                acessoDados.AdicionarParametros("@Estado", juridica.Estado);
-                acessoDados.AdicionarParametros("@CEP", juridica.CEP);
-                acessoDados.AdicionarParametros("@Senha", juridica.Senha);
-                acessoDados.AdicionarParametros("@Ativo", juridica.Ativo);
-                acessoDados.AdicionarParametros("@Telefone", juridica.Telefone);
-                string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "UPDATE PESSOA " +
-                    "SET Email=@Email,Logradouro=@Logradouro,Numero=@Numero,Cidade=@Cidade,Estado=@Estado,CEP=@CEP,Senha=@Senha," +
-                    "Ativo=@Ativo,Telefone=@Telefone WHERE IdPessoa = @IdPessoa " +
-                    "UPDATE FISICA SET Nome=@Nome,CPF=@CPF,RG=@RG,DataNascimento=@DataNascimento WHERE IdPessoa = @IdPessoa " +
+                acessoDados.AdicionarParametros("@Saldo", carteira.Saldo);
+                acessoDados.AdicionarParametros("@ValorInvestido", carteira.ValorInvestido);
+                acessoDados.AdicionarParametros("@ValorLiberado", carteira.ValorLiberado);
+                acessoDados.AdicionarParametros("@ValorRetirado", carteira.ValorRetido);
+                acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
+
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "UPDATE Carteira " +
+                    "SET Saldo=@Saldo,ValorInvestido=@ValorInvestido,ValorLiberado=@ValorLiberado,ValorRetirado=@ValorRetirado " +
+                    "WHERE IdPessoa = @IdPessoa " +
                     "SELECT @IdPessoa AS RETORNO END").ToString();
 
-                return retornoPessoa;
+                return retornoCarteira;
 
             }
             catch (Exception exception)
@@ -77,17 +64,17 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public string Excluir(Fisica fisica)
+        public string Excluir(Carteira carteira)
         {
             try
             {
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
-                string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "DELETE FROM FISICA WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM PESSOA WHERE=@IdPessoa SELECT @IdPessoa AS RETORNO").ToString();
+                acessoDados.AdicionarParametros("@IdCarteira", carteira.IdCarteira);
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "DELETE FROM Carteira WHERE IdCarteira= @IdCarteira" +
+                    "SELECT @IdCarteira AS RETORNO").ToString();
 
-                return retornoPessoa;
+                return retornoCarteira;
             }
             catch (Exception exception)
             {
@@ -95,17 +82,17 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<Fisica> ConsultarNome(Fisica fisica)
+        public List<Carteira> ConsultarNome(Carteira carteira)
         {
             try
             {
                 //Criar uma nova coleção de clientes
-                List<Fisica> clienteColecao = new List<Fisica>();
+                List<Carteira> carteiraColecao = new List<Carteira>();
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@Nome", fisica.Nome);
+                acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
                 //Retornará uma DataTable
-                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
-                    "ON P.IdPessoa=F.IdPessoa WHERE Nome='%'+@Nome+'%'");
+                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Carteira AS C INNER JOIN Pessoa AS P " +
+                    "ON C.IdPessoa=P.IdPessoa WHERE c.IdPessoa=@IdPessoa");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -114,27 +101,19 @@ namespace CamadaModel.CRUD
                     //Criar cliente vazio
                     //Colocar os dados da linha
                     //Adicionar na coleção
-                    Fisica cliente = new Fisica();
-                    cliente.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
-                    cliente.Nome = Convert.ToString(linha["Nome"]);
-                    cliente.Email = Convert.ToString(linha["Email"]);
-                    cliente.CPF = Convert.ToString(linha["CPF"]);
-                    cliente.RG = Convert.ToString(linha["Cidade"]);
-                    cliente.DataNascimento = Convert.ToDateTime(linha["DataNascimento"]);
-                    cliente.Logradouro = Convert.ToString(linha["Logradouro"]);
-                    cliente.Numero = Convert.ToInt32(linha["Numero"]);
-                    cliente.Cidade = Convert.ToString(linha["Cidade"]);
-                    cliente.Estado = Convert.ToString(linha["Estado"]);
-                    cliente.CEP = Convert.ToString(linha["CEP"]);
-                    cliente.DtUltimoLogin = Convert.ToDateTime(linha["DtUltimoogin"]);
-                    cliente.Telefone = Convert.ToString(linha["Telefone"]);
-                    cliente.Ativo = Convert.ToChar(linha["Ativo"]);
-                    cliente.Senha = Convert.ToString(linha["Senha"]);
+                    Carteira carteiraPessoa = new Carteira();
+                    carteiraPessoa._pessoa = new Pessoa();
+                    carteiraPessoa._pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
+                    carteiraPessoa.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
+                    carteiraPessoa.Saldo = Convert.ToDecimal(linha["Saldo"]);
+                    carteiraPessoa.ValorInvestido = Convert.ToDecimal(linha["ValorInvestido"]);
+                    carteiraPessoa.ValorLiberado = Convert.ToDecimal(linha["CalorLiberado"]);
+                    carteiraPessoa.ValorRetido = Convert.ToDecimal(linha["ValorRetido"]);
 
-                    clienteColecao.Add(cliente);
+                    carteiraColecao.Add(carteiraPessoa);
                 }
 
-                return clienteColecao;
+                return carteiraColecao;
             }
             catch (Exception exception)
             {

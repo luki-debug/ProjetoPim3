@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CRUD\CarteiraCrud.cs" />
+    <Compile Include="CRUD\DepartamentoCrud.cs" />
     <Compile Include="CRUD\FisicaCrud.cs" />
     <Compile Include="CRUD\JuridicaCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />

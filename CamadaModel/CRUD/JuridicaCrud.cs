@@ -90,8 +90,8 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "DELETE FROM FISICA WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM PESSOA WHERE=@IdPessoa SELECT @IdPessoa AS RETORNO").ToString();
+                    "DELETE FROM Juridica WHERE IdPessoa= @IdPessoa " +
+                    "DELETE FROM Pessoa WHERE=@IdPessoa SELECT @IdPessoa AS RETORNO").ToString();
 
                 return retornoPessoa;
             }
@@ -101,17 +101,17 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<Fisica> ConsultarNome(Fisica fisica)
+        public List<Juridica> ConsultarNome(Juridica juridica)
         {
             try
             {
                 //Criar uma nova coleção de clientes
-                List<Fisica> clienteColecao = new List<Fisica>();
+                List<Juridica> clienteColecao = new List<Juridica>();
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@Nome", fisica.Nome);
+                acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
                 //Retornará uma DataTable
-                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
-                    "ON P.IdPessoa=F.IdPessoa WHERE Nome='%'+@Nome+'%'");
+                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridica AS J " +
+                    "ON P.IdPessoa=J.IdPessoa WHERE Nome='%'+@RazaoSocial+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -120,13 +120,10 @@ namespace CamadaModel.CRUD
                     //Criar cliente vazio
                     //Colocar os dados da linha
                     //Adicionar na coleção
-                    Fisica cliente = new Fisica();
+                    Juridica cliente = new Juridica();
                     cliente.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
-                    cliente.Nome = Convert.ToString(linha["Nome"]);
-                    cliente.Email = Convert.ToString(linha["Email"]);
-                    cliente.CPF = Convert.ToString(linha["CPF"]);
-                    cliente.RG = Convert.ToString(linha["Cidade"]);
-                    cliente.DataNascimento = Convert.ToDateTime(linha["DataNascimento"]);
+                    cliente.RazaoSocial = Convert.ToString(linha["RazaoSocial"]);
+                    cliente.CNPJ = Convert.ToString(linha["CNPJ"]);
                     cliente.Logradouro = Convert.ToString(linha["Logradouro"]);
                     cliente.Numero = Convert.ToInt32(linha["Numero"]);
                     cliente.Cidade = Convert.ToString(linha["Cidade"]);
