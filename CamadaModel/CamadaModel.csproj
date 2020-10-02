@@ -46,6 +46,7 @@
     <Compile Include="CRUD\DepartamentoCrud.cs" />
     <Compile Include="CRUD\FisicaCrud.cs" />
     <Compile Include="CRUD\JuridicaCrud.cs" />
+    <Compile Include="CRUD\PerfilUsuarioCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />
     <Compile Include="Entities\Departamento.cs" />
     <Compile Include="Entities\Fisica.cs" />
