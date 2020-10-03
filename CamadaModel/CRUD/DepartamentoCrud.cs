@@ -3,13 +3,10 @@ using CamadaModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CamadaModel.CRUD
 {
-    class DepartamentoCrud
+    public class DepartamentoCrud
     {
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
 
@@ -93,12 +90,12 @@ namespace CamadaModel.CRUD
                     //Criar cliente vazio
                     //Colocar os dados da linha
                     //Adicionar na coleção
-                    Departamento departamentoLista = new Departamento();
-                    departamentoLista.Ativo = Convert.ToChar(linha["Ativo"]);
-                    departamentoLista.Descricao = Convert.ToString(linha["Descricao"]);
-                    departamentoLista.IdDepartamento = Convert.ToInt32(linha["IdDepartamento"]);
+                    Departamento departamentoAdd = new Departamento();
+                    departamentoAdd.Ativo = Convert.ToChar(linha["Ativo"]);
+                    departamentoAdd.Descricao = Convert.ToString(linha["Descricao"]);
+                    departamentoAdd.IdDepartamento = Convert.ToInt32(linha["IdDepartamento"]);
 
-                    departamentoColecao.Add(departamentoLista);
+                    departamentoColecao.Add(departamentoAdd);
                 }
 
                 return departamentoColecao;

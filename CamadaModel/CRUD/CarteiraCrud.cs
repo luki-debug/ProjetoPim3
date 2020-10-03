@@ -3,9 +3,6 @@ using CamadaModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CamadaModel.CRUD
 {
@@ -91,26 +88,26 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
                 //Retornará uma DataTable
-                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Carteira AS C INNER JOIN Pessoa AS P " +
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Carteira AS C INNER JOIN Pessoa AS P " +
                     "ON C.IdPessoa=P.IdPessoa WHERE c.IdPessoa=@IdPessoa");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
-                foreach (DataRow linha in dataTableFisica.Rows)
+                foreach (DataRow linha in dataTable.Rows)
                 {
                     //Criar cliente vazio
                     //Colocar os dados da linha
                     //Adicionar na coleção
-                    Carteira carteiraPessoa = new Carteira();
-                    carteiraPessoa._pessoa = new Pessoa();
-                    carteiraPessoa._pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
-                    carteiraPessoa.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
-                    carteiraPessoa.Saldo = Convert.ToDecimal(linha["Saldo"]);
-                    carteiraPessoa.ValorInvestido = Convert.ToDecimal(linha["ValorInvestido"]);
-                    carteiraPessoa.ValorLiberado = Convert.ToDecimal(linha["CalorLiberado"]);
-                    carteiraPessoa.ValorRetido = Convert.ToDecimal(linha["ValorRetido"]);
+                    Carteira carteiraAdd = new Carteira();
+                    carteiraAdd._pessoa = new Pessoa();
+                    carteiraAdd._pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
+                    carteiraAdd.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
+                    carteiraAdd.Saldo = Convert.ToDecimal(linha["Saldo"]);
+                    carteiraAdd.ValorInvestido = Convert.ToDecimal(linha["ValorInvestido"]);
+                    carteiraAdd.ValorLiberado = Convert.ToDecimal(linha["CalorLiberado"]);
+                    carteiraAdd.ValorRetido = Convert.ToDecimal(linha["ValorRetido"]);
 
-                    carteiraColecao.Add(carteiraPessoa);
+                    carteiraColecao.Add(carteiraAdd);
                 }
 
                 return carteiraColecao;

@@ -42,19 +42,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textCidade = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textEmail = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textNumero = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textEstado = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textCEP = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textSenha = new System.Windows.Forms.TextBox();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textCEP = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textEstado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textNumero = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -98,7 +98,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 256);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(765, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 163);
             this.dataGridView1.TabIndex = 4;
             // 
             // lblrg
@@ -181,112 +181,13 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblrg);
             this.groupBox1.Controls.Add(this.textCPF);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(359, 172);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textCEP);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textEstado);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textNumero);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textCidade);
-            this.groupBox2.Controls.Add(this.textLogradouro);
-            this.groupBox2.Location = new System.Drawing.Point(401, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 134);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Endereço";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Email";
-            // 
-            // textEmail
-            // 
-            this.textEmail.Location = new System.Drawing.Point(44, 96);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(130, 20);
-            this.textEmail.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(185, 99);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Nascimento";
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(248, 95);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(96, 20);
-            this.dtpNascimento.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(232, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Nº";
-            // 
-            // textNumero
-            // 
-            this.textNumero.Location = new System.Drawing.Point(251, 29);
-            this.textNumero.Name = "textNumero";
-            this.textNumero.Size = new System.Drawing.Size(60, 20);
-            this.textNumero.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(149, 71);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Estado";
-            // 
-            // textEstado
-            // 
-            this.textEstado.Location = new System.Drawing.Point(189, 68);
-            this.textEstado.Name = "textEstado";
-            this.textEstado.Size = new System.Drawing.Size(46, 20);
-            this.textEstado.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 99);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "CEP";
-            // 
-            // textCEP
-            // 
-            this.textCEP.Location = new System.Drawing.Point(43, 96);
-            this.textCEP.Name = "textCEP";
-            this.textCEP.Size = new System.Drawing.Size(85, 20);
-            this.textCEP.TabIndex = 18;
             // 
             // label11
             // 
@@ -304,6 +205,107 @@
             this.textSenha.Size = new System.Drawing.Size(100, 20);
             this.textSenha.TabIndex = 16;
             // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNascimento.Location = new System.Drawing.Point(248, 95);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(96, 20);
+            this.dtpNascimento.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(185, 99);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Nascimento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Email";
+            // 
+            // textEmail
+            // 
+            this.textEmail.Location = new System.Drawing.Point(44, 96);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(130, 20);
+            this.textEmail.TabIndex = 10;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.textCEP);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.textEstado);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.textNumero);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textCidade);
+            this.groupBox2.Controls.Add(this.textLogradouro);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(377, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(332, 134);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Endereço";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "CEP";
+            // 
+            // textCEP
+            // 
+            this.textCEP.Location = new System.Drawing.Point(43, 96);
+            this.textCEP.Name = "textCEP";
+            this.textCEP.Size = new System.Drawing.Size(85, 20);
+            this.textCEP.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(149, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Estado";
+            // 
+            // textEstado
+            // 
+            this.textEstado.Location = new System.Drawing.Point(189, 68);
+            this.textEstado.Name = "textEstado";
+            this.textEstado.Size = new System.Drawing.Size(46, 20);
+            this.textEstado.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(232, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Nº";
+            // 
+            // textNumero
+            // 
+            this.textNumero.Location = new System.Drawing.Point(251, 29);
+            this.textNumero.Name = "textNumero";
+            this.textNumero.Size = new System.Drawing.Size(60, 20);
+            this.textNumero.TabIndex = 14;
+            // 
             // btnInserir
             // 
             this.btnInserir.Location = new System.Drawing.Point(13, 202);
@@ -318,7 +320,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
+            this.ClientSize = new System.Drawing.Size(721, 443);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);

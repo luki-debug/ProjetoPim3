@@ -45,8 +45,12 @@
     <Compile Include="CRUD\CarteiraCrud.cs" />
     <Compile Include="CRUD\DepartamentoCrud.cs" />
     <Compile Include="CRUD\FisicaCrud.cs" />
+    <Compile Include="CRUD\HistoricoCarteiraCrud.cs" />
     <Compile Include="CRUD\JuridicaCrud.cs" />
+    <Compile Include="CRUD\NivelAcessoCrud.cs" />
     <Compile Include="CRUD\PerfilUsuarioCrud.cs" />
+    <Compile Include="CRUD\TipoTransacaoCrud.cs" />
+    <Compile Include="CRUD\UsuarioCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />
     <Compile Include="Entities\Departamento.cs" />
     <Compile Include="Entities\Fisica.cs" />

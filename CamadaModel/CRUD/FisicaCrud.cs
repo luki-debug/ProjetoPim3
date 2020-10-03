@@ -1,9 +1,8 @@
-﻿using System;
+﻿using CamadaControler.AcessoBancoDados;
+using CamadaModel.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using CamadaModel.Entities;
-using CamadaControler.AcessoBancoDados;
 
 namespace CamadaModel.CRUD
 {
@@ -113,12 +112,12 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Nome", fisica.Nome);
                 //Retornará uma DataTable
-                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
                     "ON P.IdPessoa=F.IdPessoa WHERE Nome='%'+@Nome+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
-                foreach (DataRow linha in dataTableFisica.Rows)
+                foreach (DataRow linha in dataTable.Rows)
                 {
                     //Criar cliente vazio
                     //Colocar os dados da linha

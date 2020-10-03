@@ -3,9 +3,6 @@ using CamadaModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CamadaModel.CRUD
 {
@@ -110,12 +107,12 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
                 //Retornará uma DataTable
-                DataTable dataTableFisica = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridica AS J " +
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridica AS J " +
                     "ON P.IdPessoa=J.IdPessoa WHERE Nome='%'+@RazaoSocial+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
-                foreach (DataRow linha in dataTableFisica.Rows)
+                foreach (DataRow linha in dataTable.Rows)
                 {
                     //Criar cliente vazio
                     //Colocar os dados da linha

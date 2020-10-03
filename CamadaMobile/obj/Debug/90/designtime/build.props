@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 bundleassemblies=false
 aotassemblies=false
 androidaotmode=none
@@ -25,34 +24,5 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=637371786447753927
+_nugetassetstimestamp=637371925887731570
 typemapkind=strings-asm
-=======
-BundleAssemblies=False
-AotAssemblies=False
-AndroidAotMode=
-AndroidEnableProfiledAot=
-ExplicitCrunch=false
-AndroidDexTool=dx
-AndroidLinkTool=
-AndroidPackageFormat=apk
-UseSharedRuntime=True
-EmbedAssembliesIntoApk=False
-AndroidLinkMode=None
-AndroidLinkSkip=
-AndroidSdkBuildToolsVersion=28.0.3
-AndroidSdkPath=C:\Program Files (x86)\Android\android-sdk\
-AndroidNdkPath=
-JavaSdkPath=C:\Program Files\Android\Jdk\microsoft_dist_openjdk_1.8.0.25\
-AndroidSequencePointsMode=None
-XamarinAndroidVersion=10.1.4-0
-MonoSymbolArchive=False
-AndroidUseLatestPlatformSdk=false
-TargetFrameworkVersion=v9.0
-AndroidCreatePackagePerAbi=
-AndroidGenerateJniMarshalMethods=False
-OS=Windows_NT
-DesignTimeBuild=true
-AndroidIncludeDebugSymbols=True
-AndroidPackageNamingPolicy=LowercaseCrc64
->>>>>>> 524cf1d712d907036058b74629eb188f7e31eb68
