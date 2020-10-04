@@ -47,7 +47,7 @@ namespace CamadaDesktop
 
             //iconBtnCadastro.Location = new Point(6, 127);
             iconBtnCadastro.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnCadastro.BackColor = Color.FromArgb(66,34,125);
+            iconBtnCadastro.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnCadastro.ForeColor = Color.White;
             iconBtnCadastro.IconColor = Color.White;
             AbrirForm(new Form1());
@@ -72,7 +72,7 @@ namespace CamadaDesktop
 
             //iconBtnCadastro.Location = new Point(6, 127);
             iconBtnCarteira.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnCarteira.BackColor = Color.FromArgb(66, 34, 125);
+            iconBtnCarteira.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnCarteira.ForeColor = Color.White;
             iconBtnCarteira.IconColor = Color.White;
             AbrirForm(new Form1());
@@ -98,7 +98,7 @@ namespace CamadaDesktop
 
             //iconBtnCadastro.Location = new Point(6, 127);
             iconBtnComprar.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnComprar.BackColor = Color.FromArgb(66, 34, 125);
+            iconBtnComprar.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnComprar.ForeColor = Color.White;
             iconBtnComprar.IconColor = Color.White;
             AbrirForm(new Form1());
@@ -123,7 +123,7 @@ namespace CamadaDesktop
 
             //iconBtnCadastro.Location = new Point(6, 127);
             iconBtnBtc.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnBtc.BackColor = Color.FromArgb(66, 34, 125);
+            iconBtnBtc.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnBtc.ForeColor = Color.White;
             iconBtnBtc.IconColor = Color.White;
             AbrirForm(new Form1());
@@ -148,7 +148,7 @@ namespace CamadaDesktop
 
             //iconBtnCadastro.Location = new Point(6, 127);
             iconBtnInicio.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnInicio.BackColor = Color.FromArgb(66, 34, 125);
+            iconBtnInicio.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnInicio.ForeColor = Color.White;
             iconBtnInicio.IconColor = Color.White;
             AbrirForm(new Form1());

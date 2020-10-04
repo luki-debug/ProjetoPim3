@@ -41,5 +41,10 @@ namespace CamadaDesktop
             FisicaCrud fisicaCrud = new FisicaCrud();
             fisicaCrud.Inserir(fisica);
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
