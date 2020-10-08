@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Contact" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.vb" Inherits="CamadaWeb.Contact" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="Content" runat="server">
     <h2><%: Title %></h2>
     <p>Your contact page.</p>
 
