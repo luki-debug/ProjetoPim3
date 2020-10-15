@@ -53,6 +53,7 @@
     <Compile Include="CRUD\UsuarioCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />
     <Compile Include="Entities\Departamento.cs" />
+    <Compile Include="Entities\Enums\EnumEstado.cs" />
     <Compile Include="Entities\Fisica.cs" />
     <Compile Include="Entities\HistoricoCarteira.cs" />
     <Compile Include="Entities\Juridica.cs" />
@@ -69,5 +70,6 @@
       <Name>CamadaControler</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

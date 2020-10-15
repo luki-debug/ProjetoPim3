@@ -28,10 +28,11 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Senha", fisica.Senha);
                 acessoDados.AdicionarParametros("@Ativo", fisica.Ativo);
                 acessoDados.AdicionarParametros("@Telefone", fisica.Telefone);
+                acessoDados.AdicionarParametros("@DtUltimoLogin", new DateTime(9999, 12, 31, 00, 00, 01));
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO PESSOA " +
-                    "(Email,Logradouro,Numero,Cidade,Estado,CEP,Senha,Ativo,Telefone) " +
-                    "VALUES (@Email,@Logradouro,@Numero,@Cidade,@Estado,@CEP,@Senha,@Ativo,@Telefone) " +
+                    "(Email,Logradouro,Numero,Cidade,Estado,CEP,Senha,Ativo,Telefone,DtUltimoLogin) " +
+                    "VALUES (@Email,@Logradouro,@Numero,@Cidade,@Estado,@CEP,@Senha,@Ativo,@Telefone,@DtUltimoLogin) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
                 acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
@@ -39,7 +40,7 @@ namespace CamadaModel.CRUD
                     "INSERT INTO FISICA " +
                     "(IdPessoa,Nome,CPF,RG,DataNascimento) " +
                     "VALUES (@IdPessoa,@Nome,@CPF,@RG,@DataNascimento) " +
-                    "select @@IDENTITYg as RETORNO " +
+                    "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
 
                 return retornoPessoa;
@@ -113,7 +114,7 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Nome", fisica.Nome);
                 //Retornará uma DataTable
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
-                    "ON P.IdPessoa=F.IdPessoa WHERE Nome='%'+@Nome+'%'");
+                    "ON P.IdPessoa=F.IdPessoa WHERE Nome Like '%'+@Nome+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -133,8 +134,8 @@ namespace CamadaModel.CRUD
                     cliente.Numero = Convert.ToInt32(linha["Numero"]);
                     cliente.Cidade = Convert.ToString(linha["Cidade"]);
                     cliente.Estado = Convert.ToString(linha["Estado"]);
+                    cliente.DtUltimoLogin = Convert.ToDateTime(linha["DtUltimoLogin"]);
                     cliente.CEP = Convert.ToString(linha["CEP"]);
-                    cliente.DtUltimoLogin = Convert.ToDateTime(linha["DtUltimoogin"]);
                     cliente.Telefone = Convert.ToString(linha["Telefone"]);
                     cliente.Ativo = Convert.ToChar(linha["Ativo"]);
                     cliente.Senha = Convert.ToString(linha["Senha"]);

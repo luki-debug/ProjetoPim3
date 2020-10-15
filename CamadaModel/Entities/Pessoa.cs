@@ -22,7 +22,7 @@ namespace CamadaModel.Entities
         public string Telefone { get; set; }
 
         [Required(ErrorMessage = "Informe a senha", AllowEmptyStrings = false)]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
         public DateTime DtUltimoLogin { get; set; }
         public string CEP { get; set; }

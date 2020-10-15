@@ -15,8 +15,8 @@ namespace CamadaModel.CRUD
             try
             {
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@RG", juridica.CNPJ);
-                acessoDados.AdicionarParametros("@DataNascimento", juridica.RazaoSocial);
+                acessoDados.AdicionarParametros("@CNPJ", juridica.CNPJ);
+                acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
                 acessoDados.AdicionarParametros("@Email", juridica.Email);
                 acessoDados.AdicionarParametros("@Logradouro", juridica.Logradouro);
                 acessoDados.AdicionarParametros("@Numero", juridica.Numero);
@@ -26,15 +26,16 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Senha", juridica.Senha);
                 acessoDados.AdicionarParametros("@Ativo", juridica.Ativo);
                 acessoDados.AdicionarParametros("@Telefone", juridica.Telefone);
+                acessoDados.AdicionarParametros("@DtUltimoLogin", new DateTime(9999, 12, 31, 00, 00, 01));
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO PESSOA " +
-                    "(Email,Logradouro,Numero,Cidade,Estado,CEP,Senha,Ativo,Telefone) " +
-                    "VALUES (@Email,@Logradouro,@Numero,@Cidade,@Estado,@CEP,@Senha,@Ativo,@Telefone) " +
+                    "(Email,Logradouro,Numero,Cidade,Estado,CEP,Senha,Ativo,Telefone,DtUltimoLogin) " +
+                    "VALUES (@Email,@Logradouro,@Numero,@Cidade,@Estado,@CEP,@Senha,@Ativo,@Telefone,@DtUltimoLogin) " +
                     "select @@IDENTITY as RETORNO " +
                     "END").ToString();
                 acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
                 string retornoFisica = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "INSERT INTO Juridica " +
+                    "INSERT INTO Juridico " +
                     "(IdPessoa,RazaoSocial,CNPJ) " +
                     "VALUES (@IdPessoa,@RazaoSocial,@CNPJ) " +
                     "select @@IDENTITY as RETORNO " +
@@ -107,8 +108,8 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridica AS J " +
-                    "ON P.IdPessoa=J.IdPessoa WHERE Nome='%'+@RazaoSocial+'%'");
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridico AS J " +
+                    "ON P.IdPessoa=J.IdPessoa WHERE RazaoSocial Like '%'+@RazaoSocial+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -126,10 +127,11 @@ namespace CamadaModel.CRUD
                     cliente.Cidade = Convert.ToString(linha["Cidade"]);
                     cliente.Estado = Convert.ToString(linha["Estado"]);
                     cliente.CEP = Convert.ToString(linha["CEP"]);
-                    cliente.DtUltimoLogin = Convert.ToDateTime(linha["DtUltimoogin"]);
+                    cliente.DtUltimoLogin = Convert.ToDateTime(linha["DtUltimologin"]);
                     cliente.Telefone = Convert.ToString(linha["Telefone"]);
                     cliente.Ativo = Convert.ToChar(linha["Ativo"]);
                     cliente.Senha = Convert.ToString(linha["Senha"]);
+                    cliente.Email = Convert.ToString(linha["Email"]);
 
                     clienteColecao.Add(cliente);
                 }
