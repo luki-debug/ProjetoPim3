@@ -1,10 +1,6 @@
 ﻿using CamadaModel.CRUD;
 using CamadaModel.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CamadaDesktop
@@ -13,11 +9,10 @@ namespace CamadaDesktop
     {
         public static void AbrirFormFilha(Form frm, Form p)
         {
-            //frmMenu.AbrirForm(new frmCadastro());
             frm.TopLevel = false;
             frm.AutoScroll = true;
             p.Parent.Controls.Add(frm);
-            frm.Parent = p.Parent;
+            //frm.Parent = p.Parent;
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
             frm.FormBorderStyle = FormBorderStyle.None;

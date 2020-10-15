@@ -31,7 +31,6 @@ namespace CamadaDesktop
             //Instanciar o Default Layout Form
             DefaultLayout configLayout = new DefaultLayout();
             configLayout.FormDefaultFilha(this, iconButtons);
-
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -41,7 +40,6 @@ namespace CamadaDesktop
 
         private void frmListaClientes_Load(object sender, EventArgs e)
         {
-            //FuncoesTela funcoesTela = new FuncoesTela();
             FuncoesTela.CarregarTodosClienteFisica(dgFisica);
         }
     }

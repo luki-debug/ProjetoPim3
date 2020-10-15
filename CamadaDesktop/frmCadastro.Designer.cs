@@ -49,6 +49,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEstado = new System.Windows.Forms.ComboBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,8 +57,6 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnInserir = new FontAwesome.Sharp.IconButton();
             this.dgFisica = new System.Windows.Forms.DataGridView();
-            this.rbFisica = new System.Windows.Forms.RadioButton();
-            this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +64,8 @@
             this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtEstado = new System.Windows.Forms.ComboBox();
+            this.rbFisica = new System.Windows.Forms.RadioButton();
+            this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).BeginInit();
@@ -175,7 +175,7 @@
             this.groupBox1.Controls.Add(this.lblRg);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(29, 41);
+            this.groupBox1.Location = new System.Drawing.Point(24, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(478, 273);
             this.groupBox1.TabIndex = 2;
@@ -271,12 +271,21 @@
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(521, 39);
+            this.groupBox2.Location = new System.Drawing.Point(516, 39);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(427, 145);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.txtEstado.FormattingEnabled = true;
+            this.txtEstado.Location = new System.Drawing.Point(307, 64);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(52, 29);
+            this.txtEstado.TabIndex = 11;
             // 
             // txtCEP
             // 
@@ -335,7 +344,7 @@
             this.btnInserir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInserir.IconColor = System.Drawing.Color.Black;
             this.btnInserir.IconSize = 16;
-            this.btnInserir.Location = new System.Drawing.Point(29, 322);
+            this.btnInserir.Location = new System.Drawing.Point(24, 322);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Rotation = 0D;
             this.btnInserir.Size = new System.Drawing.Size(137, 46);
@@ -355,42 +364,14 @@
             this.colConsultar,
             this.colEditar,
             this.colExcluir});
-            this.dgFisica.Location = new System.Drawing.Point(29, 378);
+            this.dgFisica.Location = new System.Drawing.Point(24, 378);
+            this.dgFisica.MultiSelect = false;
             this.dgFisica.Name = "dgFisica";
             this.dgFisica.RowHeadersVisible = false;
-            this.dgFisica.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFisica.Size = new System.Drawing.Size(826, 195);
+            this.dgFisica.Size = new System.Drawing.Size(826, 169);
             this.dgFisica.TabIndex = 1;
             this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
-            // 
-            // rbFisica
-            // 
-            this.rbFisica.AutoSize = true;
-            this.rbFisica.Checked = true;
-            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFisica.ForeColor = System.Drawing.Color.White;
-            this.rbFisica.Location = new System.Drawing.Point(29, 12);
-            this.rbFisica.Name = "rbFisica";
-            this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 4;
-            this.rbFisica.TabStop = true;
-            this.rbFisica.Text = "Pessoa Fisica";
-            this.rbFisica.UseVisualStyleBackColor = true;
-            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
-            // 
-            // rbJuridica
-            // 
-            this.rbJuridica.AutoSize = true;
-            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbJuridica.ForeColor = System.Drawing.Color.White;
-            this.rbJuridica.Location = new System.Drawing.Point(161, 12);
-            this.rbJuridica.Name = "rbJuridica";
-            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 5;
-            this.rbJuridica.Text = "Pessoa Juridica";
-            this.rbJuridica.UseVisualStyleBackColor = true;
-            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
             // 
             // Column1
             // 
@@ -448,14 +429,33 @@
             this.colExcluir.ReadOnly = true;
             this.colExcluir.Width = 25;
             // 
-            // txtEstado
+            // rbFisica
             // 
-            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.txtEstado.FormattingEnabled = true;
-            this.txtEstado.Location = new System.Drawing.Point(307, 64);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(52, 29);
-            this.txtEstado.TabIndex = 11;
+            this.rbFisica.AutoSize = true;
+            this.rbFisica.Checked = true;
+            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFisica.ForeColor = System.Drawing.Color.White;
+            this.rbFisica.Location = new System.Drawing.Point(24, 12);
+            this.rbFisica.Name = "rbFisica";
+            this.rbFisica.Size = new System.Drawing.Size(126, 23);
+            this.rbFisica.TabIndex = 4;
+            this.rbFisica.TabStop = true;
+            this.rbFisica.Text = "Pessoa Fisica";
+            this.rbFisica.UseVisualStyleBackColor = true;
+            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
+            // 
+            // rbJuridica
+            // 
+            this.rbJuridica.AutoSize = true;
+            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJuridica.ForeColor = System.Drawing.Color.White;
+            this.rbJuridica.Location = new System.Drawing.Point(156, 12);
+            this.rbJuridica.Name = "rbJuridica";
+            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
+            this.rbJuridica.TabIndex = 5;
+            this.rbJuridica.Text = "Pessoa Juridica";
+            this.rbJuridica.UseVisualStyleBackColor = true;
+            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
             // 
             // frmCadastro
             // 
@@ -471,7 +471,6 @@
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastro";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
