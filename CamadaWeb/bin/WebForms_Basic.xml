@@ -37,13 +37,85 @@ CamadaWeb
  Returns the Asp log object.
  </summary>
 </member>
-<member name="F:CamadaWeb.SiteMaster._MainContent">
+<member name="F:CamadaWeb.About._Label1">
 <summary>
-MainContent control.
+Controle Label1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.About._TextBox1">
+<summary>
+Controle TextBox1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.About._Button1">
+<summary>
+Controle Button1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.RecuperarSenha._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.RecuperarSenha._Label1">
+<summary>
+Controle Label1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.RecuperarSenha._email">
+<summary>
+Controle email.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.RecuperarSenha._Button1">
+<summary>
+Controle Button1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.SiteMaster._Content">
+<summary>
+Controle Content.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:CamadaWeb.SiteMaster._MainContent">
+<summary>
+Controle MainContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
 <member name="F:CamadaWeb.Site_Mobile._Head1">
