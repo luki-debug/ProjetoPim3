@@ -35,10 +35,6 @@
             this.lblRg = new System.Windows.Forms.Label();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtLogradouro = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -48,6 +44,22 @@
             this.lblNascimento = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.dgFisica = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rbFisica = new System.Windows.Forms.RadioButton();
+            this.rbJuridica = new System.Windows.Forms.RadioButton();
+            this.btnVoltar = new FontAwesome.Sharp.IconPictureBox();
+            this.dtUltimoLogin = new System.Windows.Forms.MaskedTextBox();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.lblUltimoLogin = new System.Windows.Forms.Label();
+            this.btnInserir = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEstado = new System.Windows.Forms.ComboBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
@@ -55,20 +67,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.btnInserir = new FontAwesome.Sharp.IconButton();
-            this.dgFisica = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.rbFisica = new System.Windows.Forms.RadioButton();
-            this.rbJuridica = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNome
@@ -123,40 +129,6 @@
             this.lblCPF.TabIndex = 8;
             this.lblCPF.Text = "CPF";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Logradouro";
-            // 
-            // txtLogradouro
-            // 
-            this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLogradouro.Location = new System.Drawing.Point(121, 32);
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(169, 20);
-            this.txtLogradouro.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 21);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Cidade";
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCidade.Location = new System.Drawing.Point(121, 69);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(110, 20);
-            this.txtCidade.TabIndex = 2;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtCPF);
@@ -175,7 +147,7 @@
             this.groupBox1.Controls.Add(this.lblRg);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(24, 41);
+            this.groupBox1.Location = new System.Drawing.Point(24, 85);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(478, 273);
             this.groupBox1.TabIndex = 2;
@@ -257,6 +229,193 @@
             this.txtEmail.Size = new System.Drawing.Size(282, 20);
             this.txtEmail.TabIndex = 2;
             // 
+            // dgFisica
+            // 
+            this.dgFisica.AllowUserToAddRows = false;
+            this.dgFisica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFisica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column9,
+            this.Column10,
+            this.Column3,
+            this.colConsultar,
+            this.colExcluir,
+            this.colId});
+            this.dgFisica.Location = new System.Drawing.Point(24, 441);
+            this.dgFisica.MultiSelect = false;
+            this.dgFisica.Name = "dgFisica";
+            this.dgFisica.RowHeadersVisible = false;
+            this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgFisica.Size = new System.Drawing.Size(903, 173);
+            this.dgFisica.TabIndex = 1;
+            this.dgFisica.Visible = false;
+            this.dgFisica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFisica_CellContentClick);
+            this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 250;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "CPF";
+            this.Column2.HeaderText = "CPF";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Email";
+            this.Column9.HeaderText = "Email";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 250;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Telefone";
+            this.Column10.HeaderText = "Telefone";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 130;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Ativo";
+            this.Column3.HeaderText = "Ativo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 50;
+            // 
+            // colConsultar
+            // 
+            this.colConsultar.HeaderText = "";
+            this.colConsultar.Image = ((System.Drawing.Image)(resources.GetObject("colConsultar.Image")));
+            this.colConsultar.Name = "colConsultar";
+            this.colConsultar.ReadOnly = true;
+            this.colConsultar.Width = 25;
+            // 
+            // colExcluir
+            // 
+            this.colExcluir.HeaderText = "";
+            this.colExcluir.Image = ((System.Drawing.Image)(resources.GetObject("colExcluir.Image")));
+            this.colExcluir.Name = "colExcluir";
+            this.colExcluir.ReadOnly = true;
+            this.colExcluir.Width = 25;
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "IdPessoa";
+            this.colId.HeaderText = "colId";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Visible = false;
+            // 
+            // rbFisica
+            // 
+            this.rbFisica.AutoSize = true;
+            this.rbFisica.Checked = true;
+            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFisica.ForeColor = System.Drawing.Color.White;
+            this.rbFisica.Location = new System.Drawing.Point(24, 59);
+            this.rbFisica.Name = "rbFisica";
+            this.rbFisica.Size = new System.Drawing.Size(126, 23);
+            this.rbFisica.TabIndex = 4;
+            this.rbFisica.TabStop = true;
+            this.rbFisica.Text = "Pessoa Fisica";
+            this.rbFisica.UseVisualStyleBackColor = true;
+            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
+            // 
+            // rbJuridica
+            // 
+            this.rbJuridica.AutoSize = true;
+            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJuridica.ForeColor = System.Drawing.Color.White;
+            this.rbJuridica.Location = new System.Drawing.Point(156, 59);
+            this.rbJuridica.Name = "rbJuridica";
+            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
+            this.rbJuridica.TabIndex = 5;
+            this.rbJuridica.Text = "Pessoa Juridica";
+            this.rbJuridica.UseVisualStyleBackColor = true;
+            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
+            this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnVoltar.IconColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(24, 8);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(34, 32);
+            this.btnVoltar.TabIndex = 6;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            this.btnVoltar.MouseLeave += new System.EventHandler(this.btnVoltar_MouseLeave);
+            this.btnVoltar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnVoltar_MouseMove);
+            // 
+            // dtUltimoLogin
+            // 
+            this.dtUltimoLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtUltimoLogin.Enabled = false;
+            this.dtUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtUltimoLogin.Location = new System.Drawing.Point(637, 247);
+            this.dtUltimoLogin.Mask = "00/00/0000 90:00";
+            this.dtUltimoLogin.Name = "dtUltimoLogin";
+            this.dtUltimoLogin.Size = new System.Drawing.Size(129, 20);
+            this.dtUltimoLogin.TabIndex = 7;
+            this.dtUltimoLogin.ValidatingType = typeof(System.DateTime);
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Enabled = false;
+            this.chkAtivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAtivo.ForeColor = System.Drawing.Color.White;
+            this.chkAtivo.Location = new System.Drawing.Point(637, 284);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(72, 25);
+            this.chkAtivo.TabIndex = 8;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // lblUltimoLogin
+            // 
+            this.lblUltimoLogin.AutoSize = true;
+            this.lblUltimoLogin.Enabled = false;
+            this.lblUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoLogin.ForeColor = System.Drawing.Color.White;
+            this.lblUltimoLogin.Location = new System.Drawing.Point(527, 247);
+            this.lblUltimoLogin.Name = "lblUltimoLogin";
+            this.lblUltimoLogin.Size = new System.Drawing.Size(104, 21);
+            this.lblUltimoLogin.TabIndex = 9;
+            this.lblUltimoLogin.Text = "Ultimo Login";
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnInserir.FlatAppearance.BorderSize = 0;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnInserir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.ForeColor = System.Drawing.Color.White;
+            this.btnInserir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnInserir.IconColor = System.Drawing.Color.Black;
+            this.btnInserir.IconSize = 16;
+            this.btnInserir.Location = new System.Drawing.Point(24, 373);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Rotation = 0D;
+            this.btnInserir.Size = new System.Drawing.Size(137, 46);
+            this.btnInserir.TabIndex = 0;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtEstado);
@@ -271,7 +430,7 @@
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(516, 39);
+            this.groupBox2.Location = new System.Drawing.Point(521, 85);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(427, 145);
             this.groupBox2.TabIndex = 3;
@@ -280,7 +439,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.txtEstado.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.txtEstado.FormattingEnabled = true;
             this.txtEstado.Location = new System.Drawing.Point(307, 64);
             this.txtEstado.Name = "txtEstado";
@@ -333,129 +492,39 @@
             this.txtNumero.Size = new System.Drawing.Size(60, 20);
             this.txtNumero.TabIndex = 1;
             // 
-            // btnInserir
+            // label6
             // 
-            this.btnInserir.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnInserir.FlatAppearance.BorderSize = 0;
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInserir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnInserir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.ForeColor = System.Drawing.Color.White;
-            this.btnInserir.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnInserir.IconColor = System.Drawing.Color.Black;
-            this.btnInserir.IconSize = 16;
-            this.btnInserir.Location = new System.Drawing.Point(24, 322);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Rotation = 0D;
-            this.btnInserir.Size = new System.Drawing.Size(137, 46);
-            this.btnInserir.TabIndex = 0;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = false;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(46, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 21);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Cidade";
             // 
-            // dgFisica
+            // label5
             // 
-            this.dgFisica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgFisica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column9,
-            this.Column10,
-            this.colConsultar,
-            this.colEditar,
-            this.colExcluir});
-            this.dgFisica.Location = new System.Drawing.Point(24, 378);
-            this.dgFisica.MultiSelect = false;
-            this.dgFisica.Name = "dgFisica";
-            this.dgFisica.RowHeadersVisible = false;
-            this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFisica.Size = new System.Drawing.Size(826, 169);
-            this.dgFisica.TabIndex = 1;
-            this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 21);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Logradouro";
             // 
-            // Column1
+            // txtCidade
             // 
-            this.Column1.DataPropertyName = "Nome";
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 250;
+            this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCidade.Location = new System.Drawing.Point(121, 69);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(110, 20);
+            this.txtCidade.TabIndex = 2;
             // 
-            // Column2
+            // txtLogradouro
             // 
-            this.Column2.DataPropertyName = "CPF";
-            this.Column2.HeaderText = "CPF";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 110;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Email";
-            this.Column9.HeaderText = "Email";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 250;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Telefone";
-            this.Column10.HeaderText = "Telefone";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 120;
-            // 
-            // colConsultar
-            // 
-            this.colConsultar.HeaderText = "";
-            this.colConsultar.Image = ((System.Drawing.Image)(resources.GetObject("colConsultar.Image")));
-            this.colConsultar.Name = "colConsultar";
-            this.colConsultar.ReadOnly = true;
-            this.colConsultar.Width = 25;
-            // 
-            // colEditar
-            // 
-            this.colEditar.HeaderText = "";
-            this.colEditar.Image = ((System.Drawing.Image)(resources.GetObject("colEditar.Image")));
-            this.colEditar.Name = "colEditar";
-            this.colEditar.ReadOnly = true;
-            this.colEditar.Width = 25;
-            // 
-            // colExcluir
-            // 
-            this.colExcluir.HeaderText = "";
-            this.colExcluir.Image = ((System.Drawing.Image)(resources.GetObject("colExcluir.Image")));
-            this.colExcluir.Name = "colExcluir";
-            this.colExcluir.ReadOnly = true;
-            this.colExcluir.Width = 25;
-            // 
-            // rbFisica
-            // 
-            this.rbFisica.AutoSize = true;
-            this.rbFisica.Checked = true;
-            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFisica.ForeColor = System.Drawing.Color.White;
-            this.rbFisica.Location = new System.Drawing.Point(24, 12);
-            this.rbFisica.Name = "rbFisica";
-            this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 4;
-            this.rbFisica.TabStop = true;
-            this.rbFisica.Text = "Pessoa Fisica";
-            this.rbFisica.UseVisualStyleBackColor = true;
-            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
-            // 
-            // rbJuridica
-            // 
-            this.rbJuridica.AutoSize = true;
-            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbJuridica.ForeColor = System.Drawing.Color.White;
-            this.rbJuridica.Location = new System.Drawing.Point(156, 12);
-            this.rbJuridica.Name = "rbJuridica";
-            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 5;
-            this.rbJuridica.Text = "Pessoa Juridica";
-            this.rbJuridica.UseVisualStyleBackColor = true;
-            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
+            this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLogradouro.Location = new System.Drawing.Point(121, 32);
+            this.txtLogradouro.Name = "txtLogradouro";
+            this.txtLogradouro.Size = new System.Drawing.Size(169, 20);
+            this.txtLogradouro.TabIndex = 0;
             // 
             // frmCadastro
             // 
@@ -465,22 +534,27 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(960, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.lblUltimoLogin);
+            this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.chkAtivo);
+            this.Controls.Add(this.dtUltimoLogin);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.rbJuridica);
             this.Controls.Add(this.rbFisica);
             this.Controls.Add(this.dgFisica);
-            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Name = "frmCadastro";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cadastro";
-            this.Load += new System.EventHandler(this.frmCadastro_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastro_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,37 +568,42 @@
         private System.Windows.Forms.Label lblRg;
         private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.Label lblCPF;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtLogradouro;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.DateTimePicker dtNascimento;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
-        private FontAwesome.Sharp.IconButton btnInserir;
         private System.Windows.Forms.DataGridView dgFisica;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCPF;
-        private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.RadioButton rbFisica;
         private System.Windows.Forms.RadioButton rbJuridica;
+        private FontAwesome.Sharp.IconPictureBox btnVoltar;
+        private System.Windows.Forms.MaskedTextBox dtUltimoLogin;
+        private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.Label lblUltimoLogin;
+        private FontAwesome.Sharp.IconButton btnInserir;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox txtEstado;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn colConsultar;
-        private System.Windows.Forms.DataGridViewImageColumn colEditar;
         private System.Windows.Forms.DataGridViewImageColumn colExcluir;
-        private System.Windows.Forms.ComboBox txtEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
     }
 }
 

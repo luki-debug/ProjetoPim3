@@ -14,6 +14,7 @@ namespace CamadaDesktop
 {
     public partial class frmMenu : Form
     {
+        private Form formAtual = new Form();
         IconButton currentButton = new IconButton();
         IconButton buttonDefault = new IconButton();
         public frmMenu()
@@ -34,6 +35,7 @@ namespace CamadaDesktop
         }
         private void iconBtnCadastrar_Click(object sender, EventArgs e)
         {
+            formAtual.Close();
             currentButton.BackColor = buttonDefault.BackColor;
             currentButton.Location = buttonDefault.Location;
             currentButton.TextImageRelation = buttonDefault.TextImageRelation;
@@ -53,12 +55,14 @@ namespace CamadaDesktop
             iconBtnCadastro.IconColor = Color.White;
             lblTitulo.Text = iconBtnCadastro.Text;
             AbrirForm(new frmListaClientes());
+            formAtual = new frmListaClientes();
             currentButton = sender as IconButton;
 
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
+            formAtual.Close();
             currentButton.BackColor = buttonDefault.BackColor;
             currentButton.Location = buttonDefault.Location;
             currentButton.TextImageRelation = buttonDefault.TextImageRelation;
@@ -84,6 +88,7 @@ namespace CamadaDesktop
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
+            formAtual.Close();
             currentButton.BackColor = buttonDefault.BackColor;
             currentButton.Location = buttonDefault.Location;
             currentButton.TextImageRelation = buttonDefault.TextImageRelation;
@@ -110,6 +115,7 @@ namespace CamadaDesktop
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            formAtual.Close();
             currentButton.BackColor = buttonDefault.BackColor;
             currentButton.Location = buttonDefault.Location;
             currentButton.TextImageRelation = buttonDefault.TextImageRelation;
@@ -130,6 +136,7 @@ namespace CamadaDesktop
             iconBtnInicio.IconColor = Color.White;
             lblTitulo.Text = iconBtnInicio.Text;
             AbrirForm(new frmInicio());
+            formAtual = new frmInicio();
             currentButton = sender as IconButton;
 
         }

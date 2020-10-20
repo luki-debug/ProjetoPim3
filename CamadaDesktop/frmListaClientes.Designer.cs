@@ -42,9 +42,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.rbJuridica = new System.Windows.Forms.RadioButton();
+            this.rbFisica = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,13 +58,14 @@
             this.btnPesquisar.IconColor = System.Drawing.Color.White;
             this.btnPesquisar.IconSize = 32;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(425, 59);
+            this.btnPesquisar.Location = new System.Drawing.Point(401, 67);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Rotation = 0D;
             this.btnPesquisar.Size = new System.Drawing.Size(137, 46);
             this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtPesquisar
             // 
@@ -69,7 +73,7 @@
             this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisar.ForeColor = System.Drawing.Color.Black;
-            this.txtPesquisar.Location = new System.Drawing.Point(52, 85);
+            this.txtPesquisar.Location = new System.Drawing.Point(28, 93);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(367, 20);
             this.txtPesquisar.TabIndex = 0;
@@ -79,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(48, 59);
+            this.label1.Location = new System.Drawing.Point(24, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 21);
             this.label1.TabIndex = 5;
@@ -92,7 +96,7 @@
             this.btnNovo.IconColor = System.Drawing.Color.White;
             this.btnNovo.IconSize = 32;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(568, 59);
+            this.btnNovo.Location = new System.Drawing.Point(544, 67);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Rotation = 0D;
             this.btnNovo.Size = new System.Drawing.Size(137, 46);
@@ -103,6 +107,7 @@
             // 
             // dgFisica
             // 
+            this.dgFisica.AllowUserToAddRows = false;
             this.dgFisica.AllowUserToOrderColumns = true;
             this.dgFisica.AllowUserToResizeColumns = false;
             this.dgFisica.AllowUserToResizeRows = false;
@@ -127,6 +132,7 @@
             this.Column2,
             this.Column9,
             this.Column10,
+            this.Column3,
             this.colConsultar,
             this.colEditar,
             this.colExcluir});
@@ -139,7 +145,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgFisica.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgFisica.EnableHeadersVisualStyles = false;
-            this.dgFisica.Location = new System.Drawing.Point(52, 121);
+            this.dgFisica.Location = new System.Drawing.Point(25, 129);
             this.dgFisica.MultiSelect = false;
             this.dgFisica.Name = "dgFisica";
             this.dgFisica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -153,8 +159,10 @@
             this.dgFisica.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgFisica.RowHeadersVisible = false;
             this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFisica.Size = new System.Drawing.Size(822, 375);
+            this.dgFisica.Size = new System.Drawing.Size(923, 391);
             this.dgFisica.TabIndex = 3;
+            this.dgFisica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFisica_CellContentClick);
+            this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
             // 
             // Column1
             // 
@@ -170,7 +178,7 @@
             this.Column2.HeaderText = "CPF";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 110;
+            this.Column2.Width = 150;
             // 
             // Column9
             // 
@@ -186,7 +194,15 @@
             this.Column10.HeaderText = "Telefone";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 120;
+            this.Column10.Width = 130;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Ativo";
+            this.Column3.HeaderText = "Ativo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 50;
             // 
             // colConsultar
             // 
@@ -212,12 +228,42 @@
             this.colExcluir.ReadOnly = true;
             this.colExcluir.Width = 25;
             // 
+            // rbJuridica
+            // 
+            this.rbJuridica.AutoSize = true;
+            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJuridica.ForeColor = System.Drawing.Color.White;
+            this.rbJuridica.Location = new System.Drawing.Point(160, 20);
+            this.rbJuridica.Name = "rbJuridica";
+            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
+            this.rbJuridica.TabIndex = 7;
+            this.rbJuridica.Text = "Pessoa Juridica";
+            this.rbJuridica.UseVisualStyleBackColor = true;
+            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
+            // 
+            // rbFisica
+            // 
+            this.rbFisica.AutoSize = true;
+            this.rbFisica.Checked = true;
+            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFisica.ForeColor = System.Drawing.Color.White;
+            this.rbFisica.Location = new System.Drawing.Point(28, 20);
+            this.rbFisica.Name = "rbFisica";
+            this.rbFisica.Size = new System.Drawing.Size(126, 23);
+            this.rbFisica.TabIndex = 6;
+            this.rbFisica.TabStop = true;
+            this.rbFisica.Text = "Pessoa Fisica";
+            this.rbFisica.UseVisualStyleBackColor = true;
+            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
+            // 
             // frmListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(960, 626);
+            this.Controls.Add(this.rbJuridica);
+            this.Controls.Add(this.rbFisica);
             this.Controls.Add(this.dgFisica);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label1);
@@ -238,10 +284,13 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnNovo;
         private System.Windows.Forms.DataGridView dgFisica;
+        private System.Windows.Forms.RadioButton rbJuridica;
+        private System.Windows.Forms.RadioButton rbFisica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn colConsultar;
         private System.Windows.Forms.DataGridViewImageColumn colEditar;
         private System.Windows.Forms.DataGridViewImageColumn colExcluir;

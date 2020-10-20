@@ -36,3 +36,4 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\MaterialSkin
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmLogin.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmInicio.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaClientes.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.ClienteConsultar.resources

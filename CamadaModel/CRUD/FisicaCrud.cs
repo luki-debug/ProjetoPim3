@@ -94,7 +94,7 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
                 string IdCliente = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "DELETE FROM FISICA WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM PESSOA WHERE=@IdPessoa SELECT @IdPessoa AS RETORNO END").ToString();
+                    "DELETE FROM PESSOA WHERE IdPessoa= @IdPessoa SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return IdCliente;
             }
@@ -104,7 +104,7 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<Fisica> ConsultarNome(Fisica fisica)
+        public List<Fisica> ConsultarNomeOrId(Fisica fisica)
         {
             try
             {
@@ -112,9 +112,11 @@ namespace CamadaModel.CRUD
                 List<Fisica> clienteColecao = new List<Fisica>();
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Nome", fisica.Nome);
+                acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
-                    "ON P.IdPessoa=F.IdPessoa WHERE Nome Like '%'+@Nome+'%'");
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "BEGIN SELECT * FROM Pessoa AS P INNER JOIN Fisica AS F " +
+                    "ON P.IdPessoa=F.IdPessoa WHERE (@IdPessoa =0 OR P.IdPessoa=@IdPessoa) AND (@Nome IS NULL OR F.Nome LIKE '%'+@Nome+'%') " +
+                    "ORDER BY F.Nome ASC END");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente

@@ -27,5 +27,10 @@ namespace CamadaModel.Entities
         public Fisica()
         {
         }
+
+        public static explicit operator Fisica(List<Pessoa> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
