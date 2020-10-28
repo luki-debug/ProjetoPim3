@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace CamadaDesktop
 {
@@ -53,7 +54,6 @@ namespace CamadaDesktop
             iconBtnCadastro.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnCadastro.ForeColor = Color.White;
             iconBtnCadastro.IconColor = Color.White;
-            lblTitulo.Text = iconBtnCadastro.Text;
             AbrirForm(new frmListaClientes());
             formAtual = new frmListaClientes();
             currentButton = sender as IconButton;
@@ -81,35 +81,36 @@ namespace CamadaDesktop
             iconBtnCarteira.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnCarteira.ForeColor = Color.White;
             iconBtnCarteira.IconColor = Color.White;
-            lblTitulo.Text = iconBtnCarteira.Text;
-            //AbrirForm(new frmCadastro());
+            //lblTitulo.Text = iconBtnCarteira.Text;
+            AbrirForm(new frmRelInvestimento());
             currentButton = sender as IconButton;
         }
 
-        private void iconButton4_Click(object sender, EventArgs e)
+        private void BtnReport_Click(object sender, EventArgs e)
         {
-            formAtual.Close();
-            currentButton.BackColor = buttonDefault.BackColor;
-            currentButton.Location = buttonDefault.Location;
-            currentButton.TextImageRelation = buttonDefault.TextImageRelation;
-            currentButton.IconColor = buttonDefault.IconColor;
-            currentButton.ForeColor = buttonDefault.ForeColor;
+            //formAtual.Close();
+            //currentButton.BackColor = buttonDefault.BackColor;
+            //currentButton.Location = buttonDefault.Location;
+            //currentButton.TextImageRelation = buttonDefault.TextImageRelation;
+            //currentButton.IconColor = buttonDefault.IconColor;
+            //currentButton.ForeColor = buttonDefault.ForeColor;
 
 
-            buttonDefault.BackColor = iconBtnBtc.BackColor;
-            buttonDefault.Location = iconBtnBtc.Location;
-            buttonDefault.TextImageRelation = iconBtnBtc.TextImageRelation;
-            buttonDefault.ForeColor = iconBtnBtc.ForeColor;
-            buttonDefault.IconColor = iconBtnBtc.IconColor;
+            //buttonDefault.BackColor = BtnReport.BackColor;
+            //buttonDefault.Location = BtnReport.Location;
+            //buttonDefault.TextImageRelation = BtnReport.TextImageRelation;
+            //buttonDefault.ForeColor = BtnReport.ForeColor;
+            //buttonDefault.IconColor = BtnReport.IconColor;
 
-            //iconBtnCadastro.Location = new Point(6, 127);
-            iconBtnBtc.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconBtnBtc.BackColor = Color.FromArgb(104, 242, 133);
-            iconBtnBtc.ForeColor = Color.White;
-            iconBtnBtc.IconColor = Color.White;
-            lblTitulo.Text = iconBtnBtc.Text;
-            //AbrirForm(new frmCadastro());
-            currentButton = sender as IconButton;
+            ////iconBtnCadastro.Location = new Point(6, 127);
+            //BtnReport.TextImageRelation = TextImageRelation.TextBeforeImage;
+            //BtnReport.BackColor = Color.FromArgb(104, 242, 133);
+            //BtnReport.ForeColor = Color.White;
+            //BtnReport.IconColor = Color.White;
+            ////lblTitulo.Text = iconBtnBtc.Text;
+            //AbrirForm(new frmRelFisicaAtiva());
+            //currentButton = sender as IconButton;
+            pnlSubMenuRelatorio.Visible = true;
 
         }
 
@@ -134,7 +135,7 @@ namespace CamadaDesktop
             iconBtnInicio.BackColor = Color.FromArgb(104, 242, 133);
             iconBtnInicio.ForeColor = Color.White;
             iconBtnInicio.IconColor = Color.White;
-            lblTitulo.Text = iconBtnInicio.Text;
+            //lblTitulo.Text = iconBtnInicio.Text;
             AbrirForm(new frmInicio());
             formAtual = new frmInicio();
             currentButton = sender as IconButton;
@@ -163,5 +164,41 @@ namespace CamadaDesktop
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        //Ativar a captura do movimento do mouse na barra de titulo
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+        private void pnlBarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnReportSituacao_Click(object sender, EventArgs e)
+        {
+            formAtual.Close();
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelClienteSituacao());
+            formAtual = new frmRelClienteSituacao();
+        }
+
+        private void btnReportInvestimento_Click(object sender, EventArgs e)
+        {
+            formAtual.Close();
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelInvestimento());
+            formAtual = new frmRelInvestimento();
+        }
+
+        private void btnReportTop_Click(object sender, EventArgs e)
+        {
+            formAtual.Close();
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelTop());
+            formAtual = new frmRelTop();
+        }
+        //---
     }
 }

@@ -24,8 +24,9 @@ namespace CamadaDesktop
             //Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Purple900, Primary.BlueGrey900,
-                Primary.Green700, Accent.Orange700,
-                TextShade.WHITE);
+                Primary.Blue900, Accent.Orange700,
+                TextShade.WHITE
+                );
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

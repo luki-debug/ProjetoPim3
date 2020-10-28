@@ -1,5 +1,6 @@
 ﻿using CamadaModel.CRUD;
 using CamadaModel.Entities;
+using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -57,6 +58,17 @@ namespace CamadaDesktop
             dg.DataSource = list;
             dg.Refresh();
             dg.Update();
+        }
+
+        public static void DesativarPDFReport(ReportViewer reportViewer)
+        {
+            var fieldInfo = typeof(RenderingExtension).GetField("m_isVisible", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+
+            foreach (var extension in reportViewer.LocalReport.ListRenderingExtensions())
+            {
+                if (string.Compare("PDF", extension.Name) == 0)
+                    fieldInfo.SetValue(extension, false);
+            }
         }
     }
 }

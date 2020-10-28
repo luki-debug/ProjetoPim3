@@ -107,7 +107,7 @@
             this.iconPicSenha.IconChar = FontAwesome.Sharp.IconChar.UnlockAlt;
             this.iconPicSenha.IconColor = System.Drawing.Color.Black;
             this.iconPicSenha.IconSize = 25;
-            this.iconPicSenha.Location = new System.Drawing.Point(297, 189);
+            this.iconPicSenha.Location = new System.Drawing.Point(297, 190);
             this.iconPicSenha.Name = "iconPicSenha";
             this.iconPicSenha.Size = new System.Drawing.Size(32, 25);
             this.iconPicSenha.TabIndex = 7;
