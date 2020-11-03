@@ -135,6 +135,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="CadastroDeAlgumaCoisa.aspx" />
+    <Content Include="CadastroUsuario.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -207,6 +208,13 @@
     </Compile>
     <Compile Include="CadastroDeAlgumaCoisa.aspx.vb">
       <DependentUpon>CadastroDeAlgumaCoisa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CadastroUsuario.aspx.designer.vb">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroUsuario.aspx.vb">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.vb">

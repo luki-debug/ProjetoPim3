@@ -11,3 +11,9 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaCont
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.pdb
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.dll.config
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.dll
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.pdb
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csprojAssemblyReference.cache
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.dll
+C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.pdb
