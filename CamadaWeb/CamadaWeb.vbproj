@@ -134,8 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+<<<<<<< Updated upstream
     <Content Include="atualiazaocadastro.aspx" />
     <Content Include="CadastroDeAlgumaCoisa.aspx" />
+=======
+    <Content Include="Attcadastro.aspx" />
+>>>>>>> Stashed changes
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -201,6 +205,7 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="atualiazaocadastro.aspx.designer.vb">
@@ -215,6 +220,13 @@
     </Compile>
     <Compile Include="CadastroDeAlgumaCoisa.aspx.vb">
       <DependentUpon>CadastroDeAlgumaCoisa.aspx</DependentUpon>
+=======
+    <Compile Include="Attcadastro.aspx.designer.vb">
+      <DependentUpon>Attcadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attcadastro.aspx.vb">
+      <DependentUpon>Attcadastro.aspx</DependentUpon>
+>>>>>>> Stashed changes
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.vb">
