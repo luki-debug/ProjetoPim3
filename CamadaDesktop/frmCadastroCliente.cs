@@ -28,15 +28,14 @@ namespace CamadaDesktop
 
             List<IconButton> listButton = new List<IconButton>();
             listButton.Add(btnInserir);
+            listButton.Add(BtnCancelar);
             DefaultLayout configLayout = new DefaultLayout();
             configLayout.FormDefaultFilha(this, listButton);
-            configLayout.LayoutGrid(dgFisica);
             frmPai = Pai;
             this.pessoa = pessoa;
 
             if (tipoTela == 1)
             {
-                dgFisica.Visible = false;
                 ModoConsulta();
                 CarregarClienteTela(pessoa, rb);
             }
@@ -78,12 +77,6 @@ namespace CamadaDesktop
             lblNascimento.Visible = false;
             dtNascimento.Visible = false;
 
-            dgFisica.Columns[0].HeaderText = "Razao Social";
-            dgFisica.Columns[0].DataPropertyName = "RazaoSocial";
-
-            dgFisica.Columns[1].HeaderText = "CNPJ";
-            dgFisica.Columns[1].DataPropertyName = "CNPJ";
-
             if (btnInserir.Text == "Inserir")
                 LimparTela();
         }
@@ -101,12 +94,6 @@ namespace CamadaDesktop
 
             lblNascimento.Visible = true;
             dtNascimento.Visible = true;
-
-            dgFisica.Columns[0].HeaderText = "Nome";
-            dgFisica.Columns[0].DataPropertyName = "Nome";
-
-            dgFisica.Columns[1].HeaderText = "CPF";
-            dgFisica.Columns[1].DataPropertyName = "CPF";
 
             if (btnInserir.Text == "Inserir")
                 LimparTela();
@@ -127,7 +114,6 @@ namespace CamadaDesktop
             txtTelefone.Text = "";
             dtNascimento.Text = "";
             dtUltimoLogin.Text = "";
-            dgFisica.DataSource = null;
         }
 
         private void InserirOrAlterarJuridica(Pessoa pessoa)
@@ -180,15 +166,6 @@ namespace CamadaDesktop
                         MessageBox.Show("Cliente Cadastrado com sucesso ID: " + retorno, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Cliente Alterado com sucesso ID: " + retorno, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    juridica.IdPessoa = int.Parse(retorno);
-                    listJuridica.Add(juridica);
-
-                    dgFisica.AutoGenerateColumns = false;
-                    dgFisica.DataSource = null;
-                    dgFisica.DataSource = listJuridica;
-                    dgFisica.Refresh();
-                    dgFisica.Update();
                 }
             }
             catch (Exception ex)
@@ -247,14 +224,6 @@ namespace CamadaDesktop
                         MessageBox.Show("Cliente Cadastrado com sucesso ID: " + retorno, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Cliente Alterado com sucesso ID: " + retorno, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    fisica.IdPessoa = int.Parse(retorno);
-                    listFisica.Add(fisica);
-
-                    dgFisica.AutoGenerateColumns = false;
-                    dgFisica.DataSource = null;
-                    dgFisica.DataSource = listFisica;
-                    dgFisica.Refresh();
-                    dgFisica.Update();
                 }
             }
             catch (Exception ex)
@@ -271,8 +240,6 @@ namespace CamadaDesktop
             }
             else if (btnInserir.Text == "Inserir")
             {
-                dgFisica.Visible = true;
-
                 if (rbFisica.Checked == true)
                     InserirOrAlterarFisica(pessoa);
                 else if (rbJuridica.Checked == true)
@@ -284,93 +251,9 @@ namespace CamadaDesktop
                     InserirOrAlterarFisica(pessoa);
                 else if (rbJuridica.Checked == true)
                     InserirOrAlterarJuridica(pessoa);
-
-                this.Close();
-
             }
+            this.Close();
         }
-
-        private void dgFisica_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //Adiciona ToolType nas Imagens
-            dgFisica.Rows[e.RowIndex].Cells["colConsultar"].ToolTipText = "Click aqui para consultar";
-            dgFisica.Rows[e.RowIndex].Cells["colExcluir"].ToolTipText = "Click aqui para excluir";
-
-            //
-        }
-
-        private void dgFisica_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgFisica.Columns[e.ColumnIndex] == dgFisica.Columns["colConsultar"])
-                {
-                    ModoConsulta();
-                    ConsultarClienteDoGrid();
-
-                }
-                else if (dgFisica.Columns[e.ColumnIndex] == dgFisica.Columns["colExcluir"])
-                {
-                    DialogResult result = MessageBox.Show("Deseja Excluir este usuario ?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.No)
-                    {
-                        return;
-                    }
-                    else
-                    {
-
-                        string retorno = string.Empty;
-                        Pessoa pessoa = new Pessoa();
-
-                        if (rbFisica.Checked == true)
-                        {
-                            Fisica itemSelecionado = (dgFisica.SelectedRows[0].DataBoundItem as Fisica);
-                            FisicaCrud fisicaCrud = new FisicaCrud();
-                            retorno = fisicaCrud.Excluir(itemSelecionado);
-                            pessoa = (Fisica)itemSelecionado;
-                        }
-                        else if (rbJuridica.Checked == true)
-                        {
-                            Juridica itemSelecionado = dgFisica.SelectedRows[0].DataBoundItem as Juridica;
-                            JuridicaCrud juridicaCrud = new JuridicaCrud();
-                            retorno = juridicaCrud.Excluir(itemSelecionado);
-                            pessoa = (Juridica)itemSelecionado;
-
-                        }
-                        if (int.TryParse(retorno, out _) == false)
-                        {
-                            MessageBox.Show("Erro. Detalhes: " + retorno, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Excluido com sucesso: ID " + retorno, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            dgFisica.DataSource = null;
-                            if (rbFisica.Checked == true)
-                            {
-
-                                listFisica.Remove((Fisica)pessoa);
-                                dgFisica.DataSource = listFisica;
-                            }
-                            else
-                            {
-                                listJuridica.Remove((Juridica)pessoa);
-                                dgFisica.DataSource = listJuridica;
-                            }
-                            dgFisica.Update();
-                            dgFisica.Refresh();
-                        }
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro. Detalhes: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnVoltar_MouseMove(object sender, MouseEventArgs e)
         {
             btnVoltar.IconColor = Color.Black;
@@ -385,56 +268,6 @@ namespace CamadaDesktop
         {
             this.Close();
         }
-
-        private void ConsultarClienteDoGrid()
-        {
-            Pessoa itemSelecionado;
-            Fisica fisica = new Fisica();
-            Juridica juridica = new Juridica();
-
-            //Selecionar o item no Grid se fisica ou juridica
-            if (rbFisica.Checked == true)
-            {
-                itemSelecionado = (Fisica)dgFisica.SelectedRows[0].DataBoundItem;
-                fisica = (Fisica)itemSelecionado;
-            }
-            else
-            {
-                itemSelecionado = (Juridica)dgFisica.SelectedRows[0].DataBoundItem;
-                juridica = (Juridica)itemSelecionado;
-            }
-
-            //Carregar campos da classe Pai
-            txtCEP.Text = itemSelecionado.CEP;
-            txtCidade.Text = itemSelecionado.Cidade;
-            txtEmail.Text = itemSelecionado.Email;
-            txtEstado.Text = itemSelecionado.Estado;
-            txtLogradouro.Text = itemSelecionado.Logradouro;
-            txtNumero.Text = itemSelecionado.Numero.ToString();
-            txtTelefone.Text = itemSelecionado.Telefone;
-            txtSenha.Text = itemSelecionado.Senha;
-            dtUltimoLogin.Text = itemSelecionado.DtUltimoLogin.ToString();
-            if (itemSelecionado.Ativo == 'T')
-                chkAtivo.Checked = true;
-            else
-                chkAtivo.Checked = false;
-
-            //Carregar campos na filha, fisica ou juridica
-            if (rbFisica.Checked == true)
-            {
-                txtCPF.Text = fisica.CPF;
-                txtNome.Text = fisica.Nome;
-                txtRg.Text = fisica.RG;
-                dtNascimento.Text = fisica.DataNascimento.ToString();
-            }
-            else
-            {
-                txtNome.Text = juridica.RazaoSocial;
-                txtRg.Text = juridica.CNPJ;
-            }
-
-        }
-
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             frmPai.AtualizarGrid();
@@ -447,7 +280,7 @@ namespace CamadaDesktop
             btnInserir.Text = "Fechar";
             rbFisica.Visible = false;
             rbJuridica.Visible = false;
-
+            BtnCancelar.Visible = false;
 
             //txt em modo ReadOnly
             txtCEP.ReadOnly = true;
@@ -473,7 +306,6 @@ namespace CamadaDesktop
             btnInserir.Text = "Alterar";
             rbFisica.Visible = false;
             rbJuridica.Visible = false;
-            dgFisica.Visible = false;
         }
 
         private void ModoInserir()
@@ -482,7 +314,6 @@ namespace CamadaDesktop
             btnInserir.Text = "Inserir";
             rbFisica.Visible = true;
             rbJuridica.Visible = true;
-            dgFisica.Visible = true;
         }
 
         private void CarregarClienteTela(Pessoa pessoa, RadioButton rb)
@@ -525,6 +356,11 @@ namespace CamadaDesktop
                 txtNome.Text = juridica.RazaoSocial;
                 txtRg.Text = juridica.CNPJ;
             }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

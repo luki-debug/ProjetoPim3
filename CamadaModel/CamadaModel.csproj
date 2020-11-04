@@ -52,7 +52,6 @@
     <Compile Include="CRUD\TipoTransacaoCrud.cs" />
     <Compile Include="CRUD\UsuarioCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />
-    <Compile Include="Entities\Departamento.cs" />
     <Compile Include="Entities\Enums\EnumEstado.cs" />
     <Compile Include="Entities\Fisica.cs" />
     <Compile Include="Entities\HistoricoCarteira.cs" />

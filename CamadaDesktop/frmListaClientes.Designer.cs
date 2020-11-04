@@ -54,7 +54,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPesquisar.IconColor = System.Drawing.Color.White;
             this.btnPesquisar.IconSize = 32;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
