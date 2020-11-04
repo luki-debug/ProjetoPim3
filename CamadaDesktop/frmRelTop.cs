@@ -27,11 +27,7 @@ namespace CamadaDesktop
 
         private void frmRelTop_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'BdLumiaDataSet.RelInvestimentosTop10Juridica' table. You can move, or remove it, as needed.
-            //this.RelInvestimentosTop10JuridicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Juridica);
-            // TODO: This line of code loads data into the 'BdLumiaDataSet.RelInvestimentosTop10Fisica' table. You can move, or remove it, as needed.
-            //this.RelInvestimentosTop10FisicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Fisica);
-
+            FuncoesTela.DesativarPDFReport(reportViewer1);
         }
 
         private void rbFisica_CheckedChanged(object sender, EventArgs e)

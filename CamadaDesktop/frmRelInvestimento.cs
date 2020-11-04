@@ -19,12 +19,8 @@ namespace CamadaDesktop
         {
             InitializeComponent();
             List<IconButton> listBtn = new List<IconButton>();
-            //listBtn.Add(btnDisponivel);
-            //listBtn.Add(btnEmCurso);
-            //listBtn.Add(btnRetido);
 
             DefaultLayout defaultLayout = new DefaultLayout();
-            //defaultLayout.LayoutReportViewer(reportViewer1);
             defaultLayout.FormDefaultFilha(this, listBtn);
             defaultLayout.LayoutReportViewer(reportViewer1);
         }

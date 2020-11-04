@@ -15,14 +15,14 @@ using CamadaModel.Entities.Enums;
 
 namespace CamadaDesktop
 {
-    public partial class frmCadastro : Form
+    public partial class frmCadastroCliente : Form
     {
         private frmListaClientes frmPai = new frmListaClientes();
         private Pessoa pessoa = new Pessoa();
         private List<Fisica> listFisica = new List<Fisica>();
         private List<Juridica> listJuridica = new List<Juridica>();
 
-        public frmCadastro(frmListaClientes Pai, Pessoa pessoa, RadioButton rb, int tipoTela)
+        public frmCadastroCliente(frmListaClientes Pai, Pessoa pessoa, RadioButton rb, int tipoTela)
         {
             InitializeComponent();
 
@@ -38,12 +38,12 @@ namespace CamadaDesktop
             {
                 dgFisica.Visible = false;
                 ModoConsulta();
-                CarregarCliente(pessoa, rb);
+                CarregarClienteTela(pessoa, rb);
             }
             else if (tipoTela == 2)
             {
                 ModoAlterar();
-                CarregarCliente(pessoa, rb);
+                CarregarClienteTela(pessoa, rb);
             }
             else
             {
@@ -485,7 +485,7 @@ namespace CamadaDesktop
             dgFisica.Visible = true;
         }
 
-        private void CarregarCliente(Pessoa pessoa, RadioButton rb)
+        private void CarregarClienteTela(Pessoa pessoa, RadioButton rb)
         {
             Fisica fisica = new Fisica();
             Juridica juridica = new Juridica();

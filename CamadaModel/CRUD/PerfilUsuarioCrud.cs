@@ -16,10 +16,11 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Descricao", perfilUsuario.Descricao);
+                acessoDados.AdicionarParametros("@Ativo", perfilUsuario.Ativo);
                 string retornoPerfil = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO PerfilUsuario " +
                     "(Ativo,Descricao) " +
-                    "VALUES ('T', @Decricao) " +
+                    "VALUES (@Ativo, @Descricao) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
 
@@ -36,6 +37,7 @@ namespace CamadaModel.CRUD
             try
             {
                 acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdPerfilUsuario", perfilUsuario.IdPerfilUsuario);
                 acessoDados.AdicionarParametros("@Ativo", perfilUsuario.Ativo);
                 acessoDados.AdicionarParametros("@Descricao", perfilUsuario.Descricao);
                 string retornoPerfil = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
@@ -57,13 +59,17 @@ namespace CamadaModel.CRUD
         {
             try
             {
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@IdPerfilUsuario", perfilUsuario.IdPerfilUsuario);
-                string retornoPerfil = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "DELETE FROM PerfilUsuario WHERE IdPerfilUsuario= @IdPerfilUsuario" +
-                    "SELECT @IdPerfilUsuario AS RETORNO").ToString();
+                string parametro = "@IdPerfilUsuario";
+                int valor = perfilUsuario.IdPerfilUsuario;
+                string query = "BEGIN " +
+                    "DELETE FROM NivelAcesso WHERE IdPerfilUsuario=@IdPerfilUsuario " +
+                    "DELETE FROM PerfilUsuario WHERE IdPerfilUsuario= @IdPerfilUsuario " +
+                    "SELECT @IdPerfilUsuario AS RETORNO " +
+                    "END ";
 
-                return retornoPerfil;
+                string retorno = acessoDados.Transaction(query, parametro, valor);
+
+                return retorno;
             }
             catch (Exception exception)
             {
@@ -81,7 +87,7 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Descricao", perfilUsuario.Descricao);
                 //Retornará uma DataTable
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM PerfilUsuario " +
-                    "WHERE Descricao=@Descricao");
+                    "WHERE Descricao LIKE '%'+@Descricao+'%'");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente

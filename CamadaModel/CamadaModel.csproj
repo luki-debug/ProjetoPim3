@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CRUD\CarteiraCrud.cs" />
-    <Compile Include="CRUD\DepartamentoCrud.cs" />
+    <Compile Include="CRUD\DashBoardSelect.cs" />
     <Compile Include="CRUD\FisicaCrud.cs" />
     <Compile Include="CRUD\HistoricoCarteiraCrud.cs" />
     <Compile Include="CRUD\JuridicaCrud.cs" />
@@ -56,12 +56,17 @@
     <Compile Include="Entities\Enums\EnumEstado.cs" />
     <Compile Include="Entities\Fisica.cs" />
     <Compile Include="Entities\HistoricoCarteira.cs" />
+    <Compile Include="Entities\InvestidorF.cs" />
+    <Compile Include="Entities\InvestidorJ.cs" />
     <Compile Include="Entities\Juridica.cs" />
     <Compile Include="Entities\NivelAcesso.cs" />
     <Compile Include="Entities\PerfilUsuario.cs" />
     <Compile Include="Entities\Pessoa.cs" />
+    <Compile Include="Entities\ReportDashBoard.cs" />
     <Compile Include="Entities\TipoTransacao.cs" />
+    <Compile Include="Entities\UltimoLoginMes.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\UsuarioCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

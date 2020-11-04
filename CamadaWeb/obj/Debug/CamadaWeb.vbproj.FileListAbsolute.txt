@@ -69,7 +69,6 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Newtonsoft.Json.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Antlr3.Runtime.pdb
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.vbprojAssemblyReference.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.Resources.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.vbproj.GenerateResource.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.vbproj.CoreCompileInputs.cache
@@ -77,3 +76,4 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.vbproj
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\WebForms_Basic.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.pdb
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\obj\Debug\CamadaWeb.vbprojAssemblyReference.cache

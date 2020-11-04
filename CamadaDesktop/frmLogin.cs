@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CamadaModel.CRUD;
+using CamadaModel.Entities;
 using MaterialSkin;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace CamadaDesktop
 {
@@ -29,22 +25,46 @@ namespace CamadaDesktop
                 );
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
+            UsuarioCrud userCrud = new UsuarioCrud();
+            Usuario user = new Usuario();
+            user.Login = txtLogin.Text;
+            user.Nome = string.Empty;
+            List<Usuario> listUser = new List<Usuario>();
 
-        }
+            listUser = userCrud.ConsultarPorNomeOrId(user);
+            bool logado = false;
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
-        {
-            if (txtLogin.Text == "adm" && txtSenha.Text == "123")
+            foreach (var item in listUser)
+            {
+                if (item.Login == txtLogin.Text && item.Senha == txtSenha.Text)
+                {
+                    NivelAcesso nivelAcesso = new NivelAcesso();
+                    NivelAcessoCrud nivelAcessoCrud = new NivelAcessoCrud();
+                    nivelAcesso._perfilUsuario = new PerfilUsuario();
+                    nivelAcesso._perfilUsuario.IdPerfilUsuario = item._perfilUsuario.IdPerfilUsuario;
+
+                    UsuarioCache._perfilUsuario = new PerfilUsuario();
+                    UsuarioCache._perfilUsuario.IdPerfilUsuario = item._perfilUsuario.IdPerfilUsuario;
+                    UsuarioCache.Nome = item.Nome;
+                    UsuarioCache.ListCdPagina = nivelAcessoCrud.ConsultarPgPorId(nivelAcesso);
+
+                    logado = true;
+                }
+            }
+            if (logado == true)
             {
                 frmMenu frmMenu = new frmMenu();
-                frmMenu.ShowDialog();
-                this.Close();
+                MessageBox.Show("Seja bem vindo " + UsuarioCache.Nome, "Login com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                frmMenu.Show();
             }
             else
             {
-                MessageBox.Show("Senha Invalida");
+                MessageBox.Show("Credencias Incorretas", "Login ou senha incorretos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtLogin.Clear();
+                txtSenha.Clear();
             }
         }
     }

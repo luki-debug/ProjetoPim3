@@ -31,12 +31,10 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDeskto
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.exe
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.pdb
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmCadastro.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\MaterialSkin.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmLogin.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmInicio.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaClientes.resources
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.ClienteConsultar.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -101,3 +99,9 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDeskto
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmRelInvestimento.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmRelClienteSituacao.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmRelTop.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmCadastroCliente.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmPerfilUsuarioCadastrar.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaPerfil.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaUsuario.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmUsuarioCadastrar.resources
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmDashBoard.resources

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnEntrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.iconPicLogin = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicSenha = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,18 +74,18 @@
             this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
-            // materialRaisedButton1
+            // btnEntrar
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(297, 229);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(229, 39);
-            this.materialRaisedButton1.TabIndex = 2;
-            this.materialRaisedButton1.Text = "Entrar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            this.btnEntrar.Depth = 0;
+            this.btnEntrar.Location = new System.Drawing.Point(297, 229);
+            this.btnEntrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Primary = true;
+            this.btnEntrar.Size = new System.Drawing.Size(229, 39);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // iconPicLogin
             // 
@@ -166,7 +166,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconPicSenha);
             this.Controls.Add(this.iconPicLogin);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.ForeColor = System.Drawing.Color.Black;
@@ -174,7 +174,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem-Vindo";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPicLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -188,7 +187,7 @@
 
         private MaterialSkin.Controls.MaterialSingleLineTextField txtLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSenha;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEntrar;
         private FontAwesome.Sharp.IconPictureBox iconPicLogin;
         private FontAwesome.Sharp.IconPictureBox iconPicSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
