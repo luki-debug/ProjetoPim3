@@ -13,6 +13,39 @@ namespace CamadaControler.AcessoBancoDados
             return new SqlConnection(Settings.Default.StringConexao);
         }
 
+        //Metodo com Rollback
+        public string Transaction(string query, string parametro, int valor)
+        {
+            SqlConnection Conn = CriarConexao();
+            Conn.Open();
+
+            string Parametro = parametro;
+            int Valor = valor;
+            //Iniciando uma transação
+            SqlTransaction trans = Conn.BeginTransaction("Transaction");
+            try
+            {
+                //SqlCommand(string SQL, conexão, e transação);
+                string sSQL = query;
+                SqlCommand cmd = new SqlCommand(sSQL, Conn, trans);
+                cmd.Parameters.AddWithValue(parametro, valor);
+                int retorno = cmd.ExecuteNonQuery();
+
+                //Confirmando a transação.
+                trans.Commit();
+                Conn.Close();
+
+                return retorno.ToString();
+            }
+            catch (Exception ex)
+            {
+                Conn.Close();
+                //Reverte a transação (Rollback) se acontecer algum erro na transação
+                trans.Rollback("Transaction");
+                return ex.Message;
+            }
+        }
+
         //Parâmetros que vão para o banco
         private SqlParameterCollection sqlParameterCollection = new SqlCommand().Parameters;
         public void LimparParametros()

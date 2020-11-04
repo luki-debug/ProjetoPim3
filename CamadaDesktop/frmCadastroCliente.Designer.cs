@@ -1,6 +1,6 @@
 ﻿namespace CamadaDesktop
 {
-    partial class frmCadastro
+    partial class frmCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -44,15 +43,6 @@
             this.lblNascimento = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.dgFisica = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rbFisica = new System.Windows.Forms.RadioButton();
             this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.btnVoltar = new FontAwesome.Sharp.IconPictureBox();
@@ -71,8 +61,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
+            this.BtnCancelar = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -147,9 +137,9 @@
             this.groupBox1.Controls.Add(this.lblRg);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(24, 85);
+            this.groupBox1.Location = new System.Drawing.Point(24, 111);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 273);
+            this.groupBox1.Size = new System.Drawing.Size(478, 286);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
@@ -229,94 +219,6 @@
             this.txtEmail.Size = new System.Drawing.Size(282, 20);
             this.txtEmail.TabIndex = 2;
             // 
-            // dgFisica
-            // 
-            this.dgFisica.AllowUserToAddRows = false;
-            this.dgFisica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgFisica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column9,
-            this.Column10,
-            this.Column3,
-            this.colConsultar,
-            this.colExcluir,
-            this.colId});
-            this.dgFisica.Location = new System.Drawing.Point(24, 441);
-            this.dgFisica.MultiSelect = false;
-            this.dgFisica.Name = "dgFisica";
-            this.dgFisica.RowHeadersVisible = false;
-            this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFisica.Size = new System.Drawing.Size(903, 173);
-            this.dgFisica.TabIndex = 1;
-            this.dgFisica.Visible = false;
-            this.dgFisica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFisica_CellContentClick);
-            this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Nome";
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 250;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CPF";
-            this.Column2.HeaderText = "CPF";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Email";
-            this.Column9.HeaderText = "Email";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 250;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Telefone";
-            this.Column10.HeaderText = "Telefone";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 130;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Ativo";
-            this.Column3.HeaderText = "Ativo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 50;
-            // 
-            // colConsultar
-            // 
-            this.colConsultar.HeaderText = "";
-            this.colConsultar.Image = ((System.Drawing.Image)(resources.GetObject("colConsultar.Image")));
-            this.colConsultar.Name = "colConsultar";
-            this.colConsultar.ReadOnly = true;
-            this.colConsultar.Width = 25;
-            // 
-            // colExcluir
-            // 
-            this.colExcluir.HeaderText = "";
-            this.colExcluir.Image = ((System.Drawing.Image)(resources.GetObject("colExcluir.Image")));
-            this.colExcluir.Name = "colExcluir";
-            this.colExcluir.ReadOnly = true;
-            this.colExcluir.Width = 25;
-            // 
-            // colId
-            // 
-            this.colId.DataPropertyName = "IdPessoa";
-            this.colId.HeaderText = "colId";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.Visible = false;
-            // 
             // rbFisica
             // 
             this.rbFisica.AutoSize = true;
@@ -364,7 +266,7 @@
             this.dtUltimoLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtUltimoLogin.Enabled = false;
             this.dtUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtUltimoLogin.Location = new System.Drawing.Point(637, 247);
+            this.dtUltimoLogin.Location = new System.Drawing.Point(637, 286);
             this.dtUltimoLogin.Mask = "00/00/0000 90:00";
             this.dtUltimoLogin.Name = "dtUltimoLogin";
             this.dtUltimoLogin.Size = new System.Drawing.Size(129, 20);
@@ -377,7 +279,7 @@
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAtivo.ForeColor = System.Drawing.Color.White;
-            this.chkAtivo.Location = new System.Drawing.Point(637, 284);
+            this.chkAtivo.Location = new System.Drawing.Point(531, 324);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(72, 25);
             this.chkAtivo.TabIndex = 8;
@@ -390,7 +292,7 @@
             this.lblUltimoLogin.Enabled = false;
             this.lblUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUltimoLogin.ForeColor = System.Drawing.Color.White;
-            this.lblUltimoLogin.Location = new System.Drawing.Point(527, 247);
+            this.lblUltimoLogin.Location = new System.Drawing.Point(527, 286);
             this.lblUltimoLogin.Name = "lblUltimoLogin";
             this.lblUltimoLogin.Size = new System.Drawing.Size(104, 21);
             this.lblUltimoLogin.TabIndex = 9;
@@ -407,12 +309,12 @@
             this.btnInserir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInserir.IconColor = System.Drawing.Color.Black;
             this.btnInserir.IconSize = 16;
-            this.btnInserir.Location = new System.Drawing.Point(24, 373);
+            this.btnInserir.Location = new System.Drawing.Point(373, 547);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Rotation = 0D;
             this.btnInserir.Size = new System.Drawing.Size(137, 46);
             this.btnInserir.TabIndex = 0;
-            this.btnInserir.Text = "Inserir";
+            this.btnInserir.Text = "Salvar";
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -430,9 +332,9 @@
             this.groupBox2.Controls.Add(this.txtLogradouro);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(521, 85);
+            this.groupBox2.Location = new System.Drawing.Point(521, 111);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 145);
+            this.groupBox2.Size = new System.Drawing.Size(427, 158);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
@@ -526,7 +428,23 @@
             this.txtLogradouro.Size = new System.Drawing.Size(169, 20);
             this.txtLogradouro.TabIndex = 0;
             // 
-            // frmCadastro
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnCancelar.IconColor = System.Drawing.Color.White;
+            this.BtnCancelar.IconSize = 32;
+            this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancelar.Location = new System.Drawing.Point(516, 547);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Rotation = 0D;
+            this.BtnCancelar.Size = new System.Drawing.Size(137, 46);
+            this.BtnCancelar.TabIndex = 16;
+            this.BtnCancelar.Text = "Voltar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -534,6 +452,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(960, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblUltimoLogin);
             this.Controls.Add(this.btnInserir);
@@ -542,16 +461,14 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.rbJuridica);
             this.Controls.Add(this.rbFisica);
-            this.Controls.Add(this.dgFisica);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmCadastro";
+            this.Name = "frmCadastroCliente";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cadastro";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastro_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -575,7 +492,6 @@
         private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.DataGridView dgFisica;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.RadioButton rbFisica;
@@ -596,14 +512,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtLogradouro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewImageColumn colConsultar;
-        private System.Windows.Forms.DataGridViewImageColumn colExcluir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private FontAwesome.Sharp.IconButton BtnCancelar;
     }
 }
 

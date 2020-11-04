@@ -3,6 +3,7 @@ using CamadaModel.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace CamadaModel.CRUD
 {
@@ -10,43 +11,27 @@ namespace CamadaModel.CRUD
     {
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
 
-        public string Inserir(NivelAcesso nivelAcesso)
+        public string Inserir(NivelAcesso nivelAcesso, List<string> listPagina)
         {
             try
             {
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@CdPagina", nivelAcesso.CdPagina);
-                acessoDados.AdicionarParametros("@IdPerfilUsuario", nivelAcesso._perfilUsuario.IdPerfilUsuario);
-                string retornoNivelAcesso = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "INSERT INTO NivelAcesso " +
-                    "(IdPerfilUsuario, CdPagina) " +
-                    "VALUES (@IdPerfilUsuario, @CdPagina) " +
-                    "SELECT @@IdPerfilUsuario as RETORNO " +
-                    "END").ToString();
+                int retorno = 0;
+                foreach (var item in listPagina)
+                {
+                    acessoDados.LimparParametros();
+                    acessoDados.AdicionarParametros("@CdPagina", item);
+                    acessoDados.AdicionarParametros("@IdPerfilUsuario", nivelAcesso._perfilUsuario.IdPerfilUsuario);
+                    string retornoNivelAcesso = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                        "INSERT INTO NivelAcesso " +
+                        "(IdPerfilUsuario,CdPagina) " +
+                        "VALUES (@IdPerfilUsuario,@CdPagina) " +
+                        "SELECT @IdPerfilUsuario as RETORNO " +
+                        "END").ToString();
+                    if (int.TryParse(retornoNivelAcesso, out _) == true)
+                        retorno++;
+                }
 
-                return retornoNivelAcesso;
-            }
-            catch (Exception exception)
-            {
-                return exception.Message;
-            }
-        }
-
-        public string Alterar(NivelAcesso nivelAcesso)
-        {
-            try
-            {
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@CdPagina", nivelAcesso.CdPagina);
-                acessoDados.AdicionarParametros("@IdPerfilUsuario", nivelAcesso._perfilUsuario.IdPerfilUsuario);
-                string retornoNivelAcesso = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "UPDATE NivelAcesso " +
-                    "SET CdPagina=@CdPagina " +
-                    "WHERE IdPerfilUsuario=@IdPerfilUsuario " +
-                    "SELECT @IdPerfilUsuario AS RETORNO END").ToString();
-
-                return retornoNivelAcesso;
-
+                return Convert.ToString(retorno);
             }
             catch (Exception exception)
             {
@@ -61,8 +46,9 @@ namespace CamadaModel.CRUD
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@IdPerfilUsuario", nivelAcesso._perfilUsuario.IdPerfilUsuario);
                 string retornoNivelAcesso = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "DELETE FROM NivelAcesso WHERE IdPerfilUsuario= @IdPerfilUsuario " +
-                    "SELECT @IdPerfilUsuario AS RETORNO").ToString();
+                    "DELETE FROM NivelAcesso WHERE IdPerfilUsuario=@IdPerfilUsuario " +
+                    "SELECT @@ROWCOUNT AS RETORNO " +
+                    "END ").ToString();
 
                 return retornoNivelAcesso;
             }
@@ -72,12 +58,12 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<NivelAcesso> ConsultarPgPorId(NivelAcesso nivelAcesso)
+        public List<string> ConsultarPgPorId(NivelAcesso nivelAcesso)
         {
             try
             {
                 //Criar uma nova coleção de clientes
-                List<NivelAcesso> nivelAcessoColecao = new List<NivelAcesso>();
+                List<string> nivelAcessoColecao = new List<string>();
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@IdPerfilUsuario", nivelAcesso._perfilUsuario.IdPerfilUsuario);
                 //Retornará uma DataTable
@@ -91,11 +77,11 @@ namespace CamadaModel.CRUD
                     //Criar cliente vazio
                     //Colocar os dados da linha
                     //Adicionar na coleção
-                    NivelAcesso nivelAdd = new NivelAcesso();
+                    //NivelAcesso nivelAdd = new NivelAcesso();
 
-                    nivelAdd._perfilUsuario = new PerfilUsuario();
-                    nivelAdd._perfilUsuario.IdPerfilUsuario = Convert.ToInt32(linha["IdPerfilUsuario"]);
-                    nivelAdd.CdPagina = Convert.ToString(linha["CdPagina"]);
+                    //nivelAdd._perfilUsuario = new PerfilUsuario();
+                    //nivelAdd._perfilUsuario.IdPerfilUsuario = Convert.ToInt32(linha["IdPerfilUsuario"]);
+                    string nivelAdd = Convert.ToString(linha["CdPagina"]);
 
                     nivelAcessoColecao.Add(nivelAdd);
                 }

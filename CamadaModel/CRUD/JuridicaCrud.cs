@@ -40,6 +40,13 @@ namespace CamadaModel.CRUD
                     "VALUES (@IdPessoa,@RazaoSocial,@CNPJ) " +
                     "select @@IDENTITY as RETORNO " +
                     "END").ToString();
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "INSERT INTO Carteira(IdPessoa) " +
+                    "VALUES (@IdPessoa) " +
+                    "SELECT @@IDENTITY AS Retorno " +
+                    "END").ToString();
 
                 return retornoPessoa;
             }
@@ -90,7 +97,9 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@IdPessoa", juridica.IdPessoa);
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "DELETE FROM Juridico WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM Pessoa WHERE IdPessoa=@IdPessoa SELECT @IdPessoa AS RETORNO END").ToString();
+                    "DELETE FROM Pessoa WHERE IdPessoa=@IdPessoa " +
+                    "DELETE FROM Carteira WHERE IdPessoa=@IdPessoa " +
+                    "SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return retornoPessoa;
             }

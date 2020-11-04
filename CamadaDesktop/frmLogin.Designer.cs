@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.iconPicLogin = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPicSenha = new FontAwesome.Sharp.IconPictureBox();
+            this.btnEntrar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicSenha)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLogin
             // 
             this.txtLogin.Depth = 0;
             this.txtLogin.Hint = "Login";
-            this.txtLogin.Location = new System.Drawing.Point(335, 162);
+            this.txtLogin.Location = new System.Drawing.Point(339, 162);
             this.txtLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.PasswordChar = '\0';
@@ -63,7 +63,7 @@
             // 
             this.txtSenha.Depth = 0;
             this.txtSenha.Hint = "Senha";
-            this.txtSenha.Location = new System.Drawing.Point(335, 191);
+            this.txtSenha.Location = new System.Drawing.Point(339, 191);
             this.txtSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
@@ -74,44 +74,18 @@
             this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
-            // materialRaisedButton1
+            // btnEntrar
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(297, 229);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(229, 39);
-            this.materialRaisedButton1.TabIndex = 2;
-            this.materialRaisedButton1.Text = "Entrar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
-            // 
-            // iconPicLogin
-            // 
-            this.iconPicLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPicLogin.ForeColor = System.Drawing.Color.Black;
-            this.iconPicLogin.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPicLogin.IconColor = System.Drawing.Color.Black;
-            this.iconPicLogin.IconSize = 23;
-            this.iconPicLogin.Location = new System.Drawing.Point(297, 162);
-            this.iconPicLogin.Name = "iconPicLogin";
-            this.iconPicLogin.Size = new System.Drawing.Size(32, 23);
-            this.iconPicLogin.TabIndex = 6;
-            this.iconPicLogin.TabStop = false;
-            // 
-            // iconPicSenha
-            // 
-            this.iconPicSenha.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPicSenha.ForeColor = System.Drawing.Color.Black;
-            this.iconPicSenha.IconChar = FontAwesome.Sharp.IconChar.UnlockAlt;
-            this.iconPicSenha.IconColor = System.Drawing.Color.Black;
-            this.iconPicSenha.IconSize = 25;
-            this.iconPicSenha.Location = new System.Drawing.Point(297, 190);
-            this.iconPicSenha.Name = "iconPicSenha";
-            this.iconPicSenha.Size = new System.Drawing.Size(32, 25);
-            this.iconPicSenha.TabIndex = 7;
-            this.iconPicSenha.TabStop = false;
+            this.btnEntrar.Depth = 0;
+            this.btnEntrar.Location = new System.Drawing.Point(296, 229);
+            this.btnEntrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Primary = true;
+            this.btnEntrar.Size = new System.Drawing.Size(234, 39);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // pictureBox1
             // 
@@ -156,17 +130,37 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Esqueci minha senha";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(296, 162);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(296, 191);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 23);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 397);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.iconPicSenha);
-            this.Controls.Add(this.iconPicLogin);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.ForeColor = System.Drawing.Color.Black;
@@ -174,11 +168,10 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem-Vindo";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +181,12 @@
 
         private MaterialSkin.Controls.MaterialSingleLineTextField txtLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSenha;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private FontAwesome.Sharp.IconPictureBox iconPicLogin;
-        private FontAwesome.Sharp.IconPictureBox iconPicSenha;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEntrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

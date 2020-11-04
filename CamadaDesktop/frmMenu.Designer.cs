@@ -29,22 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconBtnCadastro = new FontAwesome.Sharp.IconButton();
-            this.BtnReport = new FontAwesome.Sharp.IconButton();
-            this.iconBtnCarteira = new FontAwesome.Sharp.IconButton();
-            this.iconBtnInicio = new FontAwesome.Sharp.IconButton();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.pnlSubMenuRelatorio = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.btnReportTop = new FontAwesome.Sharp.IconButton();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.btnReportInvestimento = new FontAwesome.Sharp.IconButton();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.btnReportSituacao = new FontAwesome.Sharp.IconButton();
+            this.BtnReport = new FontAwesome.Sharp.IconButton();
+            this.btnDashBoard = new FontAwesome.Sharp.IconButton();
+            this.iconBtnCadastro = new FontAwesome.Sharp.IconButton();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
+            this.iconBtnUsuario = new FontAwesome.Sharp.IconButton();
+            this.plBtnUser = new System.Windows.Forms.Panel();
+            this.iconBtnInicio = new FontAwesome.Sharp.IconButton();
             this.pnlTela = new System.Windows.Forms.Panel();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,8 +49,14 @@
             this.iconPicMaximizar = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicClose = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconBarra = new FontAwesome.Sharp.IconPictureBox();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelMenu.SuspendLayout();
             this.pnlSubMenuRelatorio.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,84 +65,123 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicClose)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBarra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.iconBtnCadastro);
-            this.panel1.Controls.Add(this.BtnReport);
-            this.panel1.Controls.Add(this.iconBtnCarteira);
-            this.panel1.Controls.Add(this.iconBtnInicio);
-            this.panel1.Controls.Add(this.pnlSubMenuRelatorio);
-            this.panel1.Location = new System.Drawing.Point(0, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 428);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.pnlSubMenuRelatorio);
+            this.panelMenu.Controls.Add(this.BtnReport);
+            this.panelMenu.Controls.Add(this.btnDashBoard);
+            this.panelMenu.Controls.Add(this.iconBtnCadastro);
+            this.panelMenu.Controls.Add(this.btnPerfil);
+            this.panelMenu.Controls.Add(this.iconBtnUsuario);
+            this.panelMenu.Controls.Add(this.plBtnUser);
+            this.panelMenu.Controls.Add(this.iconBtnInicio);
+            this.panelMenu.Location = new System.Drawing.Point(0, 116);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(265, 428);
+            this.panelMenu.TabIndex = 0;
             // 
-            // panel6
+            // pnlSubMenuRelatorio
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel6.Location = new System.Drawing.Point(1, 124);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 45);
-            this.panel6.TabIndex = 7;
+            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportTop);
+            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportInvestimento);
+            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportSituacao);
+            this.pnlSubMenuRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuRelatorio.Location = new System.Drawing.Point(0, 270);
+            this.pnlSubMenuRelatorio.Name = "pnlSubMenuRelatorio";
+            this.pnlSubMenuRelatorio.Size = new System.Drawing.Size(263, 120);
+            this.pnlSubMenuRelatorio.TabIndex = 0;
+            this.pnlSubMenuRelatorio.Visible = false;
             // 
-            // panel5
+            // btnReportTop
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel5.Location = new System.Drawing.Point(2, 175);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 45);
-            this.panel5.TabIndex = 6;
+            this.btnReportTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportTop.FlatAppearance.BorderSize = 0;
+            this.btnReportTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportTop.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReportTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportTop.ForeColor = System.Drawing.Color.White;
+            this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportTop.IconColor = System.Drawing.Color.White;
+            this.btnReportTop.IconSize = 25;
+            this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportTop.Location = new System.Drawing.Point(0, 60);
+            this.btnReportTop.Name = "btnReportTop";
+            this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportTop.Rotation = 0D;
+            this.btnReportTop.Size = new System.Drawing.Size(263, 27);
+            this.btnReportTop.TabIndex = 11;
+            this.btnReportTop.Tag = "1003";
+            this.btnReportTop.Text = "      Relatório Top 10";
+            this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportTop.UseVisualStyleBackColor = true;
+            this.btnReportTop.Visible = false;
+            this.btnReportTop.Click += new System.EventHandler(this.btnReportTop_Click);
             // 
-            // panel4
+            // btnReportInvestimento
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel4.Location = new System.Drawing.Point(1, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 45);
-            this.panel4.TabIndex = 6;
+            this.btnReportInvestimento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportInvestimento.FlatAppearance.BorderSize = 0;
+            this.btnReportInvestimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportInvestimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportInvestimento.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReportInvestimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
+            this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportInvestimento.IconColor = System.Drawing.Color.White;
+            this.btnReportInvestimento.IconSize = 25;
+            this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
+            this.btnReportInvestimento.Name = "btnReportInvestimento";
+            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportInvestimento.Rotation = 0D;
+            this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
+            this.btnReportInvestimento.TabIndex = 9;
+            this.btnReportInvestimento.Tag = "1002";
+            this.btnReportInvestimento.Text = "      Relatório Inventimentos";
+            this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportInvestimento.UseVisualStyleBackColor = true;
+            this.btnReportInvestimento.Visible = false;
+            this.btnReportInvestimento.Click += new System.EventHandler(this.btnReportInvestimento_Click);
             // 
-            // panel3
+            // btnReportSituacao
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel3.Location = new System.Drawing.Point(1, 25);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 45);
-            this.panel3.TabIndex = 5;
-            // 
-            // iconBtnCadastro
-            // 
-            this.iconBtnCadastro.FlatAppearance.BorderSize = 0;
-            this.iconBtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnCadastro.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconBtnCadastro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
-            this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.iconBtnCadastro.IconColor = System.Drawing.Color.White;
-            this.iconBtnCadastro.IconSize = 40;
-            this.iconBtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnCadastro.Location = new System.Drawing.Point(0, 124);
-            this.iconBtnCadastro.Name = "iconBtnCadastro";
-            this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnCadastro.Rotation = 0D;
-            this.iconBtnCadastro.Size = new System.Drawing.Size(264, 45);
-            this.iconBtnCadastro.TabIndex = 4;
-            this.iconBtnCadastro.Text = "Cadastro";
-            this.iconBtnCadastro.UseVisualStyleBackColor = true;
-            this.iconBtnCadastro.Click += new System.EventHandler(this.iconBtnCadastrar_Click);
+            this.btnReportSituacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportSituacao.FlatAppearance.BorderSize = 0;
+            this.btnReportSituacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportSituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportSituacao.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReportSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
+            this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportSituacao.IconColor = System.Drawing.Color.White;
+            this.btnReportSituacao.IconSize = 25;
+            this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
+            this.btnReportSituacao.Name = "btnReportSituacao";
+            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportSituacao.Rotation = 0D;
+            this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
+            this.btnReportSituacao.TabIndex = 7;
+            this.btnReportSituacao.Tag = "1001";
+            this.btnReportSituacao.Text = "      Relatório Situação Cliente";
+            this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSituacao.UseVisualStyleBackColor = true;
+            this.btnReportSituacao.Visible = false;
+            this.btnReportSituacao.Click += new System.EventHandler(this.btnReportSituacao_Click);
             // 
             // BtnReport
             // 
+            this.BtnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnReport.FlatAppearance.BorderSize = 0;
             this.BtnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -151,40 +192,136 @@
             this.BtnReport.IconColor = System.Drawing.Color.White;
             this.BtnReport.IconSize = 40;
             this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.Location = new System.Drawing.Point(1, 175);
+            this.BtnReport.Location = new System.Drawing.Point(0, 225);
             this.BtnReport.Name = "BtnReport";
             this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnReport.Rotation = 0D;
             this.BtnReport.Size = new System.Drawing.Size(263, 45);
             this.BtnReport.TabIndex = 3;
+            this.BtnReport.Tag = "1000";
             this.BtnReport.Text = "Relatórios";
+            this.BtnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnReport.UseVisualStyleBackColor = true;
+            this.BtnReport.Visible = false;
             this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
-            // iconBtnCarteira
+            // btnDashBoard
             // 
-            this.iconBtnCarteira.FlatAppearance.BorderSize = 0;
-            this.iconBtnCarteira.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBtnCarteira.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnCarteira.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconBtnCarteira.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnCarteira.ForeColor = System.Drawing.Color.White;
-            this.iconBtnCarteira.IconChar = FontAwesome.Sharp.IconChar.Wallet;
-            this.iconBtnCarteira.IconColor = System.Drawing.Color.White;
-            this.iconBtnCarteira.IconSize = 40;
-            this.iconBtnCarteira.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnCarteira.Location = new System.Drawing.Point(0, 73);
-            this.iconBtnCarteira.Name = "iconBtnCarteira";
-            this.iconBtnCarteira.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnCarteira.Rotation = 0D;
-            this.iconBtnCarteira.Size = new System.Drawing.Size(263, 45);
-            this.iconBtnCarteira.TabIndex = 1;
-            this.iconBtnCarteira.Text = "Carteira";
-            this.iconBtnCarteira.UseVisualStyleBackColor = true;
-            this.iconBtnCarteira.Click += new System.EventHandler(this.iconButton2_Click);
+            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashBoard.FlatAppearance.BorderSize = 0;
+            this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashBoard.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
+            this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnDashBoard.IconColor = System.Drawing.Color.White;
+            this.btnDashBoard.IconSize = 40;
+            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashBoard.Location = new System.Drawing.Point(0, 180);
+            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDashBoard.Name = "btnDashBoard";
+            this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDashBoard.Rotation = 0D;
+            this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
+            this.btnDashBoard.TabIndex = 9;
+            this.btnDashBoard.Tag = "1100";
+            this.btnDashBoard.Text = "DashBoard";
+            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashBoard.UseVisualStyleBackColor = true;
+            this.btnDashBoard.Visible = false;
+            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
+            // 
+            // iconBtnCadastro
+            // 
+            this.iconBtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnCadastro.FlatAppearance.BorderSize = 0;
+            this.iconBtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnCadastro.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnCadastro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
+            this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.iconBtnCadastro.IconColor = System.Drawing.Color.White;
+            this.iconBtnCadastro.IconSize = 40;
+            this.iconBtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnCadastro.Location = new System.Drawing.Point(0, 135);
+            this.iconBtnCadastro.Name = "iconBtnCadastro";
+            this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnCadastro.Rotation = 0D;
+            this.iconBtnCadastro.Size = new System.Drawing.Size(263, 45);
+            this.iconBtnCadastro.TabIndex = 4;
+            this.iconBtnCadastro.Tag = "900";
+            this.iconBtnCadastro.Text = "Cadastro Cliente";
+            this.iconBtnCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnCadastro.UseVisualStyleBackColor = true;
+            this.iconBtnCadastro.Visible = false;
+            this.iconBtnCadastro.Click += new System.EventHandler(this.iconBtnCadastrar_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.btnPerfil.IconColor = System.Drawing.Color.White;
+            this.btnPerfil.IconSize = 40;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 90);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPerfil.Rotation = 0D;
+            this.btnPerfil.Size = new System.Drawing.Size(263, 45);
+            this.btnPerfil.TabIndex = 2;
+            this.btnPerfil.Tag = "800";
+            this.btnPerfil.Text = "Perfil Usuário";
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Visible = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // iconBtnUsuario
+            // 
+            this.iconBtnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnUsuario.FlatAppearance.BorderSize = 0;
+            this.iconBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnUsuario.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconBtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
+            this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconBtnUsuario.IconColor = System.Drawing.Color.White;
+            this.iconBtnUsuario.IconSize = 40;
+            this.iconBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnUsuario.Location = new System.Drawing.Point(0, 45);
+            this.iconBtnUsuario.Name = "iconBtnUsuario";
+            this.iconBtnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnUsuario.Rotation = 0D;
+            this.iconBtnUsuario.Size = new System.Drawing.Size(263, 45);
+            this.iconBtnUsuario.TabIndex = 1;
+            this.iconBtnUsuario.Tag = "700";
+            this.iconBtnUsuario.Text = "Usuário";
+            this.iconBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnUsuario.UseVisualStyleBackColor = true;
+            this.iconBtnUsuario.Visible = false;
+            this.iconBtnUsuario.Click += new System.EventHandler(this.iconBtnUsuario_Click);
+            // 
+            // plBtnUser
+            // 
+            this.plBtnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnUser.Location = new System.Drawing.Point(3, 48);
+            this.plBtnUser.Name = "plBtnUser";
+            this.plBtnUser.Size = new System.Drawing.Size(5, 40);
+            this.plBtnUser.TabIndex = 6;
+            this.plBtnUser.Visible = false;
             // 
             // iconBtnInicio
             // 
+            this.iconBtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconBtnInicio.FlatAppearance.BorderSize = 0;
             this.iconBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.iconBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -195,123 +332,17 @@
             this.iconBtnInicio.IconColor = System.Drawing.Color.White;
             this.iconBtnInicio.IconSize = 40;
             this.iconBtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnInicio.Location = new System.Drawing.Point(1, 25);
+            this.iconBtnInicio.Location = new System.Drawing.Point(0, 0);
             this.iconBtnInicio.Margin = new System.Windows.Forms.Padding(0);
             this.iconBtnInicio.Name = "iconBtnInicio";
             this.iconBtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconBtnInicio.Rotation = 0D;
-            this.iconBtnInicio.Size = new System.Drawing.Size(262, 45);
+            this.iconBtnInicio.Size = new System.Drawing.Size(263, 45);
             this.iconBtnInicio.TabIndex = 0;
             this.iconBtnInicio.Text = "Inicio";
+            this.iconBtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnInicio.UseVisualStyleBackColor = true;
-            this.iconBtnInicio.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // pnlSubMenuRelatorio
-            // 
-            this.pnlSubMenuRelatorio.Controls.Add(this.panel9);
-            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportTop);
-            this.pnlSubMenuRelatorio.Controls.Add(this.panel8);
-            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportInvestimento);
-            this.pnlSubMenuRelatorio.Controls.Add(this.panel7);
-            this.pnlSubMenuRelatorio.Controls.Add(this.btnReportSituacao);
-            this.pnlSubMenuRelatorio.Location = new System.Drawing.Point(38, 226);
-            this.pnlSubMenuRelatorio.Name = "pnlSubMenuRelatorio";
-            this.pnlSubMenuRelatorio.Size = new System.Drawing.Size(226, 120);
-            this.pnlSubMenuRelatorio.TabIndex = 0;
-            this.pnlSubMenuRelatorio.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel9.Location = new System.Drawing.Point(0, 67);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 30);
-            this.panel9.TabIndex = 12;
-            // 
-            // btnReportTop
-            // 
-            this.btnReportTop.FlatAppearance.BorderSize = 0;
-            this.btnReportTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportTop.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnReportTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportTop.ForeColor = System.Drawing.Color.White;
-            this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnReportTop.IconColor = System.Drawing.Color.White;
-            this.btnReportTop.IconSize = 40;
-            this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportTop.Location = new System.Drawing.Point(0, 67);
-            this.btnReportTop.Name = "btnReportTop";
-            this.btnReportTop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportTop.Rotation = 0D;
-            this.btnReportTop.Size = new System.Drawing.Size(228, 27);
-            this.btnReportTop.TabIndex = 11;
-            this.btnReportTop.Text = "Relatório Top 10";
-            this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportTop.UseVisualStyleBackColor = true;
-            this.btnReportTop.Click += new System.EventHandler(this.btnReportTop_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel8.Location = new System.Drawing.Point(0, 35);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 30);
-            this.panel8.TabIndex = 10;
-            // 
-            // btnReportInvestimento
-            // 
-            this.btnReportInvestimento.FlatAppearance.BorderSize = 0;
-            this.btnReportInvestimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportInvestimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportInvestimento.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnReportInvestimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
-            this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnReportInvestimento.IconColor = System.Drawing.Color.White;
-            this.btnReportInvestimento.IconSize = 40;
-            this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportInvestimento.Location = new System.Drawing.Point(-1, 35);
-            this.btnReportInvestimento.Name = "btnReportInvestimento";
-            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportInvestimento.Rotation = 0D;
-            this.btnReportInvestimento.Size = new System.Drawing.Size(228, 30);
-            this.btnReportInvestimento.TabIndex = 9;
-            this.btnReportInvestimento.Text = "Relatório Inventimentos";
-            this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportInvestimento.UseVisualStyleBackColor = true;
-            this.btnReportInvestimento.Click += new System.EventHandler(this.btnReportInvestimento_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(5, 30);
-            this.panel7.TabIndex = 8;
-            // 
-            // btnReportSituacao
-            // 
-            this.btnReportSituacao.FlatAppearance.BorderSize = 0;
-            this.btnReportSituacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportSituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportSituacao.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnReportSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
-            this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnReportSituacao.IconColor = System.Drawing.Color.White;
-            this.btnReportSituacao.IconSize = 40;
-            this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
-            this.btnReportSituacao.Name = "btnReportSituacao";
-            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportSituacao.Rotation = 0D;
-            this.btnReportSituacao.Size = new System.Drawing.Size(228, 30);
-            this.btnReportSituacao.TabIndex = 7;
-            this.btnReportSituacao.Text = "Relatório Situação Cliente";
-            this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSituacao.UseVisualStyleBackColor = true;
-            this.btnReportSituacao.Click += new System.EventHandler(this.btnReportSituacao_Click);
+            this.iconBtnInicio.Click += new System.EventHandler(this.iconBtnInicio_Click);
             // 
             // pnlTela
             // 
@@ -321,11 +352,10 @@
             this.pnlTela.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.pnlTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.pnlTela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTela.Location = new System.Drawing.Point(267, 59);
+            this.pnlTela.Location = new System.Drawing.Point(267, 100);
             this.pnlTela.Name = "pnlTela";
-            this.pnlTela.Size = new System.Drawing.Size(909, 479);
+            this.pnlTela.Size = new System.Drawing.Size(909, 438);
             this.pnlTela.TabIndex = 1;
-            this.pnlTela.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTela_Paint);
             // 
             // pnlTitulo
             // 
@@ -339,7 +369,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -417,22 +447,100 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.iconBarra);
+            this.panel2.Controls.Add(this.lblPerfil);
+            this.panel2.Controls.Add(this.btnLogout);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lblNome);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblTitulo);
             this.panel2.Location = new System.Drawing.Point(267, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 32);
+            this.panel2.Size = new System.Drawing.Size(912, 75);
             this.panel2.TabIndex = 0;
+            // 
+            // iconBarra
+            // 
+            this.iconBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBarra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconBarra.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconBarra.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconBarra.Location = new System.Drawing.Point(19, 18);
+            this.iconBarra.Name = "iconBarra";
+            this.iconBarra.Size = new System.Drawing.Size(32, 32);
+            this.iconBarra.TabIndex = 5;
+            this.iconBarra.TabStop = false;
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.White;
+            this.lblPerfil.Location = new System.Drawing.Point(679, 43);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(149, 19);
+            this.lblPerfil.TabIndex = 4;
+            this.lblPerfil.Text = "Perfil";
+            this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(834, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(66, 60);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(599, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblNome
+            // 
+            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(679, 24);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(149, 19);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Nome";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 4);
+            this.label1.Location = new System.Drawing.Point(677, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
+            this.label1.Size = new System.Drawing.Size(93, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bem Vindo";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(57, 24);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(51, 19);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Inicio";
             // 
             // frmMenu
             // 
@@ -442,7 +550,7 @@
             this.ClientSize = new System.Drawing.Size(1179, 544);
             this.Controls.Add(this.pnlBarraTitulo);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.pnlTela);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -451,7 +559,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lumia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmMenu_Load);
+            this.panelMenu.ResumeLayout(false);
             this.pnlSubMenuRelatorio.ResumeLayout(false);
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -461,17 +570,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicClose)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBarra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel pnlTela;
         private FontAwesome.Sharp.IconButton iconBtnCadastro;
         private FontAwesome.Sharp.IconButton BtnReport;
-        private FontAwesome.Sharp.IconButton iconBtnCarteira;
         private FontAwesome.Sharp.IconButton iconBtnInicio;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -479,18 +590,21 @@
         private FontAwesome.Sharp.IconPictureBox iconPicMinimizar;
         private FontAwesome.Sharp.IconPictureBox iconPicMaximizar;
         private FontAwesome.Sharp.IconPictureBox iconPicClose;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlSubMenuRelatorio;
-        private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnReportSituacao;
-        private System.Windows.Forms.Panel panel9;
         private FontAwesome.Sharp.IconButton btnReportTop;
-        private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton btnReportInvestimento;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTitulo;
+        private FontAwesome.Sharp.IconButton btnPerfil;
+        private System.Windows.Forms.Panel plBtnUser;
+        private FontAwesome.Sharp.IconButton iconBtnUsuario;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnLogout;
+        private FontAwesome.Sharp.IconButton btnDashBoard;
+        private System.Windows.Forms.Label lblPerfil;
+        private FontAwesome.Sharp.IconPictureBox iconBarra;
     }
 }

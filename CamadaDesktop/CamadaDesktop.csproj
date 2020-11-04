@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
@@ -78,24 +78,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ClienteConsultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClienteConsultar.Designer.cs">
-      <DependentUpon>ClienteConsultar.cs</DependentUpon>
-    </Compile>
     <Compile Include="DefaultLayout.cs" />
-    <Compile Include="frmCadastro.cs">
+    <Compile Include="frmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastro.Designer.cs">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="frmCadastroCliente.Designer.cs">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListaClientes.Designer.cs">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPerfil.Designer.cs">
+      <DependentUpon>frmListaPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaUsuario.Designer.cs">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,12 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilUsuario.Designer.cs">
+      <DependentUpon>frmPerfilUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRelInvestimento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,12 @@
     <Compile Include="frmRelTop.Designer.cs">
       <DependentUpon>frmRelTop.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioCadastrar.Designer.cs">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWaitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,11 +167,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="ClienteConsultar.resx">
-      <DependentUpon>ClienteConsultar.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastroCliente.resx">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastro.resx">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
@@ -155,11 +179,20 @@
     <EmbeddedResource Include="frmListaClientes.resx">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaPerfil.resx">
+      <DependentUpon>frmListaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaUsuario.resx">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilUsuario.resx">
+      <DependentUpon>frmPerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRelInvestimento.resx">
       <DependentUpon>frmRelInvestimento.cs</DependentUpon>
@@ -169,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRelTop.resx">
       <DependentUpon>frmRelTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioCadastrar.resx">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWaitForm.resx">
       <DependentUpon>frmWaitForm.cs</DependentUpon>
@@ -182,6 +218,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Relatorios\DashBoardPrincipal.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportInvestimentoTopJuridica .rdlc" />
     <EmbeddedResource Include="Relatorios\ReportInvestimentoTopFisica.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportInvestimentoJuridica.rdlc" />
@@ -200,6 +237,8 @@
       <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CamadaModel.Entities.ReportDashBoard.datasource" />
+    <None Include="Properties\DataSources\CamadaModel.Entities.TipoTransacao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,8 +273,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
