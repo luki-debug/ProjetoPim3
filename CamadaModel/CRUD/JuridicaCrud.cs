@@ -40,6 +40,13 @@ namespace CamadaModel.CRUD
                     "VALUES (@IdPessoa,@RazaoSocial,@CNPJ) " +
                     "select @@IDENTITY as RETORNO " +
                     "END").ToString();
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "INSERT INTO Carteira(IdPessoa) " +
+                    "VALUES (@IdPessoa) " +
+                    "SELECT @@IDENTITY AS Retorno " +
+                    "END").ToString();
 
                 return retornoPessoa;
             }
@@ -54,8 +61,7 @@ namespace CamadaModel.CRUD
             try
             {
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@RG", juridica.CNPJ);
-                acessoDados.AdicionarParametros("@DataNascimento", juridica.RazaoSocial);
+                acessoDados.AdicionarParametros("@IdPessoa", juridica.IdPessoa);
                 acessoDados.AdicionarParametros("@Email", juridica.Email);
                 acessoDados.AdicionarParametros("@Logradouro", juridica.Logradouro);
                 acessoDados.AdicionarParametros("@Numero", juridica.Numero);
@@ -65,11 +71,13 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Senha", juridica.Senha);
                 acessoDados.AdicionarParametros("@Ativo", juridica.Ativo);
                 acessoDados.AdicionarParametros("@Telefone", juridica.Telefone);
+                acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
+                acessoDados.AdicionarParametros("@CNPJ", juridica.CNPJ);
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE PESSOA " +
                     "SET Email=@Email,Logradouro=@Logradouro,Numero=@Numero,Cidade=@Cidade,Estado=@Estado,CEP=@CEP,Senha=@Senha," +
                     "Ativo=@Ativo,Telefone=@Telefone WHERE IdPessoa = @IdPessoa " +
-                    "UPDATE FISICA SET Nome=@Nome,CPF=@CPF,RG=@RG,DataNascimento=@DataNascimento WHERE IdPessoa = @IdPessoa " +
+                    "UPDATE JURIDICO SET RazaoSocial=@RazaoSocial,CNPJ=@CNPJ WHERE IdPessoa = @IdPessoa " +
                     "SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return retornoPessoa;
@@ -81,15 +89,17 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public string Excluir(Fisica fisica)
+        public string Excluir(Juridica juridica)
         {
             try
             {
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
+                acessoDados.AdicionarParametros("@IdPessoa", juridica.IdPessoa);
                 string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
-                    "DELETE FROM Juridica WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM Pessoa WHERE=@IdPessoa SELECT @IdPessoa AS RETORNO").ToString();
+                    "DELETE FROM Juridico WHERE IdPessoa= @IdPessoa " +
+                    "DELETE FROM Pessoa WHERE IdPessoa=@IdPessoa " +
+                    "DELETE FROM Carteira WHERE IdPessoa=@IdPessoa " +
+                    "SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return retornoPessoa;
             }
@@ -109,7 +119,7 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@RazaoSocial", juridica.RazaoSocial);
                 //Retornará uma DataTable
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Pessoa AS P INNER JOIN Juridico AS J " +
-                    "ON P.IdPessoa=J.IdPessoa WHERE RazaoSocial Like '%'+@RazaoSocial+'%'");
+                    "ON P.IdPessoa=J.IdPessoa WHERE RazaoSocial Like '%'+@RazaoSocial+'%' ORDER BY J.RazaoSocial ASC");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente

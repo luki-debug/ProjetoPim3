@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace CamadaDesktop
         public frmInicio()
         {
             InitializeComponent();
+            List<IconButton> listBtn = new List<IconButton>();
+            DefaultLayout defaultLayout = new DefaultLayout();
+            defaultLayout.FormDefaultFilha(this, listBtn);
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblLongDate.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

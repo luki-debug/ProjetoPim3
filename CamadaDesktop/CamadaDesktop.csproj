@@ -33,11 +33,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,18 +70,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BdLumiaDataSet.cs">
+      <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BdLumiaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DefaultLayout.cs" />
-    <Compile Include="frmCadastro.cs">
+    <Compile Include="frmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastro.Designer.cs">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="frmCadastroCliente.Designer.cs">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListaClientes.Designer.cs">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPerfil.Designer.cs">
+      <DependentUpon>frmListaPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaUsuario.Designer.cs">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -83,11 +127,51 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilUsuario.Designer.cs">
+      <DependentUpon>frmPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelInvestimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelInvestimento.Designer.cs">
+      <DependentUpon>frmRelInvestimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelClienteSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelClienteSituacao.Designer.cs">
+      <DependentUpon>frmRelClienteSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelTop.Designer.cs">
+      <DependentUpon>frmRelTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioCadastrar.Designer.cs">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWaitForm.Designer.cs">
+      <DependentUpon>frmWaitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FuncoesTela.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastro.resx">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmCadastroCliente.resx">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
@@ -95,11 +179,35 @@
     <EmbeddedResource Include="frmListaClientes.resx">
       <DependentUpon>frmListaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaPerfil.resx">
+      <DependentUpon>frmListaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaUsuario.resx">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilUsuario.resx">
+      <DependentUpon>frmPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelInvestimento.resx">
+      <DependentUpon>frmRelInvestimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelClienteSituacao.resx">
+      <DependentUpon>frmRelClienteSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelTop.resx">
+      <DependentUpon>frmRelTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarioCadastrar.resx">
+      <DependentUpon>frmUsuarioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWaitForm.resx">
+      <DependentUpon>frmWaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,7 +218,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Relatorios\DashBoardPrincipal.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportInvestimentoTopJuridica .rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportInvestimentoTopFisica.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportInvestimentoJuridica.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportInvestimentoFisica.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportJuridicaAtiva.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportFisicaAtiva.rdlc" />
+    <None Include="BdLumiaDataSet.xsc">
+      <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BdLumiaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdLumiaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BdLumiaDataSet.xss">
+      <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CamadaModel.Entities.ReportDashBoard.datasource" />
+    <None Include="Properties\DataSources\CamadaModel.Entities.TipoTransacao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,5 +258,21 @@
       <Name>CamadaModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

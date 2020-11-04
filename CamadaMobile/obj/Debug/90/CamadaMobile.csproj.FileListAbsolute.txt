@@ -7,7 +7,6 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\bin\Debug\com.companyna
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\build.props
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\adb.props
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\CamadaMobile.csprojAssemblyReference.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\res.flag
@@ -255,3 +254,4 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\stamp\_Con
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\90\CamadaMobile.csprojAssemblyReference.cache
