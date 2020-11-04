@@ -1557,11 +1557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\Documents\\GitHub\\PIM3Restore\\CamadaMobile\\CamadaMobile.csproj",
       "projectName": "CamadaMobile",
-      "projectPath": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
+      "projectPath": "C:\\Users\\lucas\\Documents\\GitHub\\PIM3Restore\\CamadaMobile\\CamadaMobile.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\obj\\",
+      "outputPath": "C:\\Users\\lucas\\Documents\\GitHub\\PIM3Restore\\CamadaMobile\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
