@@ -10,11 +10,6 @@ namespace CamadaModel.Entities
     {
         public int IdUsuario { get; set; }
         public PerfilUsuario _perfilUsuario { get; set; }
-        //public PerfilUsuario _Pdescricao { get; set; }
-        //public PerfilUsuario _PAtivo { get; set; }
-        //public Departamento _departamento { get; set; }
-        //public Departamento _Ddescricao { get; set; }
-        //public Departamento _DAtivo { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
         public string Matricula { get; set; }
@@ -26,7 +21,7 @@ namespace CamadaModel.Entities
         {
         }
 
-        public Usuario(int idUsuario, PerfilUsuario perfilUsuario, Departamento departamento, 
+        public Usuario(int idUsuario, PerfilUsuario perfilUsuario, 
             string login, string senha, string matricula, string nome, char ativo, DateTime dtUltimoLogin)
         {
             IdUsuario = idUsuario;

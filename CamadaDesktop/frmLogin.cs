@@ -47,6 +47,7 @@ namespace CamadaDesktop
 
                     UsuarioCache._perfilUsuario = new PerfilUsuario();
                     UsuarioCache._perfilUsuario.IdPerfilUsuario = item._perfilUsuario.IdPerfilUsuario;
+                    UsuarioCache._perfilUsuario.Descricao = item._perfilUsuario.Descricao;
                     UsuarioCache.Nome = item.Nome;
                     UsuarioCache.ListCdPagina = nivelAcessoCrud.ConsultarPgPorId(nivelAcesso);
 

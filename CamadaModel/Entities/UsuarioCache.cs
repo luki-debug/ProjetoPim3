@@ -10,10 +10,6 @@ namespace CamadaModel.Entities
     {
         public static int IdUsuario { get; set; }
         public static PerfilUsuario _perfilUsuario { get; set; }
-<<<<<<< HEAD
-        public static Departamento _departamento { get; set; }
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
         public static string Login { get; set; }
         public static string Senha { get; set; }
         public static string Matricula { get; set; }

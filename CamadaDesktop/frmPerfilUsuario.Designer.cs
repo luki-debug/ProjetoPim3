@@ -52,10 +52,7 @@
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.btnVoltar = new FontAwesome.Sharp.IconButton();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
-<<<<<<< HEAD
-=======
             this.chkDashBoard = new System.Windows.Forms.CheckBox();
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -105,10 +102,7 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
-=======
             this.groupBox1.Controls.Add(this.chkDashBoard);
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.groupBox1.Controls.Add(this.chkRelTop);
             this.groupBox1.Controls.Add(this.chkRelInvest);
             this.groupBox1.Controls.Add(this.chkRelSituacao);
@@ -140,11 +134,7 @@
             this.chkRelTop.AutoSize = true;
             this.chkRelTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRelTop.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.chkRelTop.Location = new System.Drawing.Point(53, 533);
-=======
             this.chkRelTop.Location = new System.Drawing.Point(53, 560);
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.chkRelTop.Name = "chkRelTop";
             this.chkRelTop.Size = new System.Drawing.Size(153, 25);
             this.chkRelTop.TabIndex = 26;
@@ -157,11 +147,7 @@
             this.chkRelInvest.AutoSize = true;
             this.chkRelInvest.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRelInvest.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.chkRelInvest.Location = new System.Drawing.Point(53, 502);
-=======
             this.chkRelInvest.Location = new System.Drawing.Point(53, 529);
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.chkRelInvest.Name = "chkRelInvest";
             this.chkRelInvest.Size = new System.Drawing.Size(215, 25);
             this.chkRelInvest.TabIndex = 25;
@@ -174,11 +160,7 @@
             this.chkRelSituacao.AutoSize = true;
             this.chkRelSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRelSituacao.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.chkRelSituacao.Location = new System.Drawing.Point(53, 471);
-=======
             this.chkRelSituacao.Location = new System.Drawing.Point(53, 498);
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.chkRelSituacao.Name = "chkRelSituacao";
             this.chkRelSituacao.Size = new System.Drawing.Size(232, 25);
             this.chkRelSituacao.TabIndex = 24;
@@ -191,11 +173,7 @@
             this.chkRelatorio.AutoSize = true;
             this.chkRelatorio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRelatorio.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.chkRelatorio.Location = new System.Drawing.Point(42, 440);
-=======
             this.chkRelatorio.Location = new System.Drawing.Point(42, 467);
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.chkRelatorio.Name = "chkRelatorio";
             this.chkRelatorio.Size = new System.Drawing.Size(104, 25);
             this.chkRelatorio.TabIndex = 23;
@@ -407,8 +385,6 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-<<<<<<< HEAD
-=======
             // chkDashBoard
             // 
             this.chkDashBoard.AutoSize = true;
@@ -422,7 +398,6 @@
             this.chkDashBoard.Text = "DashBoard";
             this.chkDashBoard.UseVisualStyleBackColor = true;
             // 
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             // frmPerfilUsuarioCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,9 +447,6 @@
         private System.Windows.Forms.CheckBox chkTodos;
         private FontAwesome.Sharp.IconButton btnVoltar;
         private FontAwesome.Sharp.IconButton btnSalvar;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.CheckBox chkDashBoard;
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
     }
 }

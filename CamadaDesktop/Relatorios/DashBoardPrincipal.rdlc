@@ -156,19 +156,12 @@
                       <GroupExpression>=Fields!RazaoSocial.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-<<<<<<< HEAD
-                  <Label>=Fields!RazaoSocial.Value</Label>
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!RazaoSocial.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-<<<<<<< HEAD
-=======
                   <Label>=Fields!RazaoSocial.Value</Label>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -235,10 +228,7 @@
                         <Color>#5c5c5c</Color>
                       </Style>
                     </ChartAxisTitle>
-<<<<<<< HEAD
-=======
                     <Margin>False</Margin>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                     <ChartMajorGridLines>
                       <Enabled>False</Enabled>
                       <Style>
@@ -506,11 +496,7 @@
             </ChartNoDataMessage>
             <DataSetName>InvestidoresJTop</DataSetName>
             <Height>7.97214cm</Height>
-<<<<<<< HEAD
-            <Width>12.63793cm</Width>
-=======
             <Width>12.79762cm</Width>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -529,19 +515,12 @@
                       <GroupExpression>=Fields!Nome.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-<<<<<<< HEAD
-                  <Label>=Fields!Nome.Value</Label>
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!Nome.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-<<<<<<< HEAD
-=======
                   <Label>=Fields!Nome.Value</Label>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -608,10 +587,7 @@
                         <Color>#5c5c5c</Color>
                       </Style>
                     </ChartAxisTitle>
-<<<<<<< HEAD
-=======
                     <Margin>False</Margin>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                     <ChartMajorGridLines>
                       <Enabled>False</Enabled>
                       <Style>
@@ -824,10 +800,7 @@
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
-<<<<<<< HEAD
-=======
                   <ShadowOffset>0pt</ShadowOffset>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </Style>
               </ChartArea>
             </ChartAreas>
@@ -883,15 +856,9 @@
             </ChartNoDataMessage>
             <DataSetName>InvestidoresFTop</DataSetName>
             <Top>8.20145cm</Top>
-<<<<<<< HEAD
-            <Left>0cm</Left>
-            <Height>7.97214cm</Height>
-            <Width>12.63793cm</Width>
-=======
             <Left>0.03528cm</Left>
             <Height>7.97214cm</Height>
             <Width>12.79762cm</Width>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -911,19 +878,12 @@
                       <GroupExpression>=Fields!Nome.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-<<<<<<< HEAD
-                  <Label>=Fields!Nome.Value</Label>
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!Nome.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-<<<<<<< HEAD
-=======
                   <Label>=Fields!Nome.Value</Label>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -1277,19 +1237,12 @@
                       <GroupExpression>=Fields!RazaoSocial.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-<<<<<<< HEAD
-                  <Label>=Fields!RazaoSocial.Value</Label>
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!RazaoSocial.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-<<<<<<< HEAD
-=======
                   <Label>=Fields!RazaoSocial.Value</Label>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -1642,19 +1595,12 @@
                       <GroupExpression>=Fields!Mes.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-<<<<<<< HEAD
-                  <Label>=Fields!Mes.Value</Label>
-=======
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!Mes.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-<<<<<<< HEAD
-=======
                   <Label>=Fields!Mes.Value</Label>
->>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
