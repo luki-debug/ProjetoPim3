@@ -38,8 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnNovo = new FontAwesome.Sharp.IconButton();
             this.dgFisica = new System.Windows.Forms.DataGridView();
-            this.rbJuridica = new System.Windows.Forms.RadioButton();
-            this.rbFisica = new System.Windows.Forms.RadioButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +46,8 @@
             this.colConsultar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.colExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.rbJuridica = new System.Windows.Forms.RadioButton();
+            this.rbFisica = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,13 +56,14 @@
             this.btnPesquisar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPesquisar.IconColor = System.Drawing.Color.White;
+            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.Location = new System.Drawing.Point(401, 67);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Rotation = 0D;
             this.btnPesquisar.Size = new System.Drawing.Size(137, 46);
-            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.TabIndex = 3;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -76,7 +77,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(28, 93);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(367, 20);
-            this.txtPesquisar.TabIndex = 0;
+            this.txtPesquisar.TabIndex = 2;
             // 
             // label1
             // 
@@ -86,7 +87,7 @@
             this.label1.Location = new System.Drawing.Point(24, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 21);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Pesquisar Nome";
             // 
             // btnNovo
@@ -94,13 +95,14 @@
             this.btnNovo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNovo.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnNovo.IconColor = System.Drawing.Color.White;
+            this.btnNovo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNovo.IconSize = 32;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(544, 67);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Rotation = 0D;
             this.btnNovo.Size = new System.Drawing.Size(137, 46);
-            this.btnNovo.TabIndex = 2;
+            this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Visible = false;
@@ -161,37 +163,9 @@
             this.dgFisica.RowHeadersVisible = false;
             this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgFisica.Size = new System.Drawing.Size(923, 391);
-            this.dgFisica.TabIndex = 3;
+            this.dgFisica.TabIndex = 5;
             this.dgFisica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFisica_CellContentClick);
             this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
-            // 
-            // rbJuridica
-            // 
-            this.rbJuridica.AutoSize = true;
-            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbJuridica.ForeColor = System.Drawing.Color.White;
-            this.rbJuridica.Location = new System.Drawing.Point(160, 20);
-            this.rbJuridica.Name = "rbJuridica";
-            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 7;
-            this.rbJuridica.Text = "Pessoa Juridica";
-            this.rbJuridica.UseVisualStyleBackColor = true;
-            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
-            // 
-            // rbFisica
-            // 
-            this.rbFisica.AutoSize = true;
-            this.rbFisica.Checked = true;
-            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFisica.ForeColor = System.Drawing.Color.White;
-            this.rbFisica.Location = new System.Drawing.Point(28, 20);
-            this.rbFisica.Name = "rbFisica";
-            this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 6;
-            this.rbFisica.TabStop = true;
-            this.rbFisica.Text = "Pessoa Fisica";
-            this.rbFisica.UseVisualStyleBackColor = true;
-            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
             // 
             // Column1
             // 
@@ -259,6 +233,34 @@
             this.colExcluir.ReadOnly = true;
             this.colExcluir.Visible = false;
             this.colExcluir.Width = 25;
+            // 
+            // rbJuridica
+            // 
+            this.rbJuridica.AutoSize = true;
+            this.rbJuridica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbJuridica.ForeColor = System.Drawing.Color.White;
+            this.rbJuridica.Location = new System.Drawing.Point(160, 20);
+            this.rbJuridica.Name = "rbJuridica";
+            this.rbJuridica.Size = new System.Drawing.Size(146, 23);
+            this.rbJuridica.TabIndex = 1;
+            this.rbJuridica.Text = "Pessoa Juridica";
+            this.rbJuridica.UseVisualStyleBackColor = true;
+            this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
+            // 
+            // rbFisica
+            // 
+            this.rbFisica.AutoSize = true;
+            this.rbFisica.Checked = true;
+            this.rbFisica.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFisica.ForeColor = System.Drawing.Color.White;
+            this.rbFisica.Location = new System.Drawing.Point(28, 20);
+            this.rbFisica.Name = "rbFisica";
+            this.rbFisica.Size = new System.Drawing.Size(126, 23);
+            this.rbFisica.TabIndex = 0;
+            this.rbFisica.TabStop = true;
+            this.rbFisica.Text = "Pessoa Fisica";
+            this.rbFisica.UseVisualStyleBackColor = true;
+            this.rbFisica.CheckedChanged += new System.EventHandler(this.rbFisica_CheckedChanged);
             // 
             // frmListaClientes
             // 

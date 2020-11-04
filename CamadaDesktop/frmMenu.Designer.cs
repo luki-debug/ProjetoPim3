@@ -112,6 +112,7 @@
             this.btnReportTop.ForeColor = System.Drawing.Color.White;
             this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
             this.btnReportTop.IconColor = System.Drawing.Color.White;
+            this.btnReportTop.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportTop.IconSize = 25;
             this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportTop.Location = new System.Drawing.Point(0, 60);
@@ -119,7 +120,7 @@
             this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportTop.Rotation = 0D;
             this.btnReportTop.Size = new System.Drawing.Size(263, 27);
-            this.btnReportTop.TabIndex = 11;
+            this.btnReportTop.TabIndex = 2;
             this.btnReportTop.Tag = "1003";
             this.btnReportTop.Text = "      Relatório Top 10";
             this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,6 +139,7 @@
             this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
             this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
             this.btnReportInvestimento.IconColor = System.Drawing.Color.White;
+            this.btnReportInvestimento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportInvestimento.IconSize = 25;
             this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
@@ -145,7 +147,7 @@
             this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportInvestimento.Rotation = 0D;
             this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
-            this.btnReportInvestimento.TabIndex = 9;
+            this.btnReportInvestimento.TabIndex = 1;
             this.btnReportInvestimento.Tag = "1002";
             this.btnReportInvestimento.Text = "      Relatório Inventimentos";
             this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,6 +166,7 @@
             this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
             this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
             this.btnReportSituacao.IconColor = System.Drawing.Color.White;
+            this.btnReportSituacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReportSituacao.IconSize = 25;
             this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
@@ -171,7 +174,7 @@
             this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportSituacao.Rotation = 0D;
             this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
-            this.btnReportSituacao.TabIndex = 7;
+            this.btnReportSituacao.TabIndex = 0;
             this.btnReportSituacao.Tag = "1001";
             this.btnReportSituacao.Text = "      Relatório Situação Cliente";
             this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,6 +193,7 @@
             this.BtnReport.ForeColor = System.Drawing.Color.White;
             this.BtnReport.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.BtnReport.IconColor = System.Drawing.Color.White;
+            this.BtnReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnReport.IconSize = 40;
             this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReport.Location = new System.Drawing.Point(0, 225);
@@ -197,7 +201,7 @@
             this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnReport.Rotation = 0D;
             this.BtnReport.Size = new System.Drawing.Size(263, 45);
-            this.BtnReport.TabIndex = 3;
+            this.BtnReport.TabIndex = 5;
             this.BtnReport.Tag = "1000";
             this.BtnReport.Text = "Relatórios";
             this.BtnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -216,6 +220,7 @@
             this.btnDashBoard.ForeColor = System.Drawing.Color.White;
             this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.btnDashBoard.IconColor = System.Drawing.Color.White;
+            this.btnDashBoard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashBoard.IconSize = 40;
             this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashBoard.Location = new System.Drawing.Point(0, 180);
@@ -224,7 +229,7 @@
             this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDashBoard.Rotation = 0D;
             this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
-            this.btnDashBoard.TabIndex = 9;
+            this.btnDashBoard.TabIndex = 4;
             this.btnDashBoard.Tag = "1100";
             this.btnDashBoard.Text = "DashBoard";
             this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -243,6 +248,7 @@
             this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
             this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.iconBtnCadastro.IconColor = System.Drawing.Color.White;
+            this.iconBtnCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnCadastro.IconSize = 40;
             this.iconBtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnCadastro.Location = new System.Drawing.Point(0, 135);
@@ -250,7 +256,7 @@
             this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconBtnCadastro.Rotation = 0D;
             this.iconBtnCadastro.Size = new System.Drawing.Size(263, 45);
-            this.iconBtnCadastro.TabIndex = 4;
+            this.iconBtnCadastro.TabIndex = 3;
             this.iconBtnCadastro.Tag = "900";
             this.iconBtnCadastro.Text = "Cadastro Cliente";
             this.iconBtnCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -269,6 +275,7 @@
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btnPerfil.IconColor = System.Drawing.Color.White;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPerfil.IconSize = 40;
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.Location = new System.Drawing.Point(0, 90);
@@ -295,6 +302,7 @@
             this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
             this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconBtnUsuario.IconColor = System.Drawing.Color.White;
+            this.iconBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnUsuario.IconSize = 40;
             this.iconBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnUsuario.Location = new System.Drawing.Point(0, 45);
@@ -330,6 +338,7 @@
             this.iconBtnInicio.ForeColor = System.Drawing.Color.White;
             this.iconBtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconBtnInicio.IconColor = System.Drawing.Color.White;
+            this.iconBtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnInicio.IconSize = 40;
             this.iconBtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBtnInicio.Location = new System.Drawing.Point(0, 0);
@@ -365,7 +374,7 @@
             this.pnlTitulo.Location = new System.Drawing.Point(0, 26);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(265, 93);
-            this.pnlTitulo.TabIndex = 0;
+            this.pnlTitulo.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -392,7 +401,7 @@
             this.pnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
             this.pnlBarraTitulo.Size = new System.Drawing.Size(1179, 27);
-            this.pnlBarraTitulo.TabIndex = 0;
+            this.pnlBarraTitulo.TabIndex = 3;
             this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
             // iconPicMinimizar
@@ -402,6 +411,7 @@
             this.iconPicMinimizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
             this.iconPicMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.iconPicMinimizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
+            this.iconPicMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPicMinimizar.IconSize = 19;
             this.iconPicMinimizar.Location = new System.Drawing.Point(1093, 3);
             this.iconPicMinimizar.Name = "iconPicMinimizar";
@@ -417,6 +427,7 @@
             this.iconPicMaximizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
             this.iconPicMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.iconPicMaximizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
+            this.iconPicMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPicMaximizar.IconSize = 19;
             this.iconPicMaximizar.Location = new System.Drawing.Point(1119, 3);
             this.iconPicMaximizar.Name = "iconPicMaximizar";
@@ -432,6 +443,7 @@
             this.iconPicClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
             this.iconPicClose.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.iconPicClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(173)))), ((int)(((byte)(175)))));
+            this.iconPicClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPicClose.IconSize = 19;
             this.iconPicClose.Location = new System.Drawing.Point(1146, 3);
             this.iconPicClose.Name = "iconPicClose";
@@ -465,6 +477,7 @@
             this.iconBarra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.iconBarra.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconBarra.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconBarra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBarra.Location = new System.Drawing.Point(19, 18);
             this.iconBarra.Name = "iconBarra";
             this.iconBarra.Size = new System.Drawing.Size(32, 32);
@@ -479,7 +492,7 @@
             this.lblPerfil.Location = new System.Drawing.Point(679, 43);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(149, 19);
-            this.lblPerfil.TabIndex = 4;
+            this.lblPerfil.TabIndex = 2;
             this.lblPerfil.Text = "Perfil";
             this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -514,7 +527,7 @@
             this.lblNome.Location = new System.Drawing.Point(679, 24);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(149, 19);
-            this.lblNome.TabIndex = 2;
+            this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -527,7 +540,7 @@
             this.label1.Location = new System.Drawing.Point(677, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 21);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Bem Vindo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -539,7 +552,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(57, 24);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(51, 19);
-            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Inicio";
             // 
             // frmMenu

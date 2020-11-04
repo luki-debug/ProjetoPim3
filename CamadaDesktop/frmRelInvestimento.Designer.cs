@@ -67,13 +67,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSetTopFisica";
+            reportDataSource1.Value = null;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportInvestimentoFisica.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(29, 131);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(919, 483);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.TabIndex = 5;
             this.reportViewer1.Visible = false;
             // 
             // rbJuridica
@@ -84,7 +85,7 @@
             this.rbJuridica.Location = new System.Drawing.Point(161, 22);
             this.rbJuridica.Name = "rbJuridica";
             this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 11;
+            this.rbJuridica.TabIndex = 1;
             this.rbJuridica.Text = "Pessoa Juridica";
             this.rbJuridica.UseVisualStyleBackColor = false;
             this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
@@ -98,7 +99,7 @@
             this.rbFisica.Location = new System.Drawing.Point(29, 22);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 10;
+            this.rbFisica.TabIndex = 0;
             this.rbFisica.TabStop = true;
             this.rbFisica.Text = "Pessoa Fisica";
             this.rbFisica.UseVisualStyleBackColor = false;
@@ -115,12 +116,13 @@
             this.btnRetido.ForeColor = System.Drawing.Color.White;
             this.btnRetido.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnRetido.IconColor = System.Drawing.Color.Black;
+            this.btnRetido.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRetido.IconSize = 16;
             this.btnRetido.Location = new System.Drawing.Point(253, 66);
             this.btnRetido.Name = "btnRetido";
             this.btnRetido.Rotation = 0D;
             this.btnRetido.Size = new System.Drawing.Size(218, 46);
-            this.btnRetido.TabIndex = 12;
+            this.btnRetido.TabIndex = 3;
             this.btnRetido.Text = "Investimento Retido";
             this.btnRetido.UseVisualStyleBackColor = false;
             this.btnRetido.Click += new System.EventHandler(this.btnRetido_Click);
@@ -136,12 +138,13 @@
             this.btnEmCurso.ForeColor = System.Drawing.Color.White;
             this.btnEmCurso.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEmCurso.IconColor = System.Drawing.Color.Black;
+            this.btnEmCurso.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmCurso.IconSize = 16;
             this.btnEmCurso.Location = new System.Drawing.Point(29, 66);
             this.btnEmCurso.Name = "btnEmCurso";
             this.btnEmCurso.Rotation = 0D;
             this.btnEmCurso.Size = new System.Drawing.Size(218, 46);
-            this.btnEmCurso.TabIndex = 13;
+            this.btnEmCurso.TabIndex = 2;
             this.btnEmCurso.Text = "Investimento Em Curso";
             this.btnEmCurso.UseVisualStyleBackColor = false;
             this.btnEmCurso.Click += new System.EventHandler(this.btnEmCurso_Click);
@@ -157,12 +160,13 @@
             this.btnDisponivel.ForeColor = System.Drawing.Color.White;
             this.btnDisponivel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDisponivel.IconColor = System.Drawing.Color.Black;
+            this.btnDisponivel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDisponivel.IconSize = 16;
             this.btnDisponivel.Location = new System.Drawing.Point(477, 66);
             this.btnDisponivel.Name = "btnDisponivel";
             this.btnDisponivel.Rotation = 0D;
             this.btnDisponivel.Size = new System.Drawing.Size(218, 46);
-            this.btnDisponivel.TabIndex = 14;
+            this.btnDisponivel.TabIndex = 4;
             this.btnDisponivel.Text = "Investimento Disponivel";
             this.btnDisponivel.UseVisualStyleBackColor = false;
             this.btnDisponivel.Click += new System.EventHandler(this.btnDisponivel_Click);

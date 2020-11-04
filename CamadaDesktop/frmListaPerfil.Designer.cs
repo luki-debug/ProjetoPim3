@@ -51,13 +51,14 @@
             this.btnCriar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCriar.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnCriar.IconColor = System.Drawing.Color.White;
+            this.btnCriar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCriar.IconSize = 32;
             this.btnCriar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCriar.Location = new System.Drawing.Point(544, 65);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Rotation = 0D;
             this.btnCriar.Size = new System.Drawing.Size(137, 46);
-            this.btnCriar.TabIndex = 10;
+            this.btnCriar.TabIndex = 2;
             this.btnCriar.Text = "Novo";
             this.btnCriar.UseVisualStyleBackColor = true;
             this.btnCriar.Visible = false;
@@ -68,13 +69,14 @@
             this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscar.IconSize = 32;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(401, 65);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Rotation = 0D;
             this.btnBuscar.Size = new System.Drawing.Size(137, 46);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Pesquisar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -87,7 +89,7 @@
             this.label1.Location = new System.Drawing.Point(24, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 21);
-            this.label1.TabIndex = 12;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Pesquisar Descrição";
             // 
             // txtPesquisar
@@ -99,7 +101,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(28, 91);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(367, 20);
-            this.txtPesquisar.TabIndex = 11;
+            this.txtPesquisar.TabIndex = 0;
             // 
             // dg
             // 
@@ -153,7 +155,7 @@
             this.dg.RowHeadersVisible = false;
             this.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg.Size = new System.Drawing.Size(741, 391);
-            this.dg.TabIndex = 13;
+            this.dg.TabIndex = 3;
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellContentClick);
             this.dg.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dg_CellFormatting);
             // 

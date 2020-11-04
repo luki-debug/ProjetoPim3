@@ -96,7 +96,7 @@
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(919, 483);
-            this.reportViewer.TabIndex = 0;
+            this.reportViewer.TabIndex = 4;
             this.reportViewer.Visible = false;
             this.reportViewer.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.reportViewer.Load += new System.EventHandler(this.reportViewer_Load);
@@ -109,7 +109,7 @@
             this.rbJuridica.Location = new System.Drawing.Point(161, 22);
             this.rbJuridica.Name = "rbJuridica";
             this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 9;
+            this.rbJuridica.TabIndex = 1;
             this.rbJuridica.Text = "Pessoa Juridica";
             this.rbJuridica.UseVisualStyleBackColor = true;
             // 
@@ -122,7 +122,7 @@
             this.rbFisica.Location = new System.Drawing.Point(29, 22);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 8;
+            this.rbFisica.TabIndex = 0;
             this.rbFisica.TabStop = true;
             this.rbFisica.Text = "Pessoa Fisica";
             this.rbFisica.UseVisualStyleBackColor = true;
@@ -141,13 +141,14 @@
             this.btnAtivo.ForeColor = System.Drawing.Color.White;
             this.btnAtivo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAtivo.IconColor = System.Drawing.Color.Black;
+            this.btnAtivo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtivo.IconSize = 16;
             this.btnAtivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtivo.Location = new System.Drawing.Point(29, 71);
             this.btnAtivo.Name = "btnAtivo";
             this.btnAtivo.Rotation = 0D;
             this.btnAtivo.Size = new System.Drawing.Size(137, 46);
-            this.btnAtivo.TabIndex = 10;
+            this.btnAtivo.TabIndex = 2;
             this.btnAtivo.Text = "Clientes ativos";
             this.btnAtivo.UseVisualStyleBackColor = false;
             this.btnAtivo.Click += new System.EventHandler(this.btnAtivo_Click);
@@ -162,18 +163,19 @@
             this.btnInativo.ForeColor = System.Drawing.Color.White;
             this.btnInativo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInativo.IconColor = System.Drawing.Color.Black;
+            this.btnInativo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInativo.IconSize = 16;
             this.btnInativo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInativo.Location = new System.Drawing.Point(172, 71);
             this.btnInativo.Name = "btnInativo";
             this.btnInativo.Rotation = 0D;
             this.btnInativo.Size = new System.Drawing.Size(149, 46);
-            this.btnInativo.TabIndex = 11;
+            this.btnInativo.TabIndex = 3;
             this.btnInativo.Text = "Clientes Inativos";
             this.btnInativo.UseVisualStyleBackColor = false;
             this.btnInativo.Click += new System.EventHandler(this.btnInativo_Click);
             // 
-            // frmRelFisicaAtiva
+            // frmRelClienteSituacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +185,7 @@
             this.Controls.Add(this.rbJuridica);
             this.Controls.Add(this.rbFisica);
             this.Controls.Add(this.reportViewer);
-            this.Name = "frmRelFisicaAtiva";
+            this.Name = "frmRelClienteSituacao";
             this.Text = "frmRelFisicaAtiva";
             ((System.ComponentModel.ISupportInitialize)(this.RelJuridicaAtivoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdLumiaDataSet)).EndInit();

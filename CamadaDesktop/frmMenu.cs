@@ -74,7 +74,7 @@ namespace CamadaDesktop
         }
         private void BtnReport_Click(object sender, EventArgs e)
         {
-            formAtual.Close();
+            formAtual.Close();         
             AtivarButton(sender, RGBColors.color6);
             pnlSubMenuRelatorio.Visible = true;
         }
@@ -192,9 +192,9 @@ namespace CamadaDesktop
             if (currentButton != null)
             {
                 currentButton.BackColor = Color.FromArgb(71, 48, 136);
-                currentButton.ForeColor = Color.Gainsboro;
+                currentButton.ForeColor = Color.White;
                 currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                currentButton.IconColor = Color.Gainsboro;
+                currentButton.IconColor = Color.White;
                 currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
             }

@@ -33,6 +33,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkDashBoard = new System.Windows.Forms.CheckBox();
             this.chkRelTop = new System.Windows.Forms.CheckBox();
             this.chkRelInvest = new System.Windows.Forms.CheckBox();
             this.chkRelSituacao = new System.Windows.Forms.CheckBox();
@@ -52,7 +53,6 @@
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.btnVoltar = new FontAwesome.Sharp.IconButton();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
-            this.chkDashBoard = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.label1.Location = new System.Drawing.Point(90, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 21);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Descrição:";
             // 
             // chkAtivo
@@ -86,7 +86,7 @@
             this.chkAtivo.Location = new System.Drawing.Point(116, 85);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(72, 25);
-            this.chkAtivo.TabIndex = 9;
+            this.chkAtivo.TabIndex = 1;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +98,7 @@
             this.panel1.Location = new System.Drawing.Point(94, 125);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(848, 441);
-            this.panel1.TabIndex = 11;
+            this.panel1.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -124,10 +124,23 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(10, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 579);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.Size = new System.Drawing.Size(810, 597);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Niveis de Acesso";
+            // 
+            // chkDashBoard
+            // 
+            this.chkDashBoard.AutoSize = true;
+            this.chkDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDashBoard.ForeColor = System.Drawing.Color.White;
+            this.chkDashBoard.Location = new System.Drawing.Point(42, 438);
+            this.chkDashBoard.Name = "chkDashBoard";
+            this.chkDashBoard.Size = new System.Drawing.Size(114, 25);
+            this.chkDashBoard.TabIndex = 13;
+            this.chkDashBoard.Tag = "1100";
+            this.chkDashBoard.Text = "DashBoard";
+            this.chkDashBoard.UseVisualStyleBackColor = true;
             // 
             // chkRelTop
             // 
@@ -137,7 +150,7 @@
             this.chkRelTop.Location = new System.Drawing.Point(53, 560);
             this.chkRelTop.Name = "chkRelTop";
             this.chkRelTop.Size = new System.Drawing.Size(153, 25);
-            this.chkRelTop.TabIndex = 26;
+            this.chkRelTop.TabIndex = 17;
             this.chkRelTop.Tag = "1003";
             this.chkRelTop.Text = "Relatório Top 10";
             this.chkRelTop.UseVisualStyleBackColor = true;
@@ -150,7 +163,7 @@
             this.chkRelInvest.Location = new System.Drawing.Point(53, 529);
             this.chkRelInvest.Name = "chkRelInvest";
             this.chkRelInvest.Size = new System.Drawing.Size(215, 25);
-            this.chkRelInvest.TabIndex = 25;
+            this.chkRelInvest.TabIndex = 16;
             this.chkRelInvest.Tag = "1002";
             this.chkRelInvest.Text = "Relatório Inventimentos";
             this.chkRelInvest.UseVisualStyleBackColor = true;
@@ -163,7 +176,7 @@
             this.chkRelSituacao.Location = new System.Drawing.Point(53, 498);
             this.chkRelSituacao.Name = "chkRelSituacao";
             this.chkRelSituacao.Size = new System.Drawing.Size(232, 25);
-            this.chkRelSituacao.TabIndex = 24;
+            this.chkRelSituacao.TabIndex = 15;
             this.chkRelSituacao.Tag = "1001";
             this.chkRelSituacao.Text = "Relatório Situação Cliente";
             this.chkRelSituacao.UseVisualStyleBackColor = true;
@@ -176,7 +189,7 @@
             this.chkRelatorio.Location = new System.Drawing.Point(42, 467);
             this.chkRelatorio.Name = "chkRelatorio";
             this.chkRelatorio.Size = new System.Drawing.Size(104, 25);
-            this.chkRelatorio.TabIndex = 23;
+            this.chkRelatorio.TabIndex = 14;
             this.chkRelatorio.Tag = "1000";
             this.chkRelatorio.Text = "Relatórios";
             this.chkRelatorio.UseVisualStyleBackColor = true;
@@ -189,7 +202,7 @@
             this.chkClienteDel.Location = new System.Drawing.Point(53, 409);
             this.chkClienteDel.Name = "chkClienteDel";
             this.chkClienteDel.Size = new System.Drawing.Size(77, 25);
-            this.chkClienteDel.TabIndex = 22;
+            this.chkClienteDel.TabIndex = 12;
             this.chkClienteDel.Tag = "903";
             this.chkClienteDel.Text = "Excluir";
             this.chkClienteDel.UseVisualStyleBackColor = true;
@@ -202,7 +215,7 @@
             this.chkClienteEdit.Location = new System.Drawing.Point(53, 378);
             this.chkClienteEdit.Name = "chkClienteEdit";
             this.chkClienteEdit.Size = new System.Drawing.Size(75, 25);
-            this.chkClienteEdit.TabIndex = 21;
+            this.chkClienteEdit.TabIndex = 11;
             this.chkClienteEdit.Tag = "902";
             this.chkClienteEdit.Text = "Editar";
             this.chkClienteEdit.UseVisualStyleBackColor = true;
@@ -215,7 +228,7 @@
             this.chkClienteList.Location = new System.Drawing.Point(53, 347);
             this.chkClienteList.Name = "chkClienteList";
             this.chkClienteList.Size = new System.Drawing.Size(105, 25);
-            this.chkClienteList.TabIndex = 20;
+            this.chkClienteList.TabIndex = 10;
             this.chkClienteList.Tag = "901";
             this.chkClienteList.Text = "Adicionar";
             this.chkClienteList.UseVisualStyleBackColor = true;
@@ -228,7 +241,7 @@
             this.chkCliente.Location = new System.Drawing.Point(42, 316);
             this.chkCliente.Name = "chkCliente";
             this.chkCliente.Size = new System.Drawing.Size(163, 25);
-            this.chkCliente.TabIndex = 19;
+            this.chkCliente.TabIndex = 9;
             this.chkCliente.Tag = "900";
             this.chkCliente.Text = "Cadastro Cliente";
             this.chkCliente.UseVisualStyleBackColor = true;
@@ -241,7 +254,7 @@
             this.chkPerfilDel.Location = new System.Drawing.Point(53, 285);
             this.chkPerfilDel.Name = "chkPerfilDel";
             this.chkPerfilDel.Size = new System.Drawing.Size(77, 25);
-            this.chkPerfilDel.TabIndex = 18;
+            this.chkPerfilDel.TabIndex = 8;
             this.chkPerfilDel.Tag = "803";
             this.chkPerfilDel.Text = "Excluir";
             this.chkPerfilDel.UseVisualStyleBackColor = true;
@@ -254,7 +267,7 @@
             this.chkPerfilEdit.Location = new System.Drawing.Point(53, 254);
             this.chkPerfilEdit.Name = "chkPerfilEdit";
             this.chkPerfilEdit.Size = new System.Drawing.Size(75, 25);
-            this.chkPerfilEdit.TabIndex = 17;
+            this.chkPerfilEdit.TabIndex = 7;
             this.chkPerfilEdit.Tag = "802";
             this.chkPerfilEdit.Text = "Editar";
             this.chkPerfilEdit.UseVisualStyleBackColor = true;
@@ -267,7 +280,7 @@
             this.chkPerfilList.Location = new System.Drawing.Point(53, 223);
             this.chkPerfilList.Name = "chkPerfilList";
             this.chkPerfilList.Size = new System.Drawing.Size(105, 25);
-            this.chkPerfilList.TabIndex = 16;
+            this.chkPerfilList.TabIndex = 6;
             this.chkPerfilList.Tag = "801";
             this.chkPerfilList.Text = "Adicionar";
             this.chkPerfilList.UseVisualStyleBackColor = true;
@@ -280,7 +293,7 @@
             this.chkPerfil.Location = new System.Drawing.Point(42, 192);
             this.chkPerfil.Name = "chkPerfil";
             this.chkPerfil.Size = new System.Drawing.Size(124, 25);
-            this.chkPerfil.TabIndex = 15;
+            this.chkPerfil.TabIndex = 5;
             this.chkPerfil.Tag = "800";
             this.chkPerfil.Text = "Perfil Usuário";
             this.chkPerfil.UseVisualStyleBackColor = true;
@@ -293,7 +306,7 @@
             this.chkUsuarioDel.Location = new System.Drawing.Point(53, 161);
             this.chkUsuarioDel.Name = "chkUsuarioDel";
             this.chkUsuarioDel.Size = new System.Drawing.Size(77, 25);
-            this.chkUsuarioDel.TabIndex = 14;
+            this.chkUsuarioDel.TabIndex = 4;
             this.chkUsuarioDel.Tag = "703";
             this.chkUsuarioDel.Text = "Excluir";
             this.chkUsuarioDel.UseVisualStyleBackColor = true;
@@ -306,7 +319,7 @@
             this.chkUsuarioEdit.Location = new System.Drawing.Point(53, 130);
             this.chkUsuarioEdit.Name = "chkUsuarioEdit";
             this.chkUsuarioEdit.Size = new System.Drawing.Size(75, 25);
-            this.chkUsuarioEdit.TabIndex = 13;
+            this.chkUsuarioEdit.TabIndex = 3;
             this.chkUsuarioEdit.Tag = "702";
             this.chkUsuarioEdit.Text = "Editar";
             this.chkUsuarioEdit.UseVisualStyleBackColor = true;
@@ -319,7 +332,7 @@
             this.chkUsuarioList.Location = new System.Drawing.Point(53, 99);
             this.chkUsuarioList.Name = "chkUsuarioList";
             this.chkUsuarioList.Size = new System.Drawing.Size(105, 25);
-            this.chkUsuarioList.TabIndex = 12;
+            this.chkUsuarioList.TabIndex = 2;
             this.chkUsuarioList.Tag = "701";
             this.chkUsuarioList.Text = "Adicionar";
             this.chkUsuarioList.UseVisualStyleBackColor = true;
@@ -332,7 +345,7 @@
             this.chkUsuario.Location = new System.Drawing.Point(42, 68);
             this.chkUsuario.Name = "chkUsuario";
             this.chkUsuario.Size = new System.Drawing.Size(85, 25);
-            this.chkUsuario.TabIndex = 11;
+            this.chkUsuario.TabIndex = 1;
             this.chkUsuario.Tag = "700";
             this.chkUsuario.Text = "Usuário";
             this.chkUsuario.UseVisualStyleBackColor = true;
@@ -347,7 +360,7 @@
             this.chkTodos.Location = new System.Drawing.Point(27, 37);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(74, 25);
-            this.chkTodos.TabIndex = 10;
+            this.chkTodos.TabIndex = 0;
             this.chkTodos.Tag = "600";
             this.chkTodos.Text = "Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -358,13 +371,14 @@
             this.btnVoltar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnVoltar.IconColor = System.Drawing.Color.White;
+            this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.IconSize = 32;
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.Location = new System.Drawing.Point(548, 572);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Rotation = 0D;
             this.btnVoltar.Size = new System.Drawing.Size(137, 46);
-            this.btnVoltar.TabIndex = 13;
+            this.btnVoltar.TabIndex = 3;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -374,29 +388,17 @@
             this.btnSalvar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.White;
+            this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalvar.IconSize = 32;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(405, 572);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Rotation = 0D;
             this.btnSalvar.Size = new System.Drawing.Size(137, 46);
-            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // chkDashBoard
-            // 
-            this.chkDashBoard.AutoSize = true;
-            this.chkDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDashBoard.ForeColor = System.Drawing.Color.White;
-            this.chkDashBoard.Location = new System.Drawing.Point(42, 438);
-            this.chkDashBoard.Name = "chkDashBoard";
-            this.chkDashBoard.Size = new System.Drawing.Size(114, 25);
-            this.chkDashBoard.TabIndex = 27;
-            this.chkDashBoard.Tag = "1100";
-            this.chkDashBoard.Text = "DashBoard";
-            this.chkDashBoard.UseVisualStyleBackColor = true;
             // 
             // frmPerfilUsuarioCadastrar
             // 
