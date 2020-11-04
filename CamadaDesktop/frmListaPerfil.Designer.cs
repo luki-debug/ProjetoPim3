@@ -66,7 +66,11 @@
             // btnBuscar
             // 
             this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+<<<<<<< HEAD
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.User;
+=======
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
             this.btnBuscar.IconColor = System.Drawing.Color.White;
             this.btnBuscar.IconSize = 32;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

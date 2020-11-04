@@ -64,8 +64,11 @@ namespace CamadaDesktop
                 chkClienteEdit.Checked = true;
                 chkClienteDel.Checked = true;
 
+<<<<<<< HEAD
+=======
                 chkDashBoard.Checked = true;
 
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 chkRelatorio.Checked = true;
                 chkRelInvest.Checked = true;
                 chkRelSituacao.Checked = true;
@@ -88,8 +91,11 @@ namespace CamadaDesktop
                 chkClienteEdit.Checked = false;
                 chkClienteDel.Checked = false;
 
+<<<<<<< HEAD
+=======
                 chkDashBoard.Checked = false;
 
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 chkRelatorio.Checked = false;
                 chkRelInvest.Checked = false;
                 chkRelSituacao.Checked = false;
@@ -126,8 +132,11 @@ namespace CamadaDesktop
                 listCheckBox.Add(chkClienteEdit);
                 listCheckBox.Add(chkClienteDel);
 
+<<<<<<< HEAD
+=======
                 listCheckBox.Add(chkDashBoard);
 
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 listCheckBox.Add(chkRelatorio);
                 listCheckBox.Add(chkRelInvest);
                 listCheckBox.Add(chkRelSituacao);

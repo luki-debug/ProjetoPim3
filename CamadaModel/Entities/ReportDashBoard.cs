@@ -71,11 +71,15 @@ namespace CamadaModel.Entities
             foreach (System.Data.DataRow row in selectInvestidorFTop.Rows)
             {
                 InvestidorF investidor = new InvestidorF();
+<<<<<<< HEAD
+                investidor.Nome = Convert.ToString(row[0]);
+=======
                 string[] nomeCompleto= Convert.ToString(row[0]).Split(' ');
                 if (nomeCompleto.Length > 1)
                     investidor.Nome = nomeCompleto[0] + ' ' + nomeCompleto[1];
                 else
                     investidor.Nome = nomeCompleto[0];
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                 investidor.ValorTotal = Convert.ToDouble(row[2]);
 
                 InvestidoresFTop.Add(investidor);
@@ -99,6 +103,29 @@ namespace CamadaModel.Entities
                 mes = Convert.ToInt32(row[1]);
                 if (mes == 1)
                     loginMes.Mes = "Janeiro";
+<<<<<<< HEAD
+                if(mes==2)
+                    loginMes.Mes = "Fevereiro";
+                if(mes==3)
+                    loginMes.Mes = "Março";
+                if(mes==4)
+                    loginMes.Mes = "Abril";
+                if(mes==5)
+                    loginMes.Mes = "Maio";
+                if(mes==6)
+                    loginMes.Mes = "Junho";
+                if(mes==7)
+                    loginMes.Mes = "Julho";
+                if(mes==8)
+                    loginMes.Mes = "Agosto";
+                if(mes==9)
+                    loginMes.Mes = "Setembro";
+                if(mes==10)
+                    loginMes.Mes = "Outubro";
+                if(mes==11)
+                    loginMes.Mes = "Novembro";
+                if(mes==12)
+=======
                 if (mes == 2)
                     loginMes.Mes = "Fevereiro";
                 if (mes == 3)
@@ -120,6 +147,7 @@ namespace CamadaModel.Entities
                 if (mes == 11)
                     loginMes.Mes = "Novembro";
                 if (mes == 12)
+>>>>>>> 89c1261eb6cad0c3162593a431c221eb3d232a4f
                     loginMes.Mes = "Dezembro";
 
                 LoginMeses.Add(loginMes);

@@ -29,17 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.plBtnUser = new System.Windows.Forms.Panel();
+            this.plBtnCliente = new System.Windows.Forms.Panel();
+            this.plBtnRel = new System.Windows.Forms.Panel();
+            this.plBtnPerfil = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlSubMenuRelatorio = new System.Windows.Forms.Panel();
+            this.plBtnRelTop = new System.Windows.Forms.Panel();
+            this.plBtnRelInvest = new System.Windows.Forms.Panel();
+            this.plBtnRelCliente = new System.Windows.Forms.Panel();
             this.btnReportTop = new FontAwesome.Sharp.IconButton();
             this.btnReportInvestimento = new FontAwesome.Sharp.IconButton();
             this.btnReportSituacao = new FontAwesome.Sharp.IconButton();
             this.BtnReport = new FontAwesome.Sharp.IconButton();
-            this.btnDashBoard = new FontAwesome.Sharp.IconButton();
             this.iconBtnCadastro = new FontAwesome.Sharp.IconButton();
             this.btnPerfil = new FontAwesome.Sharp.IconButton();
             this.iconBtnUsuario = new FontAwesome.Sharp.IconButton();
-            this.plBtnUser = new System.Windows.Forms.Panel();
             this.iconBtnInicio = new FontAwesome.Sharp.IconButton();
             this.pnlTela = new System.Windows.Forms.Panel();
             this.pnlTitulo = new System.Windows.Forms.Panel();
@@ -49,14 +55,12 @@
             this.iconPicMaximizar = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicClose = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconBarra = new FontAwesome.Sharp.IconPictureBox();
-            this.lblPerfil = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.panelMenu.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.pnlSubMenuRelatorio.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,41 +69,118 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicClose)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconBarra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelMenu
+            // panel1
             // 
-            this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
-            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu.Controls.Add(this.pnlSubMenuRelatorio);
-            this.panelMenu.Controls.Add(this.BtnReport);
-            this.panelMenu.Controls.Add(this.btnDashBoard);
-            this.panelMenu.Controls.Add(this.iconBtnCadastro);
-            this.panelMenu.Controls.Add(this.btnPerfil);
-            this.panelMenu.Controls.Add(this.iconBtnUsuario);
-            this.panelMenu.Controls.Add(this.plBtnUser);
-            this.panelMenu.Controls.Add(this.iconBtnInicio);
-            this.panelMenu.Location = new System.Drawing.Point(0, 116);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(265, 428);
-            this.panelMenu.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.plBtnUser);
+            this.panel1.Controls.Add(this.plBtnCliente);
+            this.panel1.Controls.Add(this.plBtnRel);
+            this.panel1.Controls.Add(this.plBtnPerfil);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pnlSubMenuRelatorio);
+            this.panel1.Controls.Add(this.BtnReport);
+            this.panel1.Controls.Add(this.iconBtnCadastro);
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.iconBtnUsuario);
+            this.panel1.Controls.Add(this.iconBtnInicio);
+            this.panel1.Location = new System.Drawing.Point(0, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(265, 428);
+            this.panel1.TabIndex = 0;
+            // 
+            // plBtnUser
+            // 
+            this.plBtnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnUser.Location = new System.Drawing.Point(3, 48);
+            this.plBtnUser.Name = "plBtnUser";
+            this.plBtnUser.Size = new System.Drawing.Size(5, 40);
+            this.plBtnUser.TabIndex = 6;
+            this.plBtnUser.Visible = false;
+            // 
+            // plBtnCliente
+            // 
+            this.plBtnCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnCliente.Location = new System.Drawing.Point(3, 138);
+            this.plBtnCliente.Name = "plBtnCliente";
+            this.plBtnCliente.Size = new System.Drawing.Size(5, 40);
+            this.plBtnCliente.TabIndex = 8;
+            this.plBtnCliente.Visible = false;
+            // 
+            // plBtnRel
+            // 
+            this.plBtnRel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnRel.Location = new System.Drawing.Point(3, 182);
+            this.plBtnRel.Name = "plBtnRel";
+            this.plBtnRel.Size = new System.Drawing.Size(5, 40);
+            this.plBtnRel.TabIndex = 6;
+            this.plBtnRel.Visible = false;
+            // 
+            // plBtnPerfil
+            // 
+            this.plBtnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnPerfil.Location = new System.Drawing.Point(3, 93);
+            this.plBtnPerfil.Name = "plBtnPerfil";
+            this.plBtnPerfil.Size = new System.Drawing.Size(5, 40);
+            this.plBtnPerfil.TabIndex = 7;
+            this.plBtnPerfil.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 40);
+            this.panel3.TabIndex = 5;
+            this.panel3.Visible = false;
             // 
             // pnlSubMenuRelatorio
             // 
+            this.pnlSubMenuRelatorio.Controls.Add(this.plBtnRelTop);
+            this.pnlSubMenuRelatorio.Controls.Add(this.plBtnRelInvest);
+            this.pnlSubMenuRelatorio.Controls.Add(this.plBtnRelCliente);
             this.pnlSubMenuRelatorio.Controls.Add(this.btnReportTop);
             this.pnlSubMenuRelatorio.Controls.Add(this.btnReportInvestimento);
             this.pnlSubMenuRelatorio.Controls.Add(this.btnReportSituacao);
             this.pnlSubMenuRelatorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuRelatorio.Location = new System.Drawing.Point(0, 270);
+            this.pnlSubMenuRelatorio.Location = new System.Drawing.Point(0, 225);
             this.pnlSubMenuRelatorio.Name = "pnlSubMenuRelatorio";
             this.pnlSubMenuRelatorio.Size = new System.Drawing.Size(263, 120);
             this.pnlSubMenuRelatorio.TabIndex = 0;
             this.pnlSubMenuRelatorio.Visible = false;
+            // 
+            // plBtnRelTop
+            // 
+            this.plBtnRelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnRelTop.Location = new System.Drawing.Point(39, 61);
+            this.plBtnRelTop.Name = "plBtnRelTop";
+            this.plBtnRelTop.Size = new System.Drawing.Size(5, 25);
+            this.plBtnRelTop.TabIndex = 12;
+            this.plBtnRelTop.Visible = false;
+            // 
+            // plBtnRelInvest
+            // 
+            this.plBtnRelInvest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnRelInvest.Location = new System.Drawing.Point(39, 32);
+            this.plBtnRelInvest.Name = "plBtnRelInvest";
+            this.plBtnRelInvest.Size = new System.Drawing.Size(5, 25);
+            this.plBtnRelInvest.TabIndex = 10;
+            this.plBtnRelInvest.Visible = false;
+            // 
+            // plBtnRelCliente
+            // 
+            this.plBtnRelCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.plBtnRelCliente.Location = new System.Drawing.Point(39, 2);
+            this.plBtnRelCliente.Name = "plBtnRelCliente";
+            this.plBtnRelCliente.Size = new System.Drawing.Size(5, 25);
+            this.plBtnRelCliente.TabIndex = 8;
+            this.plBtnRelCliente.Visible = false;
             // 
             // btnReportTop
             // 
@@ -116,12 +197,12 @@
             this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportTop.Location = new System.Drawing.Point(0, 60);
             this.btnReportTop.Name = "btnReportTop";
-            this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportTop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportTop.Rotation = 0D;
             this.btnReportTop.Size = new System.Drawing.Size(263, 27);
             this.btnReportTop.TabIndex = 11;
             this.btnReportTop.Tag = "1003";
-            this.btnReportTop.Text = "      Relatório Top 10";
+            this.btnReportTop.Text = "         Relatório Top 10";
             this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportTop.UseVisualStyleBackColor = true;
             this.btnReportTop.Visible = false;
@@ -142,12 +223,12 @@
             this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
             this.btnReportInvestimento.Name = "btnReportInvestimento";
-            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportInvestimento.Rotation = 0D;
             this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
             this.btnReportInvestimento.TabIndex = 9;
             this.btnReportInvestimento.Tag = "1002";
-            this.btnReportInvestimento.Text = "      Relatório Inventimentos";
+            this.btnReportInvestimento.Text = "         Relatório Inventimentos";
             this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportInvestimento.UseVisualStyleBackColor = true;
             this.btnReportInvestimento.Visible = false;
@@ -168,12 +249,12 @@
             this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
             this.btnReportSituacao.Name = "btnReportSituacao";
-            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportSituacao.Rotation = 0D;
             this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
             this.btnReportSituacao.TabIndex = 7;
             this.btnReportSituacao.Tag = "1001";
-            this.btnReportSituacao.Text = "      Relatório Situação Cliente";
+            this.btnReportSituacao.Text = "         Relatório Situação Cliente";
             this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportSituacao.UseVisualStyleBackColor = true;
             this.btnReportSituacao.Visible = false;
@@ -192,7 +273,7 @@
             this.BtnReport.IconColor = System.Drawing.Color.White;
             this.BtnReport.IconSize = 40;
             this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.Location = new System.Drawing.Point(0, 225);
+            this.BtnReport.Location = new System.Drawing.Point(0, 180);
             this.BtnReport.Name = "BtnReport";
             this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnReport.Rotation = 0D;
@@ -204,33 +285,6 @@
             this.BtnReport.UseVisualStyleBackColor = true;
             this.BtnReport.Visible = false;
             this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
-            // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
-            this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.btnDashBoard.IconColor = System.Drawing.Color.White;
-            this.btnDashBoard.IconSize = 40;
-            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 180);
-            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashBoard.Rotation = 0D;
-            this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
-            this.btnDashBoard.TabIndex = 9;
-            this.btnDashBoard.Tag = "1100";
-            this.btnDashBoard.Text = "DashBoard";
-            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashBoard.UseVisualStyleBackColor = true;
-            this.btnDashBoard.Visible = false;
-            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
             // 
             // iconBtnCadastro
             // 
@@ -310,15 +364,6 @@
             this.iconBtnUsuario.Visible = false;
             this.iconBtnUsuario.Click += new System.EventHandler(this.iconBtnUsuario_Click);
             // 
-            // plBtnUser
-            // 
-            this.plBtnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.plBtnUser.Location = new System.Drawing.Point(3, 48);
-            this.plBtnUser.Name = "plBtnUser";
-            this.plBtnUser.Size = new System.Drawing.Size(5, 40);
-            this.plBtnUser.TabIndex = 6;
-            this.plBtnUser.Visible = false;
-            // 
             // iconBtnInicio
             // 
             this.iconBtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
@@ -352,9 +397,9 @@
             this.pnlTela.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.pnlTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.pnlTela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTela.Location = new System.Drawing.Point(267, 100);
+            this.pnlTela.Location = new System.Drawing.Point(267, 77);
             this.pnlTela.Name = "pnlTela";
-            this.pnlTela.Size = new System.Drawing.Size(909, 438);
+            this.pnlTela.Size = new System.Drawing.Size(909, 461);
             this.pnlTela.TabIndex = 1;
             // 
             // pnlTitulo
@@ -369,7 +414,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(48)))), ((int)(((byte)(136)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -447,76 +492,26 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.iconBarra);
-            this.panel2.Controls.Add(this.lblPerfil);
-            this.panel2.Controls.Add(this.btnLogout);
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblTitulo);
             this.panel2.Location = new System.Drawing.Point(267, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 75);
+            this.panel2.Size = new System.Drawing.Size(912, 48);
             this.panel2.TabIndex = 0;
             // 
-            // iconBarra
+            // lblTitulo
             // 
-            this.iconBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBarra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconBarra.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconBarra.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconBarra.Location = new System.Drawing.Point(19, 18);
-            this.iconBarra.Name = "iconBarra";
-            this.iconBarra.Size = new System.Drawing.Size(32, 32);
-            this.iconBarra.TabIndex = 5;
-            this.iconBarra.TabStop = false;
-            // 
-            // lblPerfil
-            // 
-            this.lblPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.ForeColor = System.Drawing.Color.White;
-            this.lblPerfil.Location = new System.Drawing.Point(679, 43);
-            this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(149, 19);
-            this.lblPerfil.TabIndex = 4;
-            this.lblPerfil.Text = "Perfil";
-            this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(834, 5);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(66, 60);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(599, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 63);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(679, 24);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(149, 19);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Nome";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(15, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(51, 19);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Inicio";
             // 
             // label1
             // 
@@ -524,23 +519,43 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(677, 2);
+            this.label1.Location = new System.Drawing.Point(675, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 21);
+            this.label1.Size = new System.Drawing.Size(129, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bem Vindo";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Text = "Seja Bem Vindo";
             // 
-            // lblTitulo
+            // lblNome
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(57, 24);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(51, 19);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Inicio";
+            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(675, 22);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(153, 19);
+            this.lblNome.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(615, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(834, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // frmMenu
             // 
@@ -550,7 +565,7 @@
             this.ClientSize = new System.Drawing.Size(1179, 544);
             this.Controls.Add(this.pnlBarraTitulo);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTela);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -559,8 +574,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lumia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlSubMenuRelatorio.ResumeLayout(false);
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -570,16 +584,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicClose)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconBarra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlTela;
         private FontAwesome.Sharp.IconButton iconBtnCadastro;
         private FontAwesome.Sharp.IconButton BtnReport;
@@ -590,21 +603,25 @@
         private FontAwesome.Sharp.IconPictureBox iconPicMinimizar;
         private FontAwesome.Sharp.IconPictureBox iconPicMaximizar;
         private FontAwesome.Sharp.IconPictureBox iconPicClose;
+        private System.Windows.Forms.Panel plBtnPerfil;
+        private System.Windows.Forms.Panel plBtnRel;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlSubMenuRelatorio;
+        private System.Windows.Forms.Panel plBtnRelCliente;
         private FontAwesome.Sharp.IconButton btnReportSituacao;
+        private System.Windows.Forms.Panel plBtnRelTop;
         private FontAwesome.Sharp.IconButton btnReportTop;
+        private System.Windows.Forms.Panel plBtnRelInvest;
         private FontAwesome.Sharp.IconButton btnReportInvestimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel plBtnCliente;
         private FontAwesome.Sharp.IconButton btnPerfil;
         private System.Windows.Forms.Panel plBtnUser;
         private FontAwesome.Sharp.IconButton iconBtnUsuario;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox btnLogout;
-        private FontAwesome.Sharp.IconButton btnDashBoard;
-        private System.Windows.Forms.Label lblPerfil;
-        private FontAwesome.Sharp.IconPictureBox iconBarra;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

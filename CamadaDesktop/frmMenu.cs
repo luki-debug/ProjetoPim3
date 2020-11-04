@@ -18,15 +18,46 @@ namespace CamadaDesktop
     {
         private Form formAtual = new Form();
         IconButton currentButton = new IconButton();
-        private Panel leftBorderBtn;
+        IconButton buttonDefault = new IconButton();
         public frmMenu()
         {
             InitializeComponent();
-            validarBotoesUsuario();
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 45);
-            panelMenu.Controls.Add(leftBorderBtn);
+
+            lblNome.Text = UsuarioCache.Nome;
+
+            foreach (var item in UsuarioCache.ListCdPagina)
+            {
+                if (iconBtnUsuario.Tag.ToString() == item)
+                {
+                    iconBtnUsuario.Visible = true;
+                 }
+                if (iconBtnCadastro.Tag.ToString() == item)
+                {
+                    iconBtnCadastro.Visible = true;
+                }
+                if (btnPerfil.Tag.ToString() == item)
+                {
+                    btnPerfil.Visible = true;
+                }
+                if (BtnReport.Tag.ToString() == item)
+                {
+                    BtnReport.Visible = true;
+                }
+                if (btnReportSituacao.Tag.ToString() == item)
+                {
+                    btnReportSituacao.Visible = true;
+                }
+                if (btnReportInvestimento.Tag.ToString() == item)
+                {
+                    btnReportInvestimento.Visible = true;
+                }
+                if (btnReportTop.Tag.ToString() == item)
+                {
+                    btnReportTop.Visible = true;
+                }
+            }
         }
+
         public void AbrirForm(Form Form)
         {
             Form.TopLevel = false;
@@ -36,76 +67,102 @@ namespace CamadaDesktop
             this.pnlTela.Tag = Form;
             Form.BringToFront();
             Form.Show();
-        }
-        private void iconBtnInicio_Click(object sender, EventArgs e)
-        {
-            formAtual.Close();
-            AtivarButton(sender, RGBColors.color1);
-            AbrirForm(new frmInicio());
-            formAtual = new frmInicio();
-        }
-        private void iconBtnUsuario_Click(object sender, EventArgs e)
-        {
-            formAtual.Close();
-            AtivarButton(sender, RGBColors.color2);     
-            AbrirForm(new frmListaUsuario());
-            formAtual = new frmListaUsuario();
-        }
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            formAtual.Close();
-            AtivarButton(sender, RGBColors.color3);
-            AbrirForm(new frmListaPerfil());
-            formAtual = new frmListaPerfil();
+            //lblTitulo.Text = Form.Text;
         }
         private void iconBtnCadastrar_Click(object sender, EventArgs e)
         {
             formAtual.Close();
-            AtivarButton(sender, RGBColors.color4);
+            currentButton.BackColor = buttonDefault.BackColor;
+            currentButton.Location = buttonDefault.Location;
+            currentButton.TextImageRelation = buttonDefault.TextImageRelation;
+            currentButton.IconColor = buttonDefault.IconColor;
+            currentButton.ForeColor = buttonDefault.ForeColor;
+
+            buttonDefault.BackColor = iconBtnCadastro.BackColor;
+            buttonDefault.Location = iconBtnCadastro.Location;
+            buttonDefault.TextImageRelation = iconBtnCadastro.TextImageRelation;
+            buttonDefault.ForeColor = iconBtnCadastro.ForeColor;
+            buttonDefault.IconColor = iconBtnCadastro.IconColor;
+
+            //iconBtnCadastro.Location = new Point(6, 127);
+            iconBtnCadastro.TextImageRelation = TextImageRelation.TextBeforeImage;
+            iconBtnCadastro.BackColor = Color.FromArgb(104, 242, 133);
+            iconBtnCadastro.ForeColor = Color.White;
+            iconBtnCadastro.IconColor = Color.White;
+            lblTitulo.Text = iconBtnCadastro.Text;
             AbrirForm(new frmListaClientes());
             formAtual = new frmListaClientes();
+            currentButton = sender as IconButton;
+
         }
-        private void btnDashBoard_Click(object sender, EventArgs e)
+
+        private void iconBtnUsuario_Click(object sender, EventArgs e)
         {
             formAtual.Close();
-            AtivarButton(sender, RGBColors.color5);
-            AbrirForm(new frmDashBoard());
-            formAtual = new frmDashBoard();
+            currentButton.BackColor = buttonDefault.BackColor;
+            currentButton.Location = buttonDefault.Location;
+            currentButton.TextImageRelation = buttonDefault.TextImageRelation;
+            currentButton.IconColor = buttonDefault.IconColor;
+            currentButton.ForeColor = buttonDefault.ForeColor;
+
+
+            buttonDefault.BackColor = iconBtnUsuario.BackColor;
+            buttonDefault.Location = iconBtnUsuario.Location;
+            buttonDefault.TextImageRelation = iconBtnUsuario.TextImageRelation;
+            buttonDefault.ForeColor = iconBtnUsuario.ForeColor;
+            buttonDefault.IconColor = iconBtnUsuario.IconColor;
+
+            //iconBtnCadastro.Location = new Point(6, 127);
+            iconBtnUsuario.TextImageRelation = TextImageRelation.TextBeforeImage;
+            iconBtnUsuario.BackColor = Color.FromArgb(104, 242, 133);
+            iconBtnUsuario.ForeColor = Color.White;
+            iconBtnUsuario.IconColor = Color.White;
+            lblTitulo.Text = iconBtnUsuario.Text;
+            AbrirForm(new frmListaUsuario());
+            formAtual = new frmListaUsuario();
+            currentButton = sender as IconButton;
         }
+
         private void BtnReport_Click(object sender, EventArgs e)
         {
-            formAtual.Close();
-            AtivarButton(sender, RGBColors.color6);
             pnlSubMenuRelatorio.Visible = true;
         }
-        private void btnReportSituacao_Click(object sender, EventArgs e)
+
+        private void iconBtnInicio_Click(object sender, EventArgs e)
         {
             formAtual.Close();
-            lblTitulo.Text = btnReportSituacao.Text.Replace("      ", "");
-            pnlSubMenuRelatorio.Visible = false;
-            AbrirForm(new frmRelClienteSituacao());
-            formAtual = new frmRelClienteSituacao();
+            currentButton.BackColor = buttonDefault.BackColor;
+            currentButton.Location = buttonDefault.Location;
+            currentButton.TextImageRelation = buttonDefault.TextImageRelation;
+            currentButton.IconColor = buttonDefault.IconColor;
+            currentButton.ForeColor = buttonDefault.ForeColor;
+
+
+            buttonDefault.BackColor = iconBtnInicio.BackColor;
+            buttonDefault.Location = iconBtnInicio.Location;
+            buttonDefault.TextImageRelation = iconBtnInicio.TextImageRelation;
+            buttonDefault.ForeColor = iconBtnInicio.ForeColor;
+            buttonDefault.IconColor = iconBtnInicio.IconColor;
+
+            //iconBtnCadastro.Location = new Point(6, 127);
+            iconBtnInicio.TextImageRelation = TextImageRelation.TextBeforeImage;
+            iconBtnInicio.BackColor = Color.FromArgb(104, 242, 133);
+            iconBtnInicio.ForeColor = Color.White;
+            iconBtnInicio.IconColor = Color.White;
+            lblTitulo.Text = iconBtnInicio.Text;
+            //AbrirForm(new frmInicio());
+            //formAtual = new frmInicio();
+            AbrirForm(new frmDashBoard());
+            formAtual = new frmDashBoard();
+            currentButton = sender as IconButton;
+
         }
-        private void btnReportInvestimento_Click(object sender, EventArgs e)
-        {
-            formAtual.Close();
-            lblTitulo.Text = btnReportInvestimento.Text.Replace("      ", ""); ;
-            pnlSubMenuRelatorio.Visible = false;
-            AbrirForm(new frmRelInvestimento());
-            formAtual = new frmRelInvestimento();
-        }
-        private void btnReportTop_Click(object sender, EventArgs e)
-        {
-            formAtual.Close();
-            lblTitulo.Text = btnReportTop.Text.Replace("      ", ""); ;
-            pnlSubMenuRelatorio.Visible = false;
-            AbrirForm(new frmRelTop());
-            formAtual = new frmRelTop();
-        }
+
         private void iconPicClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
         private void iconPicMaximizar_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -113,6 +170,7 @@ namespace CamadaDesktop
             else
                 this.WindowState = FormWindowState.Maximized;
         }
+
         private void iconPicMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -127,91 +185,43 @@ namespace CamadaDesktop
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        } 
-        private void validarBotoesUsuario()
-        {
-            lblNome.Text = UsuarioCache.Nome;
-            lblPerfil.Text = UsuarioCache._perfilUsuario.Descricao;
-
-            foreach (var item in UsuarioCache.ListCdPagina)
-            {
-                if (iconBtnUsuario.Tag.ToString() == item)
-                    iconBtnUsuario.Visible = true;
-                if (iconBtnCadastro.Tag.ToString() == item)
-                    iconBtnCadastro.Visible = true;
-                if (btnPerfil.Tag.ToString() == item)
-                    btnPerfil.Visible = true;
-                if (BtnReport.Tag.ToString() == item)
-                    BtnReport.Visible = true;
-                if (btnReportSituacao.Tag.ToString() == item)
-                    btnReportSituacao.Visible = true;
-                if (btnReportInvestimento.Tag.ToString() == item)
-                    btnReportInvestimento.Visible = true;
-                if (btnReportTop.Tag.ToString() == item)
-                    btnReportTop.Visible = true;
-                if (btnDashBoard.Tag.ToString() == item)
-                    btnDashBoard.Visible = true;
-            }
-        }
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
-
-            this.Close();
         }
 
-        //Metodos para as açoes dos botoes Menu
-        private void AtivarButton(object senderBtn, Color color)
+        private void btnReportSituacao_Click(object sender, EventArgs e)
         {
-            if (senderBtn != null)
-            {
-                DesativarButton();
-                //Botao
-                currentButton = (IconButton)senderBtn;
-                currentButton.BackColor = Color.FromArgb(37, 36, 81);
-                currentButton.ForeColor = color;
-                currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                currentButton.IconColor = color;
-                currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentButton.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border Button
-                leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
-                //Icone current TituloHome
-                iconBarra.IconChar = currentButton.IconChar;
-                iconBarra.IconColor = color;
-                lblTitulo.Text = currentButton.Text;
-                pnlSubMenuRelatorio.Visible = false;
-            }
-        }
-        private void DesativarButton()
-        {
-            if (currentButton != null)
-            {
-                currentButton.BackColor = Color.FromArgb(71, 48, 136);
-                currentButton.ForeColor = Color.Gainsboro;
-                currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                currentButton.IconColor = Color.Gainsboro;
-                currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentButton.ImageAlign = ContentAlignment.MiddleLeft;
-            }
-        }
-        private struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
+            formAtual.Close();
+            lblTitulo.Text = btnReportSituacao.Text;
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelClienteSituacao());
+            formAtual = new frmRelClienteSituacao();
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
+        private void btnReportInvestimento_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmInicio());
+            formAtual.Close();
+            lblTitulo.Text = btnReportInvestimento.Text;
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelInvestimento());
+            formAtual = new frmRelInvestimento();
         }
+
+        private void btnReportTop_Click(object sender, EventArgs e)
+        {
+            formAtual.Close();
+            lblTitulo.Text = btnReportTop.Text;
+            pnlSubMenuRelatorio.Visible = false;
+            AbrirForm(new frmRelTop());
+            formAtual = new frmRelTop();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            formAtual.Close();
+            pnlSubMenuRelatorio.Visible = false;
+            lblTitulo.Text = btnPerfil.Text;
+            AbrirForm(new frmListaPerfil());
+            formAtual = new frmListaPerfil();
+        }
+        //---
     }
 }
