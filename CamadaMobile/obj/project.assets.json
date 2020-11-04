@@ -1551,24 +1551,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas\\.nuget\\packages\\": {},
+    "C:\\Users\\emill\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
+      "projectUniqueName": "C:\\Users\\emill\\OneDrive\\Documentos\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
       "projectName": "CamadaMobile",
-      "projectPath": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\Documents\\GitHub\\ProjetoPim3\\CamadaMobile\\obj\\",
+      "projectPath": "C:\\Users\\emill\\OneDrive\\Documentos\\GitHub\\ProjetoPim3\\CamadaMobile\\CamadaMobile.csproj",
+      "packagesPath": "C:\\Users\\emill\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emill\\OneDrive\\Documentos\\GitHub\\ProjetoPim3\\CamadaMobile\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emill\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="atualiazaocadastro.aspx" />
     <Content Include="CadastroDeAlgumaCoisa.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -202,6 +203,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="atualiazaocadastro.aspx.designer.vb">
+      <DependentUpon>atualiazaocadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atualiazaocadastro.aspx.vb">
+      <DependentUpon>atualiazaocadastro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="CadastroDeAlgumaCoisa.aspx.designer.vb">
       <DependentUpon>CadastroDeAlgumaCoisa.aspx</DependentUpon>
     </Compile>
