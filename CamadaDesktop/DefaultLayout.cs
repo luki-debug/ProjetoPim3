@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using FontAwesome.Sharp;
+using Microsoft.Reporting.WinForms;
 
 namespace CamadaDesktop
 {
@@ -103,6 +104,15 @@ namespace CamadaDesktop
             dg.RowHeadersVisible = false;
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg.TabIndex = 3;
+        }
+
+        public void LayoutReportViewer(ReportViewer reportViewer)
+        {
+            reportViewer.Size = new Size(919, 483);
+            reportViewer.TabIndex = 0;
+            reportViewer.Visible = false;
+            reportViewer.BorderStyle = BorderStyle.FixedSingle;
+            reportViewer.ZoomMode = ZoomMode.PageWidth;
         }
     }
 }

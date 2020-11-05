@@ -54,15 +54,16 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPesquisar.IconColor = System.Drawing.Color.White;
+            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.Location = new System.Drawing.Point(401, 67);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Rotation = 0D;
             this.btnPesquisar.Size = new System.Drawing.Size(137, 46);
-            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.TabIndex = 3;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -76,7 +77,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(28, 93);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(367, 20);
-            this.txtPesquisar.TabIndex = 0;
+            this.txtPesquisar.TabIndex = 2;
             // 
             // label1
             // 
@@ -86,7 +87,7 @@
             this.label1.Location = new System.Drawing.Point(24, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 21);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Pesquisar Nome";
             // 
             // btnNovo
@@ -94,15 +95,17 @@
             this.btnNovo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNovo.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnNovo.IconColor = System.Drawing.Color.White;
+            this.btnNovo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNovo.IconSize = 32;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(544, 67);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Rotation = 0D;
             this.btnNovo.Size = new System.Drawing.Size(137, 46);
-            this.btnNovo.TabIndex = 2;
+            this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Visible = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // dgFisica
@@ -160,7 +163,7 @@
             this.dgFisica.RowHeadersVisible = false;
             this.dgFisica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgFisica.Size = new System.Drawing.Size(923, 391);
-            this.dgFisica.TabIndex = 3;
+            this.dgFisica.TabIndex = 5;
             this.dgFisica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFisica_CellContentClick);
             this.dgFisica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgFisica_CellFormatting);
             // 
@@ -210,6 +213,7 @@
             this.colConsultar.Image = ((System.Drawing.Image)(resources.GetObject("colConsultar.Image")));
             this.colConsultar.Name = "colConsultar";
             this.colConsultar.ReadOnly = true;
+            this.colConsultar.Visible = false;
             this.colConsultar.Width = 25;
             // 
             // colEditar
@@ -218,6 +222,7 @@
             this.colEditar.Image = ((System.Drawing.Image)(resources.GetObject("colEditar.Image")));
             this.colEditar.Name = "colEditar";
             this.colEditar.ReadOnly = true;
+            this.colEditar.Visible = false;
             this.colEditar.Width = 25;
             // 
             // colExcluir
@@ -226,6 +231,7 @@
             this.colExcluir.Image = ((System.Drawing.Image)(resources.GetObject("colExcluir.Image")));
             this.colExcluir.Name = "colExcluir";
             this.colExcluir.ReadOnly = true;
+            this.colExcluir.Visible = false;
             this.colExcluir.Width = 25;
             // 
             // rbJuridica
@@ -236,7 +242,7 @@
             this.rbJuridica.Location = new System.Drawing.Point(160, 20);
             this.rbJuridica.Name = "rbJuridica";
             this.rbJuridica.Size = new System.Drawing.Size(146, 23);
-            this.rbJuridica.TabIndex = 7;
+            this.rbJuridica.TabIndex = 1;
             this.rbJuridica.Text = "Pessoa Juridica";
             this.rbJuridica.UseVisualStyleBackColor = true;
             this.rbJuridica.CheckedChanged += new System.EventHandler(this.rbJuridica_CheckedChanged);
@@ -250,7 +256,7 @@
             this.rbFisica.Location = new System.Drawing.Point(28, 20);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(126, 23);
-            this.rbFisica.TabIndex = 6;
+            this.rbFisica.TabIndex = 0;
             this.rbFisica.TabStop = true;
             this.rbFisica.Text = "Pessoa Fisica";
             this.rbFisica.UseVisualStyleBackColor = true;
@@ -270,6 +276,7 @@
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.btnPesquisar);
             this.Name = "frmListaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lista de Clientes";
             this.Load += new System.EventHandler(this.frmListaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgFisica)).EndInit();

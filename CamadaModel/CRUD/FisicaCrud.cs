@@ -42,6 +42,12 @@ namespace CamadaModel.CRUD
                     "VALUES (@IdPessoa,@Nome,@CPF,@RG,@DataNascimento) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdPessoa", retornoPessoa);
+                string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN INSERT INTO Carteira " +
+                    "(IdPessoa) " +
+                    "Values (@IdPessoa) " +
+                    "SELECT @@IDENTITY AS Retorno END").ToString();
 
                 return retornoPessoa;
             }
@@ -94,7 +100,9 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@IdPessoa", fisica.IdPessoa);
                 string IdCliente = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "DELETE FROM FISICA WHERE IdPessoa= @IdPessoa " +
-                    "DELETE FROM PESSOA WHERE IdPessoa= @IdPessoa SELECT @IdPessoa AS RETORNO END").ToString();
+                    "DELETE FROM PESSOA WHERE IdPessoa= @IdPessoa " +
+                    "DELETE FROM Carteira WHERE IdPessoa=@IdPessoa " +
+                    "SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return IdCliente;
             }

@@ -26,6 +26,18 @@ namespace CamadaDesktop
             //Instanciar o Default Layout Form
             DefaultLayout configLayout = new DefaultLayout();
             configLayout.FormDefaultFilha(this, iconButtons);
+
+            foreach (var item in UsuarioCache.ListCdPagina)
+            {
+                if (item == "900")
+                    dgFisica.Columns[5].Visible = true;
+                if (item == "901")
+                    btnNovo.Visible = true;
+                if (item == "902")
+                    dgFisica.Columns[6].Visible = true;
+                if (item == "903")
+                    dgFisica.Columns[7].Visible = true;
+            }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -33,9 +45,9 @@ namespace CamadaDesktop
             Pessoa pessoa = new Pessoa();
             int tipoTela = 0;
             if (rbFisica.Checked == true)
-                FuncoesTela.AbrirFormFilha(new frmCadastro(this, pessoa, rbFisica, tipoTela), this);
+                FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbFisica, tipoTela), this);
             else
-                FuncoesTela.AbrirFormFilha(new frmCadastro(this, pessoa, rbJuridica, tipoTela), this);
+                FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbJuridica, tipoTela), this);
         }
 
         private void frmListaClientes_Load(object sender, EventArgs e)
@@ -73,12 +85,12 @@ namespace CamadaDesktop
                     if (rbFisica.Checked == true)
                     {
                         pessoa = (Fisica)dgFisica.SelectedRows[0].DataBoundItem;
-                        FuncoesTela.AbrirFormFilha(new frmCadastro(this,pessoa,rbFisica,tipoTela), this);
+                        FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this,pessoa,rbFisica,tipoTela), this);
                     }
                     else
                     {
                         pessoa = (Juridica)dgFisica.SelectedRows[0].DataBoundItem;
-                        FuncoesTela.AbrirFormFilha(new frmCadastro(this, pessoa, rbJuridica, tipoTela), this);
+                        FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbJuridica, tipoTela), this);
                     }
 
                 }
@@ -90,12 +102,12 @@ namespace CamadaDesktop
                     if (rbFisica.Checked == true)
                     {
                         pessoa = (Fisica)dgFisica.SelectedRows[0].DataBoundItem;
-                        FuncoesTela.AbrirFormFilha(new frmCadastro(this, pessoa, rbFisica, tipoTela), this);
+                        FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbFisica, tipoTela), this);
                     }
                     else
                     {
                         pessoa = (Juridica)dgFisica.SelectedRows[0].DataBoundItem;
-                        FuncoesTela.AbrirFormFilha(new frmCadastro(this, pessoa, rbJuridica, tipoTela), this);
+                        FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbJuridica, tipoTela), this);
                     }
                 }
                 else if (dgFisica.Columns[e.ColumnIndex] == dgFisica.Columns["colExcluir"])

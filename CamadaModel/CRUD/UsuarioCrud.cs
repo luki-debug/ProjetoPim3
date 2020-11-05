@@ -16,18 +16,17 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@DtUltimoLogin", usuario.DtUltimoLogin);
-                acessoDados.AdicionarParametros("@IdUsuario", usuario.IdUsuario);
                 acessoDados.AdicionarParametros("@Login", usuario.Login);
                 acessoDados.AdicionarParametros("@Matricula", usuario.Matricula);
                 acessoDados.AdicionarParametros("@Nome", usuario.Nome);
                 acessoDados.AdicionarParametros("@Senha", usuario.Senha);
-                acessoDados.AdicionarParametros("@IdDepartamento", usuario._departamento.IdDepartamento);
                 acessoDados.AdicionarParametros("@IdPerfilUsuario", usuario._perfilUsuario.IdPerfilUsuario);
+                acessoDados.AdicionarParametros("@Ativo", usuario.Ativo);
 
                 string retornoUsuario = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO Usuario " +
-                    "(Ativo, DtUltimoLogin, IdUsuario, Login, Matricula, Nome, Senha, IdDepartamento, IdPerfilUsuario) " +
-                    "VALUES ('T', @DtUltimoLogin, @IdUsuario, @Login, @Matricula, @Nome, @Senha, @IdDepartamento, @IdPerfilUsuario) " +
+                    "(Ativo, DtUltimoLogin, Login, Matricula, Nome, Senha, IdPerfilUsuario) " +
+                    "VALUES (@Ativo, @DtUltimoLogin, @Login, @Matricula, @Nome, @Senha, @IdPerfilUsuario) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
 
@@ -51,12 +50,11 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Matricula", usuario.Matricula);
                 acessoDados.AdicionarParametros("@Nome", usuario.Nome);
                 acessoDados.AdicionarParametros("@Senha", usuario.Senha);
-                acessoDados.AdicionarParametros("@IdDepartamento", usuario._departamento.IdDepartamento);
                 acessoDados.AdicionarParametros("@IdPerfilUsuario", usuario._perfilUsuario.IdPerfilUsuario);
                 string retornoUsuario = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE Usuario " +
                     "SET Ativo=@Ativo, DtUltimoLogin=@DtUltimoLogin, IdUsuario=@IdUsuario, Login=@Login, " +
-                    "Matricula=@Matricula, Nome=@Nome, Senha=@Senha, IdDepartamento=@IdDepartamento, IdPerfilUsuario=@IdPerfilUsuario " +
+                    "Matricula=@Matricula, Nome=@Nome, Senha=@Senha, IdPerfilUsuario=@IdPerfilUsuario " +
                     "WHERE IdPerfilUsuario=@IdPerfilUsuario " +
                     "SELECT @IdUsuario AS RETORNO END").ToString();
 
@@ -77,7 +75,8 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@IdUsuario", usuario.IdUsuario);
                 string retornoUsuario = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "DELETE FROM Usuario WHERE IdUsuario= @IdUsuario " +
-                    "SELECT @IdUsuario AS RETORNO").ToString();
+                    "SELECT @IdUsuario AS RETORNO " +
+                    "END ").ToString();
 
                 return retornoUsuario;
             }
@@ -87,7 +86,7 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<Usuario> ConsultarPorNome(Usuario usuario)
+        public List<Usuario> ConsultarPorNomeOrId(Usuario usuario)
         {
             try
             {
@@ -95,9 +94,16 @@ namespace CamadaModel.CRUD
                 List<Usuario> usuarioColecao = new List<Usuario>();
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Nome", usuario.Nome);
+                acessoDados.AdicionarParametros("@Login", usuario.Login);
+                acessoDados.AdicionarParametros("@IdUsuario", usuario.IdUsuario);
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Usuario " +
-                    "WHERE Usuario='%'+@Usuario+'%'");
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT U.IdUsuario, U.Ativo, U.DtUltimoLogin, " +
+                    "U.Login, U.Matricula, U.Nome, U.Senha, " +
+                    "P.Descricao AS PDescricao, P.Ativo AS PAtivo, P.IdPerfilUsuario " +
+                    "FROM Usuario AS U " +
+                    "INNER JOIN PerfilUsuario AS P ON U.IdPerfilUsuario=P.IdPerfilUsuario " +
+                    "WHERE (@IdUsuario = 0 OR U.IdUsuario=@IdUsuario) AND (@Login IS NULL OR U.Login LIKE '%'+@Login+'%') " +
+                    "AND (@Nome IS NULL OR U.Nome LIKE '%'+@Nome+'%')");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -115,9 +121,9 @@ namespace CamadaModel.CRUD
                     userAdd.Matricula = Convert.ToString(linha["Matricula"]);
                     userAdd.Nome = Convert.ToString(linha["Nome"]);
                     userAdd.Senha = Convert.ToString(linha["Senha"]);
-                    userAdd._departamento = new Departamento();
-                    userAdd._departamento.IdDepartamento = Convert.ToInt32(linha["IdDepartamento"]);
                     userAdd._perfilUsuario = new PerfilUsuario();
+                    userAdd._perfilUsuario.Descricao = Convert.ToString(linha["PDescricao"]);
+                    userAdd._perfilUsuario.Ativo = Convert.ToChar(linha["PAtivo"]);
                     userAdd._perfilUsuario.IdPerfilUsuario = Convert.ToInt32(linha["IdPerfilUsuario"]);
 
                     usuarioColecao.Add(userAdd);
