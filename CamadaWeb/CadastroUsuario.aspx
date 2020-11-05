@@ -28,12 +28,7 @@
             background-color: #f2f2f2;
             padding: 10px;
         }
-         div{
-            width: 100px;
-            height: 50px;
-            align-self:center
-            }
-
+        
         
     </style>
 </head>
@@ -47,7 +42,7 @@
         <asp:TextBox ID="Textnome" runat="server" Width="172px"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="Cpf:"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server" Width="155px"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Width="184px"></asp:TextBox>
         <br />
         <asp:Label ID="Label3" runat="server" Text="Rg:"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>

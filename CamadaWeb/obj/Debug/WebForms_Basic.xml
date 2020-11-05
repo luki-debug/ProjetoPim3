@@ -64,7 +64,7 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:CamadaWeb.CadastroUsuario._form1">
+<member name="F:CamadaWeb.Cadastro_Usuario._form1">
 <summary>
 Controle form1.
 </summary>
@@ -73,234 +73,18 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:CamadaWeb.CadastroUsuario._Label1">
+<member name="F:CamadaWeb.Cadastro_Usuario._TextBox1">
 <summary>
-Controle Label1.
+Controle TextBox1.
 </summary>
 <remarks>
 Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:CamadaWeb.CadastroUsuario._Textnome">
-<summary>
-Controle Textnome.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label2">
-<summary>
-Controle Label2.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox2">
+<member name="F:CamadaWeb.Cadastro_Usuario._TextBox2">
 <summary>
 Controle TextBox2.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label3">
-<summary>
-Controle Label3.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox3">
-<summary>
-Controle TextBox3.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label4">
-<summary>
-Controle Label4.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox4">
-<summary>
-Controle TextBox4.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label5">
-<summary>
-Controle Label5.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox5">
-<summary>
-Controle TextBox5.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label6">
-<summary>
-Controle Label6.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox6">
-<summary>
-Controle TextBox6.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label7">
-<summary>
-Controle Label7.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox7">
-<summary>
-Controle TextBox7.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label8">
-<summary>
-Controle Label8.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox8">
-<summary>
-Controle TextBox8.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label9">
-<summary>
-Controle Label9.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox9">
-<summary>
-Controle TextBox9.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label10">
-<summary>
-Controle Label10.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox10">
-<summary>
-Controle TextBox10.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label11">
-<summary>
-Controle Label11.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox11">
-<summary>
-Controle TextBox11.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Label12">
-<summary>
-Controle Label12.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._TextBox12">
-<summary>
-Controle TextBox12.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Button1">
-<summary>
-Controle Button1.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
-<member name="F:CamadaWeb.CadastroUsuario._Button2">
-<summary>
-Controle Button2.
 </summary>
 <remarks>
 Campo gerado automaticamente.

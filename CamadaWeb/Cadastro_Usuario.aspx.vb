@@ -5,7 +5,11 @@
 
     End Sub
 
+<<<<<<< Updated upstream
     Protected Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+=======
+    Protected Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
+>>>>>>> Stashed changes
 
     End Sub
 End Class

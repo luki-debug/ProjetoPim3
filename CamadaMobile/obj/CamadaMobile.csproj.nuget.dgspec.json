@@ -23,20 +23,20 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid44"
+          "monoandroid90"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid44": {
+          "monoandroid90": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "monoandroid44": {
+        "monoandroid90": {
           "dependencies": {
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
