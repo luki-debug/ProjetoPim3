@@ -28,12 +28,3 @@ C:\Users\Dell\Source\Repos\luki-debug\ProjetoPim3\CamadaModel\obj\Debug\CamadaMo
 C:\Users\Dell\Source\Repos\luki-debug\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.csproj.CopyComplete
 C:\Users\Dell\Source\Repos\luki-debug\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.dll
 C:\Users\Dell\Source\Repos\luki-debug\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\bin\Debug\CamadaModel.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\bin\Debug\CamadaModel.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\bin\Debug\CamadaControler.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\bin\Debug\CamadaControler.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\bin\Debug\CamadaControler.dll.config
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.csprojAssemblyReference.cache
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.csproj.CopyComplete
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaModel\obj\Debug\CamadaModel.pdb

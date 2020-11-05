@@ -35,31 +35,6 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\MaterialSkin
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmLogin.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmInicio.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaClientes.resources
-<<<<<<< HEAD
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.ClienteConsultar.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaDesktop.exe.config
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaDesktop.exe
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaDesktop.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaModel.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\MaterialSkin.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaControler.dll
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaModel.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaControler.pdb
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\CamadaControler.dll.config
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.csprojAssemblyReference.cache
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.ClienteConsultar.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmCadastro.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmInicio.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaClientes.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmLogin.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmMenu.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.Properties.Resources.resources
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.csproj.GenerateResource.cache
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.csproj.CopyComplete
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.exe
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.pdb
-=======
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -130,4 +105,3 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDeskto
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmListaUsuario.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmUsuarioCadastrar.resources
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\obj\Debug\CamadaDesktop.frmDashBoard.resources
->>>>>>> f7e305ca7a6588ef54f011a381abfc418a6575c2
