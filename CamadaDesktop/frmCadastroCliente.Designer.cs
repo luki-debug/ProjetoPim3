@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroCliente));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.lblUltimoLogin = new System.Windows.Forms.Label();
             this.btnInserir = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCepConsultar = new FontAwesome.Sharp.IconButton();
             this.txtEstado = new System.Windows.Forms.ComboBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,9 +64,12 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.BtnCancelar = new FontAwesome.Sharp.IconButton();
+            this.pxCarregar = new System.Windows.Forms.PictureBox();
+            this.lblCarregando = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -267,7 +272,7 @@
             this.dtUltimoLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtUltimoLogin.Enabled = false;
             this.dtUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtUltimoLogin.Location = new System.Drawing.Point(637, 286);
+            this.dtUltimoLogin.Location = new System.Drawing.Point(637, 307);
             this.dtUltimoLogin.Mask = "00/00/0000 90:00";
             this.dtUltimoLogin.Name = "dtUltimoLogin";
             this.dtUltimoLogin.Size = new System.Drawing.Size(129, 20);
@@ -280,7 +285,7 @@
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAtivo.ForeColor = System.Drawing.Color.White;
-            this.chkAtivo.Location = new System.Drawing.Point(531, 324);
+            this.chkAtivo.Location = new System.Drawing.Point(531, 345);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(72, 25);
             this.chkAtivo.TabIndex = 3;
@@ -293,7 +298,7 @@
             this.lblUltimoLogin.Enabled = false;
             this.lblUltimoLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUltimoLogin.ForeColor = System.Drawing.Color.White;
-            this.lblUltimoLogin.Location = new System.Drawing.Point(527, 286);
+            this.lblUltimoLogin.Location = new System.Drawing.Point(527, 307);
             this.lblUltimoLogin.Name = "lblUltimoLogin";
             this.lblUltimoLogin.Size = new System.Drawing.Size(104, 21);
             this.lblUltimoLogin.TabIndex = 8;
@@ -322,6 +327,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCepConsultar);
             this.groupBox2.Controls.Add(this.txtEstado);
             this.groupBox2.Controls.Add(this.txtCEP);
             this.groupBox2.Controls.Add(this.label10);
@@ -336,10 +342,31 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(521, 111);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 158);
+            this.groupBox2.Size = new System.Drawing.Size(427, 190);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
+            // 
+            // btnCepConsultar
+            // 
+            this.btnCepConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnCepConsultar.FlatAppearance.BorderSize = 0;
+            this.btnCepConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCepConsultar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCepConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCepConsultar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCepConsultar.IconColor = System.Drawing.Color.White;
+            this.btnCepConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCepConsultar.IconSize = 32;
+            this.btnCepConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCepConsultar.Location = new System.Drawing.Point(241, 121);
+            this.btnCepConsultar.Name = "btnCepConsultar";
+            this.btnCepConsultar.Rotation = 0D;
+            this.btnCepConsultar.Size = new System.Drawing.Size(137, 46);
+            this.btnCepConsultar.TabIndex = 10;
+            this.btnCepConsultar.Text = "Consultar";
+            this.btnCepConsultar.UseVisualStyleBackColor = false;
+            this.btnCepConsultar.Click += new System.EventHandler(this.btnCepConsultar_Click);
             // 
             // txtEstado
             // 
@@ -354,7 +381,7 @@
             // 
             this.txtCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCEP.HidePromptOnLeave = true;
-            this.txtCEP.Location = new System.Drawing.Point(121, 104);
+            this.txtCEP.Location = new System.Drawing.Point(121, 134);
             this.txtCEP.Mask = "00000-000";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(110, 20);
@@ -364,7 +391,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(74, 104);
+            this.label10.Location = new System.Drawing.Point(74, 134);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 21);
             this.label10.TabIndex = 9;
@@ -447,6 +474,29 @@
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+            // pxCarregar
+            // 
+            this.pxCarregar.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregar.Image")));
+            this.pxCarregar.Location = new System.Drawing.Point(821, 31);
+            this.pxCarregar.Name = "pxCarregar";
+            this.pxCarregar.Size = new System.Drawing.Size(134, 74);
+            this.pxCarregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxCarregar.TabIndex = 9;
+            this.pxCarregar.TabStop = false;
+            this.pxCarregar.Visible = false;
+            // 
+            // lblCarregando
+            // 
+            this.lblCarregando.AutoSize = true;
+            this.lblCarregando.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarregando.ForeColor = System.Drawing.Color.White;
+            this.lblCarregando.Location = new System.Drawing.Point(827, 11);
+            this.lblCarregando.Name = "lblCarregando";
+            this.lblCarregando.Size = new System.Drawing.Size(117, 19);
+            this.lblCarregando.TabIndex = 10;
+            this.lblCarregando.Text = "Carregando...";
+            this.lblCarregando.Visible = false;
+            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +505,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(960, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.lblCarregando);
+            this.Controls.Add(this.pxCarregar);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblUltimoLogin);
@@ -475,6 +527,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,6 +569,9 @@
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtLogradouro;
         private FontAwesome.Sharp.IconButton BtnCancelar;
+        private FontAwesome.Sharp.IconButton btnCepConsultar;
+        private System.Windows.Forms.PictureBox pxCarregar;
+        private System.Windows.Forms.Label lblCarregando;
     }
 }
 

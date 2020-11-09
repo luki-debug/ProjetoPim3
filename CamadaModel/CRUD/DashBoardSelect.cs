@@ -11,7 +11,7 @@ namespace CamadaModel.CRUD
     public class DashBoardSelect
     {
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
-        public DataTable InvestimentoFisica(DateTime dtinicio, DateTime dtfim, string dataSaque)
+        public DataTable InvestimentoFisica(DateTime dtinicio, DateTime dtfim, string dataSaque,int tipoMoeda)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace CamadaModel.CRUD
                     "FROM Pessoa AS P INNER JOIN Fisica AS F ON P.IdPessoa = F.IdPessoa " +
                     "INNER JOIN Carteira AS C ON C.IdPessoa = P.IdPessoa " +
                     "INNER JOIN HistoricoInvestido AS H ON H.IdCarteira = C.IdCarteira " +
-                    "WHERE(H.DtInicio BETWEEN @dtinicio AND @dtfim) AND (H.DtFim " + dataSaque + ") " +
+                    "WHERE(H.DtInicio BETWEEN @dtinicio AND @dtfim) AND (H.DtFim " + dataSaque + ") AND (C.TipoMoeda="+tipoMoeda+") " +
                     "GROUP BY F.Nome, F.CPF ORDER BY Total DESC");
 
                 //string retorno = string.Empty;
@@ -42,7 +42,7 @@ namespace CamadaModel.CRUD
                 throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
             }
         }
-        public DataTable InvestimentoJuridico(DateTime dtinicio, DateTime dtfim, string dataSaque)
+        public DataTable InvestimentoJuridico(DateTime dtinicio, DateTime dtfim, string dataSaque,int tipoMoeda)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace CamadaModel.CRUD
                     "FROM Pessoa AS P INNER JOIN Juridico AS J ON P.IdPessoa = J.IdPessoa " +
                     "INNER JOIN Carteira AS C ON C.IdPessoa = P.IdPessoa " +
                     "INNER JOIN HistoricoInvestido AS H ON H.IdCarteira = C.IdCarteira " +
-                    "WHERE(H.DtInicio BETWEEN @dtinicio AND @dtfim) AND (H.DtFim " + dataSaque + ") " +
+                    "WHERE(H.DtInicio BETWEEN @dtinicio AND @dtfim) AND (H.DtFim " + dataSaque + ") AND (C.TipoMoeda=" + tipoMoeda + ")" +
                     "GROUP BY J.RazaoSocial, J.CNPJ, P.Estado, P.Email, P.Telefone, P.Cidade ORDER BY Total DESC");
 
                 //double valorTotal = 0;
@@ -93,15 +93,16 @@ namespace CamadaModel.CRUD
                 throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
             }
         }
-        public DataTable InvestimentoFisicaTop()
+        public DataTable InvestimentoFisicaTop(int tipoMoeda)
         {
             try
             {
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "Select TOP 10 " +
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "Select TOP 7 " +
                     "F.Nome, F.CPF, sum(H.ValorInvestido) AS Total " +
                     "From Fisica AS F INNER JOIN Carteira AS C ON F.IdPessoa = C.IdPessoa " +
                     "INNER JOIN HistoricoInvestido As H ON C.IdCarteira = H.IdCarteira " +
+                    "WHERE C.TipoMoeda="+tipoMoeda+" " +
                     "GROUP BY F.Nome, F.CPF " +
                     "ORDER BY 3 DESC");
 
@@ -118,15 +119,16 @@ namespace CamadaModel.CRUD
                 throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
             }
         }
-        public DataTable InvestimentoJuridicaTop()
+        public DataTable InvestimentoJuridicaTop(int tipoMoeda)
         {
             try
             {
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "Select TOP 10 " +
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "Select TOP 7 " +
                     "J.RazaoSocial, J.CNPJ, sum(H.ValorInvestido) AS Total " +
                     "From Juridico AS J INNER JOIN Carteira AS C ON J.IdPessoa = C.IdPessoa " +
                     "INNER JOIN HistoricoInvestido As H ON C.IdCarteira = H.IdCarteira " +
+                    "WHERE C.TipoMoeda=" + tipoMoeda + " " +
                     "GROUP BY J.RazaoSocial, J.CNPJ " +
                     "ORDER BY 3 DESC");
 

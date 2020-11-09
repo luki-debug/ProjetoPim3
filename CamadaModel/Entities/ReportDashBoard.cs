@@ -1,94 +1,133 @@
 ﻿using CamadaModel.CRUD;
+using CamadaModel.Entities.Json.CotacaoApi;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace CamadaModel.Entities
 {
     public class ReportDashBoard
     {
-        public double ValorCursoF { get; set; }
-        public double ValorDisponivelF { get; set; }
-        public double ValorRetidoF { get; set; }
-        public double ValorCursoJ { get; set; }
-        public double ValorDisponivelJ { get; set; }
-        public double ValorRetidoJ { get; set; }
-        public List<InvestidorF> InvestidoresFTop { get; set; }
-        public List<InvestidorJ> InvestidoresJTop { get; set; }
+        public double ValorCursoFBitCoin { get; set; }
+        public double ValorCursoFEtherium { get; set; }
+        public double ValorCursoJBitCoin { get; set; }
+        public double ValorCursoJEtherium { get; set; }
+        public CotacaoApi CotacaoApi { get; set; }
+        public List<InvestidorFBitCoin> InvestidoresFTopBitCoin { get; set; }
+        public List<InvestidorFEtherium> InvestidoresFTopEtherium { get; set; }
+        public List<InvestidorJBitCoin> InvestidoresJTopBitCoin { get; set; }
+        public List<InvestidorJEtherium> InvestidoresJTopEtherium { get; set; }
         public List<UltimoLoginMes> LoginMeses { get; set; }
 
         public void CarregarPropriedadesReport()
         {
             DashBoardSelect select = new DashBoardSelect();
-            var selectInvestidorFTop = select.InvestimentoFisicaTop();
-            var selectInvestidorJTop = select.InvestimentoJuridicaTop();
+            var selectInvestidorFTopBitCoin = select.InvestimentoFisicaTop(2);
+            var selectInvestidorJTopBitCoin = select.InvestimentoJuridicaTop(2);
+            var selectInvestidorFTopEtherium = select.InvestimentoFisicaTop(1);
+            var selectInvestidorJTopEtherium = select.InvestimentoJuridicaTop(1);
             var selectLoginMes = select.TotalMesUltimoLogin();
-            var valorCursoF = select.InvestimentoFisica(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL");
-            var valorDisponivelF = select.InvestimentoFisica(new DateTime(1800, 01, 01), DateTime.Now.AddMonths(-1), "IS NULL");
-            var valorRetidoF = select.InvestimentoFisica(DateTime.Now.AddMonths(-1), DateTime.Now, "IS NULL");
-            var valorCursoJ = select.InvestimentoJuridico(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL");
-            var valorDisponivelJ = select.InvestimentoJuridico(new DateTime(1800, 01, 01), DateTime.Now.AddMonths(-1), "IS NULL");
-            var valorRetidoJ = select.InvestimentoJuridico(DateTime.Now.AddMonths(-1), DateTime.Now, "IS NULL");
+            var valorCursoFBitCoin = select.InvestimentoFisica(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL", 2);
+            var valorCursoFEtherium = select.InvestimentoFisica(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL", 1);
+            var valorCursoJBitCoin = select.InvestimentoJuridico(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL", 2);
+            var valorCursoJEtherium = select.InvestimentoJuridico(new DateTime(1800, 01, 01), DateTime.Now, "IS NULL", 1);
 
-            ValorCursoF = 0;
-            foreach (System.Data.DataRow row in valorCursoF.Rows)
-            {
-                ValorCursoF += Convert.ToDouble(row[2]);
-            }
+            Negocio negocio = new Negocio();
 
-            ValorDisponivelF = 0;
-            foreach (System.Data.DataRow row in valorDisponivelF.Rows)
+            ValorCursoFBitCoin = 0;
+            foreach (System.Data.DataRow row in valorCursoFBitCoin.Rows)
             {
-                ValorDisponivelF += Convert.ToDouble(row[2]);
-            }
-            ValorRetidoF = 0;
-            foreach (System.Data.DataRow row in valorRetidoF.Rows)
-            {
-                ValorRetidoF += Convert.ToDouble(row[2]);
+                double valorTemp = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                ValorCursoFBitCoin += negocio.ConverterCriptoParaReal(valorTemp, 2);
             }
 
-            ValorCursoJ = 0;
-            foreach (System.Data.DataRow row in valorCursoJ.Rows)
+            ValorCursoJBitCoin = 0;
+            foreach (System.Data.DataRow row in valorCursoJBitCoin.Rows)
             {
-                ValorCursoJ += Convert.ToDouble(row[2]);
+                double valorTemp = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                ValorCursoJBitCoin += negocio.ConverterCriptoParaReal(valorTemp, 2);
             }
 
-            ValorDisponivelJ = 0;
-            foreach (System.Data.DataRow row in valorDisponivelJ.Rows)
+            ValorCursoFEtherium = 0;
+            foreach (System.Data.DataRow row in valorCursoFEtherium.Rows)
             {
-                ValorDisponivelJ += Convert.ToDouble(row[2]);
+                double valorTemp = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                ValorCursoFEtherium += negocio.ConverterCriptoParaReal(valorTemp, 1);
             }
-            ValorRetidoJ = 0;
-            foreach (System.Data.DataRow row in valorRetidoJ.Rows)
+
+            ValorCursoJEtherium = 0;
+            foreach (System.Data.DataRow row in valorCursoJEtherium.Rows)
             {
-                ValorRetidoJ += Convert.ToDouble(row[2]);
+                double valorTemp = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                ValorCursoJEtherium += negocio.ConverterCriptoParaReal(valorTemp, 1);
             }
 
 
-            InvestidoresFTop = new List<InvestidorF>();
-            foreach (System.Data.DataRow row in selectInvestidorFTop.Rows)
+
+            InvestidoresFTopBitCoin = new List<InvestidorFBitCoin>();
+            int i = 0;
+            foreach (System.Data.DataRow row in selectInvestidorFTopBitCoin.Rows)
             {
-                InvestidorF investidor = new InvestidorF();
-                string[] nomeCompleto= Convert.ToString(row[0]).Split(' ');
+                InvestidorFBitCoin investidor = new InvestidorFBitCoin();
+                string[] nomeCompleto = Convert.ToString(row[0]).Split(' ');
                 if (nomeCompleto.Length > 1)
-                    investidor.Nome = nomeCompleto[0] + ' ' + nomeCompleto[1];
+                    investidor.Nome = $"{i}." + nomeCompleto[0] + ' ' + nomeCompleto[1].Substring(0, 1);
                 else
-                    investidor.Nome = nomeCompleto[0];
-                investidor.ValorTotal = Convert.ToDouble(row[2]);
+                    investidor.Nome = $"{i}." + nomeCompleto[0];
+                investidor.ValorTotal = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                investidor.ValorTotal = negocio.ConverterCriptoParaReal(investidor.ValorTotal, 2);
 
-                InvestidoresFTop.Add(investidor);
+                i++;
+                InvestidoresFTopBitCoin.Add(investidor);
             }
-            InvestidoresJTop = new List<InvestidorJ>();
-            foreach (System.Data.DataRow row in selectInvestidorJTop.Rows)
+
+            InvestidoresJTopBitCoin = new List<InvestidorJBitCoin>();
+            i = 0;
+            foreach (System.Data.DataRow row in selectInvestidorJTopBitCoin.Rows)
             {
-                InvestidorJ investidor = new InvestidorJ();
-                investidor.RazaoSocial = Convert.ToString(row[0]);
-                investidor.ValorTotal = Convert.ToDouble(row[2]);
+                InvestidorJBitCoin investidor = new InvestidorJBitCoin();
+                investidor.RazaoSocial = Convert.ToString($"{i}." + row[0]).Substring(0,8);
+                investidor.ValorTotal = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                investidor.ValorTotal = negocio.ConverterCriptoParaReal(investidor.ValorTotal, 2);
 
-                InvestidoresJTop.Add(investidor);
+                i++;
+                InvestidoresJTopBitCoin.Add(investidor);
             }
+
+            InvestidoresFTopEtherium = new List<InvestidorFEtherium>();
+            i = 0;
+            foreach (System.Data.DataRow row in selectInvestidorFTopEtherium.Rows)
+            {
+                InvestidorFEtherium investidor = new InvestidorFEtherium();
+                string[] nomeCompleto = Convert.ToString(row[0]).Split(' ');
+                if (nomeCompleto.Length > 1)
+                    investidor.Nome = $"{i}." + nomeCompleto[0] + ' ' + nomeCompleto[1].Substring(0,1);
+                else
+                    investidor.Nome = $"{i}." + nomeCompleto[0];
+                investidor.ValorTotal = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                investidor.ValorTotal = negocio.ConverterCriptoParaReal(investidor.ValorTotal, 1);
+
+                i++;
+                InvestidoresFTopEtherium.Add(investidor);
+            }
+
+            InvestidoresJTopEtherium = new List<InvestidorJEtherium>();
+            i = 0;
+            foreach (System.Data.DataRow row in selectInvestidorJTopEtherium.Rows)
+            {
+                InvestidorJEtherium investidor = new InvestidorJEtherium();
+                investidor.RazaoSocial = Convert.ToString($"{i}." + row[0]).Substring(0, 8);
+                investidor.ValorTotal = Convert.ToDouble(row[2], CultureInfo.InvariantCulture);
+                investidor.ValorTotal = negocio.ConverterCriptoParaReal(investidor.ValorTotal, 1);
+
+                i++;
+                InvestidoresJTopEtherium.Add(investidor);
+            }
+
+
+
+            CotacaoApi = negocio.GetMoedaAsync();
+
 
             LoginMeses = new List<UltimoLoginMes>();
             foreach (System.Data.DataRow row in selectLoginMes.Rows)

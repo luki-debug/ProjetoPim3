@@ -54,7 +54,6 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\roslyn\VBCSCompiler.ex
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Antlr3.Runtime.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\FontAwesome.Sharp.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll

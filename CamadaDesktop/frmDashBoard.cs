@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,20 +31,25 @@ namespace CamadaDesktop
             dashBoard.CarregarPropriedadesReport();
 
             ReportDashBoardBindingSource.DataSource = dashBoard;
-            investidoresFTopBindingSource.DataSource = dashBoard;
-            investidoresJTopBindingSource.DataSource = dashBoard;
+            investidoresFTopBitCoinBindingSource.DataSource = dashBoard;
+            investidoresFTopEtheriumBindingSource.DataSource = dashBoard;
+            investidoresJTopBitCoinBindingSource.DataSource = dashBoard;
+            investidoresJTopEtheriumBindingSource.DataSource = dashBoard;
             loginMesesBindingSource.DataSource = dashBoard;
+
             this.rvDashBoard.RefreshReport();
 
             //Carregar as Labels Fisica
-            lblInvestidaFisicaCurso1.Text = dashBoard.ValorCursoF.ToString("C");
-            lblInvestidaFisicaDisponivel.Text = dashBoard.ValorDisponivelF.ToString("C");
-            lblInvestidaFisicaRetido.Text = dashBoard.ValorRetidoF.ToString("C");
+            lblInvestidaFisicaCursoBit.Text = dashBoard.ValorCursoFBitCoin.ToString("C");
+            lblInvestidaFisicaCursoEtherium.Text = dashBoard.ValorCursoFEtherium.ToString("C");
 
             //Carregar as Labels Juridica
-            lblInvestidaJuridicoCurso.Text = dashBoard.ValorCursoJ.ToString("C");
-            lblInvestidaJuridicoDisponivel.Text = dashBoard.ValorDisponivelJ.ToString("C");
-            lblInvestidaJuridicoRetido.Text = dashBoard.ValorRetidoJ.ToString("C");
+            lblInvestidaJuridicoCursoBit.Text = dashBoard.ValorCursoJBitCoin.ToString("C");
+            lblInvestidaJuridicoCursoEtherium.Text = dashBoard.ValorCursoJEtherium.ToString("C");
+
+            //CotacaoAtual nas lbl
+            lblIAtualBitcoin.Text = Convert.ToDouble(dashBoard.CotacaoApi.BTC.bid,CultureInfo.InvariantCulture).ToString("C");
+            lblIAtualEtherium.Text = Convert.ToDouble(dashBoard.CotacaoApi.ETH.bid,CultureInfo.InvariantCulture).ToString("C");
 
             //ValorTotalCliente ativos
             string totalClientesT = dashBoardSelect.ClientesAtivosTotal();

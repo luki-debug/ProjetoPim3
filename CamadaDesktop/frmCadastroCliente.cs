@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using FontAwesome.Sharp;
 using CamadaModel.Entities.Enums;
+using CamadaModel;
 
 namespace CamadaDesktop
 {
@@ -19,8 +20,6 @@ namespace CamadaDesktop
     {
         private frmListaClientes frmPai = new frmListaClientes();
         private Pessoa pessoa = new Pessoa();
-        private List<Fisica> listFisica = new List<Fisica>();
-        private List<Juridica> listJuridica = new List<Juridica>();
 
         public frmCadastroCliente(frmListaClientes Pai, Pessoa pessoa, RadioButton rb, int tipoTela)
         {
@@ -29,6 +28,7 @@ namespace CamadaDesktop
             List<IconButton> listButton = new List<IconButton>();
             listButton.Add(btnInserir);
             listButton.Add(BtnCancelar);
+            //listButton.Add(btnCepConsultar);
             DefaultLayout configLayout = new DefaultLayout();
             configLayout.FormDefaultFilha(this, listButton);
             frmPai = Pai;
@@ -361,6 +361,33 @@ namespace CamadaDesktop
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void btnCepConsultar_Click(object sender, EventArgs e)
+        {
+            Negocio negocio = new Negocio();
+            lblCarregando.Visible = true;
+            pxCarregar.Visible = true;
+            btnCepConsultar.Enabled = false;
+
+            try
+            {
+                var pessoa = await Task.Run(() => negocio.GetCepAsync(txtCEP.Text));
+                if (pessoa.status!=200)
+                    MessageBox.Show("Cep não encontrado. Detalhes: "+pessoa.statusText, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCEP.Text = pessoa.code;
+                txtLogradouro.Text = pessoa.address;
+                txtCidade.Text = pessoa.city;
+                txtEstado.Text = pessoa.state;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Digite o Cep. Detalhes: " + ex.Message,"Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            lblCarregando.Visible = false;
+            pxCarregar.Visible = false;
+            btnCepConsultar.Enabled = true;     
         }
     }
 }

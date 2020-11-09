@@ -16,14 +16,12 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Saldo", carteira.Saldo);
-                acessoDados.AdicionarParametros("@ValorInvestido", carteira.ValorInvestido);
-                acessoDados.AdicionarParametros("@ValorLiberado", carteira.ValorLiberado);
-                acessoDados.AdicionarParametros("@ValorRetirado", carteira.ValorRetido);
+                acessoDados.AdicionarParametros("@TipoMoeda", carteira.TipoMoeda);
                 acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
                 string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO Carteira " +
-                    "(Saldo,ValorInvestido,ValorLiberado,ValorRetirado,IdPessoa) " +
-                    "VALUES (@Saldo,@ValorInvestido,@ValorLiberado,@ValorRetirado,@IdPessoa) " +
+                    "(Saldo,TipoMoeda,IdPessoa) " +
+                    "VALUES (@Saldo,@TipoMoeda,@IdPessoa) " +
                     "select @@IDENTITY as RETORNO " +
                     "END").ToString();
 
@@ -41,14 +39,12 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Saldo", carteira.Saldo);
-                acessoDados.AdicionarParametros("@ValorInvestido", carteira.ValorInvestido);
-                acessoDados.AdicionarParametros("@ValorLiberado", carteira.ValorLiberado);
-                acessoDados.AdicionarParametros("@ValorRetirado", carteira.ValorRetido);
+                acessoDados.AdicionarParametros("@TipoMoeda", carteira.TipoMoeda);
                 acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
 
                 string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE Carteira " +
-                    "SET Saldo=@Saldo,ValorInvestido=@ValorInvestido,ValorLiberado=@ValorLiberado,ValorRetirado=@ValorRetirado " +
+                    "SET Saldo=@Saldo, TipoMoeda=@TipoMoeda" +
                     "WHERE IdPessoa = @IdPessoa " +
                     "SELECT @IdPessoa AS RETORNO END").ToString();
 
@@ -103,9 +99,7 @@ namespace CamadaModel.CRUD
                     carteiraAdd._pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
                     carteiraAdd.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
                     carteiraAdd.Saldo = Convert.ToDecimal(linha["Saldo"]);
-                    carteiraAdd.ValorInvestido = Convert.ToDecimal(linha["ValorInvestido"]);
-                    carteiraAdd.ValorLiberado = Convert.ToDecimal(linha["CalorLiberado"]);
-                    carteiraAdd.ValorRetido = Convert.ToDecimal(linha["ValorRetido"]);
+                    carteiraAdd.TipoMoeda = Convert.ToInt32(linha["TipoMoeda"]);
 
                     carteiraColecao.Add(carteiraAdd);
                 }
