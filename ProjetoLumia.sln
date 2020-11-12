@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaControler", "CamadaCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaMobile", "CamadaMobile\CamadaMobile.csproj", "{103E16ED-CE60-4B62-B821-5CF2DE792836}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaWebApi", "CamadaWebApi\CamadaWebApi.csproj", "{AE54E1F7-8E52-45F7-9D7D-0E00EEC3BA3C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B56C875-133D-485F-B809-0E829F4121C8} = {9B56C875-133D-485F-B809-0E829F4121C8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +46,10 @@ Global
 		{103E16ED-CE60-4B62-B821-5CF2DE792836}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{103E16ED-CE60-4B62-B821-5CF2DE792836}.Release|Any CPU.Build.0 = Release|Any CPU
 		{103E16ED-CE60-4B62-B821-5CF2DE792836}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AE54E1F7-8E52-45F7-9D7D-0E00EEC3BA3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE54E1F7-8E52-45F7-9D7D-0E00EEC3BA3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE54E1F7-8E52-45F7-9D7D-0E00EEC3BA3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE54E1F7-8E52-45F7-9D7D-0E00EEC3BA3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
