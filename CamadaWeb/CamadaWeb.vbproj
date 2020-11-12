@@ -157,6 +157,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="RecuperarSenha.aspx" />
     <Content Include="WebForm1.aspx" />
+    <None Include="My Project\PublishProfiles\lumiadevintegracao - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
