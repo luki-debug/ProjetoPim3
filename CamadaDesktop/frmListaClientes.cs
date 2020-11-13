@@ -189,7 +189,7 @@ namespace CamadaDesktop
             juridica.RazaoSocial = txtPesquisar.Text;
 
             JuridicaCrud juridicaCrud = new JuridicaCrud();
-            List<Juridica> list = juridicaCrud.ConsultarNome(juridica);
+            List<Juridica> list = juridicaCrud.ConsultarNomeOrId(juridica);
 
             dgFisica.DataSource = null;
             dgFisica.DataSource = list;

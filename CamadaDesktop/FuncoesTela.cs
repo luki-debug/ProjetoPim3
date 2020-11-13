@@ -51,7 +51,7 @@ namespace CamadaDesktop
             Juridica juridica = new Juridica();
             JuridicaCrud juridicaCrud = new JuridicaCrud();
             juridica.RazaoSocial = "";
-            list = juridicaCrud.ConsultarNome(juridica);
+            list = juridicaCrud.ConsultarNomeOrId(juridica);
 
             dg.AutoGenerateColumns = false;
             dg.DataSource = null;
