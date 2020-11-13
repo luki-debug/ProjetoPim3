@@ -35,3 +35,4 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.Tex
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.ValueTuple.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csprojAssemblyReference.cache
