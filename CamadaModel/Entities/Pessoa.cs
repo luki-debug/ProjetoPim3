@@ -26,7 +26,8 @@ namespace CamadaModel.Entities
         public string CEP { get; set; }
         public char Ativo { get; set; }
 
-        public Pessoa(int idPessoa, string logradouro, int numero, string cidade, string estado, string email, string senha, DateTime dtUltimoLogin, char ativo)
+        public Pessoa(int idPessoa, string logradouro, int numero, string cidade, string estado, 
+            string email, string telefone, string senha, DateTime dtUltimoLogin,string cEP, char ativo)
         {
             IdPessoa = idPessoa;
             Logradouro = logradouro;
@@ -34,8 +35,25 @@ namespace CamadaModel.Entities
             Cidade = cidade;
             Estado = estado;
             Email = email;
+            Telefone = telefone;
             Senha = senha;
             DtUltimoLogin = dtUltimoLogin;
+            CEP = cEP;
+            Ativo = ativo;
+        }
+
+        public Pessoa(string logradouro, int numero, string cidade, string estado, 
+            string email, string telefone, string senha, DateTime dtUltimoLogin, string cEP, char ativo)
+        {
+            Logradouro = logradouro;
+            Numero = numero;
+            Cidade = cidade;
+            Estado = estado;
+            Email = email;
+            Telefone = telefone;
+            Senha = senha;
+            DtUltimoLogin = dtUltimoLogin;
+            CEP = cEP;
             Ativo = ativo;
         }
 

@@ -111,6 +111,7 @@
     <Compile Include="Entities\Json\CotacaoApi\ETH.cs" />
     <Compile Include="Negocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\ServicoEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CamadaControler\CamadaControler.csproj">

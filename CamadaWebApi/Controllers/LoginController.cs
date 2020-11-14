@@ -1,7 +1,9 @@
 ﻿using CamadaModel.CRUD;
 using CamadaModel.Entities;
+using CamadaWebApi.Models;
 using System;
-using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace CamadaWebApi.Controllers
@@ -9,7 +11,7 @@ namespace CamadaWebApi.Controllers
     public class LoginController : ApiController
     {
         // GET: api/Login
-        public IHttpActionResult Post([FromBody] Pessoa value)
+        public HttpResponseMessage Post([FromBody] Pessoa value)
         {
             FisicaCrud fCrud = new FisicaCrud();
             JuridicaCrud jCrud = new JuridicaCrud();
@@ -22,7 +24,6 @@ namespace CamadaWebApi.Controllers
 
             try
             {
-                List<string> retorno = new List<string>();
                 Fisica clienteF = new Fisica();
                 Juridica clienteJ = new Juridica();
                 clienteF = fCrud.LoginPessoa(fisica);
@@ -30,49 +31,38 @@ namespace CamadaWebApi.Controllers
 
                 if (clienteF.Email != null)
                 {
-                    retorno.Add(Convert.ToString(clienteF.IdPessoa));
-                    retorno.Add("Fisica");
+                    Login login = new Login(clienteF.IdPessoa, "Fisica", (int)HttpStatusCode.OK);
+                    
+                    UsuarioCrud usuarioCrud = new UsuarioCrud();
+                    Pessoa pessoa = new Pessoa();
+                    pessoa.IdPessoa = value.IdPessoa;
+                    pessoa.DtUltimoLogin = DateTime.Now;
+                    usuarioCrud.AtualizarDtLogin(pessoa);
 
-                    return Ok(retorno);
+                    return Request.CreateResponse(HttpStatusCode.OK, login);
                 }
                 else if (clienteJ.Email != null)
                 {
-                    retorno[0] = clienteJ.IdPessoa.ToString();
-                    retorno[1] = "Juridica";
+                    Login login = new Login(clienteF.IdPessoa, "Juridica", (int)HttpStatusCode.OK);
 
-                    return Ok(retorno);
+                    UsuarioCrud usuarioCrud = new UsuarioCrud();
+                    Pessoa pessoa = new Pessoa();
+                    pessoa.IdPessoa = value.IdPessoa;
+                    pessoa.DtUltimoLogin = DateTime.Now;
+                    usuarioCrud.AtualizarDtLogin(pessoa);
+
+                    return Request.CreateResponse(HttpStatusCode.OK, login);
                 }
                 else
                 {
-                    return NotFound();
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return NotFound();
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
-        }
-
-        // GET: api/Login/5
-        public string Get()
-        {
-            return "value";
-        }
-
-        // POST: api/Login
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
-        // PUT: api/Login/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Login/5
-        public void Delete(int id)
-        {
         }
     }
 }

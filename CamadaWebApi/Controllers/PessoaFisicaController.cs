@@ -1,7 +1,6 @@
 ﻿using CamadaModel.CRUD;
 using CamadaModel.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,27 +12,9 @@ namespace CamadaWebApi.Controllers
     public class PessoaFisicaController : ApiController
     {
         //[HttpGet]
-        //[Route("getall")]
-        // GET: api/Pessoa/Fisica/getall
-        public IHttpActionResult Get()
-        {
-            FisicaCrud crud = new FisicaCrud();
-            Fisica fisica = new Fisica();
-            fisica.Nome = "";
-            try
-            {
-                var listaFisica = crud.ConsultarNomeOrId(fisica);
-                return Ok(listaFisica);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        //[HttpGet]
         //[Route("get/{id}")]
         // GET: api/Fisica/get/5
-        public IHttpActionResult Get(int id)
+        public HttpResponseMessage Get(int id)
         {
             FisicaCrud crud = new FisicaCrud();
             Fisica fisica = new Fisica();
@@ -41,103 +22,57 @@ namespace CamadaWebApi.Controllers
             fisica.IdPessoa = id;
             try
             {
-                var retorno = crud.ConsultarNomeOrId(fisica);
-                return Ok(retorno);
+                Fisica cliente = crud.ConsultarNomeOrId(fisica).First();
+
+                if (cliente.Nome != null)
+                    return Request.CreateResponse(HttpStatusCode.OK, cliente);
+                else
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
             }
             catch (Exception)
             {
-                throw;
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
         }
         //[HttpPost]
         //[Route("post/{id}")]
         // POST: api/Fisica
-        public IHttpActionResult Post([FromBody] Fisica value)
+        public HttpResponseMessage Post([FromBody] Fisica value)
         {
             FisicaCrud crud = new FisicaCrud();
-            Fisica fisica = new Fisica();
 
-            fisica.Nome = value.Nome;
-            fisica.RG = value.RG;
-            fisica.CPF = value.CPF;
-            fisica.Logradouro = value.Logradouro;
-            fisica.Numero = value.Numero;
-            fisica.Cidade = value.Cidade;
-            fisica.Estado = value.Estado;
-            fisica.CEP = value.CEP;
-            fisica.DataNascimento = value.DataNascimento;
-            //fisica.DtUltimoLogin = DateTime.Now;
-            fisica.Email = value.Email;
-            fisica.Senha = value.Senha;
-            fisica.Telefone = value.Telefone;
-            fisica.Ativo = 'T';
+            Fisica fisica = new Fisica(value.Nome, value.CPF, 
+                value.RG, value.DataNascimento,value.Logradouro, value.Numero,
+                value.Cidade,value.Estado,value.Email,value.Telefone,value.Senha,value.DtUltimoLogin,value.CEP,value.Ativo);
 
             try
             {
-                string retorno = crud.Inserir(fisica);
-                return Ok(retorno);
+                string resultado = crud.Inserir(fisica);
+                return Request.CreateResponse(HttpStatusCode.OK, resultado);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
 
         //[HttpPut]
         //[Route("put/{id}")]
         // PUT: api/Fisica/5
-        public IHttpActionResult Put(int id, [FromBody]Fisica value)
+        public HttpResponseMessage Put([FromBody]Fisica value)
         {
             FisicaCrud crud = new FisicaCrud();
-            Fisica fisica = new Fisica();
 
-            fisica.IdPessoa = id;
-            fisica.Nome = string.Empty;
-            var cliente=crud.ConsultarNomeOrId(fisica);
-            fisica = cliente.First();
-
-            fisica.Nome = value.Nome;
-            fisica.RG = value.RG;
-            fisica.CPF = value.CPF;
-            fisica.Logradouro = value.Logradouro;
-            fisica.Numero = value.Numero;
-            fisica.Cidade = value.Cidade;
-            fisica.Estado = value.Estado;
-            fisica.CEP = value.CEP;
-            fisica.DataNascimento = value.DataNascimento;
-            //fisica.DtUltimoLogin = DateTime.Now;
-            fisica.Email = value.Email;
-            fisica.Senha = value.Senha;
-            fisica.Telefone = value.Telefone;
-            
-            try
-            {
-                string retorno = crud.Alterar(fisica);
-                return Ok(retorno);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        //[HttpPut]
-        //[Route("Delete/{id}")]
-        // DELETE: api/Fisica/5
-        public IHttpActionResult Delete(int id)
-        {
-            FisicaCrud crud = new FisicaCrud();
-            Fisica fisica = new Fisica();
-            fisica.IdPessoa = id;
+            Fisica fisica = new Fisica(value.Nome,value.CPF,value.RG,value.DataNascimento,value.IdPessoa,value.Logradouro,value.Numero,value.Cidade,value.Estado,value.Email,value.Telefone,value.Senha,value.DtUltimoLogin,value.CEP,'T');
 
             try
             {
-                string retorno = crud.Excluir(fisica);
-                return Ok(retorno);
+                string resultado = crud.Alterar(fisica);
+                return Request.CreateResponse(HttpStatusCode.OK,resultado);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
     }

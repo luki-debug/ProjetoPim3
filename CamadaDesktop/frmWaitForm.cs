@@ -1,6 +1,8 @@
 ﻿using CamadaModel;
+using CamadaModel.CRUD;
 using CamadaModel.Entities;
 using CamadaModel.Entities.Json.CotacaoApi;
+using CamadaModel.Servicos;
 using Newtonsoft.Json;
 using Refit;
 using System;
@@ -31,29 +33,21 @@ namespace CamadaDesktop
             //Worker = worker;
         }
 
-        private async void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            List<string> listCotacao = new List<string>();
-            Carteira carteira = new Carteira();
+            ServicoEmail email = new ServicoEmail();
+            try
+            {
+                UsuarioCrud crud = new UsuarioCrud();
+                string result=crud.RecuperarLogin(txtvalor.Text);
 
-            label1.Visible = true;
-            pictureBox1.Visible = true;
-            Negocio negocio = new Negocio();
-            
-            var retorno2= await Task.Run(() => negocio.GetMoedaAsync());
-
-            var retorno= await Task.Run(()=>negocio.ConverterCriptoParaReal(double.Parse(txtvalor.Text, CultureInfo.InvariantCulture), int.Parse(txtmoeda.Text))); 
-           
-
-            label1.Visible = false;
-            pictureBox1.Visible = false;
-
-            //fromato real
-            lblEtherium.Text = string.Format("{0:c}", retorno);
-
-            //formato bitcoin
-            //lblEtherium.Text = string.Format("{0:0.00####}", retorno);
-            label5.Text = retorno2.BTC.bid;
+                string i =email.EmailRecuperacaoLogin(txtvalor.Text,result);
+                MessageBox.Show(i);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //protected override void OnLoad(EventArgs e)

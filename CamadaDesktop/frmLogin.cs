@@ -68,5 +68,11 @@ namespace CamadaDesktop
                 txtSenha.Clear();
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmWaitForm fr = new frmWaitForm();
+            fr.ShowDialog();
+        }
     }
 }

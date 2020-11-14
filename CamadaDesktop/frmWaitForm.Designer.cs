@@ -32,11 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblBitCoin = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblEtherium = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblEtherium = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtvalor = new System.Windows.Forms.TextBox();
@@ -80,6 +80,15 @@
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Bitcoin";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblBitCoin
             // 
             this.lblBitCoin.Location = new System.Drawing.Point(3, 42);
@@ -99,24 +108,6 @@
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 3;
             // 
-            // lblEtherium
-            // 
-            this.lblEtherium.Location = new System.Drawing.Point(3, 42);
-            this.lblEtherium.Name = "lblEtherium";
-            this.lblEtherium.Size = new System.Drawing.Size(194, 13);
-            this.lblEtherium.TabIndex = 1;
-            this.lblEtherium.Text = "label2";
-            this.lblEtherium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Bitcoin";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label5
             // 
             this.label5.Location = new System.Drawing.Point(3, 0);
@@ -125,6 +116,15 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Etherium";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEtherium
+            // 
+            this.lblEtherium.Location = new System.Drawing.Point(3, 42);
+            this.lblEtherium.Name = "lblEtherium";
+            this.lblEtherium.Size = new System.Drawing.Size(194, 13);
+            this.lblEtherium.TabIndex = 1;
+            this.lblEtherium.Text = "label2";
+            this.lblEtherium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBuscar
             // 
@@ -153,12 +153,12 @@
             // 
             this.txtvalor.Location = new System.Drawing.Point(27, 319);
             this.txtvalor.Name = "txtvalor";
-            this.txtvalor.Size = new System.Drawing.Size(100, 20);
+            this.txtvalor.Size = new System.Drawing.Size(200, 20);
             this.txtvalor.TabIndex = 6;
             // 
             // txtmoeda
             // 
-            this.txtmoeda.Location = new System.Drawing.Point(145, 319);
+            this.txtmoeda.Location = new System.Drawing.Point(287, 319);
             this.txtmoeda.Name = "txtmoeda";
             this.txtmoeda.Size = new System.Drawing.Size(100, 20);
             this.txtmoeda.TabIndex = 7;

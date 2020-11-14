@@ -37,7 +37,6 @@ namespace CamadaModel.CRUD
                 return exception.Message;
             }
         }
-
         public string Alterar(Usuario usuario)
         {
             try
@@ -66,7 +65,6 @@ namespace CamadaModel.CRUD
                 return exception.Message;
             }
         }
-
         public string Excluir(Usuario usuario)
         {
             try
@@ -85,7 +83,6 @@ namespace CamadaModel.CRUD
                 return exception.Message;
             }
         }
-
         public List<Usuario> ConsultarPorNomeOrId(Usuario usuario)
         {
             try
@@ -134,6 +131,52 @@ namespace CamadaModel.CRUD
             catch (Exception exception)
             {
                 throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
+            }
+        }
+        public string AtualizarDtLogin(Pessoa pessoa)
+        {
+            try
+            {
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdPessoa", pessoa.IdPessoa);
+                acessoDados.AdicionarParametros("@DtUltimoLogin", pessoa.DtUltimoLogin);
+                string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "UPDATE PESSOA " +
+                    "SET DtUltimoLogin=@DtUltimoLogin WHERE IdPessoa = @IdPessoa " +
+                    "SELECT @IdPessoa AS RETORNO END").ToString();
+
+                return retornoPessoa;
+            }
+            catch (Exception exception)
+            {
+                return exception.Message;
+            }
+        }
+        public string RecuperarLogin(string email)
+        {
+            try
+            {
+                //Criar uma nova coleção de clientes
+                string resultado = string.Empty;
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@Email", email);
+                //Retornará uma DataTable
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "BEGIN SELECT Senha FROM Pessoa " +
+                    "WHERE Email=@Email " +
+                    "END ");
+
+                //Percorrer o DataTable e transformar em coleção de cliente     
+                //Cada linha do DataTable é um cliente
+                foreach (DataRow linha in dataTable.Rows)
+                {
+                    resultado = Convert.ToString(linha["Senha"]);
+                }
+
+                return resultado;
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("Email inexistente. Detalhes: " + exception.Message);
             }
         }
     }

@@ -1,18 +1,15 @@
-﻿using CamadaModel.Entities;
+﻿using CamadaModel;
 using CamadaModel.CRUD;
+using CamadaModel.Entities;
+using CamadaModel.Entities.Enums;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using FontAwesome.Sharp;
-using CamadaModel.Entities.Enums;
-using CamadaModel;
 
 namespace CamadaDesktop
 {
@@ -306,6 +303,7 @@ namespace CamadaDesktop
             btnInserir.Text = "Alterar";
             rbFisica.Visible = false;
             rbJuridica.Visible = false;
+            chkAtivo.Enabled = true;
         }
 
         private void ModoInserir()
