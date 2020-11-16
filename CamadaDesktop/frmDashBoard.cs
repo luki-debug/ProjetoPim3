@@ -31,11 +31,11 @@ namespace CamadaDesktop
             dashBoard.CarregarPropriedadesReport();
 
             ReportDashBoardBindingSource.DataSource = dashBoard;
-            investidoresFTopBitCoinBindingSource.DataSource = dashBoard;
-            investidoresFTopEtheriumBindingSource.DataSource = dashBoard;
-            investidoresJTopBitCoinBindingSource.DataSource = dashBoard;
-            investidoresJTopEtheriumBindingSource.DataSource = dashBoard;
-            loginMesesBindingSource.DataSource = dashBoard;
+            investidoresFTopBitCoinBindingSource.DataSource = dashBoard.InvestidoresFTopBitCoin;
+            investidoresFTopEtheriumBindingSource.DataSource = dashBoard.InvestidoresFTopEtherium;
+            investidoresJTopBitCoinBindingSource.DataSource = dashBoard.InvestidoresJTopBitCoin;
+            investidoresJTopEtheriumBindingSource.DataSource = dashBoard.InvestidoresJTopEtherium;
+            loginMesesBindingSource.DataSource = dashBoard.LoginMeses;
 
             this.rvDashBoard.RefreshReport();
 

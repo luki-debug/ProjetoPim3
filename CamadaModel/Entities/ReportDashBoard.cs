@@ -130,39 +130,60 @@ namespace CamadaModel.Entities
 
 
             LoginMeses = new List<UltimoLoginMes>();
+            int mes = 1;
             foreach (System.Data.DataRow row in selectLoginMes.Rows)
             {
-                int mes = 0;
                 UltimoLoginMes loginMes = new UltimoLoginMes();
                 loginMes.Quantidade = Convert.ToInt32(row[0]);
-                mes = Convert.ToInt32(row[1]);
-                if (mes == 1)
-                    loginMes.Mes = "Janeiro";
-                if (mes == 2)
-                    loginMes.Mes = "Fevereiro";
-                if (mes == 3)
-                    loginMes.Mes = "Março";
-                if (mes == 4)
-                    loginMes.Mes = "Abril";
-                if (mes == 5)
-                    loginMes.Mes = "Maio";
-                if (mes == 6)
-                    loginMes.Mes = "Junho";
-                if (mes == 7)
-                    loginMes.Mes = "Julho";
-                if (mes == 8)
-                    loginMes.Mes = "Agosto";
-                if (mes == 9)
-                    loginMes.Mes = "Setembro";
-                if (mes == 10)
-                    loginMes.Mes = "Outubro";
-                if (mes == 11)
-                    loginMes.Mes = "Novembro";
-                if (mes == 12)
-                    loginMes.Mes = "Dezembro";
+                int MesValido = Convert.ToInt32(row[1]);
+                if (mes != MesValido)
+                {
+                    UltimoLoginMes loginZerado = new UltimoLoginMes();
+                    
+                    loginZerado.Quantidade = 0;
+                    string resultZerado=verificarMes(mes);
+                    loginZerado.Mes = resultZerado;
+
+                    LoginMeses.Add(loginZerado);
+                }
+
+                string result=verificarMes(MesValido);
+                loginMes.Mes = result;
 
                 LoginMeses.Add(loginMes);
+                mes++;
             }
+        }
+
+        public string verificarMes(int mes)
+        {
+            string mesRetorno = string.Empty;
+            if (mes == 1)
+                mesRetorno = "Jan";
+            if (mes == 2)
+                mesRetorno = "Fev";
+            if (mes == 3)
+                mesRetorno = "Mar";
+            if (mes == 4)
+                mesRetorno = "Abr";
+            if (mes == 5)
+                mesRetorno = "Mai";
+            if (mes == 6)
+                mesRetorno = "Jun";
+            if (mes == 7)
+                mesRetorno = "Jul";
+            if (mes == 8)
+                mesRetorno = "Ago";
+            if (mes == 9)
+                mesRetorno = "Set";
+            if (mes == 10)
+                mesRetorno = "Out";
+            if (mes == 11)
+                mesRetorno = "Nov";
+            if (mes == 12)
+                mesRetorno = "Dez";
+
+            return mesRetorno;
         }
     }
 }

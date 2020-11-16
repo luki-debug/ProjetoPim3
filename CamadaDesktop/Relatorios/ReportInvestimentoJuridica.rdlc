@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Relatório Investimento em Curso</Value>
+                <Value>Relatório Investimento</Value>
                 <Style>
                   <FontSize>20pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -25,10 +25,10 @@
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.28222cm</Top>
         <Height>1.235cm</Height>
-        <Width>21.84451cm</Width>
+        <Width>25.49986cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <BackgroundColor>White</BackgroundColor>
           <VerticalAlign>Middle</VerticalAlign>
@@ -42,7 +42,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.0841cm</Width>
+              <Width>5.85139cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.73062cm</Width>
@@ -51,16 +51,16 @@
               <Width>2.67229cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.10104cm</Width>
+              <Width>5.85139cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.65875cm</Width>
+              <Width>3.21438cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.33583cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.26188cm</Width>
+              <Width>2.84396cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -501,15 +501,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Total">
+                    <Textbox Name="ValorTotal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Total.Value</Value>
-                              <Style />
+                              <Value>=Fields!ValorTotal.Value</Value>
+                              <Style>
+                                <Format>'R$'#,0.00</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -517,7 +519,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Total</rd:DefaultName>
+                      <rd:DefaultName>ValorTotal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -734,7 +736,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Total.Value)</Value>
+                              <Value>=Sum(Fields!ValorTotal.Value)</Value>
                               <Style>
                                 <Format>'R$'#,0.00</Format>
                               </Style>
@@ -789,10 +791,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetRelInvestimento</DataSetName>
+        <DataSetName>JuridicaInvest</DataSetName>
         <Top>1.8259cm</Top>
         <Height>2.34067cm</Height>
-        <Width>21.84451cm</Width>
+        <Width>25.49986cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -804,10 +806,10 @@
     <Height>1.81746in</Height>
     <Style />
   </Body>
-  <Width>8.6002in</Width>
+  <Width>10.03931in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>3.64093cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -918,10 +920,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.57574cm</Top>
-          <Left>14.6091cm</Left>
+          <Top>0.04093cm</Top>
+          <Left>17.11793cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.23541cm</Width>
+          <Width>8.38193cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -954,10 +956,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>1.17574cm</Top>
-          <Left>15.6668cm</Left>
+          <Top>0.64093cm</Top>
+          <Left>19.05757cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.17771cm</Width>
+          <Width>6.44229cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -988,10 +990,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>1.21102cm</Top>
-          <Left>14.6091cm</Left>
-          <Height>0.6cm</Height>
-          <Width>1.0577cm</Width>
+          <Top>0.64093cm</Top>
+          <Left>17.11793cm</Left>
+          <Height>0.63528cm</Height>
+          <Width>1.93964cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -1023,10 +1025,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>1.79889cm</Top>
-          <Left>14.6091cm</Left>
+          <Top>1.26408cm</Top>
+          <Left>17.11793cm</Left>
           <Height>0.6cm</Height>
-          <Width>1.0577cm</Width>
+          <Width>1.93964cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
@@ -1059,16 +1061,228 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>1.77574cm</Top>
-          <Left>15.6668cm</Left>
+          <Top>1.24093cm</Top>
+          <Left>19.05757cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.17771cm</Width>
+          <Width>6.44229cm</Width>
           <ZIndex>7</ZIndex>
           <Style>
             <Border>
               <Color>Silver</Color>
               <Style>Solid</Style>
             </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox19">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!TipoMoeda.Value, "Cabecalho")</Value>
+                  <Style>
+                    <Format>t</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>1.84093cm</Top>
+          <Left>19.05757cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.44229cm</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox30">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Moeda:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox17</rd:DefaultName>
+          <Top>1.84093cm</Top>
+          <Left>17.11793cm</Left>
+          <Height>0.6cm</Height>
+          <Width>1.90436cm</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>#263238</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox31">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cotação:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox17</rd:DefaultName>
+          <Top>2.44093cm</Top>
+          <Left>17.11793cm</Left>
+          <Height>0.6cm</Height>
+          <Width>1.90436cm</Width>
+          <ZIndex>10</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>#263238</BackgroundColor>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox32">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Cotacao.Value, "Cabecalho")</Value>
+                  <Style>
+                    <Format>'R$'0.00</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>2.44093cm</Top>
+          <Left>19.02229cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.44229cm</Width>
+          <ZIndex>11</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+            <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox33">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!TipoRelatorio.Value, "Cabecalho")</Value>
+                  <Style>
+                    <Format>'R$'0.00</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>3.04093cm</Top>
+          <Left>19.02229cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.44229cm</Width>
+          <ZIndex>12</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+            <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox34">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Relatório:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox17</rd:DefaultName>
+          <Top>3.04093cm</Top>
+          <Left>17.11793cm</Left>
+          <Height>0.6cm</Height>
+          <Width>1.90436cm</Width>
+          <ZIndex>13</ZIndex>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+            <BackgroundColor>#263238</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -1106,7 +1320,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Left>18.89472cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>22.55007cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -1138,7 +1353,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Left>21.39472cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>25.05007cm</Left>
           <Height>0.6cm</Height>
           <Width>0.44979cm</Width>
           <ZIndex>1</ZIndex>
@@ -1177,50 +1393,119 @@
       </ConnectionProperties>
       <rd:DataSourceID>01a777ea-bd08-4386-a21d-09989b09f4f8</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="CamadaModelEntities">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>189e234f-213c-4b1c-9b58-bbfd35420c6d</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="CamadaModelEntities1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>9b85dc9e-b44e-4287-9396-4f8a119b5e27</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetRelInvestimento">
+    <DataSet Name="JuridicaInvest">
       <Query>
-        <DataSourceName>BdLumiaDataSet</DataSourceName>
+        <DataSourceName>CamadaModelEntities</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="RazaoSocial">
-          <DataField>RazaoSocial</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Ativo">
+          <DataField>Ativo</DataField>
+          <rd:TypeName>System.Char</rd:TypeName>
         </Field>
-        <Field Name="Estado">
-          <DataField>Estado</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Email">
-          <DataField>Email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Telefone">
-          <DataField>Telefone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CNPJ">
-          <DataField>CNPJ</DataField>
+        <Field Name="CEP">
+          <DataField>CEP</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Cidade">
           <DataField>Cidade</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Total">
-          <DataField>Total</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="CNPJ">
+          <DataField>CNPJ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DtUltimoLogin">
+          <DataField>DtUltimoLogin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Estado">
+          <DataField>Estado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdPessoa">
+          <DataField>IdPessoa</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Logradouro">
+          <DataField>Logradouro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Numero">
+          <DataField>Numero</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RazaoSocial">
+          <DataField>RazaoSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Senha">
+          <DataField>Senha</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telefone">
+          <DataField>Telefone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotal">
+          <DataField>ValorTotal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BdLumiaDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\BdLumiaDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>RelInvestimentosJuridica</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>RelInvestimentosJuridicaTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>CamadaModel.Entities</rd:DataSetName>
+        <rd:TableName>RelatoriosGeral</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>listRelatoriojuridica</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>CamadaModel.Entities.RelatoriosGeral, CamadaModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Cabecalho">
+      <Query>
+        <DataSourceName>CamadaModelEntities1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Cotacao">
+          <DataField>Cotacao</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="TipoMoeda">
+          <DataField>TipoMoeda</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoRelatorio">
+          <DataField>TipoRelatorio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Usuario">
+          <DataField>Usuario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CamadaModel.Entities</rd:DataSetName>
+        <rd:TableName>RelatoriosGeral</rd:TableName>
+        <rd:ObjectDataSourceType>CamadaModel.Entities.RelatoriosGeral, CamadaModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

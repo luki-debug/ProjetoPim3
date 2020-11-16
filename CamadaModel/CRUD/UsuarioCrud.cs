@@ -144,6 +144,9 @@ namespace CamadaModel.CRUD
                     "UPDATE PESSOA " +
                     "SET DtUltimoLogin=@DtUltimoLogin WHERE IdPessoa = @IdPessoa " +
                     "SELECT @IdPessoa AS RETORNO END").ToString();
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@dtLogin", DateTime.Now);
+                acessoDados.ExecutarManipulacao(CommandType.Text, "INSERT INTO HistoricoLogin (DataLogin) VALUES (@dtLogin)");
 
                 return retornoPessoa;
             }

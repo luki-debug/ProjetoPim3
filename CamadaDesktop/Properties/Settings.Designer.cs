@@ -26,10 +26,33 @@ namespace CamadaDesktop.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=BdLumia;User ID=sa;Password=abc@123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=lumiamssql.cow0acwjbsb6.us-east-2.rds.amazonaws.com,1433;Initial Cata" +
+            "log=BdLumia;User ID=sa")]
         public string BdLumiaConnectionString {
             get {
                 return ((string)(this["BdLumiaConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=lumiamssql.cow0acwjbsb6.us-east-2.rds.amazonaws.com,1433;Initial Cata" +
+            "log=BdLumia;User ID=admin;Password=lumiaadmin")]
+        public string BdLumiaConnectionStringNuvem {
+            get {
+                return ((string)(this["BdLumiaConnectionStringNuvem"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=BdLumia;Persist Security Info=True;User " +
+            "ID=sa;Password=abc@123")]
+        public string BdLumiaConnectio {
+            get {
+                return ((string)(this["BdLumiaConnectio"]));
             }
         }
     }

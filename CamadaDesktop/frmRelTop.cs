@@ -1,19 +1,18 @@
-﻿using FontAwesome.Sharp;
+﻿using CamadaModel;
+using CamadaModel.Entities;
+using FontAwesome.Sharp;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CamadaDesktop
 {
     public partial class frmRelTop : Form
     {
+        Negocio negocio = new Negocio();
+        private string nameBtn;
         public frmRelTop()
         {
             List<IconButton> listBtn = new List<IconButton>();
@@ -28,6 +27,8 @@ namespace CamadaDesktop
         private void frmRelTop_Load(object sender, EventArgs e)
         {
             FuncoesTela.DesativarPDFReport(reportViewer1);
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
         private void rbFisica_CheckedChanged(object sender, EventArgs e)
@@ -40,66 +41,136 @@ namespace CamadaDesktop
             reportViewer1.Visible = false;
         }
 
-        private void ReportFisicaOrJuridica()
+        private void ReportFisicaOrJuridica(string topOrAll, double valor, DateTime dtInicio, DateTime dtFim, int tipoMoeda)
         {
             ReportDataSource reportDataSource1 = new ReportDataSource();
+            string moeda = string.Empty;
+
+            if (tipoMoeda == 1)
+                moeda = "Etherium";
+            else
+                moeda = "Bitcoin";
 
             if (rbFisica.Checked == true)
             {
-                reportDataSource1.Name = "DataSetTopFisica";
-                reportDataSource1.Value = this.RelInvestimentosTop10FisicaBindingSource;
+                reportDataSource1.Name = "FisicaInvest";
+                reportDataSource1.Value = this.RelatoriosGeralBindingSource;
                 this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-                this.reportViewer1.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportInvestimentoTopFisica.rdlc";
+                this.reportViewer1.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportInvestimentoFisica.rdlc";
+                RelatoriosGeral relatoriosGeral = new RelatoriosGeral();
+                relatoriosGeral.CarregarRelatorioFisicaInvestimento(topOrAll, valor, dtInicio, dtFim, tipoMoeda);
+                relatoriosGeral.CarregarCabecalho(moeda,valor,nameBtn);
+
+                this.RelatoriosGeralBindingSource.DataSource = relatoriosGeral.listRelatoriofisica;
+                this.relatoriosGeralBindingSource1.DataSource = relatoriosGeral;
+                this.Refresh();
             }
-            else
-            {
-                reportDataSource1.Name = "DataSetTopJuridica";
-                reportDataSource1.Value = this.RelInvestimentosTop10JuridicaBindingSource;
+            else 
+            { 
+                reportDataSource1.Name = "JuridicaInvest";
+                reportDataSource1.Value = this.RelatoriosGeralBindingSource;
                 this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-                this.reportViewer1.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportInvestimentoTopJuridica .rdlc";
+                this.reportViewer1.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportInvestimentoJuridica .rdlc";
+                RelatoriosGeral relatoriosGeral = new RelatoriosGeral();
+                relatoriosGeral.CarregarRelatorioJuridicaInvestimento(topOrAll, valor, dtInicio, dtFim, tipoMoeda);
+                relatoriosGeral.CarregarCabecalho(moeda,valor,nameBtn);
+
+                this.RelatoriosGeralBindingSource.DataSource = relatoriosGeral.listRelatoriojuridica;
+                this.relatoriosGeralBindingSource1.DataSource = relatoriosGeral;
+                this.Refresh();
             }
         }
 
         private void btnTop10_Click(object sender, EventArgs e)
         {
-            ReportFisicaOrJuridica();
-            reportViewer1.Visible = true;
-
-            if (rbFisica.Checked == true)
-                this.RelInvestimentosTop10FisicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Fisica, new DateTime(1800, 01, 01), DateTime.Now);
-            else
-                this.RelInvestimentosTop10JuridicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Juridica, new DateTime(1800, 01, 01), DateTime.Now);
-
-            this.reportViewer1.RefreshReport();
+            subMenuMes.Visible = false;
+            subMenuTopPersonalizado.Visible = false;
+            subMenuTop10.Visible = true;
+            nameBtn = btnTop10.Text;
         }
 
         private void btnTopMes_Click(object sender, EventArgs e)
         {
-            ReportFisicaOrJuridica();
-            reportViewer1.Visible = true;
-
-            DateTime dtinicio = new DateTime(DateTime.Now.Year,DateTime.Now.Month,1);
-            
-            if (rbFisica.Checked == true)
-                this.RelInvestimentosTop10FisicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Fisica, dtinicio, DateTime.Now);
-            else
-                this.RelInvestimentosTop10JuridicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Juridica, dtinicio, DateTime.Now);
-
-            this.reportViewer1.RefreshReport();
+            subMenuTop10.Visible = false;
+            subMenuTopPersonalizado.Visible = false;
+            subMenuMes.Visible = true;
+            nameBtn = btnTopMes.Text;
         }
 
         private void btnBuscarTop_Click(object sender, EventArgs e)
         {
+            subMenuMes.Visible = false;
+            subMenuTop10.Visible = false;
+            subMenuTopPersonalizado.Visible = true;
+            nameBtn = "Top 10 Personalizado";
+        }
 
-            ReportFisicaOrJuridica();
+        private void btnTop10BitCoin_Click(object sender, EventArgs e)
+        {
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.BTC.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, new DateTime(1800, 01, 01), DateTime.Now, 2);
             reportViewer1.Visible = true;
 
-            if (rbFisica.Checked == true)
-                this.RelInvestimentosTop10FisicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Fisica, dtInicio.Value, dtFim.Value);
-            else
-                this.RelInvestimentosTop10JuridicaTableAdapter.Fill(this.BdLumiaDataSet.RelInvestimentosTop10Juridica, dtInicio.Value, dtFim.Value);
+            this.reportViewer1.RefreshReport();
+            subMenuTop10.Visible = false;
+        }
+
+        private void btnTop10Etherium_Click(object sender, EventArgs e)
+        {
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.ETH.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, new DateTime(1800, 01, 01), DateTime.Now, 1);
+            reportViewer1.Visible = true;
 
             this.reportViewer1.RefreshReport();
+            subMenuTop10.Visible = false;
+        }
+
+        private void btnMesBitcoin_Click(object sender, EventArgs e)
+        {
+            DateTime dtinicio = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.BTC.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, dtinicio, DateTime.Now, 2);
+            reportViewer1.Visible = true;
+
+            this.reportViewer1.RefreshReport();
+            subMenuMes.Visible = false;
+        }
+
+        private void btnMesEtherium_Click(object sender, EventArgs e)
+        {
+            DateTime dtinicio = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.ETH.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, dtinicio, DateTime.Now, 1);
+            reportViewer1.Visible = true;
+
+            this.reportViewer1.RefreshReport();
+            subMenuMes.Visible = false;
+        }
+
+        private void btnBuscaBitcoin_Click(object sender, EventArgs e)
+        {           
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.BTC.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, dtInicio.Value, dtFim.Value, 2);
+            reportViewer1.Visible = true;
+
+            this.reportViewer1.RefreshReport();
+            subMenuTopPersonalizado.Visible = false;
+        }
+
+        private void btnBuscarEtherium_Click(object sender, EventArgs e)
+        {
+            var result = negocio.GetMoedaAsync();
+            double cotacao = Convert.ToDouble(result.ETH.bid, CultureInfo.InvariantCulture);
+            ReportFisicaOrJuridica("TOP (10)", cotacao, dtInicio.Value, dtFim.Value, 1);
+            reportViewer1.Visible = true;
+
+            this.reportViewer1.RefreshReport();
+            subMenuTopPersonalizado.Visible = false;
         }
     }
 }

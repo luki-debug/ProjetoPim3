@@ -11,7 +11,8 @@ namespace CamadaDesktop
     public partial class frmMenu : Form
     {
         private Form formAtual = new Form();
-        IconButton currentButton = new IconButton();
+        //possivel erro abaixo
+        private IconButton currentButton;
         private Panel leftBorderBtn;
         public frmMenu()
         {

@@ -108,11 +108,11 @@ namespace CamadaDesktop
 
         public void LayoutReportViewer(ReportViewer reportViewer)
         {
-            reportViewer.Size = new Size(919, 483);
+            //reportViewer.Size = new Size(919, 483);
             reportViewer.TabIndex = 0;
             reportViewer.Visible = false;
             reportViewer.BorderStyle = BorderStyle.FixedSingle;
-            reportViewer.ZoomMode = ZoomMode.PageWidth;
+            //reportViewer.ZoomMode = ZoomMode.PageWidth;
         }
     }
 }

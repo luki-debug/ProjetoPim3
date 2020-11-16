@@ -42,7 +42,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.0841cm</Width>
+              <Width>5.85139cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.73556cm</Width>
@@ -51,7 +51,7 @@
               <Width>3.73556cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.73556cm</Width>
+              <Width>5.85139cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5147cm</Width>
@@ -598,10 +598,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSetJuridica</DataSetName>
+        <DataSetName>JuridicaAtivo</DataSetName>
         <Top>1.74639cm</Top>
         <Height>2.38208cm</Height>
-        <Width>19.95285cm</Width>
+        <Width>22.83597cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -613,7 +613,7 @@
     <Height>1.8233in</Height>
     <Style />
   </Body>
-  <Width>7.85545in</Width>
+  <Width>8.99054in</Width>
   <Page>
     <PageHeader>
       <Height>2.59292cm</Height>
@@ -916,7 +916,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Left>17.00306cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>19.88618cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -948,7 +949,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Left>19.50306cm</Left>
+          <Top>0.07056cm</Top>
+          <Left>22.38618cm</Left>
           <Height>0.6cm</Height>
           <Width>0.44979cm</Width>
           <ZIndex>1</ZIndex>
@@ -987,46 +989,83 @@
       </ConnectionProperties>
       <rd:DataSourceID>34dc21fd-7d2a-43af-8a7c-f434596b5679</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="CamadaModelEntities">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a90c71eb-32af-48b0-9070-eabab7db5bad</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetJuridica">
+    <DataSet Name="JuridicaAtivo">
       <Query>
-        <DataSourceName>BdLumiaDataSet</DataSourceName>
+        <DataSourceName>CamadaModelEntities</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="RazaoSocial">
-          <DataField>RazaoSocial</DataField>
+        <Field Name="Ativo">
+          <DataField>Ativo</DataField>
+          <rd:TypeName>System.Char</rd:TypeName>
+        </Field>
+        <Field Name="CEP">
+          <DataField>CEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cidade">
+          <DataField>Cidade</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CNPJ">
           <DataField>CNPJ</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DtUltimoLogin">
+          <DataField>DtUltimoLogin</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="Email">
           <DataField>Email</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="DtUltimoLogin">
-          <DataField>DtUltimoLogin</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="Estado">
+          <DataField>Estado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IdPessoa">
+          <DataField>IdPessoa</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Logradouro">
+          <DataField>Logradouro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Numero">
+          <DataField>Numero</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RazaoSocial">
+          <DataField>RazaoSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Senha">
+          <DataField>Senha</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Telefone">
           <DataField>Telefone</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ativo">
-          <DataField>Ativo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="ValorTotal">
+          <DataField>ValorTotal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BdLumiaDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaDesktop\BdLumiaDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>RelJuridicaAtivo</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>RelJuridicaAtivoTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>CamadaModel.Entities</rd:DataSetName>
+        <rd:TableName>RelatoriosGeral</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>listRelatoriojuridica</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>CamadaModel.Entities.RelatoriosGeral, CamadaModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

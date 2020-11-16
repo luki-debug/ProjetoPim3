@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PessoaFisicaController.cs" />
     <Compile Include="Controllers\PessoaJuridicaController.cs" />

@@ -31,17 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.pnlSubMenuRelatorio = new System.Windows.Forms.Panel();
-            this.btnReportTop = new FontAwesome.Sharp.IconButton();
-            this.btnReportInvestimento = new FontAwesome.Sharp.IconButton();
-            this.btnReportSituacao = new FontAwesome.Sharp.IconButton();
-            this.BtnReport = new FontAwesome.Sharp.IconButton();
-            this.btnDashBoard = new FontAwesome.Sharp.IconButton();
-            this.iconBtnCadastro = new FontAwesome.Sharp.IconButton();
-            this.btnPerfil = new FontAwesome.Sharp.IconButton();
-            this.iconBtnUsuario = new FontAwesome.Sharp.IconButton();
             this.plBtnUser = new System.Windows.Forms.Panel();
-            this.iconBtnInicio = new FontAwesome.Sharp.IconButton();
-            this.pnlTela = new System.Windows.Forms.Panel();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
@@ -56,6 +46,16 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlTela = new System.Windows.Forms.Panel();
+            this.BtnReport = new FontAwesome.Sharp.IconButton();
+            this.iconBtnInicio = new FontAwesome.Sharp.IconButton();
+            this.iconBtnCadastro = new FontAwesome.Sharp.IconButton();
+            this.btnDashBoard = new FontAwesome.Sharp.IconButton();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
+            this.btnReportTop = new FontAwesome.Sharp.IconButton();
+            this.btnReportInvestimento = new FontAwesome.Sharp.IconButton();
+            this.btnReportSituacao = new FontAwesome.Sharp.IconButton();
+            this.iconBtnUsuario = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.pnlSubMenuRelatorio.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
@@ -101,207 +101,6 @@
             this.pnlSubMenuRelatorio.TabIndex = 0;
             this.pnlSubMenuRelatorio.Visible = false;
             // 
-            // btnReportTop
-            // 
-            this.btnReportTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportTop.FlatAppearance.BorderSize = 0;
-            this.btnReportTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportTop.ForeColor = System.Drawing.Color.White;
-            this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            this.btnReportTop.IconColor = System.Drawing.Color.White;
-            this.btnReportTop.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReportTop.IconSize = 25;
-            this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportTop.Location = new System.Drawing.Point(0, 60);
-            this.btnReportTop.Name = "btnReportTop";
-            this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReportTop.Size = new System.Drawing.Size(263, 27);
-            this.btnReportTop.TabIndex = 2;
-            this.btnReportTop.Tag = "1003";
-            this.btnReportTop.Text = "      Relatório Top 10";
-            this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportTop.UseVisualStyleBackColor = true;
-            this.btnReportTop.Visible = false;
-            this.btnReportTop.Click += new System.EventHandler(this.btnReportTop_Click);
-            // 
-            // btnReportInvestimento
-            // 
-            this.btnReportInvestimento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportInvestimento.FlatAppearance.BorderSize = 0;
-            this.btnReportInvestimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportInvestimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportInvestimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
-            this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            this.btnReportInvestimento.IconColor = System.Drawing.Color.White;
-            this.btnReportInvestimento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReportInvestimento.IconSize = 25;
-            this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
-            this.btnReportInvestimento.Name = "btnReportInvestimento";
-            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
-            this.btnReportInvestimento.TabIndex = 1;
-            this.btnReportInvestimento.Tag = "1002";
-            this.btnReportInvestimento.Text = "      Relatório Inventimentos";
-            this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportInvestimento.UseVisualStyleBackColor = true;
-            this.btnReportInvestimento.Visible = false;
-            this.btnReportInvestimento.Click += new System.EventHandler(this.btnReportInvestimento_Click);
-            // 
-            // btnReportSituacao
-            // 
-            this.btnReportSituacao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportSituacao.FlatAppearance.BorderSize = 0;
-            this.btnReportSituacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnReportSituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
-            this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            this.btnReportSituacao.IconColor = System.Drawing.Color.White;
-            this.btnReportSituacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReportSituacao.IconSize = 25;
-            this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
-            this.btnReportSituacao.Name = "btnReportSituacao";
-            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
-            this.btnReportSituacao.TabIndex = 0;
-            this.btnReportSituacao.Tag = "1001";
-            this.btnReportSituacao.Text = "      Relatório Situação Cliente";
-            this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSituacao.UseVisualStyleBackColor = true;
-            this.btnReportSituacao.Visible = false;
-            this.btnReportSituacao.Click += new System.EventHandler(this.btnReportSituacao_Click);
-            // 
-            // BtnReport
-            // 
-            this.BtnReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnReport.FlatAppearance.BorderSize = 0;
-            this.BtnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReport.ForeColor = System.Drawing.Color.White;
-            this.BtnReport.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
-            this.BtnReport.IconColor = System.Drawing.Color.White;
-            this.BtnReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnReport.IconSize = 40;
-            this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReport.Location = new System.Drawing.Point(0, 225);
-            this.BtnReport.Name = "BtnReport";
-            this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnReport.Size = new System.Drawing.Size(263, 45);
-            this.BtnReport.TabIndex = 5;
-            this.BtnReport.Tag = "1000";
-            this.BtnReport.Text = "Relatórios";
-            this.BtnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnReport.UseVisualStyleBackColor = true;
-            this.BtnReport.Visible = false;
-            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
-            // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
-            this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.btnDashBoard.IconColor = System.Drawing.Color.White;
-            this.btnDashBoard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDashBoard.IconSize = 40;
-            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 180);
-            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
-            this.btnDashBoard.TabIndex = 4;
-            this.btnDashBoard.Tag = "1100";
-            this.btnDashBoard.Text = "DashBoard";
-            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashBoard.UseVisualStyleBackColor = true;
-            this.btnDashBoard.Visible = false;
-            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
-            // 
-            // iconBtnCadastro
-            // 
-            this.iconBtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnCadastro.FlatAppearance.BorderSize = 0;
-            this.iconBtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnCadastro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
-            this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.iconBtnCadastro.IconColor = System.Drawing.Color.White;
-            this.iconBtnCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCadastro.IconSize = 40;
-            this.iconBtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnCadastro.Location = new System.Drawing.Point(0, 135);
-            this.iconBtnCadastro.Name = "iconBtnCadastro";
-            this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnCadastro.Size = new System.Drawing.Size(263, 45);
-            this.iconBtnCadastro.TabIndex = 3;
-            this.iconBtnCadastro.Tag = "900";
-            this.iconBtnCadastro.Text = "Cadastro Cliente";
-            this.iconBtnCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnCadastro.UseVisualStyleBackColor = true;
-            this.iconBtnCadastro.Visible = false;
-            this.iconBtnCadastro.Click += new System.EventHandler(this.iconBtnCadastrar_Click);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.btnPerfil.IconColor = System.Drawing.Color.White;
-            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPerfil.IconSize = 40;
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 90);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPerfil.Size = new System.Drawing.Size(263, 45);
-            this.btnPerfil.TabIndex = 2;
-            this.btnPerfil.Tag = "800";
-            this.btnPerfil.Text = "Perfil Usuário";
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Visible = false;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // iconBtnUsuario
-            // 
-            this.iconBtnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnUsuario.FlatAppearance.BorderSize = 0;
-            this.iconBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
-            this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconBtnUsuario.IconColor = System.Drawing.Color.White;
-            this.iconBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnUsuario.IconSize = 40;
-            this.iconBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnUsuario.Location = new System.Drawing.Point(0, 45);
-            this.iconBtnUsuario.Name = "iconBtnUsuario";
-            this.iconBtnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnUsuario.Size = new System.Drawing.Size(263, 45);
-            this.iconBtnUsuario.TabIndex = 1;
-            this.iconBtnUsuario.Tag = "700";
-            this.iconBtnUsuario.Text = "Usuário";
-            this.iconBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnUsuario.UseVisualStyleBackColor = true;
-            this.iconBtnUsuario.Visible = false;
-            this.iconBtnUsuario.Click += new System.EventHandler(this.iconBtnUsuario_Click);
-            // 
             // plBtnUser
             // 
             this.plBtnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
@@ -310,43 +109,6 @@
             this.plBtnUser.Size = new System.Drawing.Size(5, 40);
             this.plBtnUser.TabIndex = 6;
             this.plBtnUser.Visible = false;
-            // 
-            // iconBtnInicio
-            // 
-            this.iconBtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconBtnInicio.FlatAppearance.BorderSize = 0;
-            this.iconBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.iconBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconBtnInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnInicio.ForeColor = System.Drawing.Color.White;
-            this.iconBtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconBtnInicio.IconColor = System.Drawing.Color.White;
-            this.iconBtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnInicio.IconSize = 40;
-            this.iconBtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnInicio.Location = new System.Drawing.Point(0, 0);
-            this.iconBtnInicio.Margin = new System.Windows.Forms.Padding(0);
-            this.iconBtnInicio.Name = "iconBtnInicio";
-            this.iconBtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconBtnInicio.Size = new System.Drawing.Size(263, 45);
-            this.iconBtnInicio.TabIndex = 0;
-            this.iconBtnInicio.Text = "Inicio";
-            this.iconBtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconBtnInicio.UseVisualStyleBackColor = true;
-            this.iconBtnInicio.Click += new System.EventHandler(this.iconBtnInicio_Click);
-            // 
-            // pnlTela
-            // 
-            this.pnlTela.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTela.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.pnlTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
-            this.pnlTela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTela.Location = new System.Drawing.Point(267, 100);
-            this.pnlTela.Name = "pnlTela";
-            this.pnlTela.Size = new System.Drawing.Size(909, 438);
-            this.pnlTela.TabIndex = 1;
             // 
             // pnlTitulo
             // 
@@ -460,7 +222,7 @@
             this.iconBarra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.iconBarra.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconBarra.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconBarra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBarra.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconBarra.Location = new System.Drawing.Point(19, 18);
             this.iconBarra.Name = "iconBarra";
             this.iconBarra.Size = new System.Drawing.Size(32, 32);
@@ -538,6 +300,244 @@
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Inicio";
             // 
+            // pnlTela
+            // 
+            this.pnlTela.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTela.AutoScrollMargin = new System.Drawing.Size(10, 10);
+            this.pnlTela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
+            this.pnlTela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTela.Location = new System.Drawing.Point(267, 100);
+            this.pnlTela.Name = "pnlTela";
+            this.pnlTela.Size = new System.Drawing.Size(909, 438);
+            this.pnlTela.TabIndex = 1;
+            // 
+            // BtnReport
+            // 
+            this.BtnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnReport.FlatAppearance.BorderSize = 0;
+            this.BtnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReport.ForeColor = System.Drawing.Color.White;
+            this.BtnReport.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.BtnReport.IconColor = System.Drawing.Color.White;
+            this.BtnReport.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnReport.IconSize = 40;
+            this.BtnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnReport.Location = new System.Drawing.Point(0, 225);
+            this.BtnReport.Name = "BtnReport";
+            this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReport.Size = new System.Drawing.Size(263, 45);
+            this.BtnReport.TabIndex = 5;
+            this.BtnReport.Tag = "1000";
+            this.BtnReport.Text = "Relatórios";
+            this.BtnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnReport.UseVisualStyleBackColor = true;
+            this.BtnReport.Visible = false;
+            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
+            // 
+            // iconBtnInicio
+            // 
+            this.iconBtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnInicio.FlatAppearance.BorderSize = 0;
+            this.iconBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnInicio.ForeColor = System.Drawing.Color.White;
+            this.iconBtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconBtnInicio.IconColor = System.Drawing.Color.White;
+            this.iconBtnInicio.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnInicio.IconSize = 40;
+            this.iconBtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnInicio.Location = new System.Drawing.Point(0, 0);
+            this.iconBtnInicio.Margin = new System.Windows.Forms.Padding(0);
+            this.iconBtnInicio.Name = "iconBtnInicio";
+            this.iconBtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnInicio.Size = new System.Drawing.Size(263, 45);
+            this.iconBtnInicio.TabIndex = 0;
+            this.iconBtnInicio.Text = "Inicio";
+            this.iconBtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnInicio.UseVisualStyleBackColor = true;
+            this.iconBtnInicio.Click += new System.EventHandler(this.iconBtnInicio_Click);
+            // 
+            // iconBtnCadastro
+            // 
+            this.iconBtnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnCadastro.FlatAppearance.BorderSize = 0;
+            this.iconBtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnCadastro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
+            this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.iconBtnCadastro.IconColor = System.Drawing.Color.White;
+            this.iconBtnCadastro.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnCadastro.IconSize = 40;
+            this.iconBtnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnCadastro.Location = new System.Drawing.Point(0, 135);
+            this.iconBtnCadastro.Name = "iconBtnCadastro";
+            this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnCadastro.Size = new System.Drawing.Size(263, 45);
+            this.iconBtnCadastro.TabIndex = 3;
+            this.iconBtnCadastro.Tag = "900";
+            this.iconBtnCadastro.Text = "Cadastro Cliente";
+            this.iconBtnCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnCadastro.UseVisualStyleBackColor = true;
+            this.iconBtnCadastro.Visible = false;
+            this.iconBtnCadastro.Click += new System.EventHandler(this.iconBtnCadastrar_Click);
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashBoard.FlatAppearance.BorderSize = 0;
+            this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
+            this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnDashBoard.IconColor = System.Drawing.Color.White;
+            this.btnDashBoard.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDashBoard.IconSize = 40;
+            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashBoard.Location = new System.Drawing.Point(0, 180);
+            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDashBoard.Name = "btnDashBoard";
+            this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
+            this.btnDashBoard.TabIndex = 4;
+            this.btnDashBoard.Tag = "1100";
+            this.btnDashBoard.Text = "DashBoard";
+            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashBoard.UseVisualStyleBackColor = true;
+            this.btnDashBoard.Visible = false;
+            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.btnPerfil.IconColor = System.Drawing.Color.White;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnPerfil.IconSize = 40;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 90);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPerfil.Size = new System.Drawing.Size(263, 45);
+            this.btnPerfil.TabIndex = 2;
+            this.btnPerfil.Tag = "800";
+            this.btnPerfil.Text = "Perfil Usuário";
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Visible = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // btnReportTop
+            // 
+            this.btnReportTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportTop.FlatAppearance.BorderSize = 0;
+            this.btnReportTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportTop.ForeColor = System.Drawing.Color.White;
+            this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportTop.IconColor = System.Drawing.Color.White;
+            this.btnReportTop.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReportTop.IconSize = 25;
+            this.btnReportTop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportTop.Location = new System.Drawing.Point(0, 60);
+            this.btnReportTop.Name = "btnReportTop";
+            this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportTop.Size = new System.Drawing.Size(263, 27);
+            this.btnReportTop.TabIndex = 2;
+            this.btnReportTop.Tag = "1003";
+            this.btnReportTop.Text = "      Relatório Top 10";
+            this.btnReportTop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportTop.UseVisualStyleBackColor = true;
+            this.btnReportTop.Visible = false;
+            this.btnReportTop.Click += new System.EventHandler(this.btnReportTop_Click);
+            // 
+            // btnReportInvestimento
+            // 
+            this.btnReportInvestimento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportInvestimento.FlatAppearance.BorderSize = 0;
+            this.btnReportInvestimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportInvestimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportInvestimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
+            this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportInvestimento.IconColor = System.Drawing.Color.White;
+            this.btnReportInvestimento.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReportInvestimento.IconSize = 25;
+            this.btnReportInvestimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
+            this.btnReportInvestimento.Name = "btnReportInvestimento";
+            this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
+            this.btnReportInvestimento.TabIndex = 1;
+            this.btnReportInvestimento.Tag = "1002";
+            this.btnReportInvestimento.Text = "      Relatório Inventimentos";
+            this.btnReportInvestimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportInvestimento.UseVisualStyleBackColor = true;
+            this.btnReportInvestimento.Visible = false;
+            this.btnReportInvestimento.Click += new System.EventHandler(this.btnReportInvestimento_Click);
+            // 
+            // btnReportSituacao
+            // 
+            this.btnReportSituacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportSituacao.FlatAppearance.BorderSize = 0;
+            this.btnReportSituacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.btnReportSituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
+            this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            this.btnReportSituacao.IconColor = System.Drawing.Color.White;
+            this.btnReportSituacao.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReportSituacao.IconSize = 25;
+            this.btnReportSituacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
+            this.btnReportSituacao.Name = "btnReportSituacao";
+            this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
+            this.btnReportSituacao.TabIndex = 0;
+            this.btnReportSituacao.Tag = "1001";
+            this.btnReportSituacao.Text = "      Relatório Situação Cliente";
+            this.btnReportSituacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSituacao.UseVisualStyleBackColor = true;
+            this.btnReportSituacao.Visible = false;
+            this.btnReportSituacao.Click += new System.EventHandler(this.btnReportSituacao_Click);
+            // 
+            // iconBtnUsuario
+            // 
+            this.iconBtnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconBtnUsuario.FlatAppearance.BorderSize = 0;
+            this.iconBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.iconBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
+            this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconBtnUsuario.IconColor = System.Drawing.Color.White;
+            this.iconBtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconBtnUsuario.IconSize = 40;
+            this.iconBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconBtnUsuario.Location = new System.Drawing.Point(0, 45);
+            this.iconBtnUsuario.Name = "iconBtnUsuario";
+            this.iconBtnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnUsuario.Size = new System.Drawing.Size(263, 45);
+            this.iconBtnUsuario.TabIndex = 1;
+            this.iconBtnUsuario.Tag = "700";
+            this.iconBtnUsuario.Text = "Usuário";
+            this.iconBtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconBtnUsuario.UseVisualStyleBackColor = true;
+            this.iconBtnUsuario.Visible = false;
+            this.iconBtnUsuario.Click += new System.EventHandler(this.iconBtnUsuario_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,10 +576,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel pnlTela;
-        private FontAwesome.Sharp.IconButton iconBtnCadastro;
-        private FontAwesome.Sharp.IconButton BtnReport;
-        private FontAwesome.Sharp.IconButton iconBtnInicio;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlBarraTitulo;
@@ -587,20 +583,24 @@
         private FontAwesome.Sharp.IconPictureBox iconPicMaximizar;
         private FontAwesome.Sharp.IconPictureBox iconPicClose;
         private System.Windows.Forms.Panel pnlSubMenuRelatorio;
-        private FontAwesome.Sharp.IconButton btnReportSituacao;
-        private FontAwesome.Sharp.IconButton btnReportTop;
-        private FontAwesome.Sharp.IconButton btnReportInvestimento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
-        private FontAwesome.Sharp.IconButton btnPerfil;
         private System.Windows.Forms.Panel plBtnUser;
-        private FontAwesome.Sharp.IconButton iconBtnUsuario;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox btnLogout;
-        private FontAwesome.Sharp.IconButton btnDashBoard;
         private System.Windows.Forms.Label lblPerfil;
         private FontAwesome.Sharp.IconPictureBox iconBarra;
+        private FontAwesome.Sharp.IconButton btnReportTop;
+        private FontAwesome.Sharp.IconButton btnReportInvestimento;
+        private FontAwesome.Sharp.IconButton btnReportSituacao;
+        private FontAwesome.Sharp.IconButton BtnReport;
+        private FontAwesome.Sharp.IconButton btnDashBoard;
+        private FontAwesome.Sharp.IconButton iconBtnCadastro;
+        private FontAwesome.Sharp.IconButton btnPerfil;
+        private FontAwesome.Sharp.IconButton iconBtnUsuario;
+        private FontAwesome.Sharp.IconButton iconBtnInicio;
+        private System.Windows.Forms.Panel pnlTela;
     }
 }

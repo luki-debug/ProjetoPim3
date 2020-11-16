@@ -1,4 +1,6 @@
-﻿using FontAwesome.Sharp;
+﻿using CamadaModel.Entities;
+using FontAwesome.Sharp;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,27 +29,29 @@ namespace CamadaDesktop
 
         private void ReportFisicaOrJuridica(string where)
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            ReportDataSource reportDataSource1 = new ReportDataSource();
 
             if (rbFisica.Checked == true)
             {
-                reportDataSource1.Name = "DataSetFisicaAtiva";
-                reportDataSource1.Value = this.relFisicaAtivoBindingSource;
+                reportDataSource1.Name = "FisicaAtivo";
+                reportDataSource1.Value = this.RelatoriosGeralBindingSource;
                 this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
                 this.reportViewer.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportFisicaAtiva.rdlc";
+                RelatoriosGeral relatoriosGeral = new RelatoriosGeral();
+                relatoriosGeral.CarregarRelatorioFisicaAtivo(where);
 
-                // TODO: This line of code loads data into the 'bdLumiaDataSet.RelFisicaAtivo' table. You can move, or remove it, as needed.
-                this.relFisicaAtivoTableAdapter.Fill(bdLumiaDataSet.RelFisicaAtivo, where);
+                RelatoriosGeralBindingSource.DataSource = relatoriosGeral.listRelatoriofisica;
             }
             else
             {
-                reportDataSource1.Name = "DataSetJuridicaAtiva";
-                reportDataSource1.Value = this.RelJuridicaAtivoBindingSource;
+                reportDataSource1.Name = "JuridicaAtivo";
+                reportDataSource1.Value = this.RelatoriosGeralBindingSource;
                 this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
                 this.reportViewer.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportJuridicaAtiva.rdlc";
+                RelatoriosGeral relatoriosGeral = new RelatoriosGeral();
+                relatoriosGeral.CarregarRelatorioJuridicaAtivo(where);
 
-                // TODO: This line of code loads data into the 'bdLumiaDataSet.RelFisicaAtivo' table. You can move, or remove it, as needed.
-                this.RelJuridicaAtivoTableAdapter.Fill(bdLumiaDataSet.RelJuridicaAtivo, where);               
+                RelatoriosGeralBindingSource.DataSource = relatoriosGeral.listRelatoriojuridica;
             }
         }
 
@@ -73,6 +77,16 @@ namespace CamadaDesktop
 
             ReportFisicaOrJuridica(where);
             this.reportViewer.RefreshReport();
+        }
+
+        private void rbJuridica_CheckedChanged(object sender, EventArgs e)
+        {
+            reportViewer.Visible = false;
+        }
+
+        private void rbFisica_CheckedChanged(object sender, EventArgs e)
+        {
+            reportViewer.Visible = false;
         }
     }
 }

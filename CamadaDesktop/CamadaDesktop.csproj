@@ -65,6 +65,8 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Refit, Version=5.2.0.0, Culture=neutral, PublicKeyToken=2f9b1262776509f5, processorArchitecture=MSIL">
       <HintPath>..\packages\Refit.5.2.1\lib\net461\Refit.dll</HintPath>
     </Reference>
@@ -96,6 +98,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -105,8 +108,17 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BdLumiaDataNuvem.cs">
+      <DependentUpon>BdLumiaDataNuvem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BdLumiaDataNuvem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdLumiaDataNuvem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BdLumiaDataSet.cs">
       <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
     </Compile>
@@ -256,12 +268,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Relatorios\DashBoardPrincipal.rdlc" />
-    <EmbeddedResource Include="Relatorios\ReportInvestimentoTopJuridica .rdlc" />
-    <EmbeddedResource Include="Relatorios\ReportInvestimentoTopFisica.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportInvestimentoJuridica.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportInvestimentoFisica.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportJuridicaAtiva.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportFisicaAtiva.rdlc" />
+    <None Include="BdLumiaDataNuvem.xsc">
+      <DependentUpon>BdLumiaDataNuvem.xsd</DependentUpon>
+    </None>
+    <None Include="BdLumiaDataNuvem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdLumiaDataNuvem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BdLumiaDataNuvem.xss">
+      <DependentUpon>BdLumiaDataNuvem.xsd</DependentUpon>
+    </None>
     <None Include="BdLumiaDataSet.xsc">
       <DependentUpon>BdLumiaDataSet.xsd</DependentUpon>
     </None>
@@ -275,6 +296,7 @@
     </None>
     <None Include="libman.json" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CamadaModel.Entities.RelatoriosGeral.datasource" />
     <None Include="Properties\DataSources\CamadaModel.Entities.ReportDashBoard.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
