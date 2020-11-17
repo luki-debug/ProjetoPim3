@@ -371,7 +371,6 @@
             this.btnVoltar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnVoltar.IconColor = System.Drawing.Color.White;
-            this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.IconSize = 32;
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.Location = new System.Drawing.Point(548, 572);
@@ -388,7 +387,6 @@
             this.btnSalvar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.White;
-            this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalvar.IconSize = 32;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(405, 572);

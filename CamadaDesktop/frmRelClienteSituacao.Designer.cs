@@ -92,8 +92,7 @@
             this.btnAtivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtivo.ForeColor = System.Drawing.Color.White;
             this.btnAtivo.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAtivo.IconColor = System.Drawing.Color.Black;
-            this.btnAtivo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtivo.IconColor = System.Drawing.Color.Black;            
             this.btnAtivo.IconSize = 16;
             this.btnAtivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtivo.Location = new System.Drawing.Point(29, 71);
@@ -113,7 +112,6 @@
             this.btnInativo.ForeColor = System.Drawing.Color.White;
             this.btnInativo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInativo.IconColor = System.Drawing.Color.Black;
-            this.btnInativo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInativo.IconSize = 16;
             this.btnInativo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInativo.Location = new System.Drawing.Point(172, 71);

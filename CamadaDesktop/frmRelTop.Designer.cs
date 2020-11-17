@@ -71,7 +71,6 @@
             this.btnTopMes.ForeColor = System.Drawing.Color.White;
             this.btnTopMes.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTopMes.IconColor = System.Drawing.Color.Black;
-            this.btnTopMes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTopMes.IconSize = 16;
             this.btnTopMes.Location = new System.Drawing.Point(215, 66);
             this.btnTopMes.Name = "btnTopMes";
@@ -91,7 +90,6 @@
             this.btnTop10.ForeColor = System.Drawing.Color.White;
             this.btnTop10.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnTop10.IconColor = System.Drawing.Color.Black;
-            this.btnTop10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTop10.IconSize = 16;
             this.btnTop10.Location = new System.Drawing.Point(29, 66);
             this.btnTop10.Name = "btnTop10";
@@ -155,7 +153,6 @@
             this.btnBuscarTop.ForeColor = System.Drawing.Color.White;
             this.btnBuscarTop.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscarTop.IconColor = System.Drawing.Color.Black;
-            this.btnBuscarTop.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarTop.IconSize = 16;
             this.btnBuscarTop.Location = new System.Drawing.Point(119, 53);
             this.btnBuscarTop.Name = "btnBuscarTop";
@@ -212,7 +209,6 @@
             this.btnBuscarEtherium.ForeColor = System.Drawing.Color.White;
             this.btnBuscarEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnBuscarEtherium.IconColor = System.Drawing.Color.BlueViolet;
-            this.btnBuscarEtherium.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnBuscarEtherium.IconSize = 32;
             this.btnBuscarEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnBuscarEtherium.Name = "btnBuscarEtherium";
@@ -234,7 +230,6 @@
             this.btnBuscaBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnBuscaBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnBuscaBitcoin.IconColor = System.Drawing.Color.Gold;
-            this.btnBuscaBitcoin.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnBuscaBitcoin.IconSize = 32;
             this.btnBuscaBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnBuscaBitcoin.Name = "btnBuscaBitcoin";
@@ -275,7 +270,6 @@
             this.btnTop10Etherium.ForeColor = System.Drawing.Color.White;
             this.btnTop10Etherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnTop10Etherium.IconColor = System.Drawing.Color.BlueViolet;
-            this.btnTop10Etherium.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnTop10Etherium.IconSize = 32;
             this.btnTop10Etherium.Location = new System.Drawing.Point(0, 46);
             this.btnTop10Etherium.Name = "btnTop10Etherium";
@@ -297,7 +291,6 @@
             this.btnTop10BitCoin.ForeColor = System.Drawing.Color.White;
             this.btnTop10BitCoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnTop10BitCoin.IconColor = System.Drawing.Color.Gold;
-            this.btnTop10BitCoin.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnTop10BitCoin.IconSize = 32;
             this.btnTop10BitCoin.Location = new System.Drawing.Point(0, 0);
             this.btnTop10BitCoin.Name = "btnTop10BitCoin";
@@ -329,7 +322,6 @@
             this.btnMesEtherium.ForeColor = System.Drawing.Color.White;
             this.btnMesEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnMesEtherium.IconColor = System.Drawing.Color.BlueViolet;
-            this.btnMesEtherium.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnMesEtherium.IconSize = 32;
             this.btnMesEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnMesEtherium.Name = "btnMesEtherium";
@@ -351,7 +343,6 @@
             this.btnMesBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnMesBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnMesBitcoin.IconColor = System.Drawing.Color.Gold;
-            this.btnMesBitcoin.IconFont = FontAwesome.Sharp.IconFont.Brands;
             this.btnMesBitcoin.IconSize = 32;
             this.btnMesBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnMesBitcoin.Name = "btnMesBitcoin";

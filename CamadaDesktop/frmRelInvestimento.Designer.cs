@@ -117,7 +117,6 @@
             this.btnRetido.ForeColor = System.Drawing.Color.White;
             this.btnRetido.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnRetido.IconColor = System.Drawing.Color.Black;
-            this.btnRetido.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRetido.IconSize = 16;
             this.btnRetido.Location = new System.Drawing.Point(253, 66);
             this.btnRetido.Name = "btnRetido";
@@ -137,7 +136,6 @@
             this.btnEmCurso.ForeColor = System.Drawing.Color.White;
             this.btnEmCurso.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEmCurso.IconColor = System.Drawing.Color.Black;
-            this.btnEmCurso.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmCurso.IconSize = 16;
             this.btnEmCurso.Location = new System.Drawing.Point(29, 66);
             this.btnEmCurso.Name = "btnEmCurso";
@@ -157,7 +155,6 @@
             this.btnDisponivel.ForeColor = System.Drawing.Color.White;
             this.btnDisponivel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDisponivel.IconColor = System.Drawing.Color.Black;
-            this.btnDisponivel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDisponivel.IconSize = 16;
             this.btnDisponivel.Location = new System.Drawing.Point(477, 66);
             this.btnDisponivel.Name = "btnDisponivel";
@@ -188,7 +185,6 @@
             this.btnCursoEtherium.ForeColor = System.Drawing.Color.White;
             this.btnCursoEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnCursoEtherium.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnCursoEtherium.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCursoEtherium.IconSize = 32;
             this.btnCursoEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnCursoEtherium.Name = "btnCursoEtherium";
@@ -210,7 +206,6 @@
             this.btnCursoBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnCursoBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnCursoBitcoin.IconColor = System.Drawing.Color.Gold;
-            this.btnCursoBitcoin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCursoBitcoin.IconSize = 32;
             this.btnCursoBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnCursoBitcoin.Name = "btnCursoBitcoin";
@@ -242,7 +237,6 @@
             this.btnRetidoEtherium.ForeColor = System.Drawing.Color.White;
             this.btnRetidoEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnRetidoEtherium.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnRetidoEtherium.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRetidoEtherium.IconSize = 32;
             this.btnRetidoEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnRetidoEtherium.Name = "btnRetidoEtherium";
@@ -264,7 +258,6 @@
             this.btnRetidoBitCoin.ForeColor = System.Drawing.Color.White;
             this.btnRetidoBitCoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnRetidoBitCoin.IconColor = System.Drawing.Color.Gold;
-            this.btnRetidoBitCoin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRetidoBitCoin.IconSize = 32;
             this.btnRetidoBitCoin.Location = new System.Drawing.Point(0, 0);
             this.btnRetidoBitCoin.Name = "btnRetidoBitCoin";
@@ -296,7 +289,6 @@
             this.btnDisponivelEtherium.ForeColor = System.Drawing.Color.White;
             this.btnDisponivelEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
             this.btnDisponivelEtherium.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDisponivelEtherium.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDisponivelEtherium.IconSize = 32;
             this.btnDisponivelEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnDisponivelEtherium.Name = "btnDisponivelEtherium";
@@ -318,7 +310,6 @@
             this.btnDisponivelBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnDisponivelBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.btnDisponivelBitcoin.IconColor = System.Drawing.Color.Gold;
-            this.btnDisponivelBitcoin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDisponivelBitcoin.IconSize = 32;
             this.btnDisponivelBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnDisponivelBitcoin.Name = "btnDisponivelBitcoin";
