@@ -107,6 +107,7 @@
             this.btnReportTop.FlatAppearance.BorderSize = 0;
             this.btnReportTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnReportTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportTop.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnReportTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportTop.ForeColor = System.Drawing.Color.White;
             this.btnReportTop.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
@@ -116,6 +117,7 @@
             this.btnReportTop.Location = new System.Drawing.Point(0, 60);
             this.btnReportTop.Name = "btnReportTop";
             this.btnReportTop.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportTop.Rotation = 0D;
             this.btnReportTop.Size = new System.Drawing.Size(263, 27);
             this.btnReportTop.TabIndex = 2;
             this.btnReportTop.Tag = "1003";
@@ -131,6 +133,7 @@
             this.btnReportInvestimento.FlatAppearance.BorderSize = 0;
             this.btnReportInvestimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnReportInvestimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportInvestimento.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnReportInvestimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportInvestimento.ForeColor = System.Drawing.Color.White;
             this.btnReportInvestimento.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
@@ -140,6 +143,7 @@
             this.btnReportInvestimento.Location = new System.Drawing.Point(0, 30);
             this.btnReportInvestimento.Name = "btnReportInvestimento";
             this.btnReportInvestimento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportInvestimento.Rotation = 0D;
             this.btnReportInvestimento.Size = new System.Drawing.Size(263, 30);
             this.btnReportInvestimento.TabIndex = 1;
             this.btnReportInvestimento.Tag = "1002";
@@ -155,6 +159,7 @@
             this.btnReportSituacao.FlatAppearance.BorderSize = 0;
             this.btnReportSituacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnReportSituacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportSituacao.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnReportSituacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportSituacao.ForeColor = System.Drawing.Color.White;
             this.btnReportSituacao.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
@@ -164,6 +169,7 @@
             this.btnReportSituacao.Location = new System.Drawing.Point(0, 0);
             this.btnReportSituacao.Name = "btnReportSituacao";
             this.btnReportSituacao.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReportSituacao.Rotation = 0D;
             this.btnReportSituacao.Size = new System.Drawing.Size(263, 30);
             this.btnReportSituacao.TabIndex = 0;
             this.btnReportSituacao.Tag = "1001";
@@ -179,6 +185,7 @@
             this.BtnReport.FlatAppearance.BorderSize = 0;
             this.BtnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.BtnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReport.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReport.ForeColor = System.Drawing.Color.White;
             this.BtnReport.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
@@ -188,6 +195,7 @@
             this.BtnReport.Location = new System.Drawing.Point(0, 225);
             this.BtnReport.Name = "BtnReport";
             this.BtnReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnReport.Rotation = 0D;
             this.BtnReport.Size = new System.Drawing.Size(263, 45);
             this.BtnReport.TabIndex = 5;
             this.BtnReport.Tag = "1000";
@@ -203,6 +211,7 @@
             this.btnDashBoard.FlatAppearance.BorderSize = 0;
             this.btnDashBoard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashBoard.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashBoard.ForeColor = System.Drawing.Color.White;
             this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
@@ -213,6 +222,7 @@
             this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
             this.btnDashBoard.Name = "btnDashBoard";
             this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDashBoard.Rotation = 0D;
             this.btnDashBoard.Size = new System.Drawing.Size(263, 45);
             this.btnDashBoard.TabIndex = 4;
             this.btnDashBoard.Tag = "1100";
@@ -228,6 +238,7 @@
             this.iconBtnCadastro.FlatAppearance.BorderSize = 0;
             this.iconBtnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.iconBtnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnCadastro.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnCadastro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnCadastro.ForeColor = System.Drawing.Color.White;
             this.iconBtnCadastro.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
@@ -237,6 +248,7 @@
             this.iconBtnCadastro.Location = new System.Drawing.Point(0, 135);
             this.iconBtnCadastro.Name = "iconBtnCadastro";
             this.iconBtnCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnCadastro.Rotation = 0D;
             this.iconBtnCadastro.Size = new System.Drawing.Size(263, 45);
             this.iconBtnCadastro.TabIndex = 3;
             this.iconBtnCadastro.Tag = "900";
@@ -252,6 +264,7 @@
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
@@ -261,6 +274,7 @@
             this.btnPerfil.Location = new System.Drawing.Point(0, 90);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPerfil.Rotation = 0D;
             this.btnPerfil.Size = new System.Drawing.Size(263, 45);
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Tag = "800";
@@ -276,6 +290,7 @@
             this.iconBtnUsuario.FlatAppearance.BorderSize = 0;
             this.iconBtnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.iconBtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnUsuario.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
             this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
@@ -285,6 +300,7 @@
             this.iconBtnUsuario.Location = new System.Drawing.Point(0, 45);
             this.iconBtnUsuario.Name = "iconBtnUsuario";
             this.iconBtnUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnUsuario.Rotation = 0D;
             this.iconBtnUsuario.Size = new System.Drawing.Size(263, 45);
             this.iconBtnUsuario.TabIndex = 1;
             this.iconBtnUsuario.Tag = "700";
@@ -309,6 +325,7 @@
             this.iconBtnInicio.FlatAppearance.BorderSize = 0;
             this.iconBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.iconBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconBtnInicio.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnInicio.ForeColor = System.Drawing.Color.White;
             this.iconBtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
@@ -319,6 +336,7 @@
             this.iconBtnInicio.Margin = new System.Windows.Forms.Padding(0);
             this.iconBtnInicio.Name = "iconBtnInicio";
             this.iconBtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconBtnInicio.Rotation = 0D;
             this.iconBtnInicio.Size = new System.Drawing.Size(263, 45);
             this.iconBtnInicio.TabIndex = 0;
             this.iconBtnInicio.Text = "Inicio";
@@ -446,9 +464,9 @@
             this.lblPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfil.ForeColor = System.Drawing.Color.White;
-            this.lblPerfil.Location = new System.Drawing.Point(708, 43);
+            this.lblPerfil.Location = new System.Drawing.Point(725, 42);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(118, 19);
+            this.lblPerfil.Size = new System.Drawing.Size(107, 19);
             this.lblPerfil.TabIndex = 2;
             this.lblPerfil.Text = "Perfil";
             this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -469,7 +487,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(628, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(645, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 63);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -481,9 +499,9 @@
             this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(708, 24);
+            this.lblNome.Location = new System.Drawing.Point(725, 23);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(118, 19);
+            this.lblNome.Size = new System.Drawing.Size(107, 19);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -494,7 +512,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(706, 2);
+            this.label1.Location = new System.Drawing.Point(723, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 21);
             this.label1.TabIndex = 0;
