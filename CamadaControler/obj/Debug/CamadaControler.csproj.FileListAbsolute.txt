@@ -35,3 +35,4 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaCont
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.pdb
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csprojAssemblyReference.cache
