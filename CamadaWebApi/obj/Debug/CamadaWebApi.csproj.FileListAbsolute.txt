@@ -1,5 +1,3 @@
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.csprojAssemblyReference.cache
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaWebApi.dll.config
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaWebApi.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaWebApi.pdb
@@ -86,6 +84,8 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.Web
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaControler.pdb
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaControler.dll.config
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\obj\Debug\CamadaWebApi.pdb

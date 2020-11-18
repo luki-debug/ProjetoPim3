@@ -102,9 +102,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-1, 63);
+            this.panel1.Location = new System.Drawing.Point(-1, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 335);
+            this.panel1.Size = new System.Drawing.Size(268, 334);
             this.panel1.TabIndex = 5;
             // 
             // materialDivider1

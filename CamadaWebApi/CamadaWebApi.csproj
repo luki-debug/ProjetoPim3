@@ -155,7 +155,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CarteiraController.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PessoaFisicaController.cs" />
@@ -184,6 +184,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Carteira\" />
+    <Folder Include="Views\Compra\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CamadaModel\CamadaModel.csproj">
