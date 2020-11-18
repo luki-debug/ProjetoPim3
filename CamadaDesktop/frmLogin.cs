@@ -3,6 +3,7 @@ using CamadaModel.Entities;
 using MaterialSkin;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CamadaDesktop
@@ -25,7 +26,7 @@ namespace CamadaDesktop
                 );
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private async void btnEntrar_Click(object sender, EventArgs e)
         {
             UsuarioCrud userCrud = new UsuarioCrud();
             Usuario user = new Usuario();
@@ -33,7 +34,19 @@ namespace CamadaDesktop
             user.Nome = string.Empty;
             List<Usuario> listUser = new List<Usuario>();
 
-            listUser = userCrud.ConsultarPorNomeOrId(user);
+            //Efeito Carregar ativo
+            lblCarregando.Visible = true;
+            pxCarregar.Visible = true;
+            //Esconder componentes
+            btnEntrar.Visible = false;
+            icoUser.Visible = false;
+            icoSenha.Visible = false;
+            txtLogin.Visible = false;
+            txtSenha.Visible = false;
+            linkSenha.Enabled = false;
+            await Task.Run(() => listUser = userCrud.ConsultarPorNomeOrId(user));
+            
+
             bool logado = false;
 
             foreach (var item in listUser)
@@ -49,10 +62,21 @@ namespace CamadaDesktop
                     UsuarioCache._perfilUsuario.IdPerfilUsuario = item._perfilUsuario.IdPerfilUsuario;
                     UsuarioCache._perfilUsuario.Descricao = item._perfilUsuario.Descricao;
                     UsuarioCache.Nome = item.Nome;
-                    UsuarioCache.ListCdPagina = nivelAcessoCrud.ConsultarPgPorId(nivelAcesso);
+                    await Task.Run(() => UsuarioCache.ListCdPagina = nivelAcessoCrud.ConsultarPgPorId(nivelAcesso));
 
                     logado = true;
                 }
+
+                //Abilitar botoes depois da tarefa
+                pxCarregar.Visible = false;
+                lblCarregando.Visible = false;
+                icoUser.Visible = true;
+                icoSenha.Visible = true;
+                txtLogin.Visible = true;
+                txtSenha.Visible = true;
+                btnEntrar.Visible = true;
+                linkSenha.Enabled = true;
+
             }
             if (logado == true)
             {

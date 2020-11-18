@@ -16,16 +16,40 @@ namespace CamadaDesktop
 {
     public partial class frmDashBoard : Form
     {
-        public frmDashBoard()
+        public frmDashBoard()   
         {
             InitializeComponent();
         }
-        private void frmDashBoard_Load(object sender, EventArgs e)
+        private async void frmDashBoard_Load(object sender, EventArgs e)
         {
-            carregarDashBoard();
+            CheckForIllegalCrossThreadCalls = false;
+            //Efeito Carregar
+            lblCarregando.Visible = true;
+            pxCarregar.Visible = true;
+            pl1.Visible = false;
+            pl2.Visible = false;
+            pl3.Visible = false;
+            pl4.Visible = false;
+            pl5.Visible = false;
+            pl6.Visible = false;
+            pl7.Visible = false;
+
+            await Task.Run(() => carregarDashBoard());
+
+            //Efeito pós carregamento
+            lblCarregando.Visible = false;
+            pxCarregar.Visible = false;
+            pl1.Visible = true;
+            pl2.Visible = true;
+            pl3.Visible = true;
+            pl4.Visible = true;
+            pl5.Visible = true;
+            pl6.Visible = true;
+            pl7.Visible = true;
         }
         private void carregarDashBoard()
         {
+            lblCarregando.Visible = true;
             DashBoardSelect dashBoardSelect = new DashBoardSelect();
             ReportDashBoard dashBoard = new ReportDashBoard();
             dashBoard.CarregarPropriedadesReport();
@@ -54,6 +78,7 @@ namespace CamadaDesktop
             //ValorTotalCliente ativos
             string totalClientesT = dashBoardSelect.ClientesAtivosTotal();
             lblTotalClientesAtivos.Text = totalClientesT;
+            lblCarregando.Visible = false;
         }
     }
 }

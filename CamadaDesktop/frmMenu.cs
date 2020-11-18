@@ -42,7 +42,7 @@ namespace CamadaDesktop
         private void iconBtnUsuario_Click(object sender, EventArgs e)
         {
             formAtual.Close();
-            AtivarButton(sender, RGBColors.color2);     
+            AtivarButton(sender, RGBColors.color2);
             AbrirForm(new frmListaUsuario());
             formAtual = new frmListaUsuario();
         }
@@ -60,7 +60,7 @@ namespace CamadaDesktop
             AbrirForm(new frmListaClientes());
             formAtual = new frmListaClientes();
         }
-        private void btnDashBoard_Click(object sender, EventArgs e)
+        private async void btnDashBoard_Click(object sender, EventArgs e)
         {
             formAtual.Close();
             AtivarButton(sender, RGBColors.color5);
