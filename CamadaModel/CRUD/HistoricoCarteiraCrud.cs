@@ -10,19 +10,26 @@ namespace CamadaModel.CRUD
     {
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
 
-        public string Inserir(HistoricoCarteira historicoCarteira)
+        public string InserirBoleto(HistoricoCarteira historicoCarteira)
+        {
+            return Inserir(historicoCarteira, "Boleto");
+        }
+
+        private string Inserir(HistoricoCarteira historicoCarteira, string tipoTransacao)
         {
             try
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@DataHora", historicoCarteira.DataHora);
+                acessoDados.AdicionarParametros("@dtVencimento", historicoCarteira.dtVencimento);
                 acessoDados.AdicionarParametros("@Valor", historicoCarteira.Valor);
                 acessoDados.AdicionarParametros("@IdCarteira", historicoCarteira._carteira.IdCarteira);
-                acessoDados.AdicionarParametros("@IdTransacao", historicoCarteira._transacao.IdTransacao);
+                acessoDados.AdicionarParametros("@TipoTransacao", tipoTransacao);
+                acessoDados.AdicionarParametros("@Descricao", historicoCarteira.Descricao);
                 string retornoHistorico = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO HistoricoCarteira " +
-                    "(DataHora,Estado,Valor,IdCarteira,IdTransacao) " +
-                    "VALUES (@DataHora,0,@Valor,@IdCarteira,@IdTransacao) " +
+                    "(DataHora,Valor,IdCarteira,TipoTransacao, Descricao, dtVencimento) " +
+                    "VALUES (@DataHora,@Valor,@IdCarteira,@TipoTransacao, @Descricao, @dtVencimento) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
 
@@ -40,13 +47,12 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@DataHora", historicoCarteira.DataHora);
-                acessoDados.AdicionarParametros("@Estado", historicoCarteira.Estado);
                 acessoDados.AdicionarParametros("@Valor", historicoCarteira.Valor);
                 acessoDados.AdicionarParametros("@IdCarteira", historicoCarteira._carteira.IdCarteira);
-                acessoDados.AdicionarParametros("@IdTransacao", historicoCarteira._transacao.IdTransacao);
+                acessoDados.AdicionarParametros("@Descricao", historicoCarteira.Descricao);
                 string retornoHistorico = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE TipoTransacao " +
-                    "SET DataHora=@DataHora,Estado=@Estado,Valor=@Valor,IdCarteira=@IdCarteira,IdTransacao=@IdTransacao " +
+                    "SET DataHora=@DataHora,Valor=@Valor,IdCarteira=@IdCarteira, Descricao=@Descricao " +
                     "WHERE IdHistorico = @IdHistorico " +
                     "SELECT @IdHistorico AS RETORNO END").ToString();
 
@@ -76,46 +82,46 @@ namespace CamadaModel.CRUD
                 return exception.Message;
             }
         }
-
-        public List<HistoricoCarteira> ConsultarEstado(HistoricoCarteira historicoCarteira)
+        
+        public List<HistoricoCarteira> ObterTodos(Pessoa pessoa)
         {
-            try
+            List<HistoricoCarteira> historicoColecao = new List<HistoricoCarteira>();
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@IdPessoa", pessoa.IdPessoa);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT h.* FROM HistoricoCarteira as h LEFT JOIN " +
+                "Carteira as c ON h.IdCarteira = c.IdCarteira " +
+                    "WHERE c.IdPessoa = @IdPessoa");
+
+            return popular(dataTable);
+        }
+
+        private List<HistoricoCarteira> popular(DataTable dataTable)
+        {
+            //Criar uma nova coleção de clientes
+            List<HistoricoCarteira> historicoColecao = new List<HistoricoCarteira>();
+
+            foreach (DataRow linha in dataTable.Rows)
             {
-                //Criar uma nova coleção de clientes
-                List<HistoricoCarteira> historicoColecao = new List<HistoricoCarteira>();
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@Estado", historicoCarteira.Estado);
-                //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM HistoricoCarteira " +
-                    "WHERE Estado=@Estado");
+                //Criar cliente vazio
+                //Colocar os dados da linha
+                //Adicionar na coleção
+                HistoricoCarteira historicoAdd = new HistoricoCarteira();
 
-                //Percorrer o DataTable e transformar em coleção de cliente     
-                //Cada linha do DataTable é um cliente
-                foreach (DataRow linha in dataTable.Rows)
-                {
-                    //Criar cliente vazio
-                    //Colocar os dados da linha
-                    //Adicionar na coleção
-                    HistoricoCarteira historicoAdd = new HistoricoCarteira();
+                historicoAdd.DataHora = Convert.ToDateTime(linha["DataHora"]);
+                historicoAdd.IdHistorico = Convert.ToInt32(linha["IdHistorico"]);
+                historicoAdd.Valor = Convert.ToDouble(linha["Valor"]);
+                historicoAdd._carteira = new Carteira();
+                historicoAdd._carteira.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
+                historicoAdd.TipoTransacao = Convert.ToString(linha["TipoTransacao"]);
+                historicoAdd.Descricao = Convert.ToString(linha["Descricao"]);
+                if (!linha.IsNull("dtVencimento"))
+                    historicoAdd.dtVencimento = Convert.ToDateTime(linha["dtVencimento"]);
 
-                    historicoAdd.DataHora = Convert.ToDateTime(linha["DataHora"]);
-                    historicoAdd.Estado = Convert.ToInt32(linha["Estado"]);
-                    historicoAdd.IdHistorico = Convert.ToInt32(linha["IdHistorico"]);
-                    historicoAdd.Valor = Convert.ToDecimal(linha["Valor"]);
-                    historicoAdd._carteira = new Carteira();
-                    historicoAdd._carteira.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
-                    historicoAdd._transacao = new TipoTransacao();
-                    historicoAdd._transacao.IdTransacao = Convert.ToInt32(linha["IdTransacao"]);
-
-                    historicoColecao.Add(historicoAdd);
-                }
-
-                return historicoColecao;
+                historicoColecao.Add(historicoAdd);
             }
-            catch (Exception exception)
-            {
-                throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
-            }
+
+            return historicoColecao;
         }
     }
 }
