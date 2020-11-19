@@ -3,6 +3,7 @@ using CamadaModel.Entities;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CamadaDesktop
@@ -50,9 +51,15 @@ namespace CamadaDesktop
                 FuncoesTela.AbrirFormFilha(new frmCadastroCliente(this, pessoa, rbJuridica, tipoTela), this);
         }
 
-        private void frmListaClientes_Load(object sender, EventArgs e)
+        private async void frmListaClientes_Load(object sender, EventArgs e)
         {
-            FuncoesTela.CarregarTodosClienteFisica(dgFisica);
+            CheckForIllegalCrossThreadCalls = false;
+            //Efeito Carregar
+            lblCarregando.Visible = true;
+            pxCarregando2.Visible = true;
+            await Task.Run(() => FuncoesTela.CarregarTodosClienteFisica(dgFisica));
+            lblCarregando.Visible = false;
+            pxCarregando2.Visible = false;
         }
 
         public void AtualizarGrid()

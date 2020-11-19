@@ -30,8 +30,8 @@ namespace CamadaDesktop
             foreach (var item in UsuarioCache.ListCdPagina)
             {
                 if (item == "700")
-                    dg.Columns[3].Visible = true; 
-                if (item=="701")    
+                    dg.Columns[3].Visible = true;
+                if (item == "701")
                     btnCriar.Visible = true;
                 if (item == "702")
                     dg.Columns[4].Visible = true;
@@ -53,9 +53,15 @@ namespace CamadaDesktop
             FuncoesTela.CarregarTodosUsuarios(dg);
         }
 
-        private void frmListaUsuario_Load(object sender, EventArgs e)
+        private async void frmListaUsuario_Load(object sender, EventArgs e)
         {
-            AtualizarGrid();
+            CheckForIllegalCrossThreadCalls = false;
+            //Efeito Carregar
+            lblCarregando.Visible = true;
+            pxCarregando2.Visible = true;
+            await Task.Run(() => AtualizarGrid());
+            lblCarregando.Visible = false;
+            pxCarregando2.Visible = false;
         }
 
         private void dg_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,7 +108,7 @@ namespace CamadaDesktop
                         }
                         else
                         {
-                            MessageBox.Show("Excluido com sucesso: ID "+retornoDelete, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Excluido com sucesso: ID " + retornoDelete, "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             AtualizarGrid();
                         }
