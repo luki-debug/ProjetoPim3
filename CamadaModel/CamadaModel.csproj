@@ -82,6 +82,7 @@
     <Compile Include="CRUD\CarteiraCrud.cs" />
     <Compile Include="CRUD\DashBoardSelect.cs" />
     <Compile Include="CRUD\FisicaCrud.cs" />
+    <Compile Include="CRUD\HistoricoInvestidoCrud.cs" />
     <Compile Include="CRUD\HistoricoCarteiraCrud.cs" />
     <Compile Include="CRUD\JuridicaCrud.cs" />
     <Compile Include="CRUD\NivelAcessoCrud.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="CRUD\UsuarioCrud.cs" />
     <Compile Include="Entities\Carteira.cs" />
     <Compile Include="Entities\Enums\EnumEstado.cs" />
+    <Compile Include="Entities\HistoricoInvestido.cs" />
     <Compile Include="Entities\RelatorioJuridica.cs" />
     <Compile Include="Entities\Fisica.cs" />
     <Compile Include="Entities\HistoricoCarteira.cs" />
