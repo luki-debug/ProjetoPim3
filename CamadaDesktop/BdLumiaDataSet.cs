@@ -7,9 +7,12 @@
     }
 }
 
-namespace CamadaDesktop.BdLumiaDataSetTableAdapters {
-    
-    
+namespace CamadaDesktop.BdLumiaDataSetTableAdapters
+{
+    partial class RelJuridicaAtivoTableAdapter
+    {
+    }
+
     public partial class RelFisicaAtivoTableAdapter {
     }
 }

@@ -56,7 +56,6 @@
             this.btnPesquisar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPesquisar.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPesquisar.IconColor = System.Drawing.Color.White;
-            this.btnPesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesquisar.IconSize = 32;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.Location = new System.Drawing.Point(401, 67);
@@ -95,7 +94,6 @@
             this.btnNovo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNovo.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnNovo.IconColor = System.Drawing.Color.White;
-            this.btnNovo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNovo.IconSize = 32;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(544, 67);

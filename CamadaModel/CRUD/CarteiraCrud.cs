@@ -44,8 +44,8 @@ namespace CamadaModel.CRUD
 
                 string retornoCarteira = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE Carteira " +
-                    "SET Saldo=@Saldo, TipoMoeda=@TipoMoeda" +
-                    "WHERE IdPessoa = @IdPessoa " +
+                    "SET Saldo=@Saldo " +
+                    "WHERE IdPessoa = @IdPessoa AND TipoMoeda=@TipoMoeda " +
                     "SELECT @IdPessoa AS RETORNO END").ToString();
 
                 return retornoCarteira;
@@ -75,17 +75,18 @@ namespace CamadaModel.CRUD
             }
         }
 
-        public List<Carteira> ConsultarNome(Carteira carteira)
+        public Carteira ConsultarPorIdPessoaANDTMoeda(Carteira carteira)
         {
             try
             {
                 //Criar uma nova coleção de clientes
-                List<Carteira> carteiraColecao = new List<Carteira>();
+                Carteira carteiraResult = new Carteira();
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@IdPessoa", carteira._pessoa.IdPessoa);
+                acessoDados.AdicionarParametros("@TipoMoeda", carteira.TipoMoeda);
                 //Retornará uma DataTable
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * FROM Carteira AS C INNER JOIN Pessoa AS P " +
-                    "ON C.IdPessoa=P.IdPessoa WHERE c.IdPessoa=@IdPessoa");
+                    "ON C.IdPessoa=P.IdPessoa WHERE C.IdPessoa=@IdPessoa AND TipoMoeda=@TipoMoeda");
 
                 //Percorrer o DataTable e transformar em coleção de cliente     
                 //Cada linha do DataTable é um cliente
@@ -98,13 +99,13 @@ namespace CamadaModel.CRUD
                     carteiraAdd._pessoa = new Pessoa();
                     carteiraAdd._pessoa.IdPessoa = Convert.ToInt32(linha["IdPessoa"]);
                     carteiraAdd.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
-                    carteiraAdd.Saldo = Convert.ToDecimal(linha["Saldo"]);
+                    carteiraAdd.Saldo = Convert.ToDouble(linha["Saldo"]);
                     carteiraAdd.TipoMoeda = Convert.ToInt32(linha["TipoMoeda"]);
 
-                    carteiraColecao.Add(carteiraAdd);
+                    carteiraResult = carteiraAdd;
                 }
 
-                return carteiraColecao;
+                return carteiraResult;
             }
             catch (Exception exception)
             {

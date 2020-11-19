@@ -257,7 +257,6 @@
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.btnVoltar.IconColor = System.Drawing.Color.White;
-            this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.Location = new System.Drawing.Point(24, 8);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(34, 32);
@@ -314,7 +313,6 @@
             this.btnInserir.ForeColor = System.Drawing.Color.White;
             this.btnInserir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInserir.IconColor = System.Drawing.Color.Black;
-            this.btnInserir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInserir.IconSize = 16;
             this.btnInserir.Location = new System.Drawing.Point(373, 547);
             this.btnInserir.Name = "btnInserir";
@@ -356,7 +354,6 @@
             this.btnCepConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCepConsultar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCepConsultar.IconColor = System.Drawing.Color.White;
-            this.btnCepConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCepConsultar.IconSize = 32;
             this.btnCepConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCepConsultar.Location = new System.Drawing.Point(241, 121);
@@ -462,7 +459,6 @@
             this.BtnCancelar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCancelar.IconColor = System.Drawing.Color.White;
-            this.BtnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancelar.IconSize = 32;
             this.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCancelar.Location = new System.Drawing.Point(516, 547);
@@ -476,10 +472,11 @@
             // 
             // pxCarregar
             // 
+            this.pxCarregar.BackColor = System.Drawing.Color.Transparent;
             this.pxCarregar.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregar.Image")));
-            this.pxCarregar.Location = new System.Drawing.Point(821, 31);
+            this.pxCarregar.Location = new System.Drawing.Point(841, 33);
             this.pxCarregar.Name = "pxCarregar";
-            this.pxCarregar.Size = new System.Drawing.Size(134, 74);
+            this.pxCarregar.Size = new System.Drawing.Size(90, 80);
             this.pxCarregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pxCarregar.TabIndex = 9;
             this.pxCarregar.TabStop = false;

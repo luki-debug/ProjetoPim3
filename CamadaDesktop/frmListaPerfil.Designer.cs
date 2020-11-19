@@ -51,7 +51,6 @@
             this.btnCriar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCriar.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnCriar.IconColor = System.Drawing.Color.White;
-            this.btnCriar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCriar.IconSize = 32;
             this.btnCriar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCriar.Location = new System.Drawing.Point(544, 65);
@@ -69,7 +68,6 @@
             this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
             this.btnBuscar.IconColor = System.Drawing.Color.White;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscar.IconSize = 32;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(401, 65);

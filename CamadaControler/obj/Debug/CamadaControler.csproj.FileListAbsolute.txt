@@ -8,10 +8,6 @@ C:\Users\lucas\source\repos\CamadaWeb\CamadaControler\obj\Debug\CamadaControler.
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.dll.config
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\CamadaControler.pdb
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CoreCompileInputs.cache
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.dll
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.pdb
-C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\RefitStubs.g.cs
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\Refit.dll
@@ -34,5 +30,9 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.Tex
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.Text.Json.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\bin\Debug\System.ValueTuple.xml
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\RefitStubs.g.cs
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.dll
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.pdb
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaControler\obj\Debug\CamadaControler.csprojAssemblyReference.cache

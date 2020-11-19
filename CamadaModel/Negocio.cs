@@ -31,7 +31,6 @@ namespace CamadaModel
 
             return cepConsulta;
         }
-
         public double ConverterRealParaCripto(double valorReal, int tipoMoeda)
         {
             var cotacaoMoedas = GetMoedaAsync();

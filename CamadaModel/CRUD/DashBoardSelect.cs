@@ -151,21 +151,15 @@ namespace CamadaModel.CRUD
             try
             {
                 //Retornará uma DataTable
-                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT COUNT(*), MONTH (DtUltimoLogin) " +
-                    "FROM Pessoa WHERE YEAR(DtUltimologin) = YEAR(GETDATE()) " +
-                    "GROUP BY FORMAT (CAST(DtUltimoLogin AS DATE), 'yyyy/MM'), MONTH(DtUltimoLogin)");
-
-                //int valorTotal = 0;
-                //foreach (DataRow linha in dataTable.Rows)
-                //{
-                //    valorTotal = Convert.ToInt32(linha["Total"]);
-                //}
+                DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT COUNT(*), MONTH (DataLogin) " +
+                    "FROM HistoricoLogin WHERE YEAR(DataLogin) = YEAR(GETDATE()) GROUP BY FORMAT(CAST(DataLogin AS DATE), 'yyyy/MM'), MONTH(DataLogin) " +
+                    "ORDER BY 2 ASC");
 
                 return dataTable;
             }
             catch (Exception exception)
             {
-                throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
+                throw new Exception("Não foi possivel consultar. Detalhes: " + exception.Message);
             }
         }
     }
