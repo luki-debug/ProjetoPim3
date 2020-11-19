@@ -10,8 +10,8 @@ namespace CamadaModel.Entities
     {
         public int IdCarteira { get; set; }
         public Pessoa _pessoa { get; set; }
-        public double Saldo { get; set; }
-        public int TipoMoeda { get; set; }
+        public double Saldo { get; set; } //Valor para update
+        public int TipoMoeda { get; set; } //1 - Etheriun, 2 - Bitcoin
 
         public Carteira()
         {

@@ -160,6 +160,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PessoaFisicaController.cs" />
     <Compile Include="Controllers\PessoaJuridicaController.cs" />
+    <Compile Include="Controllers\TransacaoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,7 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CamadaModel\CamadaModel.csproj">
-      <Project>{9B56C875-133D-485F-B809-0E829F4121C8}</Project>
+      <Project>{9b56c875-133d-485f-b809-0e829f4121c8}</Project>
       <Name>CamadaModel</Name>
     </ProjectReference>
   </ItemGroup>

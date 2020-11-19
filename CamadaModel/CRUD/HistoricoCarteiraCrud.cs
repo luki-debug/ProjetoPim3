@@ -10,19 +10,26 @@ namespace CamadaModel.CRUD
     {
         AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
 
-        public string Inserir(HistoricoCarteira historicoCarteira)
+        public string InserirBoleto(HistoricoCarteira historicoCarteira)
+        {
+            return Inserir(historicoCarteira, "Boleto");
+        }
+
+        private string Inserir(HistoricoCarteira historicoCarteira, string tipoTransacao)
         {
             try
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@DataHora", historicoCarteira.DataHora);
+                acessoDados.AdicionarParametros("@dtVencimento", historicoCarteira.dtVencimento);
                 acessoDados.AdicionarParametros("@Valor", historicoCarteira.Valor);
                 acessoDados.AdicionarParametros("@IdCarteira", historicoCarteira._carteira.IdCarteira);
-                acessoDados.AdicionarParametros("@IdTransacao", historicoCarteira._transacao.IdTransacao);
+                acessoDados.AdicionarParametros("@TipoTransacao", tipoTransacao);
+                acessoDados.AdicionarParametros("@Descricao", historicoCarteira.Descricao);
                 string retornoHistorico = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "INSERT INTO HistoricoCarteira " +
-                    "(DataHora,Estado,Valor,IdCarteira,IdTransacao) " +
-                    "VALUES (@DataHora,0,@Valor,@IdCarteira,@IdTransacao) " +
+                    "(DataHora,Estado,Valor,IdCarteira,TipoTransacao, Descricao) " +
+                    "VALUES (@DataHora,0,@Valor,@IdCarteira,@TipoTransacao, @Descricao) " +
                     "SELECT @@IDENTITY as RETORNO " +
                     "END").ToString();
 
@@ -43,10 +50,10 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@Estado", historicoCarteira.Estado);
                 acessoDados.AdicionarParametros("@Valor", historicoCarteira.Valor);
                 acessoDados.AdicionarParametros("@IdCarteira", historicoCarteira._carteira.IdCarteira);
-                acessoDados.AdicionarParametros("@IdTransacao", historicoCarteira._transacao.IdTransacao);
+                acessoDados.AdicionarParametros("@Descricao", historicoCarteira.Descricao);
                 string retornoHistorico = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE TipoTransacao " +
-                    "SET DataHora=@DataHora,Estado=@Estado,Valor=@Valor,IdCarteira=@IdCarteira,IdTransacao=@IdTransacao " +
+                    "SET DataHora=@DataHora,Estado=@Estado,Valor=@Valor,IdCarteira=@IdCarteira, Descricao=@Descricao " +
                     "WHERE IdHistorico = @IdHistorico " +
                     "SELECT @IdHistorico AS RETORNO END").ToString();
 
@@ -101,11 +108,11 @@ namespace CamadaModel.CRUD
                     historicoAdd.DataHora = Convert.ToDateTime(linha["DataHora"]);
                     historicoAdd.Estado = Convert.ToInt32(linha["Estado"]);
                     historicoAdd.IdHistorico = Convert.ToInt32(linha["IdHistorico"]);
-                    historicoAdd.Valor = Convert.ToDecimal(linha["Valor"]);
+                    historicoAdd.Valor = Convert.ToDouble(linha["Valor"]);
                     historicoAdd._carteira = new Carteira();
                     historicoAdd._carteira.IdCarteira = Convert.ToInt32(linha["IdCarteira"]);
-                    historicoAdd._transacao = new TipoTransacao();
-                    historicoAdd._transacao.IdTransacao = Convert.ToInt32(linha["IdTransacao"]);
+                    historicoAdd.TipoTransacao = Convert.ToString(linha["IdTransacao"]);
+                    historicoAdd.Descricao = Convert.ToString(linha["Descricao"]);
 
                     historicoColecao.Add(historicoAdd);
                 }
