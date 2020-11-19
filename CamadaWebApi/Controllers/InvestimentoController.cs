@@ -25,7 +25,8 @@ namespace CamadaWebApi.Controllers
 
                 value.DtInicio = DateTime.Now;
 
-                value._carteira.Saldo = value._carteira.Saldo - new Negocio().ConverterRealParaCripto(value.ValorInvestido, value._carteira.TipoMoeda);
+                value.ValorInvestido = new Negocio().ConverterRealParaCripto(value.ValorInvestido, value._carteira.TipoMoeda);
+                value._carteira.Saldo = value._carteira.Saldo - value.ValorInvestido;
                 if (value._carteira.Saldo < 0)
                 {
                     HttpResponseMessage response = this.Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Saldo Insuficiente!");
