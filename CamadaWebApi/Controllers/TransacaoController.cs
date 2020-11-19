@@ -59,5 +59,22 @@ namespace CamadaWebApi.Controllers
                 throw;
             }
         }
+
+        [HttpPost]
+        [Route("obter-todos")]
+        // GET: api/transacao/obter-boleto
+        public IHttpActionResult ObterTodos([FromBody] Pessoa pessoa)
+        {
+            try
+            {
+                HistoricoCarteiraCrud historicoCarteiraCrud = new HistoricoCarteiraCrud();
+                List<HistoricoCarteira> retorno = historicoCarteiraCrud.ObterTodos(pessoa);
+                return Ok(retorno);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

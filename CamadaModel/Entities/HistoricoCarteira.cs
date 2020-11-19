@@ -13,7 +13,6 @@ namespace CamadaModel.Entities
         public string TipoTransacao { get; set; }
         public DateTime DataHora { get; set; }
         public double Valor { get; set; }
-        public int Estado { get; set; }
         public DateTime dtVencimento { get; set; }
         public string Descricao { get; set; }
 
@@ -21,13 +20,12 @@ namespace CamadaModel.Entities
         {
         }
 
-        public HistoricoCarteira(int idHistorico, Carteira carteira, DateTime dataHora, double valor, int estado, string descricao)
+        public HistoricoCarteira(int idHistorico, Carteira carteira, DateTime dataHora, double valor, string descricao)
         {
             IdHistorico = idHistorico;
             _carteira = carteira;
             DataHora = dataHora;
             Valor = valor;
-            Estado = estado;
             Descricao = descricao;
         }
     }
