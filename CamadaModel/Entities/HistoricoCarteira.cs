@@ -20,9 +20,8 @@ namespace CamadaModel.Entities
         {
         }
 
-        public HistoricoCarteira(int idHistorico, Carteira carteira, DateTime dataHora, double valor, string descricao)
+        public HistoricoCarteira(Carteira carteira, DateTime dataHora, double valor, string descricao)
         {
-            IdHistorico = idHistorico;
             _carteira = carteira;
             DataHora = dataHora;
             Valor = valor;

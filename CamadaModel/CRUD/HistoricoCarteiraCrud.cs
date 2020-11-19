@@ -15,13 +15,21 @@ namespace CamadaModel.CRUD
             return Inserir(historicoCarteira, "Boleto");
         }
 
+        public string InserirInvestimento(HistoricoCarteira historicoCarteira)
+        {
+            return Inserir(historicoCarteira, "Investimento");
+        }
+
         private string Inserir(HistoricoCarteira historicoCarteira, string tipoTransacao)
         {
             try
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@DataHora", historicoCarteira.DataHora);
-                acessoDados.AdicionarParametros("@dtVencimento", historicoCarteira.dtVencimento);
+                if(historicoCarteira.dtVencimento != DateTime.MinValue)
+                    acessoDados.AdicionarParametros("@dtVencimento", historicoCarteira.dtVencimento);
+                else
+                    acessoDados.AdicionarParametros("@dtVencimento", DBNull.Value);
                 acessoDados.AdicionarParametros("@Valor", historicoCarteira.Valor);
                 acessoDados.AdicionarParametros("@IdCarteira", historicoCarteira._carteira.IdCarteira);
                 acessoDados.AdicionarParametros("@TipoTransacao", tipoTransacao);
@@ -37,7 +45,7 @@ namespace CamadaModel.CRUD
             }
             catch (Exception exception)
             {
-                return exception.Message;
+                throw exception;
             }
         }
 
