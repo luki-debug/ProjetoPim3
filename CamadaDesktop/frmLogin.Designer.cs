@@ -35,13 +35,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.linkSenha = new System.Windows.Forms.LinkLabel();
+            this.icoUser = new FontAwesome.Sharp.IconPictureBox();
+            this.icoSenha = new FontAwesome.Sharp.IconPictureBox();
+            this.lblCarregando = new System.Windows.Forms.Label();
+            this.pxCarregar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLogin
@@ -77,11 +80,11 @@
             // btnEntrar
             // 
             this.btnEntrar.Depth = 0;
-            this.btnEntrar.Location = new System.Drawing.Point(296, 229);
+            this.btnEntrar.Location = new System.Drawing.Point(296, 224);
             this.btnEntrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Primary = true;
-            this.btnEntrar.Size = new System.Drawing.Size(234, 39);
+            this.btnEntrar.Size = new System.Drawing.Size(242, 44);
             this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -118,51 +121,77 @@
             this.materialDivider1.TabIndex = 4;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // linkLabel1
+            // linkSenha
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(292, 312);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(161, 20);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Esqueci minha senha";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkSenha.AutoSize = true;
+            this.linkSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSenha.LinkColor = System.Drawing.Color.Black;
+            this.linkSenha.Location = new System.Drawing.Point(292, 312);
+            this.linkSenha.Name = "linkSenha";
+            this.linkSenha.Size = new System.Drawing.Size(161, 20);
+            this.linkSenha.TabIndex = 3;
+            this.linkSenha.TabStop = true;
+            this.linkSenha.Text = "Esqueci minha senha";
+            this.linkSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // iconPictureBox1
+            // icoUser
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
-            this.iconPictureBox1.Location = new System.Drawing.Point(301, 157);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 6;
-            this.iconPictureBox1.TabStop = false;
+            this.icoUser.BackColor = System.Drawing.SystemColors.Control;
+            this.icoUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoUser.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.icoUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoUser.Location = new System.Drawing.Point(301, 157);
+            this.icoUser.Name = "icoUser";
+            this.icoUser.Size = new System.Drawing.Size(32, 32);
+            this.icoUser.TabIndex = 6;
+            this.icoUser.TabStop = false;
             // 
-            // iconPictureBox2
+            // icoSenha
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Unlock;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
-            this.iconPictureBox2.Location = new System.Drawing.Point(301, 186);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox2.TabIndex = 7;
-            this.iconPictureBox2.TabStop = false;
+            this.icoSenha.BackColor = System.Drawing.SystemColors.Control;
+            this.icoSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoSenha.IconChar = FontAwesome.Sharp.IconChar.Unlock;
+            this.icoSenha.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoSenha.Location = new System.Drawing.Point(301, 186);
+            this.icoSenha.Name = "icoSenha";
+            this.icoSenha.Size = new System.Drawing.Size(32, 32);
+            this.icoSenha.TabIndex = 7;
+            this.icoSenha.TabStop = false;
+            // 
+            // lblCarregando
+            // 
+            this.lblCarregando.AutoSize = true;
+            this.lblCarregando.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarregando.ForeColor = System.Drawing.Color.Black;
+            this.lblCarregando.Location = new System.Drawing.Point(273, 73);
+            this.lblCarregando.Name = "lblCarregando";
+            this.lblCarregando.Size = new System.Drawing.Size(117, 19);
+            this.lblCarregando.TabIndex = 12;
+            this.lblCarregando.Text = "Carregando...";
+            this.lblCarregando.Visible = false;
+            // 
+            // pxCarregar
+            // 
+            this.pxCarregar.BackColor = System.Drawing.Color.Transparent;
+            this.pxCarregar.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregar.Image")));
+            this.pxCarregar.Location = new System.Drawing.Point(375, 173);
+            this.pxCarregar.Name = "pxCarregar";
+            this.pxCarregar.Size = new System.Drawing.Size(90, 80);
+            this.pxCarregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxCarregar.TabIndex = 11;
+            this.pxCarregar.TabStop = false;
+            this.pxCarregar.Visible = false;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 397);
-            this.Controls.Add(this.iconPictureBox2);
-            this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lblCarregando);
+            this.Controls.Add(this.pxCarregar);
+            this.Controls.Add(this.icoSenha);
+            this.Controls.Add(this.icoUser);
+            this.Controls.Add(this.linkSenha);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEntrar);
@@ -175,8 +204,9 @@
             this.Text = "Bem-Vindo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,8 +220,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.LinkLabel linkSenha;
+        private FontAwesome.Sharp.IconPictureBox icoUser;
+        private FontAwesome.Sharp.IconPictureBox icoSenha;
+        private System.Windows.Forms.Label lblCarregando;
+        private System.Windows.Forms.PictureBox pxCarregar;
     }
 }

@@ -472,10 +472,11 @@
             // 
             // pxCarregar
             // 
+            this.pxCarregar.BackColor = System.Drawing.Color.Transparent;
             this.pxCarregar.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregar.Image")));
-            this.pxCarregar.Location = new System.Drawing.Point(821, 31);
+            this.pxCarregar.Location = new System.Drawing.Point(841, 33);
             this.pxCarregar.Name = "pxCarregar";
-            this.pxCarregar.Size = new System.Drawing.Size(134, 74);
+            this.pxCarregar.Size = new System.Drawing.Size(90, 80);
             this.pxCarregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pxCarregar.TabIndex = 9;
             this.pxCarregar.TabStop = false;
