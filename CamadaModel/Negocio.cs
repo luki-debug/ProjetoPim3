@@ -1,15 +1,9 @@
 ﻿using CamadaModel.Entities.Json.CepApi;
 using CamadaModel.Entities.Json.CotacaoApi;
 using Newtonsoft.Json;
-using Refit;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace CamadaModel
 {

@@ -293,7 +293,7 @@
             this.iconBtnUsuario.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconBtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnUsuario.ForeColor = System.Drawing.Color.White;
-            this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconBtnUsuario.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.iconBtnUsuario.IconColor = System.Drawing.Color.White;
             this.iconBtnUsuario.IconSize = 40;
             this.iconBtnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

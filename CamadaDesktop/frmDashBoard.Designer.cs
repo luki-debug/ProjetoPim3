@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashBoard));
-            this.ReportDashBoardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.investidoresFTopBitCoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.investidoresFTopEtheriumBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.investidoresJTopBitCoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -45,6 +44,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rvDashBoard = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pl1 = new System.Windows.Forms.Panel();
+            this.lblInvestidaFisicaCursoBit = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pl2 = new System.Windows.Forms.Panel();
+            this.lblInvestidaFisicaCursoEtherium = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCarregando = new System.Windows.Forms.Label();
             this.pl7 = new System.Windows.Forms.Panel();
             this.lblTotalClientesAtivos = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -62,17 +70,8 @@
             this.lblInvestidaJuridicoCursoBit = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pl2 = new System.Windows.Forms.Panel();
-            this.lblInvestidaFisicaCursoEtherium = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pl1 = new System.Windows.Forms.Panel();
-            this.lblInvestidaFisicaCursoBit = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCarregando = new System.Windows.Forms.Label();
-            this.pxCarregar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ReportDashBoardBindingSource)).BeginInit();
+            this.ReportDashBoardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pxCarregando2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresFTopBitCoinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresFTopEtheriumBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresJTopBitCoinBindingSource)).BeginInit();
@@ -80,19 +79,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginMesesBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pl1.SuspendLayout();
+            this.pl2.SuspendLayout();
             this.pl7.SuspendLayout();
             this.pl6.SuspendLayout();
             this.pl4.SuspendLayout();
             this.pl5.SuspendLayout();
             this.pl3.SuspendLayout();
-            this.pl2.SuspendLayout();
-            this.pl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportDashBoardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregando2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ReportDashBoardBindingSource
-            // 
-            this.ReportDashBoardBindingSource.DataSource = typeof(CamadaModel.Entities.ReportDashBoard);
             // 
             // investidoresFTopBitCoinBindingSource
             // 
@@ -121,7 +117,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pxCarregar);
+            this.panel1.Controls.Add(this.pxCarregando2);
             this.panel1.Controls.Add(this.rvDashBoard);
             this.panel1.Location = new System.Drawing.Point(163, 3);
             this.panel1.Name = "panel1";
@@ -132,24 +128,24 @@
             // 
             this.rvDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(34)))), ((int)(((byte)(125)))));
             this.rvDashBoard.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            reportDataSource1.Name = "DashBoardPrincipalNew";
-            reportDataSource1.Value = this.ReportDashBoardBindingSource;
-            reportDataSource2.Name = "InvestidoresFTopBit";
-            reportDataSource2.Value = this.investidoresFTopBitCoinBindingSource;
-            reportDataSource3.Name = "investidoresFTopEtherium";
-            reportDataSource3.Value = this.investidoresFTopEtheriumBindingSource;
-            reportDataSource4.Name = "InvestimentosJTopBit";
-            reportDataSource4.Value = this.investidoresJTopBitCoinBindingSource;
-            reportDataSource5.Name = "InvestimentoJTopEtherium";
-            reportDataSource5.Value = this.investidoresJTopEtheriumBindingSource;
-            reportDataSource6.Name = "LoginMeses";
-            reportDataSource6.Value = this.loginMesesBindingSource;
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource2);
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource3);
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource4);
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource5);
-            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource7.Name = "DashBoardPrincipalNew";
+            reportDataSource7.Value = this.ReportDashBoardBindingSource;
+            reportDataSource8.Name = "InvestidoresFTopBit";
+            reportDataSource8.Value = this.investidoresFTopBitCoinBindingSource;
+            reportDataSource9.Name = "investidoresFTopEtherium";
+            reportDataSource9.Value = this.investidoresFTopEtheriumBindingSource;
+            reportDataSource10.Name = "InvestimentosJTopBit";
+            reportDataSource10.Value = this.investidoresJTopBitCoinBindingSource;
+            reportDataSource11.Name = "InvestimentoJTopEtherium";
+            reportDataSource11.Value = this.investidoresJTopEtheriumBindingSource;
+            reportDataSource12.Name = "LoginMeses";
+            reportDataSource12.Value = this.loginMesesBindingSource;
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource7);
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource8);
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource9);
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource10);
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource11);
+            this.rvDashBoard.LocalReport.DataSources.Add(reportDataSource12);
             this.rvDashBoard.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.DashBoardPrincipal.rdlc";
             this.rvDashBoard.Location = new System.Drawing.Point(3, 3);
             this.rvDashBoard.Name = "rvDashBoard";
@@ -172,6 +168,96 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(159, 622);
             this.panel2.TabIndex = 2;
+            // 
+            // pl1
+            // 
+            this.pl1.BackColor = System.Drawing.Color.White;
+            this.pl1.Controls.Add(this.lblInvestidaFisicaCursoBit);
+            this.pl1.Controls.Add(this.label11);
+            this.pl1.Controls.Add(this.label1);
+            this.pl1.Location = new System.Drawing.Point(3, 3);
+            this.pl1.Name = "pl1";
+            this.pl1.Size = new System.Drawing.Size(153, 88);
+            this.pl1.TabIndex = 3;
+            // 
+            // lblInvestidaFisicaCursoBit
+            // 
+            this.lblInvestidaFisicaCursoBit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvestidaFisicaCursoBit.Location = new System.Drawing.Point(2, 40);
+            this.lblInvestidaFisicaCursoBit.Name = "lblInvestidaFisicaCursoBit";
+            this.lblInvestidaFisicaCursoBit.Size = new System.Drawing.Size(147, 19);
+            this.lblInvestidaFisicaCursoBit.TabIndex = 3;
+            this.lblInvestidaFisicaCursoBit.Text = "label12";
+            this.lblInvestidaFisicaCursoBit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(4, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Em Curso BitCoin/Real";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total Investido Fisica ";
+            // 
+            // pl2
+            // 
+            this.pl2.BackColor = System.Drawing.Color.White;
+            this.pl2.Controls.Add(this.lblInvestidaFisicaCursoEtherium);
+            this.pl2.Controls.Add(this.label4);
+            this.pl2.Controls.Add(this.label2);
+            this.pl2.Location = new System.Drawing.Point(3, 97);
+            this.pl2.Name = "pl2";
+            this.pl2.Size = new System.Drawing.Size(153, 88);
+            this.pl2.TabIndex = 9;
+            // 
+            // lblInvestidaFisicaCursoEtherium
+            // 
+            this.lblInvestidaFisicaCursoEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvestidaFisicaCursoEtherium.Location = new System.Drawing.Point(4, 40);
+            this.lblInvestidaFisicaCursoEtherium.Name = "lblInvestidaFisicaCursoEtherium";
+            this.lblInvestidaFisicaCursoEtherium.Size = new System.Drawing.Size(147, 19);
+            this.lblInvestidaFisicaCursoEtherium.TabIndex = 2;
+            this.lblInvestidaFisicaCursoEtherium.Text = "label12";
+            this.lblInvestidaFisicaCursoEtherium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Total Investido Fisica ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Em Curso Etherium/Real";
+            // 
+            // lblCarregando
+            // 
+            this.lblCarregando.AutoSize = true;
+            this.lblCarregando.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarregando.ForeColor = System.Drawing.Color.White;
+            this.lblCarregando.Location = new System.Drawing.Point(3, 3);
+            this.lblCarregando.Name = "lblCarregando";
+            this.lblCarregando.Size = new System.Drawing.Size(117, 19);
+            this.lblCarregando.TabIndex = 12;
+            this.lblCarregando.Text = "Carregando...";
+            this.lblCarregando.Visible = false;
             // 
             // pl7
             // 
@@ -338,107 +424,20 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Total Investido Juridico ";
             // 
-            // pl2
+            // ReportDashBoardBindingSource
             // 
-            this.pl2.BackColor = System.Drawing.Color.White;
-            this.pl2.Controls.Add(this.lblInvestidaFisicaCursoEtherium);
-            this.pl2.Controls.Add(this.label4);
-            this.pl2.Controls.Add(this.label2);
-            this.pl2.Location = new System.Drawing.Point(3, 97);
-            this.pl2.Name = "pl2";
-            this.pl2.Size = new System.Drawing.Size(153, 88);
-            this.pl2.TabIndex = 9;
+            this.ReportDashBoardBindingSource.DataSource = typeof(CamadaModel.Entities.ReportDashBoard);
             // 
-            // lblInvestidaFisicaCursoEtherium
+            // pxCarregando2
             // 
-            this.lblInvestidaFisicaCursoEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvestidaFisicaCursoEtherium.Location = new System.Drawing.Point(4, 40);
-            this.lblInvestidaFisicaCursoEtherium.Name = "lblInvestidaFisicaCursoEtherium";
-            this.lblInvestidaFisicaCursoEtherium.Size = new System.Drawing.Size(147, 19);
-            this.lblInvestidaFisicaCursoEtherium.TabIndex = 2;
-            this.lblInvestidaFisicaCursoEtherium.Text = "label12";
-            this.lblInvestidaFisicaCursoEtherium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Total Investido Fisica ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Em Curso Etherium/Real";
-            // 
-            // pl1
-            // 
-            this.pl1.BackColor = System.Drawing.Color.White;
-            this.pl1.Controls.Add(this.lblInvestidaFisicaCursoBit);
-            this.pl1.Controls.Add(this.label11);
-            this.pl1.Controls.Add(this.label1);
-            this.pl1.Location = new System.Drawing.Point(3, 3);
-            this.pl1.Name = "pl1";
-            this.pl1.Size = new System.Drawing.Size(153, 88);
-            this.pl1.TabIndex = 3;
-            // 
-            // lblInvestidaFisicaCursoBit
-            // 
-            this.lblInvestidaFisicaCursoBit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvestidaFisicaCursoBit.Location = new System.Drawing.Point(2, 40);
-            this.lblInvestidaFisicaCursoBit.Name = "lblInvestidaFisicaCursoBit";
-            this.lblInvestidaFisicaCursoBit.Size = new System.Drawing.Size(147, 19);
-            this.lblInvestidaFisicaCursoBit.TabIndex = 3;
-            this.lblInvestidaFisicaCursoBit.Text = "label12";
-            this.lblInvestidaFisicaCursoBit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Em Curso BitCoin/Real";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total Investido Fisica ";
-            // 
-            // lblCarregando
-            // 
-            this.lblCarregando.AutoSize = true;
-            this.lblCarregando.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarregando.ForeColor = System.Drawing.Color.White;
-            this.lblCarregando.Location = new System.Drawing.Point(3, 3);
-            this.lblCarregando.Name = "lblCarregando";
-            this.lblCarregando.Size = new System.Drawing.Size(117, 19);
-            this.lblCarregando.TabIndex = 12;
-            this.lblCarregando.Text = "Carregando...";
-            this.lblCarregando.Visible = false;
-            // 
-            // pxCarregar
-            // 
-            this.pxCarregar.BackColor = System.Drawing.Color.Transparent;
-            this.pxCarregar.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregar.Image")));
-            this.pxCarregar.Location = new System.Drawing.Point(302, 245);
-            this.pxCarregar.Name = "pxCarregar";
-            this.pxCarregar.Size = new System.Drawing.Size(90, 80);
-            this.pxCarregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pxCarregar.TabIndex = 11;
-            this.pxCarregar.TabStop = false;
-            this.pxCarregar.Visible = false;
+            this.pxCarregando2.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregando2.Image")));
+            this.pxCarregando2.Location = new System.Drawing.Point(240, 278);
+            this.pxCarregando2.Name = "pxCarregando2";
+            this.pxCarregando2.Size = new System.Drawing.Size(217, 23);
+            this.pxCarregando2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pxCarregando2.TabIndex = 14;
+            this.pxCarregando2.TabStop = false;
+            this.pxCarregando2.Visible = false;
             // 
             // frmDashBoard
             // 
@@ -451,7 +450,6 @@
             this.Name = "frmDashBoard";
             this.Text = "frmDashBoard";
             this.Load += new System.EventHandler(this.frmDashBoard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ReportDashBoardBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresFTopBitCoinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresFTopEtheriumBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.investidoresJTopBitCoinBindingSource)).EndInit();
@@ -460,6 +458,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pl1.ResumeLayout(false);
+            this.pl1.PerformLayout();
+            this.pl2.ResumeLayout(false);
+            this.pl2.PerformLayout();
             this.pl7.ResumeLayout(false);
             this.pl7.PerformLayout();
             this.pl6.ResumeLayout(false);
@@ -470,11 +472,8 @@
             this.pl5.PerformLayout();
             this.pl3.ResumeLayout(false);
             this.pl3.PerformLayout();
-            this.pl2.ResumeLayout(false);
-            this.pl2.PerformLayout();
-            this.pl1.ResumeLayout(false);
-            this.pl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pxCarregar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportDashBoardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregando2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -515,6 +514,6 @@
         private System.Windows.Forms.BindingSource investidoresJTopEtheriumBindingSource;
         private System.Windows.Forms.BindingSource loginMesesBindingSource;
         private System.Windows.Forms.Label lblCarregando;
-        private System.Windows.Forms.PictureBox pxCarregar;
+        private System.Windows.Forms.PictureBox pxCarregando2;
     }
 }

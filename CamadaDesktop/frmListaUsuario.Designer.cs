@@ -46,7 +46,10 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btnCriar = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.pxCarregando2 = new System.Windows.Forms.PictureBox();
+            this.lblCarregando = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregando2)).BeginInit();
             this.SuspendLayout();
             // 
             // dg
@@ -216,11 +219,36 @@
             this.btnBuscar.Text = "Pesquisar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // pxCarregando2
+            // 
+            this.pxCarregando2.Image = ((System.Drawing.Image)(resources.GetObject("pxCarregando2.Image")));
+            this.pxCarregando2.Location = new System.Drawing.Point(33, 188);
+            this.pxCarregando2.Name = "pxCarregando2";
+            this.pxCarregando2.Size = new System.Drawing.Size(217, 23);
+            this.pxCarregando2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pxCarregando2.TabIndex = 17;
+            this.pxCarregando2.TabStop = false;
+            this.pxCarregando2.Visible = false;
+            // 
+            // lblCarregando
+            // 
+            this.lblCarregando.AutoSize = true;
+            this.lblCarregando.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarregando.ForeColor = System.Drawing.Color.White;
+            this.lblCarregando.Location = new System.Drawing.Point(34, 166);
+            this.lblCarregando.Name = "lblCarregando";
+            this.lblCarregando.Size = new System.Drawing.Size(117, 19);
+            this.lblCarregando.TabIndex = 16;
+            this.lblCarregando.Text = "Carregando...";
+            this.lblCarregando.Visible = false;
+            // 
             // frmListaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 626);
+            this.Controls.Add(this.pxCarregando2);
+            this.Controls.Add(this.lblCarregando);
             this.Controls.Add(this.dg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPesquisar);
@@ -230,6 +258,7 @@
             this.Text = "frmListaUsuario";
             this.Load += new System.EventHandler(this.frmListaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxCarregando2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +277,7 @@
         private System.Windows.Forms.DataGridViewImageColumn colConsultar;
         private System.Windows.Forms.DataGridViewImageColumn colEditar;
         private System.Windows.Forms.DataGridViewImageColumn colExcluir;
+        private System.Windows.Forms.PictureBox pxCarregando2;
+        private System.Windows.Forms.Label lblCarregando;
     }
 }

@@ -67,6 +67,7 @@
             this.btnTopMes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTopMes.FlatAppearance.BorderSize = 0;
             this.btnTopMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopMes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTopMes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopMes.ForeColor = System.Drawing.Color.White;
             this.btnTopMes.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -74,6 +75,7 @@
             this.btnTopMes.IconSize = 16;
             this.btnTopMes.Location = new System.Drawing.Point(215, 66);
             this.btnTopMes.Name = "btnTopMes";
+            this.btnTopMes.Rotation = 0D;
             this.btnTopMes.Size = new System.Drawing.Size(180, 46);
             this.btnTopMes.TabIndex = 3;
             this.btnTopMes.Text = "Top Mês Atual";
@@ -86,6 +88,7 @@
             this.btnTop10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTop10.FlatAppearance.BorderSize = 0;
             this.btnTop10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTop10.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTop10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTop10.ForeColor = System.Drawing.Color.White;
             this.btnTop10.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -93,6 +96,7 @@
             this.btnTop10.IconSize = 16;
             this.btnTop10.Location = new System.Drawing.Point(29, 66);
             this.btnTop10.Name = "btnTop10";
+            this.btnTop10.Rotation = 0D;
             this.btnTop10.Size = new System.Drawing.Size(180, 46);
             this.btnTop10.TabIndex = 2;
             this.btnTop10.Text = "Top 10 Geral";
@@ -149,6 +153,7 @@
             this.btnBuscarTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscarTop.FlatAppearance.BorderSize = 0;
             this.btnBuscarTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarTop.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBuscarTop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarTop.ForeColor = System.Drawing.Color.White;
             this.btnBuscarTop.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -156,6 +161,7 @@
             this.btnBuscarTop.IconSize = 16;
             this.btnBuscarTop.Location = new System.Drawing.Point(119, 53);
             this.btnBuscarTop.Name = "btnBuscarTop";
+            this.btnBuscarTop.Rotation = 0D;
             this.btnBuscarTop.Size = new System.Drawing.Size(180, 46);
             this.btnBuscarTop.TabIndex = 6;
             this.btnBuscarTop.Text = "Buscar Top";
@@ -205,6 +211,7 @@
             this.btnBuscarEtherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBuscarEtherium.FlatAppearance.BorderSize = 0;
             this.btnBuscarEtherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarEtherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBuscarEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarEtherium.ForeColor = System.Drawing.Color.White;
             this.btnBuscarEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -212,11 +219,12 @@
             this.btnBuscarEtherium.IconSize = 32;
             this.btnBuscarEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnBuscarEtherium.Name = "btnBuscarEtherium";
+            this.btnBuscarEtherium.Rotation = 0D;
             this.btnBuscarEtherium.Size = new System.Drawing.Size(180, 46);
             this.btnBuscarEtherium.TabIndex = 6;
             this.btnBuscarEtherium.Text = "Etherium";
             this.btnBuscarEtherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarEtherium.UseVisualStyleBackColor = false;
+            this.btnBuscarEtherium.UseVisualStyleBackColor = true;
             this.btnBuscarEtherium.Click += new System.EventHandler(this.btnBuscarEtherium_Click);
             // 
             // btnBuscaBitcoin
@@ -226,6 +234,7 @@
             this.btnBuscaBitcoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBuscaBitcoin.FlatAppearance.BorderSize = 0;
             this.btnBuscaBitcoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaBitcoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBuscaBitcoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscaBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnBuscaBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -233,11 +242,12 @@
             this.btnBuscaBitcoin.IconSize = 32;
             this.btnBuscaBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnBuscaBitcoin.Name = "btnBuscaBitcoin";
+            this.btnBuscaBitcoin.Rotation = 0D;
             this.btnBuscaBitcoin.Size = new System.Drawing.Size(180, 46);
             this.btnBuscaBitcoin.TabIndex = 5;
             this.btnBuscaBitcoin.Text = "Bitcoin";
             this.btnBuscaBitcoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscaBitcoin.UseVisualStyleBackColor = false;
+            this.btnBuscaBitcoin.UseVisualStyleBackColor = true;
             this.btnBuscaBitcoin.Click += new System.EventHandler(this.btnBuscaBitcoin_Click);
             // 
             // label1
@@ -266,6 +276,7 @@
             this.btnTop10Etherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTop10Etherium.FlatAppearance.BorderSize = 0;
             this.btnTop10Etherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTop10Etherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTop10Etherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTop10Etherium.ForeColor = System.Drawing.Color.White;
             this.btnTop10Etherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -273,11 +284,12 @@
             this.btnTop10Etherium.IconSize = 32;
             this.btnTop10Etherium.Location = new System.Drawing.Point(0, 46);
             this.btnTop10Etherium.Name = "btnTop10Etherium";
+            this.btnTop10Etherium.Rotation = 0D;
             this.btnTop10Etherium.Size = new System.Drawing.Size(180, 46);
             this.btnTop10Etherium.TabIndex = 4;
             this.btnTop10Etherium.Text = "Etherium";
             this.btnTop10Etherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTop10Etherium.UseVisualStyleBackColor = false;
+            this.btnTop10Etherium.UseVisualStyleBackColor = true;
             this.btnTop10Etherium.Click += new System.EventHandler(this.btnTop10Etherium_Click);
             // 
             // btnTop10BitCoin
@@ -287,6 +299,7 @@
             this.btnTop10BitCoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTop10BitCoin.FlatAppearance.BorderSize = 0;
             this.btnTop10BitCoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTop10BitCoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTop10BitCoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTop10BitCoin.ForeColor = System.Drawing.Color.White;
             this.btnTop10BitCoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -294,11 +307,12 @@
             this.btnTop10BitCoin.IconSize = 32;
             this.btnTop10BitCoin.Location = new System.Drawing.Point(0, 0);
             this.btnTop10BitCoin.Name = "btnTop10BitCoin";
+            this.btnTop10BitCoin.Rotation = 0D;
             this.btnTop10BitCoin.Size = new System.Drawing.Size(180, 46);
             this.btnTop10BitCoin.TabIndex = 3;
             this.btnTop10BitCoin.Text = "Bitcoin";
             this.btnTop10BitCoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTop10BitCoin.UseVisualStyleBackColor = false;
+            this.btnTop10BitCoin.UseVisualStyleBackColor = true;
             this.btnTop10BitCoin.Click += new System.EventHandler(this.btnTop10BitCoin_Click);
             // 
             // subMenuMes
@@ -318,6 +332,7 @@
             this.btnMesEtherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMesEtherium.FlatAppearance.BorderSize = 0;
             this.btnMesEtherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesEtherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnMesEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMesEtherium.ForeColor = System.Drawing.Color.White;
             this.btnMesEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -325,11 +340,12 @@
             this.btnMesEtherium.IconSize = 32;
             this.btnMesEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnMesEtherium.Name = "btnMesEtherium";
+            this.btnMesEtherium.Rotation = 0D;
             this.btnMesEtherium.Size = new System.Drawing.Size(180, 46);
             this.btnMesEtherium.TabIndex = 4;
             this.btnMesEtherium.Text = "Etherium";
             this.btnMesEtherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMesEtherium.UseVisualStyleBackColor = false;
+            this.btnMesEtherium.UseVisualStyleBackColor = true;
             this.btnMesEtherium.Click += new System.EventHandler(this.btnMesEtherium_Click);
             // 
             // btnMesBitcoin
@@ -339,6 +355,7 @@
             this.btnMesBitcoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMesBitcoin.FlatAppearance.BorderSize = 0;
             this.btnMesBitcoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesBitcoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnMesBitcoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMesBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnMesBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -346,15 +363,19 @@
             this.btnMesBitcoin.IconSize = 32;
             this.btnMesBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnMesBitcoin.Name = "btnMesBitcoin";
+            this.btnMesBitcoin.Rotation = 0D;
             this.btnMesBitcoin.Size = new System.Drawing.Size(180, 46);
             this.btnMesBitcoin.TabIndex = 3;
             this.btnMesBitcoin.Text = "Bitcoin";
             this.btnMesBitcoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMesBitcoin.UseVisualStyleBackColor = false;
+            this.btnMesBitcoin.UseVisualStyleBackColor = true;
             this.btnMesBitcoin.Click += new System.EventHandler(this.btnMesBitcoin_Click);
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "FisicaInvest";
             reportDataSource1.Value = this.RelatoriosGeralBindingSource;
             reportDataSource2.Name = "Cabecalho";

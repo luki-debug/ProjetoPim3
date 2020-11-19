@@ -25,7 +25,7 @@ namespace CamadaDesktop
             CheckForIllegalCrossThreadCalls = false;
             //Efeito Carregar
             lblCarregando.Visible = true;
-            pxCarregar.Visible = true;
+            pxCarregando2.Visible = true;
             pl1.Visible = false;
             pl2.Visible = false;
             pl3.Visible = false;
@@ -38,7 +38,7 @@ namespace CamadaDesktop
 
             //Efeito pós carregamento
             lblCarregando.Visible = false;
-            pxCarregar.Visible = false;
+            pxCarregando2.Visible = false;
             pl1.Visible = true;
             pl2.Visible = true;
             pl3.Visible = true;

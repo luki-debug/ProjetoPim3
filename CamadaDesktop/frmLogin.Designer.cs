@@ -138,7 +138,7 @@
             // 
             this.icoUser.BackColor = System.Drawing.SystemColors.Control;
             this.icoUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
-            this.icoUser.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.icoUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.icoUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
             this.icoUser.Location = new System.Drawing.Point(301, 157);
             this.icoUser.Name = "icoUser";

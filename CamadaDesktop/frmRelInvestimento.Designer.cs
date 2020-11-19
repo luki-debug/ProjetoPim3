@@ -32,6 +32,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RelatoriosGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.relatoriosGeralBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.rbFisica = new System.Windows.Forms.RadioButton();
@@ -47,18 +48,21 @@
             this.subMenuDisponivel = new System.Windows.Forms.Panel();
             this.btnDisponivelEtherium = new FontAwesome.Sharp.IconButton();
             this.btnDisponivelBitcoin = new FontAwesome.Sharp.IconButton();
-            this.relatoriosGeralBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.RelatoriosGeralBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relatoriosGeralBindingSource1)).BeginInit();
             this.subMenuCurso.SuspendLayout();
             this.subMenuRetido.SuspendLayout();
             this.subMenuDisponivel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosGeralBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // RelatoriosGeralBindingSource
             // 
             this.RelatoriosGeralBindingSource.DataMember = "listRelatoriojuridica";
             this.RelatoriosGeralBindingSource.DataSource = typeof(CamadaModel.Entities.RelatoriosGeral);
+            // 
+            // relatoriosGeralBindingSource1
+            // 
+            this.relatoriosGeralBindingSource1.DataSource = typeof(CamadaModel.Entities.RelatoriosGeral);
             // 
             // reportViewer1
             // 
@@ -113,6 +117,7 @@
             this.btnRetido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRetido.FlatAppearance.BorderSize = 0;
             this.btnRetido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetido.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnRetido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetido.ForeColor = System.Drawing.Color.White;
             this.btnRetido.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -120,6 +125,7 @@
             this.btnRetido.IconSize = 16;
             this.btnRetido.Location = new System.Drawing.Point(253, 66);
             this.btnRetido.Name = "btnRetido";
+            this.btnRetido.Rotation = 0D;
             this.btnRetido.Size = new System.Drawing.Size(218, 46);
             this.btnRetido.TabIndex = 3;
             this.btnRetido.Text = "Investimento Retido";
@@ -132,6 +138,7 @@
             this.btnEmCurso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEmCurso.FlatAppearance.BorderSize = 0;
             this.btnEmCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmCurso.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnEmCurso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmCurso.ForeColor = System.Drawing.Color.White;
             this.btnEmCurso.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -139,6 +146,7 @@
             this.btnEmCurso.IconSize = 16;
             this.btnEmCurso.Location = new System.Drawing.Point(29, 66);
             this.btnEmCurso.Name = "btnEmCurso";
+            this.btnEmCurso.Rotation = 0D;
             this.btnEmCurso.Size = new System.Drawing.Size(218, 46);
             this.btnEmCurso.TabIndex = 2;
             this.btnEmCurso.Text = "Investimento Em Curso";
@@ -151,6 +159,7 @@
             this.btnDisponivel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDisponivel.FlatAppearance.BorderSize = 0;
             this.btnDisponivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisponivel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDisponivel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisponivel.ForeColor = System.Drawing.Color.White;
             this.btnDisponivel.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -158,6 +167,7 @@
             this.btnDisponivel.IconSize = 16;
             this.btnDisponivel.Location = new System.Drawing.Point(477, 66);
             this.btnDisponivel.Name = "btnDisponivel";
+            this.btnDisponivel.Rotation = 0D;
             this.btnDisponivel.Size = new System.Drawing.Size(218, 46);
             this.btnDisponivel.TabIndex = 4;
             this.btnDisponivel.Text = "Investimento Disponivel";
@@ -181,6 +191,7 @@
             this.btnCursoEtherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCursoEtherium.FlatAppearance.BorderSize = 0;
             this.btnCursoEtherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursoEtherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCursoEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCursoEtherium.ForeColor = System.Drawing.Color.White;
             this.btnCursoEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -188,11 +199,12 @@
             this.btnCursoEtherium.IconSize = 32;
             this.btnCursoEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnCursoEtherium.Name = "btnCursoEtherium";
+            this.btnCursoEtherium.Rotation = 0D;
             this.btnCursoEtherium.Size = new System.Drawing.Size(218, 46);
             this.btnCursoEtherium.TabIndex = 4;
             this.btnCursoEtherium.Text = "Etherium";
             this.btnCursoEtherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCursoEtherium.UseVisualStyleBackColor = false;
+            this.btnCursoEtherium.UseVisualStyleBackColor = true;
             this.btnCursoEtherium.Click += new System.EventHandler(this.btnCursoEtherium_Click);
             // 
             // btnCursoBitcoin
@@ -202,6 +214,7 @@
             this.btnCursoBitcoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCursoBitcoin.FlatAppearance.BorderSize = 0;
             this.btnCursoBitcoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCursoBitcoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCursoBitcoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCursoBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnCursoBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -209,11 +222,12 @@
             this.btnCursoBitcoin.IconSize = 32;
             this.btnCursoBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnCursoBitcoin.Name = "btnCursoBitcoin";
+            this.btnCursoBitcoin.Rotation = 0D;
             this.btnCursoBitcoin.Size = new System.Drawing.Size(218, 46);
             this.btnCursoBitcoin.TabIndex = 3;
             this.btnCursoBitcoin.Text = "Bitcoin";
             this.btnCursoBitcoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCursoBitcoin.UseVisualStyleBackColor = false;
+            this.btnCursoBitcoin.UseVisualStyleBackColor = true;
             this.btnCursoBitcoin.Click += new System.EventHandler(this.btnCursoBitcoin_Click);
             // 
             // subMenuRetido
@@ -233,6 +247,7 @@
             this.btnRetidoEtherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRetidoEtherium.FlatAppearance.BorderSize = 0;
             this.btnRetidoEtherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetidoEtherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnRetidoEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetidoEtherium.ForeColor = System.Drawing.Color.White;
             this.btnRetidoEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -240,11 +255,12 @@
             this.btnRetidoEtherium.IconSize = 32;
             this.btnRetidoEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnRetidoEtherium.Name = "btnRetidoEtherium";
+            this.btnRetidoEtherium.Rotation = 0D;
             this.btnRetidoEtherium.Size = new System.Drawing.Size(218, 46);
             this.btnRetidoEtherium.TabIndex = 4;
             this.btnRetidoEtherium.Text = "Etherium";
             this.btnRetidoEtherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRetidoEtherium.UseVisualStyleBackColor = false;
+            this.btnRetidoEtherium.UseVisualStyleBackColor = true;
             this.btnRetidoEtherium.Click += new System.EventHandler(this.btnRetidoEtherium_Click);
             // 
             // btnRetidoBitCoin
@@ -254,6 +270,7 @@
             this.btnRetidoBitCoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRetidoBitCoin.FlatAppearance.BorderSize = 0;
             this.btnRetidoBitCoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetidoBitCoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnRetidoBitCoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetidoBitCoin.ForeColor = System.Drawing.Color.White;
             this.btnRetidoBitCoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -261,11 +278,12 @@
             this.btnRetidoBitCoin.IconSize = 32;
             this.btnRetidoBitCoin.Location = new System.Drawing.Point(0, 0);
             this.btnRetidoBitCoin.Name = "btnRetidoBitCoin";
+            this.btnRetidoBitCoin.Rotation = 0D;
             this.btnRetidoBitCoin.Size = new System.Drawing.Size(218, 46);
             this.btnRetidoBitCoin.TabIndex = 3;
             this.btnRetidoBitCoin.Text = "Bitcoin";
             this.btnRetidoBitCoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRetidoBitCoin.UseVisualStyleBackColor = false;
+            this.btnRetidoBitCoin.UseVisualStyleBackColor = true;
             this.btnRetidoBitCoin.Click += new System.EventHandler(this.btnRetidoBitCoin_Click);
             // 
             // subMenuDisponivel
@@ -285,6 +303,7 @@
             this.btnDisponivelEtherium.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDisponivelEtherium.FlatAppearance.BorderSize = 0;
             this.btnDisponivelEtherium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisponivelEtherium.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDisponivelEtherium.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisponivelEtherium.ForeColor = System.Drawing.Color.White;
             this.btnDisponivelEtherium.IconChar = FontAwesome.Sharp.IconChar.Ethereum;
@@ -292,11 +311,12 @@
             this.btnDisponivelEtherium.IconSize = 32;
             this.btnDisponivelEtherium.Location = new System.Drawing.Point(0, 46);
             this.btnDisponivelEtherium.Name = "btnDisponivelEtherium";
+            this.btnDisponivelEtherium.Rotation = 0D;
             this.btnDisponivelEtherium.Size = new System.Drawing.Size(218, 46);
             this.btnDisponivelEtherium.TabIndex = 4;
             this.btnDisponivelEtherium.Text = "Etherium";
             this.btnDisponivelEtherium.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDisponivelEtherium.UseVisualStyleBackColor = false;
+            this.btnDisponivelEtherium.UseVisualStyleBackColor = true;
             this.btnDisponivelEtherium.Click += new System.EventHandler(this.btnDisponivelEtherium_Click);
             // 
             // btnDisponivelBitcoin
@@ -306,6 +326,7 @@
             this.btnDisponivelBitcoin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDisponivelBitcoin.FlatAppearance.BorderSize = 0;
             this.btnDisponivelBitcoin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisponivelBitcoin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDisponivelBitcoin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisponivelBitcoin.ForeColor = System.Drawing.Color.White;
             this.btnDisponivelBitcoin.IconChar = FontAwesome.Sharp.IconChar.Btc;
@@ -313,16 +334,13 @@
             this.btnDisponivelBitcoin.IconSize = 32;
             this.btnDisponivelBitcoin.Location = new System.Drawing.Point(0, 0);
             this.btnDisponivelBitcoin.Name = "btnDisponivelBitcoin";
+            this.btnDisponivelBitcoin.Rotation = 0D;
             this.btnDisponivelBitcoin.Size = new System.Drawing.Size(218, 46);
             this.btnDisponivelBitcoin.TabIndex = 3;
             this.btnDisponivelBitcoin.Text = "Bitcoin";
             this.btnDisponivelBitcoin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDisponivelBitcoin.UseVisualStyleBackColor = false;
+            this.btnDisponivelBitcoin.UseVisualStyleBackColor = true;
             this.btnDisponivelBitcoin.Click += new System.EventHandler(this.btnDisponivelBitcoin_Click);
-            // 
-            // relatoriosGeralBindingSource1
-            // 
-            this.relatoriosGeralBindingSource1.DataSource = typeof(CamadaModel.Entities.RelatoriosGeral);
             // 
             // frmRelInvestimento
             // 
@@ -342,10 +360,10 @@
             this.Text = "frmRelEmCurso";
             this.Load += new System.EventHandler(this.frmRelEmCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RelatoriosGeralBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relatoriosGeralBindingSource1)).EndInit();
             this.subMenuCurso.ResumeLayout(false);
             this.subMenuRetido.ResumeLayout(false);
             this.subMenuDisponivel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.relatoriosGeralBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
