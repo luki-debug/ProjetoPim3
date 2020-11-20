@@ -157,6 +157,5 @@ namespace CamadaModel.CRUD
                 throw new Exception("Não foi possivel consultar. Detalhes: " + exception.Message);
             }
         }
-
     }
 }

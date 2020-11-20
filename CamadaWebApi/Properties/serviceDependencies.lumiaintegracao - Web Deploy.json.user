@@ -1,0 +1,30 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "lumiaintegracao.resourceGroupName": {
+      "Name": "lumiaintegracao.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ProjetoLumia"
+    },
+    "lumiaintegracao.resourceName": {
+      "Name": "lumiaintegracao.resourceName",
+      "Type": null,
+      "Value": "lumiaintegracao"
+    },
+    "lumiaintegracao.resourceGroupLocation": {
+      "Name": "lumiaintegracao.resourceGroupLocation",
+      "Type": null,
+      "Value": "brazilsouth"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "f03ceb3b-39a8-4015-9079-0de5e68b2f00"
+    },
+    "lumiaintegracao.subscriptionId": {
+      "Name": "lumiaintegracao.subscriptionId",
+      "Type": "subscription",
+      "Value": "f03ceb3b-39a8-4015-9079-0de5e68b2f00"
+    }
+  }
+}

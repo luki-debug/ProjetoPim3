@@ -19,7 +19,14 @@ namespace CamadaModel.CRUD
         {
             return Inserir(historicoCarteira, "Investimento");
         }
-
+        public string InserirCompraMoeda(HistoricoCarteira historicoCarteira)
+        {
+            return Inserir(historicoCarteira, "Compra Moeda");
+        }
+        public string InserirResgateInvestimento(HistoricoCarteira historicoCarteira)
+        {
+            return Inserir(historicoCarteira, "Resgate Investimento");
+        }
         private string Inserir(HistoricoCarteira historicoCarteira, string tipoTransacao)
         {
             try
@@ -104,6 +111,20 @@ namespace CamadaModel.CRUD
             return popular(dataTable);
         }
 
+        public List<HistoricoCarteira> ObterPorMes(Pessoa pessoa, DateTime dtInicio, DateTime dtFim)
+        {
+            List<HistoricoCarteira> historicoColecao = new List<HistoricoCarteira>();
+            acessoDados.LimparParametros();
+            acessoDados.AdicionarParametros("@IdPessoa", pessoa.IdPessoa);
+            acessoDados.AdicionarParametros("@dtInicio", dtInicio);
+            acessoDados.AdicionarParametros("@dtFim", dtFim);
+
+            DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT h.* FROM HistoricoCarteira as h LEFT JOIN " +
+                "Carteira as c ON h.IdCarteira = c.IdCarteira " +
+                    "WHERE (c.IdPessoa = @IdPessoa) AND (h.DataHora BETWEEN @dtInicio AND @dtFim)");
+
+            return popular(dataTable);
+        }
         private List<HistoricoCarteira> popular(DataTable dataTable)
         {
             //Criar uma nova coleção de clientes

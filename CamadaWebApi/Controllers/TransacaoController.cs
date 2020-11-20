@@ -76,5 +76,21 @@ namespace CamadaWebApi.Controllers
                 throw;
             }
         }
+
+        [HttpPost]
+        [Route("obter-pordata/{dtinicio},{dtfim}")]
+        public IHttpActionResult ObterPorData(DateTime dtinicio,DateTime dtfim,[FromBody] Pessoa pessoa)
+        {
+            try
+            {
+                HistoricoCarteiraCrud historicoCarteiraCrud = new HistoricoCarteiraCrud();
+                List<HistoricoCarteira> retorno = historicoCarteiraCrud.ObterPorMes(pessoa, dtinicio, dtfim);
+                return Ok(retorno);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

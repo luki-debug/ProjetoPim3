@@ -26,5 +26,11 @@ namespace CamadaModel.Entities
             DtInicio = dtInicio;
             DtFim = dtFim;
         }
+
+        public HistoricoInvestido(Carteira carteira, DateTime dtFim)
+        {
+            _carteira = carteira;
+            DtFim = dtFim;
+        }
     }
 }

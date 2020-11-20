@@ -145,7 +145,6 @@ namespace CamadaModel.CRUD
                 throw new Exception("Não foi possivel consultar o cliente por nome. Detalhes: " + exception.Message);
             }
         }
-
         public DataTable TotalMesUltimoLogin()
         {
             try

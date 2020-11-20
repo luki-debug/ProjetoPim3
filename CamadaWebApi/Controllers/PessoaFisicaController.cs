@@ -8,11 +8,11 @@ using System.Web.Http;
 
 namespace CamadaWebApi.Controllers
 {
-    //[RoutePrefix("api/fisica")]
+    //[RoutePrefix("api/pessoa")]
     public class PessoaFisicaController : ApiController
     {
         //[HttpGet]
-        //[Route("get/{id}")]
+        //[Route("{id}")]
         // GET: api/Fisica/get/5
         public HttpResponseMessage Get(int id)
         {
