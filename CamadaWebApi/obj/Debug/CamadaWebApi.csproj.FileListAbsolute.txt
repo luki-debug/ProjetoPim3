@@ -56,7 +56,9 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\Microsoft.CodeDom.P
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\Newtonsoft.Json.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Cors.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Helpers.dll
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.Cors.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.WebHost.dll
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Mvc.dll
@@ -71,6 +73,7 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaModel.pdb
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\CamadaModel.dll.config
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\Antlr3.Runtime.pdb
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Helpers.xml
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.Cors.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Mvc.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Optimization.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Razor.xml

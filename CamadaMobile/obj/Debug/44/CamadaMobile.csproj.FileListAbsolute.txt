@@ -1,9 +1,0 @@
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\MonoAndroid,Version=v4.4.AssemblyAttributes.cs
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\build.props
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\adb.props
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\CamadaMobile.csprojAssemblyReference.cache
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\stamp\_BuildLibraryImportsCache.stamp
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\resourcepaths.cache
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\resourcecache.stamp
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\res.flag
-C:\Users\Adailson\Documents\GitHub\ProjetoPim3\CamadaMobile\obj\Debug\44\flata\compiled.flata

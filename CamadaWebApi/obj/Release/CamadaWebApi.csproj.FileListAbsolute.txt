@@ -89,3 +89,6 @@ C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Razor.xm
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.WebPages.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.WebPages.Deployment.xml
 C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Cors.dll
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.Cors.dll
+C:\Users\lucas\Documents\GitHub\ProjetoPim3\CamadaWebApi\bin\System.Web.Http.Cors.xml
