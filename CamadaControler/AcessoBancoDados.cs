@@ -59,10 +59,10 @@ namespace CamadaControler.AcessoBancoDados
         //persistência- Inserir,Alterar, Excluir
         public object ExecutarManipulacao(CommandType commandType, string nomeStoredProcedureOuTextoSql)
         {
+            //Criar a conexão
+            SqlConnection sqlConnection = CriarConexao();
             try
-            {
-                //Criar a conexão
-                SqlConnection sqlConnection = CriarConexao();
+            {    
                 //Abrir conexão
                 sqlConnection.Open();
                 //Criar o comando que vai levar a informação
@@ -77,21 +77,28 @@ namespace CamadaControler.AcessoBancoDados
                     sqlCommand.Parameters.Add(new SqlParameter(sqlParameter.ParameterName, sqlParameter.Value));
                 }
                 //Executa o comando enviando-o para o banco
-                return sqlCommand.ExecuteScalar();
+                var retorno= sqlCommand.ExecuteScalar();
+                sqlConnection.Close();
+
+                return retorno;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
             }
         }
 
         //Consultar Registros do bando de dados
         public DataTable ExecutarConsulta(CommandType commandType, string nomeStoredProcedureOuTextoSql)
         {
+            //Criar a conexão
+            SqlConnection sqlConnection = CriarConexao();
             try
             {
-                //Criar a conexão
-                SqlConnection sqlConnection = CriarConexao();
                 //Abrir conexão
                 sqlConnection.Open();
                 //Criar o comando que vai levar a informação
@@ -113,13 +120,19 @@ namespace CamadaControler.AcessoBancoDados
 
                 //Mandar o comando ir até o banco buscar os dados e o adaptador preencher o datatable
                 sqlDataAdapter.Fill(dataTable);
+                var retorno = dataTable;
+                sqlConnection.Close();
 
-                return dataTable;
+                return retorno;
 
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
             }
         }
 
