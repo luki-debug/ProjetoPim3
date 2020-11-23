@@ -92,5 +92,31 @@ namespace CamadaWebApi.Controllers
                 throw;
             }
         }
+
+        [HttpGet]
+        [Route("obter-saldo/{idPessoa}")]
+        public IHttpActionResult ObterSaldo(int idPessoa)
+        {
+            try
+            {
+                CarteiraCrud crud = new CarteiraCrud();
+                Carteira carteira = new Carteira();
+                carteira._pessoa = new Pessoa();
+                carteira._pessoa.IdPessoa = idPessoa;
+                carteira.TipoMoeda = 1;
+                Carteira retornoEth = crud.ConsultarPorIdPessoaANDTMoeda(carteira);
+                double ethReal = new Negocio().ConverterCriptoParaReal(retornoEth.Saldo, 1);
+                carteira.TipoMoeda = 2;
+                Carteira retornoBtc = crud.ConsultarPorIdPessoaANDTMoeda(carteira);
+                double btcReal = new Negocio().ConverterCriptoParaReal(retornoBtc.Saldo, 2);
+                carteira.Saldo = ethReal+btcReal;
+                carteira.TipoMoeda = 0;
+                return Ok(carteira);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

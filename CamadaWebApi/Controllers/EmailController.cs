@@ -1,4 +1,5 @@
 ﻿using CamadaModel.CRUD;
+using CamadaModel.Entities;
 using CamadaModel.Servicos;
 using System;
 using System.Collections.Generic;
@@ -11,18 +12,18 @@ namespace CamadaWebApi.Controllers
 {
     public class EmailController : ApiController
     {
-        public HttpResponseMessage Post([FromBody] string email)
+        public HttpResponseMessage Post([FromBody] Pessoa value)
         {
             UsuarioCrud crud = new UsuarioCrud();
 
             try
             {
-                string code = crud.RecuperarLogin(email);
+                string code = crud.RecuperarLogin(value.Email);
 
                 if (code != "" || code != string.Empty)
                 {
                     ServicoEmail servico = new ServicoEmail();
-                    string result = servico.EmailRecuperacaoLogin(email, code);
+                    string result = servico.EmailRecuperacaoLogin(value.Email, code);
                     return Request.CreateResponse(HttpStatusCode.OK, result);
                 }
                 else
