@@ -79,6 +79,7 @@ namespace CamadaControler.AcessoBancoDados
                 //Executa o comando enviando-o para o banco
                 var retorno= sqlCommand.ExecuteScalar();
                 sqlConnection.Close();
+                sqlConnection.Dispose();
 
                 return retorno;
             }
@@ -89,6 +90,7 @@ namespace CamadaControler.AcessoBancoDados
             finally
             {
                 sqlConnection.Close();
+                sqlConnection.Dispose();
             }
         }
 
@@ -122,6 +124,7 @@ namespace CamadaControler.AcessoBancoDados
                 sqlDataAdapter.Fill(dataTable);
                 var retorno = dataTable;
                 sqlConnection.Close();
+                sqlConnection.Dispose();
 
                 return retorno;
 
@@ -133,6 +136,7 @@ namespace CamadaControler.AcessoBancoDados
             finally
             {
                 sqlConnection.Close();
+                sqlConnection.Dispose();
             }
         }
 
