@@ -46,12 +46,14 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@dtFim", dtFim);
                 //Retornará uma DataTable
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT SUM(ValorInvestido) AS Total " +
-                    "FROM HistoricoInvestido WHERE (IdCarteira=@IdCarteira) AND (DtInicio BETWEEN @dtInicio AND @dtFim) AND (dtFim IS NULL) GROUP BY ValorInvestido");
+                    "FROM HistoricoInvestido WHERE (IdCarteira=@IdCarteira) AND (DtInicio BETWEEN @dtInicio AND @dtFim) AND (dtFim IS NULL) ");
 
                 foreach (DataRow linha in dataTable.Rows)
                 {
-                    
-                    vTotal = Convert.ToDouble(linha["Total"]);
+                    if (linha["Total"]!=DBNull.Value)
+                        vTotal = Convert.ToDouble(linha["Total"]);
+                    else
+                        vTotal = 0;
                 }
 
                 return vTotal;
