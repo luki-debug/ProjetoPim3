@@ -132,7 +132,10 @@ namespace CamadaWebApi.Controllers
                 value._carteira.Saldo = value._carteira.Saldo - value.ValorInvestido;
                 if (value._carteira.Saldo < 0)
                 {
-                    HttpResponseMessage response = this.Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Saldo Insuficiente!");
+                    value._carteira.Saldo = value._carteira.Saldo + value.ValorInvestido;
+                    value._carteira.Saldo = new Negocio().ConverterCriptoParaReal(value._carteira.Saldo, value._carteira.TipoMoeda);
+                    HttpResponseMessage response = this.Request.CreateErrorResponse(HttpStatusCode.BadRequest, 
+                        "Saldo Insuficiente! Saldo atual desta moeda: R$ "+value._carteira.Saldo);
                     throw new HttpResponseException(response);
                 }
 

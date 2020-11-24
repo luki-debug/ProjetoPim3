@@ -46,7 +46,9 @@ namespace CamadaWebApi.Controllers
 
                 if(value._carteira.Saldo < 0)
                 {
-                    HttpResponseMessage response = this.Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Saldo Insuficiente!");
+                    value._carteira.Saldo = value._carteira.Saldo + new Negocio().ConverterRealParaCripto(value.Valor, value._carteira.TipoMoeda);
+                    value._carteira.Saldo = new Negocio().ConverterCriptoParaReal(value._carteira.Saldo, value._carteira.TipoMoeda);
+                    HttpResponseMessage response = this.Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Saldo Insuficiente! Saldo Atual desta moeda: R$ "+value._carteira.Saldo);
                     throw new HttpResponseException(response);
                 }
 
@@ -84,7 +86,7 @@ namespace CamadaWebApi.Controllers
             try
             {
                 HistoricoCarteiraCrud historicoCarteiraCrud = new HistoricoCarteiraCrud();
-                List<HistoricoCarteira> retorno = historicoCarteiraCrud.ObterPorMes(pessoa, dtinicio, dtfim);
+                List<HistoricoCarteira> retorno = historicoCarteiraCrud.ObterPorMes(pessoa, dtinicio, dtfim.AddDays(1));
                 return Ok(retorno);
             }
             catch (Exception)
