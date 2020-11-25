@@ -106,7 +106,7 @@ namespace CamadaModel.CRUD
 
             DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT h.* FROM HistoricoCarteira as h LEFT JOIN " +
                 "Carteira as c ON h.IdCarteira = c.IdCarteira " +
-                    "WHERE c.IdPessoa = @IdPessoa");
+                    "WHERE c.IdPessoa = @IdPessoa ORDER BY DataHora Desc");
 
             return popular(dataTable);
         }
@@ -121,7 +121,7 @@ namespace CamadaModel.CRUD
 
             DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT h.* FROM HistoricoCarteira as h LEFT JOIN " +
                 "Carteira as c ON h.IdCarteira = c.IdCarteira " +
-                    "WHERE (c.IdPessoa = @IdPessoa) AND (h.DataHora BETWEEN @dtInicio AND @dtFim)");
+                    "WHERE (c.IdPessoa = @IdPessoa) AND (h.DataHora BETWEEN @dtInicio AND @dtFim) ORDER BY DataHora Desc");
 
             return popular(dataTable);
         }

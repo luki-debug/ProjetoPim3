@@ -35,7 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.linkSenha = new System.Windows.Forms.LinkLabel();
             this.icoUser = new FontAwesome.Sharp.IconPictureBox();
             this.icoSenha = new FontAwesome.Sharp.IconPictureBox();
             this.lblCarregando = new System.Windows.Forms.Label();
@@ -121,25 +120,13 @@
             this.materialDivider1.TabIndex = 4;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // linkSenha
-            // 
-            this.linkSenha.AutoSize = true;
-            this.linkSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkSenha.LinkColor = System.Drawing.Color.Black;
-            this.linkSenha.Location = new System.Drawing.Point(292, 312);
-            this.linkSenha.Name = "linkSenha";
-            this.linkSenha.Size = new System.Drawing.Size(161, 20);
-            this.linkSenha.TabIndex = 3;
-            this.linkSenha.TabStop = true;
-            this.linkSenha.Text = "Esqueci minha senha";
-            this.linkSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // icoUser
             // 
             this.icoUser.BackColor = System.Drawing.SystemColors.Control;
             this.icoUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
             this.icoUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.icoUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icoUser.Location = new System.Drawing.Point(301, 157);
             this.icoUser.Name = "icoUser";
             this.icoUser.Size = new System.Drawing.Size(32, 32);
@@ -152,6 +139,7 @@
             this.icoSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
             this.icoSenha.IconChar = FontAwesome.Sharp.IconChar.Unlock;
             this.icoSenha.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(44)))), ((int)(((byte)(58)))));
+            this.icoSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icoSenha.Location = new System.Drawing.Point(301, 186);
             this.icoSenha.Name = "icoSenha";
             this.icoSenha.Size = new System.Drawing.Size(32, 32);
@@ -191,7 +179,6 @@
             this.Controls.Add(this.pxCarregar);
             this.Controls.Add(this.icoSenha);
             this.Controls.Add(this.icoUser);
-            this.Controls.Add(this.linkSenha);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEntrar);
@@ -220,7 +207,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private System.Windows.Forms.LinkLabel linkSenha;
         private FontAwesome.Sharp.IconPictureBox icoUser;
         private FontAwesome.Sharp.IconPictureBox icoSenha;
         private System.Windows.Forms.Label lblCarregando;

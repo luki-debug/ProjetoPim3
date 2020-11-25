@@ -43,7 +43,6 @@ namespace CamadaDesktop
             icoSenha.Visible = false;
             txtLogin.Visible = false;
             txtSenha.Visible = false;
-            linkSenha.Enabled = false;
             await Task.Run(() => listUser = userCrud.ConsultarPorNomeOrId(user));
             
 
@@ -75,7 +74,6 @@ namespace CamadaDesktop
                 txtLogin.Visible = true;
                 txtSenha.Visible = true;
                 btnEntrar.Visible = true;
-                linkSenha.Enabled = true;
 
             }
             if (logado == true)
@@ -91,12 +89,6 @@ namespace CamadaDesktop
                 txtLogin.Clear();
                 txtSenha.Clear();
             }
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmWaitForm fr = new frmWaitForm();
-            fr.ShowDialog();
         }
     }
 }
