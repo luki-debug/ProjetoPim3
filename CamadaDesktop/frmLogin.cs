@@ -61,11 +61,12 @@ namespace CamadaDesktop
                     UsuarioCache._perfilUsuario.IdPerfilUsuario = item._perfilUsuario.IdPerfilUsuario;
                     UsuarioCache._perfilUsuario.Descricao = item._perfilUsuario.Descricao;
                     UsuarioCache.Nome = item.Nome;
+                    UsuarioCache.IdUsuario = item.IdUsuario;
                     await Task.Run(() => UsuarioCache.ListCdPagina = nivelAcessoCrud.ConsultarPgPorId(nivelAcesso));
                     Usuario usuario = new Usuario();
                     usuario.IdUsuario = UsuarioCache.IdUsuario;
                     usuario.DtUltimoLogin = DateTime.Now;
-                    userCrud.AtualizarDtLoginUsuario(usuario);
+                    await Task.Run(() => userCrud.AtualizarDtLoginUsuario(usuario));
                     logado = true;
                 }
 
