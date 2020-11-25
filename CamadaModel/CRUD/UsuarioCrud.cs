@@ -155,7 +155,29 @@ namespace CamadaModel.CRUD
                 return exception.Message;
             }
         }
-        public string RecuperarLogin(string email)
+        public string AtualizarDtLoginUsuario(Usuario user)
+        {
+            try
+            {
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametros("@IdUsuario", user.IdUsuario);
+                acessoDados.AdicionarParametros("@DtUltimoLogin", user.DtUltimoLogin);
+                string retornoPessoa = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
+                    "UPDATE Usuario " +
+                    "SET DtUltimoLogin=@DtUltimoLogin WHERE IdUsuario = @IdUsuario " +
+                    "SELECT @IdPessoa AS RETORNO END").ToString();
+                acessoDados.LimparParametros();
+                //acessoDados.AdicionarParametros("@dtLogin", DateTime.Now);
+                //acessoDados.ExecutarManipulacao(CommandType.Text, "INSERT INTO HistoricoLogin (DataLogin) VALUES (@dtLogin)");
+
+                return retornoPessoa;
+            }
+            catch (Exception exception)
+            {
+                return exception.Message;
+            }
+        }
+            public string RecuperarLogin(string email)
         {
             try
             {

@@ -35,7 +35,7 @@ namespace CamadaWebApi.Controllers
                     
                     UsuarioCrud usuarioCrud = new UsuarioCrud();
                     Pessoa pessoa = new Pessoa();
-                    pessoa.IdPessoa = value.IdPessoa;
+                    pessoa.IdPessoa = clienteF.IdPessoa;
                     pessoa.DtUltimoLogin = DateTime.Now;
                     usuarioCrud.AtualizarDtLogin(pessoa);
 
@@ -47,7 +47,7 @@ namespace CamadaWebApi.Controllers
 
                     UsuarioCrud usuarioCrud = new UsuarioCrud();
                     Pessoa pessoa = new Pessoa();
-                    pessoa.IdPessoa = value.IdPessoa;
+                    pessoa.IdPessoa = clienteJ.IdPessoa;
                     pessoa.DtUltimoLogin = DateTime.Now;
                     usuarioCrud.AtualizarDtLogin(pessoa);
 
