@@ -78,7 +78,7 @@ namespace CamadaModel.CRUD
                 DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.Text, "SELECT * " +
                     "FROM HistoricoInvestido AS h INNER JOIN Carteira as c ON h.IdCarteira=c.IdCarteira " +
                     "WHERE (h.IdCarteira IN (@IdCarteiraEth,@IdCarteiraBtc)) " +
-                    "AND (DtInicio BETWEEN @dtInicio AND @dtFim) AND (dtFim IS NULL)");
+                    "AND (DtInicio BETWEEN @dtInicio AND @dtFim) AND (dtFim IS NULL) ORDER BY DtInicio DESC");
 
                 foreach (DataRow linha in dataTable.Rows)
                 {
