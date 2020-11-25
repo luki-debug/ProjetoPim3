@@ -45,14 +45,13 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnVoltar.IconColor = System.Drawing.Color.White;
+            this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVoltar.IconSize = 32;
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.Location = new System.Drawing.Point(516, 547);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Rotation = 0D;
             this.btnVoltar.Size = new System.Drawing.Size(137, 46);
             this.btnVoltar.TabIndex = 7;
             this.btnVoltar.Text = "Voltar";
@@ -61,14 +60,13 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSalvar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalvar.IconColor = System.Drawing.Color.White;
+            this.btnSalvar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalvar.IconSize = 32;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(373, 547);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Rotation = 0D;
             this.btnSalvar.Size = new System.Drawing.Size(137, 46);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";

@@ -29,15 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.RelatoriosGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.rbJuridica = new System.Windows.Forms.RadioButton();
             this.rbFisica = new System.Windows.Forms.RadioButton();
             this.btnAtivo = new FontAwesome.Sharp.IconButton();
             this.btnInativo = new FontAwesome.Sharp.IconButton();
-            this.RelatoriosGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.RelatoriosGeralBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // RelatoriosGeralBindingSource
+            // 
+            this.RelatoriosGeralBindingSource.DataMember = "listRelatoriojuridica";
+            this.RelatoriosGeralBindingSource.DataSource = typeof(CamadaModel.Entities.RelatoriosGeral);
             // 
             // reportViewer
             // 
@@ -45,9 +50,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            reportDataSource2.Name = "FisicaAtiva";
-            reportDataSource2.Value = this.RelatoriosGeralBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "FisicaAtiva";
+            reportDataSource1.Value = this.RelatoriosGeralBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "CamadaDesktop.Relatorios.ReportFisicaAtiva.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(29, 133);
             this.reportViewer.Name = "reportViewer";
@@ -92,7 +97,8 @@
             this.btnAtivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtivo.ForeColor = System.Drawing.Color.White;
             this.btnAtivo.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAtivo.IconColor = System.Drawing.Color.Black;            
+            this.btnAtivo.IconColor = System.Drawing.Color.Black;
+            this.btnAtivo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtivo.IconSize = 16;
             this.btnAtivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtivo.Location = new System.Drawing.Point(29, 71);
@@ -112,6 +118,7 @@
             this.btnInativo.ForeColor = System.Drawing.Color.White;
             this.btnInativo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnInativo.IconColor = System.Drawing.Color.Black;
+            this.btnInativo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInativo.IconSize = 16;
             this.btnInativo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInativo.Location = new System.Drawing.Point(172, 71);
@@ -121,11 +128,6 @@
             this.btnInativo.Text = "Clientes Inativos";
             this.btnInativo.UseVisualStyleBackColor = false;
             this.btnInativo.Click += new System.EventHandler(this.btnInativo_Click);
-            // 
-            // RelatoriosGeralBindingSource
-            // 
-            this.RelatoriosGeralBindingSource.DataMember = "listRelatoriojuridica";
-            this.RelatoriosGeralBindingSource.DataSource = typeof(CamadaModel.Entities.RelatoriosGeral);
             // 
             // frmRelClienteSituacao
             // 
@@ -139,6 +141,7 @@
             this.Controls.Add(this.reportViewer);
             this.Name = "frmRelClienteSituacao";
             this.Text = "frmRelFisicaAtiva";
+            this.Load += new System.EventHandler(this.frmRelClienteSituacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RelatoriosGeralBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

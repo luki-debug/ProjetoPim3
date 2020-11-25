@@ -83,6 +83,7 @@ namespace CamadaDesktop
                 usuario.Ativo = 'F';
             usuario._perfilUsuario = new PerfilUsuario();
             usuario._perfilUsuario.IdPerfilUsuario = (int)txtPerfil.SelectedValue;
+            usuario.IdUsuario = User.IdUsuario;
 
             return usuario;
         }

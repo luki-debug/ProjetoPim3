@@ -43,7 +43,6 @@ namespace CamadaModel.CRUD
             {
                 acessoDados.LimparParametros();
                 acessoDados.AdicionarParametros("@Ativo", usuario.Ativo);
-                acessoDados.AdicionarParametros("@DtUltimoLogin", usuario.DtUltimoLogin);
                 acessoDados.AdicionarParametros("@IdUsuario", usuario.IdUsuario);
                 acessoDados.AdicionarParametros("@Login", usuario.Login);
                 acessoDados.AdicionarParametros("@Matricula", usuario.Matricula);
@@ -52,9 +51,9 @@ namespace CamadaModel.CRUD
                 acessoDados.AdicionarParametros("@IdPerfilUsuario", usuario._perfilUsuario.IdPerfilUsuario);
                 string retornoUsuario = acessoDados.ExecutarManipulacao(CommandType.Text, "BEGIN " +
                     "UPDATE Usuario " +
-                    "SET Ativo=@Ativo, DtUltimoLogin=@DtUltimoLogin, IdUsuario=@IdUsuario, Login=@Login, " +
-                    "Matricula=@Matricula, Nome=@Nome, Senha=@Senha, IdPerfilUsuario=@IdPerfilUsuario " +
-                    "WHERE IdPerfilUsuario=@IdPerfilUsuario " +
+                    "SET Ativo=@Ativo, IdPerfilUsuario=@IdPerfilUsuario, Login=@Login, " +
+                    "Matricula=@Matricula, Nome=@Nome, Senha=@Senha " +
+                    "WHERE  IdUsuario=@IdUsuario " +
                     "SELECT @IdUsuario AS RETORNO END").ToString();
 
                 return retornoUsuario;

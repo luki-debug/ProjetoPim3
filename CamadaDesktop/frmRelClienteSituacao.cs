@@ -54,11 +54,6 @@ namespace CamadaDesktop
                 RelatoriosGeralBindingSource.DataSource = relatoriosGeral.listRelatoriojuridica;
             }
         }
-
-        private void reportViewer_Load(object sender, EventArgs e)
-        {
-            FuncoesTela.DesativarPDFReport(reportViewer);
-        }
         private void btnAtivo_Click(object sender, EventArgs e)
         {
             reportViewer.Visible = true;
@@ -87,6 +82,11 @@ namespace CamadaDesktop
         private void rbFisica_CheckedChanged(object sender, EventArgs e)
         {
             reportViewer.Visible = false;
+        }
+
+        private void frmRelClienteSituacao_Load(object sender, EventArgs e)
+        {
+            FuncoesTela.DesativarPDFReport(reportViewer);
         }
     }
 }

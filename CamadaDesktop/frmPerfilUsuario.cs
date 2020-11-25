@@ -234,6 +234,7 @@ namespace CamadaDesktop
             chkClienteEdit.Enabled = false;
             chkClienteDel.Enabled = false;
 
+            chkDashBoard.Enabled = false;
             chkRelatorio.Enabled = false;
             chkRelInvest.Enabled = false;
             chkRelSituacao.Enabled = false;
@@ -280,6 +281,8 @@ namespace CamadaDesktop
                 if (chkClienteDel.Tag.ToString() == pagina)
                     chkClienteDel.Checked = true;
 
+                if (chkDashBoard.Tag.ToString() == pagina)
+                    chkDashBoard.Checked = true;
                 if (chkRelatorio.Tag.ToString() == pagina)
                     chkRelatorio.Checked = true;
                 if (chkRelSituacao.Tag.ToString() == pagina)
