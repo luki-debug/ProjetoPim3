@@ -1,0 +1,119 @@
+#moedas {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#moedas .moedasContent {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+}
+
+#moedas .moedasContent .content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#moedas .moedasContent .content .moedasContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+#moedas .moedasContent .content .moedasContainer .title {
+  color: var(--color-text-in-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+#moedas .moedasContent .content .moedasContainer .options {
+  margin-bottom: 1rem;
+  display: flex;
+}
+#moedas .moedasContent .content .moedasContainer .options .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 20px;
+  background: var(--color-primary-light);
+  transform-style: preserve-3d;
+}
+#moedas .moedasContent .content .moedasContainer .options .item:hover {
+}
+#moedas .moedasContent .content .moedasContainer .options .item.active {
+  background: var(--color-secondary);
+}
+#moedas .moedasContent .content .moedasContainer .options .item .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transform: translateZ(20px);
+}
+
+#moedas .moedasContent .content .moedasContainer .options .item .image {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  transform: translateZ(70px);
+}
+
+#moedas .moedasContent .content .moedasContainer .options .item .cotacao {
+  font-size: 1.5rem;
+  color: var(--color-text-in-primary);
+  transform: translateZ(20px);
+}
+#moedas .moedasContent .content .moedasContainer input {
+  width: 150px;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+#moedas .moedasContent .content .moedasContainer button {
+  border: 0;
+  margin: 1rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  color: var(--color-text-in-primary);
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#moedas .moedasContent .content .moedasContainer button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  #moedas .moedasContent .content .moedasContainer .options {
+    flex-direction: column;
+  }
+  #moedas .moedasContent .content .moedasContainer {
+    justify-content: flex-start;
+  }
+
+  #moedas .moedasContent .content .moedasContainer .title {
+    margin-top: 1rem;
+  }
+
+  #moedas .moedasContent {
+    justify-content: flex-start;
+  }
+}

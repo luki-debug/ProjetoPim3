@@ -1,0 +1,116 @@
+#header {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--color-primary);
+}
+
+#header .openMenu {
+  font-size: 2rem;
+  color: var(--color-text-in-primary);
+  cursor: pointer;
+  min-width: 2rem;
+
+  visibility: hidden;
+}
+
+#header .openMenu:hover {
+  color: var(--color-primary-lighter);
+}
+
+#header .headerOptions {
+  display: flex;
+  align-items: center;
+}
+
+#header .headerOptions a {
+  text-decoration: none;
+}
+
+#header .headerOptions .depositar {
+  width: 120px;
+  height: 48px;
+  border: 0;
+  margin: 0 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-text-in-primary);
+  border-radius: 10px;
+  color: var(--color-text-in-background);
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#header .headerOptions .depositar:hover {
+  background: var(--color-primary-lighter);
+}
+
+#header .headerOptions .saldo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+#header .headerOptions .saldo:hover svg,
+#header .headerOptions .saldo:hover span {
+  color: var(--color-primary-lighter);
+}
+
+#header .headerOptions .saldo svg {
+  color: var(--color-text-in-primary);
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+#header .headerOptions .saldo span {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-text-in-primary);
+}
+
+#header .headerOptions .perfil {
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 0 1rem;
+  color: var(--color-text-in-primary);
+}
+
+#header .headerOptions .perfil.active {
+  color: var(--color-secondary);
+}
+
+#header .headerOptions .perfil:hover {
+  opacity: 0.8;
+}
+
+#header .headerOptions .exitSvg {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: var(--color-text-in-primary);
+}
+
+#header .headerOptions .exitSvg:hover {
+  color: var(--color-primary-lighter);
+}
+
+@media (max-width: 845px) {
+  #header .openMenu {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 510px) {
+  #header .headerOptions .perfil {
+    display: none;
+  }
+}

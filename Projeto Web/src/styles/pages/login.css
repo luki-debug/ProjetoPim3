@@ -1,0 +1,107 @@
+#login {
+  background: var(--color-primary);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#login .loginContainer {
+  width: 350px;
+  background: var(--color-background);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#login .loginContainer img {
+  height: 100px;
+}
+
+#login .loginContainer h1 {
+  color: var(--color-text-in-background);
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+#login .loginContainer p {
+  color: var(--color-text-in-background);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#login .loginContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+#login .loginContainer form input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+#login .loginContainer form .anotherOptionsContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#login .loginContainer form .anotherOptionsContainer a {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-in-background);
+  margin-bottom: 1rem;
+}
+
+#login .loginContainer form .anotherOptionsContainer a:hover {
+  color: var(--color-primary);
+}
+
+#login .loginContainer form .error {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #f00;
+}
+
+#login .loginContainer form .enter.creating {
+  opacity: 0.6;
+}
+
+#login .loginContainer form .enter {
+  width: 120px;
+  height: 48px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-text-in-background);
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#login .loginContainer form .enter.loading {
+  opacity: 0.6;
+}
+
+#login .loginContainer form .enter:hover {
+  background: var(--color-primary);
+}

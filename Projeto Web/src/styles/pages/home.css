@@ -1,0 +1,129 @@
+#home {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#home .homeContent {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+}
+
+#home .homeContent .content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#home .homeContent .content .chartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+#home .homeContent .content .chartContainer svg {
+  max-width: 300px;
+}
+
+#home .homeContent .content .valuesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+}
+
+#home .homeContent .content .valuesContainer .itemContainer {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+#home .homeContent .content .valuesContainer .itemContainer svg {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+#home .homeContent .content .valuesContainer .itemContainer .valueContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#home
+  .homeContent
+  .content
+  .valuesContainer
+  .itemContainer
+  .valueContainer
+  .label {
+  color: var(--color-text-in-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#home
+  .homeContent
+  .content
+  .valuesContainer
+  .itemContainer
+  .valueContainer
+  .value {
+  color: var(--color-text-in-primary);
+  font-size: 1.5rem;
+}
+
+#home
+  .homeContent
+  .content
+  .valuesContainer
+  .itemContainer
+  .valueContainer
+  .labelPatrimonio {
+  color: var(--color-text-in-primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#home
+  .homeContent
+  .content
+  .valuesContainer
+  .itemContainer
+  .valueContainer
+  .valuePatrimonio {
+  color: var(--color-text-in-primary);
+  font-size: 2rem;
+}
+
+@media (max-width: 580px) {
+  #home .homeContent {
+    justify-content: flex-start;
+  }
+
+  #home .homeContent .content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #home .homeContent .content .chartContainer {
+    margin: 2rem 0;
+  }
+
+  #home .homeContent .content .valuesContainer {
+    padding: 0 2rem;
+  }
+
+  #home .homeContent .content .valuesContainer {
+    margin: 1rem 0;
+  }
+}

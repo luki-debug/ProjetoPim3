@@ -1,0 +1,31 @@
+:root {
+  --color-background: #f7f7f7;
+  --color-primary-lighter: #d1cce2;
+  --color-primary-light-hover: #7564a6;
+  --color-primary-light: #5e4a97;
+  --color-primary: #473088;
+  --color-primary-dark: #362466;
+  --color-secondary: #ffa200;
+  --color-tertiary: #d864a2;
+  --color-text-in-background: #333;
+  --color-text-in-primary: #fff;
+  --color-menu-hover: #253238;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-text-in-background);
+  background: var(--color-primary);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 600 18px sans-serif;
+}

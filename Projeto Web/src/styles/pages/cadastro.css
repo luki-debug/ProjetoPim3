@@ -1,0 +1,68 @@
+#login {
+  background: var(--color-primary);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  padding: 3rem 0;
+}
+
+#login form .inputBox {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#login form .inputBox label {
+  font-size: 1rem;
+}
+
+#login .loginContainer .optionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#login .loginContainer .optionsContainer button {
+  height: 48px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-text-in-background);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#login .loginContainer .optionsContainer button.active {
+  background: var(--color-primary);
+}
+
+#login .loginContainer .optionsContainer button:hover {
+  background: var(--color-primary);
+}

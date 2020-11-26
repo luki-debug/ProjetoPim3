@@ -1,0 +1,50 @@
+#sidemenuModalContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#sidemenuModalContainer .sidemenu {
+  display: flex;
+}
+
+#outsideModal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#outsideModal.open {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#outsideModal.closed {
+  visibility: hidden;
+}
+
+#sidemenuModalContainer.closed .sidemenu {
+  transform: translateX(-100%);
+}
+
+#sidemenuModalContainer .sidemenu {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+#sidemenuModalContainer .sidemenu .closeSvg {
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: var(--color-text-in-primary);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+}
+
+#sidemenuModalContainer .sidemenu .closeSvg:hover {
+  color: var(--color-primary-lighter);
+}

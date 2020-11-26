@@ -1,0 +1,124 @@
+#perfil {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#perfil .perfilContent {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+}
+
+#perfil .perfilContent .content {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+#perfil .perfilContent .content .itemsContainer {
+  display: flex;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 100%;
+  background: var(--color-primary-light);
+}
+
+#perfil .perfilContent .content .itemsContainer .inputsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+#perfil
+  .perfilContent
+  .content
+  .itemsContainer
+  .inputsContainer
+  .salvar.updating {
+  opacity: 0.6;
+}
+
+#perfil .perfilContent .content .itemsContainer .inputsContainer .salvar {
+  width: 120px;
+  height: 48px;
+  border: 0;
+  margin: 1rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  color: var(--color-text-in-primary);
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#perfil .perfilContent .content .itemsContainer .inputsContainer .salvar:hover {
+  opacity: 0.8;
+}
+
+#perfil .perfilContent .content .itemsContainer .inputsContainer .inputBox {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+#perfil
+  .perfilContent
+  .content
+  .itemsContainer
+  .inputsContainer
+  .inputBox
+  label {
+  color: var(--color-text-in-primary);
+  font-size: 1rem;
+}
+
+#perfil
+  .perfilContent
+  .content
+  .itemsContainer
+  .inputsContainer
+  .inputBox
+  input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#perfil .perfilContent .content .itemsContainer .iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#perfil .perfilContent .content .itemsContainer .iconContainer svg {
+  font-size: 10rem;
+  color: var(--color-text-in-primary);
+}
+
+@media (max-width: 550px) {
+  #perfil .perfilContent .content .itemsContainer {
+    flex-direction: column-reverse;
+  }
+
+  #perfil .perfilContent .content .itemsContainer .iconContainer svg {
+    margin-bottom: 1rem;
+  }
+}

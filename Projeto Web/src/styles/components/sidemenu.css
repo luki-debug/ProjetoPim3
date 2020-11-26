@@ -1,0 +1,179 @@
+.sidemenu {
+  width: 300px;
+  height: 100%;
+
+  background: var(--color-primary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.sidemenu img {
+  width: 150px;
+  margin: 1rem 0;
+}
+
+.sidemenu .optionsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.sidemenu .optionsContainer .menuItems {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidemenu .optionsContainer .menuItem {
+  width: 100%;
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: background 0.2s;
+}
+
+.sidemenu .optionsContainer .menuItem svg {
+  color: var(--color-text-in-primary);
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.sidemenu .optionsContainer .menuItem .menuItemLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-in-primary);
+}
+
+.sidemenu .optionsContainer .menuItem.active {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background: var(--color-menu-hover);
+  border-left: 0.5rem solid var(--color-tertiary);
+}
+
+.sidemenu .optionsContainer .menuItem.active svg {
+  color: var(--color-tertiary);
+  margin: 0;
+}
+
+.sidemenu .optionsContainer .menuItem.active .menuItemLabel {
+  color: var(--color-tertiary);
+  padding: 0 1rem;
+}
+
+.sidemenu .optionsContainer .menuItem.active.perfil {
+  border-left: 0.5rem solid #fd8a72;
+}
+
+.sidemenu .optionsContainer .menuItem.active.perfil svg {
+  color: #fd8a72;
+}
+
+.sidemenu .optionsContainer .menuItem.active.perfil .menuItemLabel {
+  color: #fd8a72;
+}
+
+.sidemenu .optionsContainer .menuItem.active.inicio {
+  border-left: 0.5rem solid #ac7ef1;
+}
+
+.sidemenu .optionsContainer .menuItem.active.inicio svg {
+  color: #ac7ef1;
+}
+
+.sidemenu .optionsContainer .menuItem.active.inicio .menuItemLabel {
+  color: #ac7ef1;
+}
+
+.sidemenu .optionsContainer .menuItem.active.saldo {
+  border-left: 0.5rem solid #f976b0;
+}
+
+.sidemenu .optionsContainer .menuItem.active.saldo svg {
+  color: #f976b0;
+}
+
+.sidemenu .optionsContainer .menuItem.active.saldo .menuItemLabel {
+  color: #f976b0;
+}
+
+.sidemenu .optionsContainer .menuItem.active.investimentos {
+  border-left: 0.5rem solid #5f4ddd;
+}
+
+.sidemenu .optionsContainer .menuItem.active.investimentos svg {
+  color: #5f4ddd;
+}
+
+.sidemenu .optionsContainer .menuItem.active.investimentos .menuItemLabel {
+  color: #5f4ddd;
+}
+
+.sidemenu .optionsContainer .menuItem.active.compra {
+  border-left: 0.5rem solid #f9589b;
+}
+
+.sidemenu .optionsContainer .menuItem.active.compra svg {
+  color: #f9589b;
+}
+
+.sidemenu .optionsContainer .menuItem.active.compra .menuItemLabel {
+  color: #f9589b;
+}
+
+.sidemenu .optionsContainer .menuItem.active.transacoes {
+  border-left: 0.5rem solid #18a1fb;
+}
+
+.sidemenu .optionsContainer .menuItem.active.transacoes svg {
+  color: #18a1fb;
+}
+
+.sidemenu .optionsContainer .menuItem.active.transacoes .menuItemLabel {
+  color: #18a1fb;
+}
+
+.sidemenu .optionsContainer .menuItem:hover {
+  background: var(--color-menu-hover);
+}
+
+.sidemenu .optionsContainer .menuItem:active svg {
+  color: var(--color-primary-lighter);
+}
+
+.sidemenu .optionsContainer .menuItem:active .menuItemLabel {
+  color: var(--color-primary-lighter);
+}
+
+.sidemenu .optionsContainer .perfil {
+  display: none;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+@media (max-width: 510px) {
+  .sidemenu .optionsContainer .perfil {
+    display: flex;
+  }
+}
+
+@media (max-width: 845px) {
+  #sidemenu {
+    display: none;
+  }
+}

@@ -1,0 +1,315 @@
+#investimentos {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#investimentos .investimentosContent {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+}
+
+#investimentos .investimentosContent .content {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#investimentos .investimentosContent .content .infoAtivosContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .infoAtivosContainer
+  .ativosTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .infoAtivosContainer
+  .ativosSubtitles {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-in-primary);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .infoAtivosContainer
+  .ativosQuantidade {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .infoAtivosContainer
+  .ativosTotal {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos .investimentosContent .content .ativosContainer {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+#investimentos .investimentosContent .content .ativosContainer .abas {
+  display: flex;
+}
+
+#investimentos .investimentosContent .content .ativosContainer .abas .aba {
+  color: var(--color-text-in-primary);
+  background: var(--color-primary-light);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 0.5rem;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .abas
+  .aba:hover {
+  opacity: 0.8;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .abas
+  .aba.active {
+  background: var(--color-secondary);
+}
+
+#investimentos .investimentosContent .content .ativosContainer .cardsContainer {
+  display: flex;
+  justify-content: center;
+  background: var(--color-primary-light);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px black;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card:hover {
+  transform: translateY(-10px);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card
+  .cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-secondary);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card
+  .cardQuantidade {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card
+  .cardValor {
+  font-size: 1rem;
+  color: var(--color-text-in-primary);
+  margin-bottom: 0.5rem;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .cardsContainer
+  .card
+  .cardDescription {
+  overflow: auto;
+  font-size: 0.8rem;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos .investimentosContent .content .ativosContainer .patrimonio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .patrimonio
+  .label {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos
+  .investimentosContent
+  .content
+  .ativosContainer
+  .patrimonio
+  .value {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-text-in-primary);
+}
+
+#investimentos .investimentosContent .content table {
+}
+
+#investimentos .investimentosContent .content table tr {
+}
+
+#investimentos .investimentosContent .content table tr th {
+  color: var(--color-text-in-primary);
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#investimentos .investimentosContent .content table tr td {
+  color: var(--color-text-in-primary);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+#investimentos .investimentosContent .content table tr td button {
+  width: 120px;
+  height: 48px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  color: var(--color-text-in-primary);
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#investimentos .investimentosContent .content table tr td button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1150px) {
+  #investimentos .investimentosContent .content {
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+  }
+
+  #investimentos .investimentosContent .content .infoAtivosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  #investimentos
+    .investimentosContent
+    .content
+    .ativosContainer
+    .cardsContainer {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  #investimentos .investimentosContent .content .ativosContainer .abas {
+    flex-direction: column;
+  }
+
+  #investimentos .investimentosContent .content .ativosContainer .abas .aba {
+    margin: 0.2rem 0;
+  }
+
+  #investimentos
+    .investimentosContent
+    .content
+    .ativosContainer
+    .cardsContainer {
+    margin: 0.5rem 0;
+  }
+}

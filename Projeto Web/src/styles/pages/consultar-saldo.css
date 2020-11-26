@@ -1,0 +1,387 @@
+#consultarSaldo {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#consultarSaldo .consultarSaldoContent {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+}
+
+#consultarSaldo .consultarSaldoContent .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#consultarSaldo .consultarSaldoContent .content .saldoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+}
+
+#consultarSaldo .consultarSaldoContent .content .saldoContainer .saldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-primary-light);
+  width: 100%;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .saldoValueContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .saldoValueContainer
+  .title {
+  color: var(--color-text-in-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .saldoValueContainer
+  .value {
+  font-size: 3rem;
+  color: var(--color-text-in-primary);
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer
+  .inputResgateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer
+  .inputResgateContainer
+  label {
+  margin: 0 1rem;
+  color: var(--color-text-in-primary);
+  font-size: 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer
+  .inputResgateContainer
+  input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer
+  button {
+  width: 120px;
+  height: 48px;
+  border: 0;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  color: var(--color-text-in-primary);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .saldo
+  .resgatarContainer
+  button:hover {
+  opacity: 0.8;
+}
+
+#consultarSaldo .consultarSaldoContent .content .saldoContainer .movimentacoes {
+  display: flex;
+  padding: 1rem;
+  margin-right: 1rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  background: var(--color-primary-light);
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .filterContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .filterContainer
+  svg {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .filterContainer
+  .filterContent {
+  display: flex;
+  align-items: center;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .filterContainer
+  span {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .filterContainer
+  input {
+  width: 165px;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-in-primary);
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .movimentacoesItems {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-right: 1rem;
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .movimentacoesItems
+  .movimentacaoItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: var(--color-text-in-primary);
+}
+
+#consultarSaldo
+  .consultarSaldoContent
+  .content
+  .saldoContainer
+  .movimentacoes
+  .movimentacoesItems
+  .movimentacaoItem
+  .description {
+  display: flex;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .resgatarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .resgatarContainer
+    .resgatarButton {
+    margin-top: 1rem;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .resgatarContainer
+    .inputResgateContainer
+    input {
+    margin-right: 1rem;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .movimentacoes
+    .filterContainer {
+    flex-direction: column;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .movimentacoes
+    .filterContainer
+    input {
+    margin-top: 1rem;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .movimentacoes
+    .filterContainer
+    span {
+    margin-top: 1rem;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .movimentacoes
+    .filterContainer
+    .filterContent
+    span {
+    margin: 0;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .saldoValueContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .saldoValueContainer
+    .title {
+    font-size: 1.5rem;
+  }
+
+  #consultarSaldo
+    .consultarSaldoContent
+    .content
+    .saldoContainer
+    .saldo
+    .saldoValueContainer
+    .value {
+    font-size: 1.5rem;
+  }
+}
