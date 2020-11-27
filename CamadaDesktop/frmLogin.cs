@@ -82,6 +82,14 @@ namespace CamadaDesktop
             }
             if (logado == true)
             {
+                //Abilitar botoes depois da tarefa
+                pxCarregar.Visible = false;
+                lblCarregando.Visible = false;
+                icoUser.Visible = true;
+                icoSenha.Visible = true;
+                txtLogin.Visible = true;
+                txtSenha.Visible = true;
+                btnEntrar.Visible = true;
                 frmMenu frmMenu = new frmMenu();
                 MessageBox.Show("Seja bem vindo " + UsuarioCache.Nome, "Login com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
@@ -89,6 +97,14 @@ namespace CamadaDesktop
             }
             else
             {
+                //Abilitar botoes depois da tarefa
+                pxCarregar.Visible = false;
+                lblCarregando.Visible = false;
+                icoUser.Visible = true;
+                icoSenha.Visible = true;
+                txtLogin.Visible = true;
+                txtSenha.Visible = true;
+                btnEntrar.Visible = true;
                 MessageBox.Show("Credencias Incorretas", "Login ou senha incorretos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtLogin.Clear();
                 txtSenha.Clear();
